@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Refer a Participant – Able Aide</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description"
+        content="Support Coordinators and professionals can refer NDIS participants to Able Aide for disability support across Victoria.">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="/" class="logo">
+        <img src="assets/img/able-aide-logo.png"
+             alt="Able Aide Logo"
+             class="logo-img">
+        <span class="logo-text">Able Aide</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="about.html">About</a>
+        <a href="services/">Services</a>
+        <a href="refer.html" class="btn btn-outline">Refer a Participant</a>
+        <a href="resources.html">Resources</a>
+        <a href="contact.html" class="btn btn-primary">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+
+  <!-- MAIN CONTENT -->
+  <main class="section">
+    <div class="container grid grid-2">
+
+      <!-- REFERRAL FORM -->
+      <section>
+        <h1>Refer a Participant</h1>
+        <p>
+          This form is for Support Coordinators, allied health professionals, plan managers
+          and other referrers who would like to connect a participant with Able Aide.
+        </p>
+        <p class="small">
+          We understand you’re busy – provide as much detail as you can, and we’ll follow up
+          if we need more information.
+        </p>
+
+        <form
+          method="POST"
+          data-netlify="true"
+          name="referral"
+          action="/thanks.html"
+          class="form"
+        >
+          <input type="hidden" name="form-name" value="referral">
+
+          <!-- Anti-bot honeypot -->
+          <p style="display:none">
+            <label>Don’t fill this out if you’re human:
+              <input name="bot-field">
+            </label>
+          </p>
+
+          <!-- REFERRER DETAILS -->
+          <h2 class="section-title" style="font-size:1.2rem;margin-top:0;">Referrer details</h2>
+
+          <div class="form-group">
+            <label for="referrer-name">Your name *</label>
+            <input id="referrer-name" name="referrer-name" type="text" required>
+          </div>
+
+          <div class="form-group">
+            <label for="role-organisation">Role & organisation *</label>
+            <input id="role-organisation" name="role-organisation" type="text" required>
+          </div>
+
+          <div class="form-group">
+            <label for="referrer-email">Email *</label>
+            <input id="referrer-email" name="referrer-email" type="email" required>
+          </div>
+
+          <div class="form-group">
+            <label for="referrer-phone">Phone *</label>
+            <input id="referrer-phone" name="referrer-phone" type="tel" required>
+          </div>
+
+          <div class="form-group">
+            <label for="relationship">Relationship to participant *</label>
+            <input id="relationship" name="relationship" type="text"
+                   placeholder="e.g. Support Coordinator, Allied Health, Plan Manager" required>
+          </div>
+
+          <hr style="margin:1.5rem 0; border:none; border-top:1px solid #e0e0ea;">
+
+          <!-- PARTICIPANT DETAILS -->
+          <h2 class="section-title" style="font-size:1.2rem;">Participant details</h2>
+
+          <div class="form-group">
+            <label for="participant-name">Participant name *</label>
+            <input id="participant-name" name="participant-name" type="text" required>
+          </div>
+
+          <div class="form-group">
+            <label for="participant-dob">Date of birth *</label>
+            <input id="participant-dob" name="participant-dob" type="date" required>
+          </div>
+
+          <div class="form-group">
+            <label for="participant-suburb">Suburb & postcode *</label>
+            <input id="participant-suburb" name="participant-suburb" type="text" required>
+          </div>
+
+          <div class="form-group">
+            <label for="ndis-number">NDIS number (if known)</label>
+            <input id="ndis-number" name="ndis-number" type="text">
+          </div>
+
+          <div class="form-group">
+            <label for="primary-diagnosis">Primary diagnosis / brief description of support needs *</label>
+            <textarea id="primary-diagnosis" name="primary-diagnosis" rows="3" required></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="risks">Any known risks, behaviours of concern or safety considerations?</label>
+            <textarea id="risks" name="risks" rows="3"
+                      placeholder="E.g. mobility issues, behaviours of concern, supervision needs, allergies, communication needs"></textarea>
+          </div>
+
+          <hr style="margin:1.5rem 0; border:none; border-top:1px solid #e0e0ea;">
+
+          <!-- NDIS PLAN & FUNDING -->
+          <h2 class="section-title" style="font-size:1.2rem;">NDIS plan & funding</h2>
+
+          <div class="form-group">
+            <label for="plan-dates">NDIS plan dates (start & end)</label>
+            <input id="plan-dates" name="plan-dates" type="text"
+                   placeholder="e.g. 01/07/2024 – 30/06/2025">
+          </div>
+
+          <div class="form-group">
+            <label for="funding-type">Funding management type *</label>
+            <select id="funding-type" name="funding-type" required>
+              <option value="">Please select</option>
+              <option value="self-managed">Self-managed</option>
+              <option value="plan-managed">Plan-managed</option>
+              <option value="combination">Combination</option>
+              <option value="unsure">Unsure</option>
+            </select>
+          </div>
+
+          <div class="form-group">
+            <label for="plan-manager-details">Plan manager details (if applicable)</label>
+            <textarea id="plan-manager-details" name="plan-manager-details" rows="2"
+                      placeholder="Organisation name, contact person, email/phone"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="supports-requested">Supports requested (select all that apply) *</label>
+            <select id="supports-requested" name="supports-requested" multiple required>
+              <option value="core-personal-care">Core – Personal care & daily living</option>
+              <option value="core-community-access">Core – Community access & social support</option>
+              <option value="support-coordination">Support Coordination</option>
+              <option value="allied-health-assist">Allied Health assistance (therapy support)</option>
+              <option value="family-early-support">Family / early supports</option>
+              <option value="other">Other (describe below)</option>
+            </select>
+            <small class="small">Hold Ctrl (Windows) or Command (Mac) to select more than one.</small>
+          </div>
+
+          <div class="form-group">
+            <label for="hours-budget">Approximate hours or budget available (if known)</label>
+            <input id="hours-budget" name="hours-budget" type="text"
+                   placeholder="e.g. 10 hrs/week core, 50 hrs support coordination">
+          </div>
+
+          <div class="form-group">
+            <label for="preferred-times">Preferred days/times for support</label>
+            <input id="preferred-times" name="preferred-times" type="text"
+                   placeholder="e.g. weekday afternoons, weekends only">
+          </div>
+
+          <div class="form-group">
+            <label for="start-date">Preferred start date</label>
+            <input id="start-date" name="start-date" type="date">
+          </div>
+
+          <hr style="margin:1.5rem 0; border:none; border-top:1px solid #e0e0ea;">
+
+          <!-- ADDITIONAL INFO -->
+          <h2 class="section-title" style="font-size:1.2rem;">Additional information</h2>
+
+          <div class="form-group">
+            <label for="other-providers">Other key providers involved</label>
+            <textarea id="other-providers" name="other-providers" rows="2"
+                      placeholder="E.g. therapy teams, behaviour support practitioners, mainstream services"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="goals">Key goals or priorities for this referral</label>
+            <textarea id="goals" name="goals" rows="3"
+                      placeholder="E.g. increase community participation, improve daily living skills, stabilise roster"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label for="other-notes">Any other information that would be helpful?</label>
+            <textarea id="other-notes" name="other-notes" rows="3"></textarea>
+          </div>
+
+          <div class="form-group">
+            <label>
+              <input type="checkbox" name="consent-confirmation" required>
+              I confirm that the participant (or their guardian) has consented to this referral to Able Aide.
+            </label>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit Referral</button>
+        </form>
+      </section>
+
+
+      <!-- SIDEBAR INFO -->
+      <aside class="info-box">
+        <h2>Referral support</h2>
+        <p>
+          If you’d like to discuss a potential referral before submitting this form,
+          please contact us and we’ll be happy to talk it through.
+        </p>
+
+        <p><strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a></p>
+        <p><strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a></p>
+
+        <h3>Service Hours</h3>
+        <p>
+          Support Coordination: 8:00 am – 7:00 pm<br>
+          Core Supports: 24/7<br>
+          Allied Health: 9:00 am – 6:00 pm
+        </p>
+
+        <h3>Where we support</h3>
+        <p>
+          Able Aide provides NDIS supports across Victoria, including
+          Melbourne, Geelong, Ballarat, Bendigo, Shepparton and surrounding areas.
+        </p>
+
+        <h3>Useful links</h3>
+        <p>
+          <a href="services/support-coordination.html">Support Coordination</a><br>
+          <a href="services/">All services</a><br>
+          <a href="contact.html">General contact form</a>
+        </p>
+      </aside>
+
+    </div>
+  </main>
+
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <div>
+        <strong>Able Aide</strong><br>
+        Your Journey, Our Support<br><br>
+        <strong>Phone:</strong>
+        <a href="tel:61435039110">0435 039 110</a><br>
+        <strong>Email:</strong>
+        <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
+      </div>
+
+      <div>
+        <strong>Service Hours</strong><br>
+        Support Coordination: 8am – 7pm<br>
+        Core Supports: 24/7<br>
+        Allied Health: 9am – 6pm
+      </div>
+
+      <div>
+        <strong>Where We Support</strong><br>
+        Melbourne · Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria
+      </div>
+
+      <div>
+        <strong>Follow Us</strong><br>
+        <a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a><br>
+        <a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a><br>
+        <a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a><br>
+        <a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a><br>
+        <a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a><br>
+        <a href="https://x.com/AbleAideSupport" target="_blank">X (Twitter)</a>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="small">© <span id="year"></span> Able Aide. All rights reserved.</p>
+    </div>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
+  <!-- MAIN PAGES -->
+  <url>
+    <loc>https://ableaide.com.au/</loc>
+    <priority>1.0</priority>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/about.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/services/</loc>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/refer.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/resources.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/contact.html</loc>
+  </url>
+
+  <!-- SERVICE PAGES -->
+  <url>
+    <loc>https://ableaide.com.au/services/personal-care.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/services/community-participation.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/services/support-coordination.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/services/allied-health-access.html</loc>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/services/family-early-support.html</loc>
+  </url>
+
+</urlset>

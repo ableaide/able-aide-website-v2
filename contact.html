@@ -2,151 +2,213 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Contact Able Aide – NDIS Disability Support Victoria</title>
+  <title>Contact Able Aide – NDIS Disability Support Across Victoria</title>
+
+  <!-- Canonical URL -->
+  <link rel="canonical" href="https://ableaide.com.au/contact.html">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- SEO -->
   <meta name="description"
-        content="Get in touch with Able Aide for NDIS disability support services across Victoria. Contact us for personal care, community access, support coordination and more.">
-  <link rel="stylesheet" href="assets/css/style.css">
+        content="Contact Able Aide to enquire about NDIS disability supports, support coordination and community access across Victoria. Phone, email or send an online enquiry form.">
+  <meta name="keywords"
+        content="contact Able Aide, NDIS provider contact, disability support enquiry, NDIS Victoria, support coordination contact">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Contact Able Aide – NDIS Disability Support Across Victoria">
+  <meta property="og:description"
+        content="Get in touch with Able Aide to discuss NDIS supports, service options and availability across Victoria.">
+  <meta property="og:image" content="/assets/img/og-image.png">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ableaide.com.au/contact.html">
+  <meta property="og:site_name" content="Able Aide">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Contact Able Aide – NDIS Disability Support Across Victoria">
+  <meta name="twitter:description"
+        content="Reach out to Able Aide with your NDIS questions or support needs.">
+  <meta name="twitter:image" content="/assets/img/og-image.png">
+
+  <!-- CSS -->
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
+
 <body>
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="logo">
-        <img src="assets/img/able-aide-logo.png"
-             alt="Able Aide Logo"
-             class="logo-img">
+        <img src="/assets/img/able-aide-logo.png" alt="Able Aide Logo" class="logo-img">
         <span class="logo-text">Able Aide</span>
       </a>
 
       <nav class="main-nav">
-        <a href="about.html">About</a>
-        <a href="services/">Services</a>
-        <a href="refer.html">Refer a Participant</a>
-        <a href="resources.html">Resources</a>
-        <a href="contact.html" class="btn btn-outline">Contact</a>
+        <a href="/about.html">About</a>
+        <a href="/services/">Services</a>
+        <a href="/refer.html">Refer a Participant</a>
+        <a href="/resources.html">Resources</a>
+        <a href="/contact.html" class="btn btn-primary" aria-current="page">Contact</a>
       </nav>
     </div>
   </header>
 
-
   <!-- HERO -->
   <section class="hero">
     <div class="container hero-inner">
+
       <div class="hero-text">
         <h1>Contact Able Aide</h1>
         <p>
-          We’re here to help. Whether you’re a participant, family member, Support Coordinator or therapist,
-          you can reach out anytime. We respond within 24 hours.
+          Whether you’re a participant, family member, support coordinator or allied health professional,
+          we’re happy to talk through your situation and see how we can support you.
+        </p>
+        <p class="hero-subtext">
+          There’s no pressure and no obligation – just a chance to ask questions and explore options.
         </p>
       </div>
 
       <div class="hero-card">
-        <img src="assets/img/able-aide-ndis-general-disability-support-2.jpg"
-             alt="Support worker assisting a participant with planning during a friendly conversation"
-             style="width:100%; border-radius:12px;">
+        <h2>Contact details</h2>
+        <p><strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a></p>
+        <p><strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a></p>
+        <p class="small">
+          If we miss your call, please leave a message with your name, best contact details and
+          a brief note, and we’ll call you back.
+        </p>
       </div>
+
     </div>
   </section>
-
 
   <!-- CONTACT FORM -->
   <section class="section">
     <div class="container">
+      <h2 class="section-title">Send an Enquiry</h2>
+      <p class="section-intro">
+        Share a few details about yourself, your location and the kind of support you’re interested in.
+        We will get back to you to discuss next steps and current availability.
+      </p>
 
-      <h2 class="section-title">Send Us a Message</h2>
-      <p class="section-intro">We will get back to you as soon as possible.</p>
+      <form class="form" name="contact" method="POST" data-netlify="true">
+        <input type="hidden" name="form-name" value="contact">
 
-      <form class="form" action="thanks.html" method="GET">
+        <div class="grid grid-2">
 
-        <div class="form-group">
-          <label>Your Name</label>
-          <input type="text" name="name" required>
+          <div>
+            <div class="form-group">
+              <label for="name">Your name</label>
+              <input id="name" name="name" type="text" autocomplete="name" required>
+            </div>
+
+            <div class="form-group">
+              <label for="participant-name">Participant’s name (if different)</label>
+              <input id="participant-name" name="participant-name" type="text">
+            </div>
+
+            <div class="form-group">
+              <label for="role">Your role / relationship</label>
+              <input id="role" name="role" type="text"
+                     placeholder="Self, parent, support coordinator, therapist, etc.">
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email address</label>
+              <input id="email" name="email" type="email" autocomplete="email" required>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone number</label>
+              <input id="phone" name="phone" type="tel" autocomplete="tel">
+            </div>
+          </div>
+
+          <div>
+            <div class="form-group">
+              <label for="location">Suburb / area in Victoria</label>
+              <input id="location" name="location" type="text">
+            </div>
+
+            <div class="form-group">
+              <label for="funding">NDIS funding type</label>
+              <select id="funding" name="funding">
+                <option value="">Please choose</option>
+                <option value="self">Self-managed</option>
+                <option value="plan">Plan-managed</option>
+                <option value="agency">Agency-managed</option>
+                <option value="applying">Applying / not sure yet</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="supports">What supports are you interested in?</label>
+              <textarea id="supports" name="supports" rows="4"
+                        placeholder="E.g. personal care, community access, support coordination, early support, etc."
+                        required></textarea>
+            </div>
+
+            <div class="form-group">
+              <label for="best-time">Best time to contact you</label>
+              <input id="best-time" name="best-time" type="text"
+                     placeholder="E.g. weekday mornings, after 5pm, any time, email only, etc.">
+            </div>
+          </div>
+
         </div>
 
-        <div class="form-group">
-          <label>Your Email</label>
-          <input type="email" name="email" required>
-        </div>
+        <p class="small">
+          By submitting this form, you consent to Able Aide contacting you about your enquiry.
+          Your information will be handled with care and confidentiality.
+        </p>
 
-        <div class="form-group">
-          <label>Your Phone</label>
-          <input type="text" name="phone">
-        </div>
-
-        <div class="form-group">
-          <label>How can we help?</label>
-          <textarea name="message" rows="5" required></textarea>
-        </div>
-
-        <button class="btn btn-primary btn-block" type="submit">Send Message</button>
-
+        <button type="submit" class="btn btn-primary">Submit enquiry</button>
       </form>
-
     </div>
   </section>
 
-
-  <!-- CONTACT DETAILS -->
+  <!-- FAQ / WHAT TO EXPECT -->
   <section class="section section-alt">
     <div class="container">
+      <h2 class="section-title">What Happens After You Contact Us?</h2>
 
-      <h2 class="section-title">Other Ways to Contact Us</h2>
-
-      <div class="grid grid-2" style="margin-top:1.5rem;">
-
-        <div class="info-box">
-          <h3>Phone</h3>
-          <p><a href="tel:61435039110">0435 039 110</a></p>
-
-          <h3>Email</h3>
-          <p><a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a></p>
-
-          <h3>Service Hours</h3>
-          <ul class="pill-list">
-            <li>08:00am – 07:00pm (Support Coordination)</li>
-            <li>24/7 (Core Supports)</li>
-            <li>09:00am – 06:00pm (Allied Health Access)</li>
-          </ul>
+      <div class="grid grid-3">
+        <div class="step-card">
+          <span class="step-number">1</span>
+          <h3>We review your enquiry</h3>
+          <p>
+            We look at your location, funding type and supports requested to check if we’re
+            likely to be a good fit for your needs.
+          </p>
         </div>
 
-        <div class="info-box">
-          <h3>Where We Support</h3>
-          <p>We support participants across all of Victoria, including:</p>
-          <ul class="checklist">
-            <li>Melbourne Metro</li>
-            <li>Geelong</li>
-            <li>Ballarat</li>
-            <li>Bendigo</li>
-            <li>Shepparton</li>
-            <li>Regional Victoria</li>
-          </ul>
+        <div class="step-card">
+          <span class="step-number">2</span>
+          <h3>We get in touch</h3>
+          <p>
+            We’ll contact you (usually by phone or email) to ask a few more questions, explain
+            how we work and discuss our current capacity.
+          </p>
         </div>
 
-      </div>
-
-    </div>
-  </section>
-
-
-  <!-- SOCIAL MEDIA -->
-  <section class="section">
-    <div class="container center">
-      <h2>Connect With Us</h2>
-      <p>Follow Able Aide for updates, community information and support services.</p>
-
-      <div style="margin-top:1rem; line-height:2;">
-        <a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a> ·
-        <a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a> ·
-        <a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a> ·
-        <a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a> ·
-        <a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a> ·
-        <a href="https://x.com/AbleAideSupport" target="_blank">X</a>
+        <div class="step-card">
+          <span class="step-number">3</span>
+          <h3>We decide together</h3>
+          <p>
+            If we’re a good fit, we’ll discuss next steps. If we’re not the right provider,
+            we’ll be honest and may suggest other options if possible.
+          </p>
+        </div>
       </div>
     </div>
   </section>
-
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -155,12 +217,8 @@
       <div>
         <strong>Able Aide</strong><br>
         Your Journey, Our Support<br><br>
-
-        <strong>Phone:</strong>
-        <a href="tel:61435039110">0435 039 110</a><br>
-
-        <strong>Email:</strong>
-        <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
+        <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
+        <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
       </div>
 
       <div>

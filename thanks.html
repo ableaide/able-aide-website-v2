@@ -5,7 +5,7 @@
   <title>Thank You – Able Aide</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description"
-        content="Thank you for contacting Able Aide. We will be in touch as soon as possible.">
+        content="Thank you for contacting Able Aide. We will respond to your enquiry as soon as possible.">
   <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
@@ -23,7 +23,7 @@
       <nav class="main-nav">
         <a href="about.html">About</a>
         <a href="services/">Services</a>
-        <a href="refer.html">Refer a Participant</a>
+        <a href="refer.html">Refer</a>
         <a href="resources.html">Resources</a>
         <a href="contact.html" class="btn btn-primary">Contact</a>
       </nav>
@@ -31,32 +31,31 @@
   </header>
 
 
-  <!-- MAIN -->
-  <main class="section">
-    <div class="container" style="max-width:700px; text-align:center;">
+  <!-- THANK YOU MESSAGE -->
+  <section class="section">
+    <div class="container center" style="max-width:700px;">
+
+      <img src="assets/img/able-aide-ndis-general-disability-support-2.jpg"
+           alt="Support worker smiling with NDIS participant"
+           style="width:100%; border-radius:12px; margin-bottom:2rem;">
 
       <h1>Thank You!</h1>
-      <p>
-        We’ve received your enquiry. Our team will contact you as soon as possible
-        to discuss the next steps and how we can best support you.
+      <p class="section-intro" style="margin-top:1rem;">
+        Your message has been received.  
+        Our team will be in touch with you within 24 hours.
       </p>
 
       <p>
-        In the meantime, you're welcome to explore our services or return to the home page.
+        If your enquiry is urgent, please contact us directly:
+        <br><br>
+        <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
+        <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
       </p>
 
-      <div class="center" style="margin-top:2rem;">
-        <a href="/" class="btn btn-outline" style="margin-right:1rem;">Back to Home</a>
-        <a href="services/" class="btn btn-primary">Our Services</a>
-      </div>
-
-      <p style="margin-top:2rem;">
-        If your enquiry is urgent, please call us at
-        <a href="tel:61435039110">0435 039 110</a>.
-      </p>
+      <a href="/" class="btn btn-primary" style="margin-top:1.5rem;">Return to Homepage</a>
 
     </div>
-  </main>
+  </section>
 
 
   <!-- FOOTER -->
@@ -66,11 +65,46 @@
       <div>
         <strong>Able Aide</strong><br>
         Your Journey, Our Support<br><br>
+
         <strong>Phone:</strong>
         <a href="tel:61435039110">0435 039 110</a><br>
+
         <strong>Email:</strong>
         <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
       </div>
 
       <div>
-        <strong>Service Hours</strong><br
+        <strong>Service Hours</strong><br>
+        Support Coordination: 8am – 7pm<br>
+        Core Supports: 24/7<br>
+        Allied Health: 9am – 6pm
+      </div>
+
+      <div>
+        <strong>Where We Support</strong><br>
+        Melbourne · Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria
+      </div>
+
+      <div>
+        <strong>Follow Us</strong><br>
+        <a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a><br>
+        <a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a><br>
+        <a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a><br>
+        <a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a><br>
+        <a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a><br>
+        <a href="https://x.com/AbleAideSupport" target="_blank">X (Twitter)</a>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="small">© <span id="year"></span> Able Aide. All rights reserved.</p>
+    </div>
+
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
+
+</body>
+</html>

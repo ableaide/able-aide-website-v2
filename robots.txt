@@ -1,4 +1,7 @@
 User-agent: *
 Allow: /
 
+# Exclude thank-you page from search
+Disallow: /thanks
+
 Sitemap: https://ableaide.com.au/sitemap.xml

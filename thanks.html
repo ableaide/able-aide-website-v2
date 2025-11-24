@@ -4,13 +4,16 @@
   <meta charset="UTF-8">
   <title>Thank You – Able Aide</title>
 
-  <!-- Prevent Indexing -->
+  <!-- Do not index this page -->
   <meta name="robots" content="noindex, nofollow">
+
+  <!-- Canonical -->
+  <link rel="canonical" href="https://ableaide.com.au/thanks">
 
   <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <!-- Description (for clarity, not SEO ranking) -->
+  <!-- Page Description (not for SEO) -->
   <meta name="description"
         content="Thank you for contacting Able Aide. We have received your enquiry and will be in touch shortly.">
 
@@ -18,8 +21,9 @@
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
+  <link rel="shortcut icon" href="/favicon.ico">
 
-  <!-- Styles -->
+  <!-- Stylesheet -->
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
@@ -28,7 +32,7 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">
+      <a href="/" class="logo" aria-label="Able Aide home">
         <img src="/assets/img/able-aide-logo.png" alt="Able Aide Logo" class="logo-img">
         <span class="logo-text">Able Aide</span>
       </a>
@@ -93,11 +97,11 @@
       <div>
         <strong>Follow Us</strong><br>
         <a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a><br>
-        <a href="https://www.instagram.com/ableaide">Instagram</a><br>
-        <a href="https://www.linkedin.com/company/ableaide">LinkedIn</a><br>
-        <a href="https://www.tiktok.com/@ableaide">TikTok</a><br>
-        <a href="https://www.youtube.com/@AbleAide">YouTube</a><br>
-        <a href="https://x.com/AbleAideSupport">X (Twitter)</a>
+        <a href="https://www.instagram.com/ableaide" target="_blank">Instagram</a><br>
+        <a href="https://www.linkedin.com/company/ableaide" target="_blank">LinkedIn</a><br>
+        <a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a><br>
+        <a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a><br>
+        <a href="https://x.com/AbleAideSupport" target="_blank">X (Twitter)</a>
       </div>
 
     </div>
@@ -111,19 +115,19 @@
     </script>
   </footer>
 
-  <!-- Light JSON-LD (Optional but Good Practice) -->
+  <!-- JSON-LD Schema for Thank You Page -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "WebPage",
-    "name": "Thank You",
+    "name": "Thank You – Able Aide",
     "url": "https://ableaide.com.au/thanks",
+    "description": "Confirmation page for Able Aide enquiries.",
     "isPartOf": {
       "@type": "WebSite",
       "name": "Able Aide",
-      "url": "https://ableaide.com.au/"
-    },
-    "description": "Thank you page confirming your enquiry with Able Aide."
+      "url": "https://ableaide.com.au"
+    }
   }
   </script>
 

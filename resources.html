@@ -17,8 +17,8 @@
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
-  <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
+  <link rel="shortcut icon" href="/favicon.ico">
 
   <!-- OpenGraph -->
   <meta property="og:title" content="NDIS Resources & Guides – Able Aide Victoria">
@@ -39,13 +39,12 @@
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
-
 <body>
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">
+      <a href="/" class="logo" aria-label="Able Aide home">
         <img src="/assets/img/able-aide-logo.png" alt="Able Aide Logo" class="logo-img">
         <span class="logo-text">Able Aide</span>
       </a>
@@ -59,7 +58,6 @@
       </nav>
     </div>
   </header>
-
 
   <!-- HERO -->
   <section class="hero">
@@ -77,6 +75,9 @@
       </div>
 
       <div class="hero-card">
+        <img src="/assets/img/able-aide-ndis-general-disability-support-1.jpg"
+             alt="NDIS disability support resources"
+             style="width:100%; border-radius:12px; margin-bottom:1rem;">
         <h2>Useful for:</h2>
         <ul class="checklist">
           <li>Participants & families</li>
@@ -89,7 +90,6 @@
 
     </div>
   </section>
-
 
   <!-- RESOURCES SECTION -->
   <section class="section">
@@ -108,7 +108,8 @@
             A simple guide explaining self-managed, plan-managed and agency-managed funding —
             and what each option means for your support choices.
           </p>
-          <a href="https://www.ndis.gov.au/participants/working-providers/how-ndis-funds-work" target="_blank"
+          <a href="https://www.ndis.gov.au/participants/working-providers/how-ndis-funds-work"
+             target="_blank"
              class="card-link">View NDIS link →</a>
         </div>
 
@@ -118,7 +119,8 @@
             Learn what Core, Capacity Building and Capital Supports include, with examples
             of real-world services.
           </p>
-          <a href="https://www.ndis.gov.au/understanding/supports-funded-ndis" target="_blank"
+          <a href="https://www.ndis.gov.au/understanding/supports-funded-ndis"
+             target="_blank"
              class="card-link">View NDIS guide →</a>
         </div>
 
@@ -128,7 +130,8 @@
             Tips on gathering documentation, reflecting on goals, and communicating clearly
             during NDIS plan reassessments.
           </p>
-          <a href="https://www.ndis.gov.au/participants/your-plan-reviewing-and-reassessing-your-plan" target="_blank"
+          <a href="https://www.ndis.gov.au/participants/your-plan-reviewing-and-reassessing-your-plan"
+             target="_blank"
              class="card-link">See details →</a>
         </div>
 
@@ -156,14 +159,14 @@
             Every NDIS participant has the right to safe, respectful and quality support.
             Explore independent advocacy options across Victoria.
           </p>
-          <a href="https://www.disabilityadvocacyfinder.services.gov.au/disability-advocacy-finder" target="_blank"
+          <a href="https://www.disabilityadvocacyfinder.services.gov.au/disability-advocacy-finder"
+             target="_blank"
              class="card-link">Find advocacy →</a>
         </div>
 
       </div>
     </div>
   </section>
-
 
   <!-- DOWNLOADABLE RESOURCES -->
   <section class="section section-alt">
@@ -195,18 +198,14 @@
     </div>
   </section>
 
-
   <!-- CTA -->
   <section class="section">
     <div class="container center">
       <h2>Need Help Understanding the NDIS?</h2>
-      <p>
-        We’re here to explain things clearly and help you navigate supports with confidence.
-      </p>
+      <p>We’re here to explain things clearly and help you navigate supports with confidence.</p>
       <a href="/contact" class="btn btn-primary">Talk to Able Aide</a>
     </div>
   </section>
-
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -255,6 +254,23 @@
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </footer>
+
+  <!-- JSON-LD SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "NDIS Resources & Guides – Able Aide",
+    "url": "https://ableaide.com.au/resources",
+    "description": "NDIS resources for participants, families and support coordinators across Victoria.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Able Aide",
+      "url": "https://ableaide.com.au",
+      "logo": "https://ableaide.com.au/assets/img/able-aide-logo.png"
+    }
+  }
+  </script>
 
 </body>
 </html>

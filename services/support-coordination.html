@@ -45,12 +45,12 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">
+      <a href="/" class="logo" aria-label="Able Aide home">
         <img src="/assets/img/able-aide-logo.png" alt="Able Aide Logo" class="logo-img">
         <span class="logo-text">Able Aide</span>
       </a>
 
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Main navigation">
         <a href="/about">About</a>
         <a href="/services" aria-current="page">Services</a>
         <a href="/refer">Refer a Participant</a>
@@ -269,9 +269,9 @@
         <div class="card">
           <h3>Calm, Honest Conversations</h3>
           <p>
-            We aim to be honest and realistic about capacity, waitlists and service options —
-            without giving up on advocating for what you need. Our communication is clear, kind
-            and straightforward.
+            We aim to be honest and realistic about capacity, waitlists and service options — without
+            giving up on advocating for what you need. Our communication is clear, kind and
+            straightforward.
           </p>
         </div>
       </div>
@@ -567,6 +567,24 @@
         }
       }
     ]
+  }
+  </script>
+
+  <!-- SERVICE SCHEMA JSON-LD -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Service",
+    "name": "NDIS Support Coordination",
+    "url": "https://ableaide.com.au/services/support-coordination",
+    "description": "Experienced, person-centred NDIS Support Coordination across Victoria, helping participants understand their plans, connect with providers, resolve issues and feel confident using their NDIS funding.",
+    "provider": {
+      "@type": "Organization",
+      "name": "Able Aide",
+      "url": "https://ableaide.com.au"
+    },
+    "areaServed": "Victoria, Australia",
+    "serviceType": "NDIS Support Coordination"
   }
   </script>
 

@@ -45,7 +45,13 @@
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="logo">
-        <img src="/assets/img/able-aide-logo.png" alt="Able Aide Logo" class="logo-img">
+        <img src="/assets/img/able-aide-logo.png"
+             alt="Able Aide Logo"
+             class="logo-img"
+             loading="lazy"
+             decoding="async"
+             width="300"
+             height="120">
         <span class="logo-text">Able Aide</span>
       </a>
 
@@ -77,9 +83,15 @@
       </div>
 
       <div class="hero-card">
+        <!-- ⛔ Hero image: NOT lazy-loaded (LCP best practice) -->
         <img src="/assets/img/able-aide-ndis-allied-health-access.jpg"
              alt="Therapist supporting an NDIS participant with hand and arm exercises"
-             style="width:100%; border-radius:12px; margin-bottom:1rem;">
+             style="width:100%; border-radius:12px; margin-bottom:1rem;"
+             decoding="async"
+             fetchpriority="high"
+             width="1200"
+             height="800">
+
         <h2>Turning therapy plans into day-to-day support</h2>
         <p>
           We help bridge the gap between reports and real life — supporting you to access services and
@@ -308,7 +320,7 @@
 
           <h3>Can you book appointments for me?</h3>
           <p>
-            Yes, we can help with making and confirming bookings, and coordinating them with your other
+            Yes, we can help making and confirming bookings, and coordinating them with your other
             supports and commitments, where funded and appropriate.
           </p>
 
@@ -335,14 +347,14 @@
 
           <h3>What if I’m already seeing therapists?</h3>
           <p>
-            We can help you organise, communicate and implement what’s already been recommended, and
-            ensure new supports fit well into your existing network.
+            We can help you organise information, coordinate between providers and put existing recommendations
+            into practice. The goal is to reduce overwhelm and help your supports work together.
           </p>
 
           <h3>Do you help with equipment and assistive technology?</h3>
           <p>
-            We can assist with the practical side — supporting you to attend assessments, trial equipment
-            and follow up on recommendations. Prescribing and clinical decision-making remains with your therapist.
+            We assist with the practical side, such as attending assessments and following up on recommendations.
+            Prescribing and clinical decisions remain with your therapist.
           </p>
 
           <h3>Can you help if English is not my first language?</h3>
@@ -354,7 +366,7 @@
           <h3>How do I get started?</h3>
           <p>
             You can contact us directly, speak with your Support Coordinator, or ask a provider to send a
-            referral. We’ll then talk through your goals, funding and next steps.
+            referral. We’ll talk through your goals, funding and next steps.
           </p>
         </div>
 
@@ -441,7 +453,7 @@
         "name": "Can you recommend specific therapists?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We can suggest options based on your location, needs and preferences, and share information to help you decide. We aim to remain transparent and participant-focused in all referrals."
+          "text": "We can suggest options based on your location, needs and preferences, and share information to help you decide."
         }
       },
       {
@@ -449,7 +461,7 @@
         "name": "Can you book appointments for me?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes, we can help make and confirm bookings, and coordinate them with your other supports and commitments where funded and appropriate."
+          "text": "Yes, we can help with making and confirming bookings, and coordinating them with your other supports and commitments where funded and appropriate."
         }
       },
       {
@@ -457,7 +469,7 @@
         "name": "Do you come to therapy sessions with me?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Where it is helpful and within your funding, a support worker or Support Coordinator may be able to attend some sessions or reviews with you. This is discussed together beforehand."
+          "text": "Where it is helpful and within your funding, a support worker or Support Coordinator may be able to attend some sessions or reviews with you."
         }
       },
       {
@@ -465,7 +477,7 @@
         "name": "Can you help with NDIS reports?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We can help you keep track of which reports are needed and when, remind you to request them, and communicate with providers about timelines. Therapists remain responsible for writing the clinical report itself."
+          "text": "We can help you keep track of which reports are needed, remind you to request them, and communicate with providers about timelines."
         }
       },
       {
@@ -473,15 +485,15 @@
         "name": "Is this service separate from Support Coordination?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Some allied health access tasks may be part of Support Coordination, while others may be delivered as part of core or capacity supports. We can discuss how it best fits within your plan and goals."
+          "text": "Some allied health access tasks may be part of Support Coordination, while others may be core or capacity supports."
         }
       },
       {
         "@type": "Question",
-        "name": "Do you help with equipment and assistive technology?",
+        "name": "Do you help with assistive technology?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We assist with the practical side, such as attending assessments and following up on recommendations. Prescribing and clinical decisions about equipment remain with your allied health therapist."
+          "text": "We help with the practical side such as attending assessments and following up on recommendations. Clinical decisions remain with your therapist."
         }
       },
       {
@@ -489,23 +501,23 @@
         "name": "What if I already have therapists?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "We can help you organise information, coordinate between providers and put existing recommendations into practice. The goal is to reduce overwhelm and help your supports work together."
+          "text": "We can help coordinate between providers and put existing recommendations into practice."
         }
       },
       {
         "@type": "Question",
-        "name": "Can you support participants who do not speak English as a first language?",
+        "name": "Can you support non-English speaking participants?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "Yes. We do our best to work with interpreters, bilingual workers where available, and culturally appropriate services to help you access allied health."
+          "text": "Yes. We work with interpreters, bilingual workers and culturally appropriate services wherever possible."
         }
       },
       {
         "@type": "Question",
-        "name": "How do I get started with Allied Health Access support?",
+        "name": "How do I get started?",
         "acceptedAnswer": {
           "@type": "Answer",
-          "text": "You can contact us directly, speak with your Support Coordinator, or ask a provider to send us a referral. We will talk through your goals, funding and options, then outline next steps clearly."
+          "text": "You can contact us directly or ask a provider to send a referral. We confirm goals, funding and next steps."
         }
       }
     ]

@@ -7,18 +7,18 @@
   <!-- Canonical URL -->
   <link rel="canonical" href="https://ableaide.com.au/contact">
 
-  <!-- Mobile Responsive -->
+  <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- SEO Description -->
   <meta name="description"
-        content="Contact Able Aide to enquire about NDIS disability supports, support coordination and community access across Victoria. Call, email, or submit our online enquiry form.">
+        content="Contact Able Aide to enquire about NDIS disability supports, support coordination and community access across Victoria. Call, email or submit an enquiry form.">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
-  <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
+  <link rel="shortcut icon" href="/favicon.ico">
 
   <!-- OpenGraph -->
   <meta property="og:title" content="Contact Able Aide – NDIS Disability Support Across Victoria">
@@ -35,7 +35,7 @@
         content="Get in touch with Able Aide for personalised NDIS support across Victoria.">
   <meta name="twitter:image" content="/assets/img/og-image.png">
 
-  <!-- Stylesheet -->
+  <!-- Styles -->
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
@@ -44,19 +44,19 @@
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">
+      <a href="/" class="logo" aria-label="Able Aide home">
         <img src="/assets/img/able-aide-logo.png"
              alt="Able Aide Logo"
              class="logo-img">
         <span class="logo-text">Able Aide</span>
       </a>
 
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Main Navigation">
         <a href="/about">About</a>
         <a href="/services">Services</a>
         <a href="/refer">Refer a Participant</a>
         <a href="/resources">Resources</a>
-        <a href="/contact" class="btn btn-primary" aria-current="page">Contact</a>
+        <a href="/contact" aria-current="page" class="btn btn-primary">Contact</a>
       </nav>
     </div>
   </header>
@@ -77,6 +77,10 @@
       </div>
 
       <div class="hero-card">
+        <img src="/assets/img/able-aide-ndis-services-hero.jpg"
+             alt="Able Aide NDIS support worker"
+             style="width:100%; border-radius:12px; margin-bottom:1rem;">
+
         <h2>Our Contact Details</h2>
 
         <p><strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a></p>
@@ -91,7 +95,7 @@
     </div>
   </section>
 
-  <!-- CONTACT FORM -->
+  <!-- CONTACT FORM SECTION -->
   <section class="section">
     <div class="container">
       <h2 class="section-title">Send an Enquiry</h2>
@@ -101,11 +105,16 @@
         We will get back to you to discuss next steps and current availability.
       </p>
 
-      <form class="form" name="contact" method="POST" data-netlify="true">
+      <form class="form"
+            name="contact"
+            method="POST"
+            data-netlify="true">
+
         <input type="hidden" name="form-name" value="contact">
 
         <div class="grid grid-2">
 
+          <!-- Column 1 -->
           <div>
             <div class="form-group">
               <label for="name">Your name</label>
@@ -113,8 +122,8 @@
             </div>
 
             <div class="form-group">
-              <label for="participant-name">Participant’s name (if different)</label>
-              <input id="participant-name" name="participant-name" type="text">
+              <label for="participant">Participant’s name (if different)</label>
+              <input id="participant" name="participant" type="text">
             </div>
 
             <div class="form-group">
@@ -134,6 +143,7 @@
             </div>
           </div>
 
+          <!-- Column 2 -->
           <div>
             <div class="form-group">
               <label for="location">Suburb / area in Victoria</label>
@@ -147,7 +157,7 @@
                 <option value="self">Self-managed</option>
                 <option value="plan">Plan-managed</option>
                 <option value="agency">Agency-managed</option>
-                <option value="applying">Applying / unsure</option>
+                <option value="unsure">Applying / unsure</option>
               </select>
             </div>
 
@@ -159,9 +169,9 @@
             </div>
 
             <div class="form-group">
-              <label for="best-time">Best time to contact you</label>
-              <input id="best-time" name="best-time" type="text"
-                     placeholder="E.g. weekday mornings, after 5pm, anytime, email only, etc.">
+              <label for="time">Best time to contact you</label>
+              <input id="time" name="best-time" type="text"
+                     placeholder="Morning, afternoon, after 5pm, anytime, etc.">
             </div>
           </div>
 
@@ -169,10 +179,11 @@
 
         <p class="small">
           By submitting this form, you consent to Able Aide contacting you about your enquiry.
-          Your information will be handled with care and confidentiality.
+          Your information will be handled confidentially.
         </p>
 
         <button type="submit" class="btn btn-primary">Submit Enquiry</button>
+
       </form>
     </div>
   </section>
@@ -183,6 +194,7 @@
       <h2 class="section-title">What Happens After You Contact Us?</h2>
 
       <div class="grid grid-3">
+
         <div class="step-card">
           <span class="step-number">1</span>
           <h3>We review your enquiry</h3>
@@ -209,6 +221,7 @@
             and may suggest alternative providers where possible.
           </p>
         </div>
+
       </div>
     </div>
   </section>
@@ -237,7 +250,7 @@
 
       <div>
         <strong>Where We Support</strong><br>
-        Melbourne · Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria
+        Melbourne • Geelong • Ballarat • Bendigo • Shepparton • Regional Victoria
       </div>
 
       <div>
@@ -247,19 +260,45 @@
         <a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a><br>
         <a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a><br>
         <a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a><br>
-        <a href="https://x.com/AbleAideSupport" target="_blank">X (Twitter)</a>
+        <a href="https://x.com/AbleAideSupport" target="_blank">X</a>
       </div>
 
     </div>
 
     <div class="container footer-bottom">
-      <p class="small">© <span id="year"></span> Able Aide. All rights reserved.</p>
+      <p class="small">
+        © <span id="year"></span> Able Aide. All rights reserved.
+      </p>
     </div>
 
     <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
+      document.getElementById("year").textContent = new Date().getFullYear();
     </script>
   </footer>
+
+  <!-- CONTACT PAGE JSON-LD SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "name": "Contact Able Aide",
+    "url": "https://ableaide.com.au/contact",
+    "description": "Contact Able Aide for NDIS disability support across Victoria.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Able Aide",
+      "url": "https://ableaide.com.au",
+      "logo": "https://ableaide.com.au/assets/img/able-aide-logo.png"
+    },
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+61 435 039 110",
+      "email": "enquiries@ableaide.com.au",
+      "contactType": "customer service",
+      "areaServed": "AU"
+    }
+  }
+  </script>
 
 </body>
 </html>

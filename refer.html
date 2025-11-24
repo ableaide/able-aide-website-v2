@@ -40,18 +40,17 @@
   <link rel="stylesheet" href="/assets/css/style.css">
 </head>
 
-
 <body>
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">
+      <a href="/" class="logo" aria-label="Able Aide home">
         <img src="/assets/img/able-aide-logo.png" alt="Able Aide Logo" class="logo-img">
         <span class="logo-text">Able Aide</span>
       </a>
 
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Main navigation">
         <a href="/about">About</a>
         <a href="/services">Services</a>
         <a href="/refer" aria-current="page">Refer a Participant</a>
@@ -77,6 +76,10 @@
       </div>
 
       <div class="hero-card">
+        <img src="/assets/img/able-aide-ndis-support-coordination-hero.jpg"
+             alt="NDIS support coordination and referral discussion"
+             style="width:100%; border-radius:12px; margin-bottom:1rem;">
+
         <h2>Who can refer?</h2>
         <ul class="checklist">
           <li>Support Coordinators & Specialist Support Coordinators</li>
@@ -90,7 +93,6 @@
 
     </div>
   </section>
-
 
   <!-- REFERRAL FORM -->
   <section class="section">
@@ -156,7 +158,6 @@
             </div>
           </div>
 
-
           <!-- REFERRER DETAILS -->
           <div>
             <h3>Referrer Details</h3>
@@ -214,7 +215,6 @@
     </div>
   </section>
 
-
   <!-- WHAT HAPPENS NEXT -->
   <section class="section section-alt">
     <div class="container">
@@ -235,7 +235,7 @@
           <span class="step-number">2</span>
           <h3>We confirm capacity</h3>
           <p>
-            If we can proceed, we contact the referrer and/or participant. 
+            If we can proceed, we contact the referrer and/or participant.
             If we cannot accept, we communicate this honestly.
           </p>
         </div>
@@ -252,7 +252,6 @@
       </div>
     </div>
   </section>
-
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -301,6 +300,26 @@
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </footer>
+
+  <!-- JSON-LD SCHEMA FOR REFERRAL PAGE -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Refer an NDIS Participant – Able Aide Referral Form",
+    "url": "https://ableaide.com.au/refer",
+    "description": "Referral page for support coordinators, providers and families to refer an NDIS participant to Able Aide for disability support and support coordination.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Able Aide",
+      "url": "https://ableaide.com.au",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ableaide.com.au/assets/img/able-aide-logo.png"
+      }
+    }
+  }
+  </script>
 
 </body>
 </html>

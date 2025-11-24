@@ -3,60 +3,65 @@
 <head>
   <meta charset="UTF-8">
   <title>Thank You – Able Aide</title>
+
+  <!-- Prevent Indexing -->
+  <meta name="robots" content="noindex, nofollow">
+
+  <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Description (for clarity, not SEO ranking) -->
   <meta name="description"
-        content="Thank you for contacting Able Aide. We will respond to your enquiry as soon as possible.">
-  <link rel="stylesheet" href="assets/css/style.css">
+        content="Thank you for contacting Able Aide. We have received your enquiry and will be in touch shortly.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="/assets/css/style.css">
 </head>
+
 <body>
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="logo">
-        <img src="assets/img/able-aide-logo.png"
-             alt="Able Aide Logo"
-             class="logo-img">
+        <img src="/assets/img/able-aide-logo.png" alt="Able Aide Logo" class="logo-img">
         <span class="logo-text">Able Aide</span>
       </a>
 
       <nav class="main-nav">
-        <a href="about.html">About</a>
-        <a href="services/">Services</a>
-        <a href="refer.html">Refer</a>
-        <a href="resources.html">Resources</a>
-        <a href="contact.html" class="btn btn-primary">Contact</a>
+        <a href="/about">About</a>
+        <a href="/services">Services</a>
+        <a href="/refer">Refer</a>
+        <a href="/resources">Resources</a>
+        <a href="/contact" class="btn btn-primary">Contact</a>
       </nav>
     </div>
   </header>
 
-
-  <!-- THANK YOU MESSAGE -->
+  <!-- THANK YOU CONTENT -->
   <section class="section">
-    <div class="container center" style="max-width:700px;">
-
-      <img src="assets/img/able-aide-ndis-general-disability-support-2.jpg"
-           alt="Support worker smiling with NDIS participant"
-           style="width:100%; border-radius:12px; margin-bottom:2rem;">
-
-      <h1>Thank You!</h1>
-      <p class="section-intro" style="margin-top:1rem;">
-        Your message has been received.  
-        Our team will be in touch with you within 24 hours.
-      </p>
-
+    <div class="container center">
+      <h1>Thank You</h1>
       <p>
-        If your enquiry is urgent, please contact us directly:
-        <br><br>
-        <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
-        <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
+        Your enquiry has been received. One of our team members will contact you shortly
+        to discuss your needs and how we can support you.
       </p>
 
-      <a href="/" class="btn btn-primary" style="margin-top:1.5rem;">Return to Homepage</a>
+      <p class="hero-subtext">
+        In the meantime, feel free to explore our NDIS services or return to the homepage.
+      </p>
 
+      <div style="margin-top:2rem;">
+        <a href="/" class="btn btn-outline">Return to Home</a>
+        <a href="/services" class="btn btn-primary">Explore Services</a>
+      </div>
     </div>
   </section>
-
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -82,17 +87,17 @@
 
       <div>
         <strong>Where We Support</strong><br>
-        Melbourne · Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria
+        Melbourne • Geelong • Ballarat • Bendigo • Shepparton • Regional Victoria
       </div>
 
       <div>
         <strong>Follow Us</strong><br>
         <a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a><br>
-        <a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a><br>
-        <a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a><br>
-        <a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a><br>
-        <a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a><br>
-        <a href="https://x.com/AbleAideSupport" target="_blank">X (Twitter)</a>
+        <a href="https://www.instagram.com/ableaide">Instagram</a><br>
+        <a href="https://www.linkedin.com/company/ableaide">LinkedIn</a><br>
+        <a href="https://www.tiktok.com/@ableaide">TikTok</a><br>
+        <a href="https://www.youtube.com/@AbleAide">YouTube</a><br>
+        <a href="https://x.com/AbleAideSupport">X (Twitter)</a>
       </div>
 
     </div>
@@ -105,6 +110,22 @@
       document.getElementById('year').textContent = new Date().getFullYear();
     </script>
   </footer>
+
+  <!-- Light JSON-LD (Optional but Good Practice) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Thank You",
+    "url": "https://ableaide.com.au/thanks",
+    "isPartOf": {
+      "@type": "WebSite",
+      "name": "Able Aide",
+      "url": "https://ableaide.com.au/"
+    },
+    "description": "Thank you page confirming your enquiry with Able Aide."
+  }
+  </script>
 
 </body>
 </html>

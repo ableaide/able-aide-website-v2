@@ -1,10 +1,4 @@
 User-agent: *
 Allow: /
 
-# Block admin or backend paths (none currently, but future-proof)
-Disallow: /admin/
-Disallow: /private/
-Disallow: /tmp/
-
-# Point Google & search engines to your sitemap
 Sitemap: https://ableaide.com.au/sitemap.xml

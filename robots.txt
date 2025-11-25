@@ -1,7 +1,28 @@
 User-agent: *
 Allow: /
 
-# Exclude thank-you page from search
+# Block internal utility pages
 Disallow: /thanks
+Disallow: /admin/
+Disallow: /draft/
+Disallow: /private/
+Disallow: /temp/
+Disallow: /test/
 
+# Block server files (precaution, even if not present)
+Disallow: /*.php$
+Disallow: /*.cgi$
+Disallow: /*.asp$
+Disallow: /*.aspx$
+
+# Block non-public assets (optional but recommended)
+Disallow: /assets/temp/
+Disallow: /assets/raw/
+
+# Allow important assets
+Allow: /assets/css/
+Allow: /assets/js/
+Allow: /assets/img/
+
+# Sitemap
 Sitemap: https://ableaide.com.au/sitemap.xml

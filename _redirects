@@ -1,40 +1,66 @@
 # -----------------------------------
 # Main Pages – Clean URLs
 # -----------------------------------
-/about              /about.html              200
-/about.html         /about                   301
+/about               /about.html               200
+/about.html          /about                    301
 
-/services           /services/index.html     200
-/services/          /services/index.html     200
-/services/index.html /services               301
+/services            /services/index.html      200
+/services/           /services/index.html      200
+/services/index.html /services                 301
 
-/refer              /refer.html              200
-/refer.html         /refer                   301
+/refer               /refer.html               200
+/refer.html          /refer                    301
 
-/resources          /resources.html          200
-/resources.html     /resources               301
+/resources           /resources.html           200
+/resources.html      /resources                301
 
-/contact            /contact.html            200
-/contact.html       /contact                 301
+/contact             /contact.html             200
+/contact.html        /contact                  301
 
 # Thank you page
-/thanks             /thanks.html             200
-/thanks.html        /thanks                  301
+/thanks              /thanks.html              200
+/thanks.html         /thanks                   301
 
 # -----------------------------------
 # Service Pages – Clean URLs
 # -----------------------------------
-/services/personal-care              /services/personal-care.html              200
-/services/personal-care.html         /services/personal-care                   301
+/services/personal-care               /services/personal-care.html               200
+/services/personal-care.html          /services/personal-care                    301
 
-/services/community-participation     /services/community-participation.html    200
-/services/community-participation.html /services/community-participation        301
+/services/community-participation     /services/community-participation.html     200
+/services/community-participation.html /services/community-participation         301
 
-/services/support-coordination       /services/support-coordination.html       200
-/services/support-coordination.html  /services/support-coordination            301
+/services/support-coordination        /services/support-coordination.html        200
+/services/support-coordination.html   /services/support-coordination             301
 
-/services/allied-health-access        /services/allied-health-access.html       200
-/services/allied-health-access.html   /services/allied-health-access            301
+/services/allied-health-access        /services/allied-health-access.html        200
+/services/allied-health-access.html   /services/allied-health-access             301
 
-/services/family-early-support        /services/family-early-support.html       200
-/services/family-early-support.html   /services/family-early-support            301
+/services/family-early-support        /services/family-early-support.html        200
+/services/family-early-support.html   /services/family-early-support             301
+
+# -----------------------------------
+# SEO Protection – Redirect Old URLs to New Ones
+# -----------------------------------
+
+# Community Access older URLs
+/services/community                 /services/community-participation           301
+/services/community-access          /services/community-participation           301
+/services/community-support         /services/community-participation           301
+
+# Personal Care older URLs
+/services/personal                  /services/personal-care                     301
+/services/daily-living              /services/personal-care                     301
+
+# Support Coordination older URLs
+/services/support                   /services/support-coordination              301
+/services/sc                        /services/support-coordination              301
+
+# Allied Health older URLs
+/services/allied-health             /services/allied-health-access              301
+/services/alliedhealth              /services/allied-health-access              301
+
+# Family & Early Support older URLs
+/services/early                     /services/family-early-support              301
+/services/family-support            /services/family-early-support              301
+/services/child-support             /services/family-early-support              301

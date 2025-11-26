@@ -1,66 +1,87 @@
-# -----------------------------------
-# Main Pages – Clean URLs
-# -----------------------------------
+# -----------------------------
+# 1. GLOBAL SETTINGS
+# -----------------------------
+
+# Force HTTPS
+http://ableaide.com.au/*   https://ableaide.com.au/:splat    301!
+
+# Remove trailing slashes (canonical URLs)
+https://ableaide.com.au/*/ https://ableaide.com.au/:splat    301!
+
+# Clean URLs — allow visitors to use extension-less URLs
+# Example: /about → /about.html
 /about               /about.html               200
-/about.html          /about                    301
-
-/services            /services/index.html      200
-/services/           /services/index.html      200
-/services/index.html /services                 301
-
-/refer               /refer.html               200
-/refer.html          /refer                    301
-
-/resources           /resources.html           200
-/resources.html      /resources                301
-
 /contact             /contact.html             200
-/contact.html        /contact                  301
-
-# Thank you page
+/refer               /refer.html               200
+/complaints          /complaints.html          200
+/privacy-policy      /privacy-policy.html      200
+/terms-of-service    /terms-of-service.html    200
 /thanks              /thanks.html              200
-/thanks.html         /thanks                   301
 
-# -----------------------------------
-# Service Pages – Clean URLs
-# -----------------------------------
-/services/personal-care               /services/personal-care.html               200
-/services/personal-care.html          /services/personal-care                    301
+# -----------------------------
+# 2. SERVICE PAGES
+# -----------------------------
+/services                     /services/index.html                200
+/services/personal-care       /services/personal-care.html        200
+/services/community-participation  /services/community-participation.html 200
+/services/support-coordination     /services/support-coordination.html    200
+/services/allied-health-access     /services/allied-health-access.html    200
+/services/family-early-support     /services/family-early-support.html    200
 
-/services/community-participation     /services/community-participation.html     200
-/services/community-participation.html /services/community-participation         301
+# -----------------------------
+# 3. LOCATION PAGES
+# -----------------------------
+/locations                    /locations/index.html               200
+/locations/melbourne          /locations/melbourne.html           200
+/locations/geelong            /locations/geelong.html             200
+/locations/ballarat           /locations/ballarat.html            200
+/locations/bendigo            /locations/bendigo.html             200
+/locations/shepparton         /locations/shepparton.html          200
+/locations/dandenong          /locations/dandenong.html           200
+/locations/frankston          /locations/frankston.html           200
+/locations/epping             /locations/epping.html              200
+/locations/werribee           /locations/werribee.html            200
+/locations/ringwood           /locations/ringwood.html            200
+/locations/mornington-peninsula  /locations/mornington-peninsula.html 200
 
-/services/support-coordination        /services/support-coordination.html        200
-/services/support-coordination.html   /services/support-coordination             301
+# -----------------------------
+# 4. RESOURCES SECTION
+# -----------------------------
+/resources                       /resources/resources.html        200
+/resources/downloads             /resources/downloads.html        200
+/resources/ndis-guides           /resources/ndis-guides.html      200
+/resources/templates             /resources/templates.html        200
 
-/services/allied-health-access        /services/allied-health-access.html        200
-/services/allied-health-access.html   /services/allied-health-access             301
+# Fix old path (resource.html → resources.html)
+# In case old Google link exists
+/resources/resource.html         /resources/resources.html        301!
 
-/services/family-early-support        /services/family-early-support.html        200
-/services/family-early-support.html   /services/family-early-support             301
+# -----------------------------
+# 5. BLOG
+# -----------------------------
+/blog                       /blog/index.html                     200
+/blog/community-access-ideas-ndis                 /blog/community-access-ideas-ndis.html                    200
+/blog/how-to-access-allied-health-ndis            /blog/how-to-access-allied-health-ndis.html               200
+/blog/how-to-prepare-for-ndis-plan-review         /blog/how-to-prepare-for-ndis-plan-review.html            200
+/blog/ndis-early-childhood-pathway-explained      /blog/ndis-early-childhood-pathway-explained.html         200
+/blog/what-personal-care-includes-ndis            /blog/what-personal-care-includes-ndis.html               200
 
-# -----------------------------------
-# SEO Protection – Redirect Old URLs to New Ones
-# -----------------------------------
+# -----------------------------
+# 6. CASE STUDIES
+# -----------------------------
+/case-studies                     /case-studies/index.html           200
+/case-studies/building-confidence-in-the-community    /case-studies/building-confidence-in-the-community.html 200
+/case-studies/helping-participant-get-unstuck-with-therapies   /case-studies/helping-participant-get-unstuck-with-therapies.html 200
+/case-studies/safe-transition-home-after-hospital    /case-studies/safe-transition-home-after-hospital.html 200
+/case-studies/supporting-family-early-childhood-routines   /case-studies/supporting-family-early-childhood-routines.html 200
 
-# Community Access older URLs
-/services/community                 /services/community-participation           301
-/services/community-access          /services/community-participation           301
-/services/community-support         /services/community-participation           301
+# -----------------------------
+# 7. REVIEWS & CAREERS
+# -----------------------------
+/reviews                     /reviews/index.html                 200
+/careers                     /careers/index.html                 200
 
-# Personal Care older URLs
-/services/personal                  /services/personal-care                     301
-/services/daily-living              /services/personal-care                     301
-
-# Support Coordination older URLs
-/services/support                   /services/support-coordination              301
-/services/sc                        /services/support-coordination              301
-
-# Allied Health older URLs
-/services/allied-health             /services/allied-health-access              301
-/services/alliedhealth              /services/allied-health-access              301
-
-# Family & Early Support older URLs
-/services/early                     /services/family-early-support              301
-/services/family-support            /services/family-early-support              301
-/services/child-support             /services/family-early-support              301
+# -----------------------------
+# 8. FALLBACK (404)
+# -----------------------------
+/*     /404.html      404

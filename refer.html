@@ -17,8 +17,8 @@
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
-  <link rel="shortcut icon" href="/favicon.ico">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
+  <link rel="shortcut icon" href="/favicon.ico">
 
   <!-- OpenGraph -->
   <meta property="og:title" content="Refer an NDIS Participant – Able Aide">
@@ -42,287 +42,453 @@
 
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="/" class="logo" aria-label="Able Aide Home">
-      <img src="/assets/img/able-aide-logo.png" alt="Able Aide Logo" class="logo-img">
-      <span class="logo-text">Able Aide</span>
-    </a>
-
-    <nav class="main-nav" aria-label="Main Navigation">
-      <a href="/about">About</a>
-      <a href="/services">Services</a>
-      <a href="/refer" aria-current="page">Refer a Participant</a>
-      <a href="/resources">Resources</a>
-      <a href="/contact" class="btn btn-primary">Contact</a>
-    </nav>
-  </div>
-</header>
-
-
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-inner">
-
-    <div>
-      <h1>Refer an NDIS Participant</h1>
-      <p class="hero-subtext">
-        Support coordinators, plan managers, allied health professionals, community workers
-        and families can use this form to refer an NDIS participant to Able Aide.
+  <!-- GLOBAL TOP TRUST BAR -->
+  <div class="top-trust-bar">
+    <div class="container top-trust-inner">
+      <p class="top-trust-text">
+        NDIS registration in progress – currently supporting self-managed &amp; plan-managed participants across Victoria.
       </p>
-      <p class="hero-subtext">
-        We respond promptly with clear communication and realistic expectations about capacity.
-      </p>
+      <div class="top-trust-links">
+        <a href="/resources" class="top-link">NDIS guides</a>
+        <a href="/complaints" class="top-link">Compliments &amp; concerns</a>
+        <a href="/refer" class="top-link top-link-strong">Quick referral</a>
+        <a href="tel:61435039110" class="top-link top-phone">0435 039 110</a>
+      </div>
     </div>
-
-    <aside class="hero-card">
-      <img src="/assets/img/able-aide-ndis-support-coordination-hero.jpg"
-           alt="NDIS support coordination and referral"
-           style="width:100%; border-radius:12px; margin-bottom:1rem;">
-
-      <h2 class="section-title" style="font-size:1.4rem; margin-bottom:0.6rem;">
-        Who can refer?
-      </h2>
-
-      <ul class="checklist small">
-        <li>Support Coordinators & Specialist Support Coordinators</li>
-        <li>Plan Managers & LACs</li>
-        <li>Therapists & Allied Health Providers</li>
-        <li>Schools & Community Workers</li>
-        <li>Parents, Guardians & Carers</li>
-        <li>Participants (self-referral)</li>
-      </ul>
-    </aside>
-
   </div>
-</section>
+
+  <!-- GLOBAL HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="/" class="logo" aria-label="Able Aide Home">
+        <img src="/assets/img/able-aide-logo.png"
+             alt="Able Aide Logo"
+             class="logo-img"
+             style="height:46px; width:auto; margin-bottom:0.2rem;">
+        <span class="logo-mark">Able Aide</span>
+        <span class="logo-tagline">Your Journey, Our Support</span>
+      </a>
+
+      <nav class="main-nav" aria-label="Main Navigation">
+        <ul class="nav-list">
+          <li><a href="/about">About</a></li>
+
+          <li class="nav-has-children">
+            <a href="/services">Services</a>
+            <ul class="nav-submenu">
+              <li><a href="/services/personal-care">Personal care &amp; daily living</a></li>
+              <li><a href="/services/community-participation">Community participation</a></li>
+              <li><a href="/services/support-coordination">Support coordination</a></li>
+              <li><a href="/services/allied-health-access">Allied health access</a></li>
+              <li><a href="/services/family-early-support">Family &amp; early support</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/locations">Locations</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/refer" aria-current="page">Refer a participant</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="/refer" class="btn btn-outline">Quick referral</a>
+        <a href="/contact" class="btn btn-primary">Book a free chat</a>
+      </div>
+
+    </div>
+  </header>
 
 
-<!-- REFERRAL FORM -->
-<section class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">Referral Form</h2>
+  <main>
 
-    <p class="section-intro">
-      Provide as much relevant information as possible. This helps us understand
-      supports, routines, location and safety considerations before making contact.
-    </p>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
 
-    <form class="form" name="refer" method="POST" data-netlify="true">
-      <input type="hidden" name="form-name" value="refer">
-
-      <div class="grid grid-2">
-
-        <!-- PARTICIPANT DETAILS -->
         <div>
-          <h3 style="margin-bottom:0.8rem;">Participant Details</h3>
+          <h1>Refer an NDIS Participant</h1>
+          <p class="hero-subtext">
+            Support coordinators, plan managers, allied health professionals, schools, community workers
+            and families can use this form to refer an NDIS participant to Able Aide.
+          </p>
+          <p class="hero-subtext">
+            We respond promptly with clear communication, realistic expectations about capacity, and a
+            person-centred intake process.
+          </p>
 
-          <div class="form-group">
-            <label for="participant-name">Participant name</label>
-            <input id="participant-name" name="participant-name" type="text" required>
-          </div>
-
-          <div class="form-group">
-            <label for="participant-dob">Date of birth</label>
-            <input id="participant-dob" name="participant-dob" type="date">
-          </div>
-
-          <div class="form-group">
-            <label for="ndis-number">NDIS number (optional)</label>
-            <input id="ndis-number" name="ndis-number" type="text">
-          </div>
-
-          <div class="form-group">
-            <label for="participant-location">Suburb / location in Victoria</label>
-            <input id="participant-location" name="participant-location" type="text" required>
-          </div>
-
-          <div class="form-group">
-            <label for="funding-type">NDIS funding type</label>
-            <select id="funding-type" name="funding-type">
-              <option value="">Please choose</option>
-              <option value="self">Self-managed</option>
-              <option value="plan">Plan-managed</option>
-              <option value="agency">Agency-managed</option>
-              <option value="pending">Applying / pending</option>
-            </select>
-          </div>
-
-          <div class="form-group">
-            <label for="supports-requested">Supports requested</label>
-            <textarea id="supports-requested" name="supports-requested" rows="4"
-                      placeholder="E.g. personal care, community access, support coordination, early supports, allied health"
-                      required></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="availability">Preferred days / times</label>
-            <textarea id="availability" name="availability" rows="3" placeholder="Optional"></textarea>
+          <div class="hero-meta">
+            <p class="small">
+              <strong>Current capacity:</strong> Core Supports (personal care, community access), Support Coordination,
+              Family &amp; Early Support – across Greater Melbourne and key regional centres.
+            </p>
           </div>
         </div>
 
+        <aside class="hero-card">
+          <img src="/assets/img/able-aide-ndis-support-coordination-hero.jpg"
+               alt="NDIS support coordination and referral"
+               style="width:100%; border-radius:12px; margin-bottom:1rem;">
 
-        <!-- REFERRER DETAILS -->
-        <div>
-          <h3 style="margin-bottom:0.8rem;">Referrer Details</h3>
+          <h2 class="section-title" style="font-size:1.4rem; margin-bottom:0.6rem;">
+            Who can refer?
+          </h2>
 
-          <div class="form-group">
-            <label for="referrer-name">Your name</label>
-            <input id="referrer-name" name="referrer-name" type="text" required>
+          <ul class="checklist small">
+            <li>Support Coordinators &amp; Specialist Support Coordinators</li>
+            <li>Plan Managers &amp; LACs</li>
+            <li>Therapists &amp; allied health providers</li>
+            <li>Schools &amp; community workers</li>
+            <li>Parents, guardians &amp; carers</li>
+            <li>Participants (self-referral)</li>
+          </ul>
+
+          <p class="small" style="margin-top:0.75rem;">
+            If you’re unsure whether Able Aide is the right fit, feel free to
+            <a href="/contact">contact us first</a> for a brief discussion.
+          </p>
+        </aside>
+
+      </div>
+    </section>
+
+
+    <!-- REFERRAL FORM SECTION -->
+    <section class="section section-alt">
+      <div class="container">
+        <h2 class="section-title">Referral Form</h2>
+
+        <p class="section-intro">
+          Please provide as much relevant information as you reasonably can. This helps us understand
+          the person’s routines, goals, risks and support environment before making contact.
+        </p>
+
+        <form class="form" name="refer" method="POST" data-netlify="true">
+          <!-- Netlify form config -->
+          <input type="hidden" name="form-name" value="refer">
+          <div style="display:none;">
+            <label>Don’t fill this in if you're human: <input name="bot-field"></label>
           </div>
 
-          <div class="form-group">
-            <label for="referrer-role">Your role / relationship</label>
-            <input id="referrer-role" name="referrer-role" type="text"
-                   placeholder="Support coordinator, parent, psychologist, etc.">
+          <div class="grid grid-2 form-grid">
+
+            <!-- LEFT COLUMN – PARTICIPANT & SUPPORTS -->
+            <div>
+
+              <h3 style="margin-bottom:0.8rem;">Participant details</h3>
+
+              <div class="form-group">
+                <label for="participant-name">Participant name <span class="required">*</span></label>
+                <input id="participant-name" name="participant-name" type="text" required>
+              </div>
+
+              <div class="form-group">
+                <label for="participant-dob">Date of birth</label>
+                <input id="participant-dob" name="participant-dob" type="date">
+              </div>
+
+              <div class="form-group">
+                <label for="ndis-number">NDIS number (if known)</label>
+                <input id="ndis-number" name="ndis-number" type="text">
+              </div>
+
+              <div class="form-group">
+                <label for="participant-location">Suburb / location in Victoria <span class="required">*</span></label>
+                <input id="participant-location" name="participant-location" type="text" required
+                       placeholder="E.g. Dandenong, Werribee, Geelong, Ballarat">
+              </div>
+
+              <div class="form-group">
+                <label for="living-situation">Living situation</label>
+                <select id="living-situation" name="living-situation">
+                  <option value="">Please choose</option>
+                  <option value="with-family">With family</option>
+                  <option value="living-alone">Living alone</option>
+                  <option value="shared-living">Shared living / SDA / SIL</option>
+                  <option value="other">Other / unsure</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="funding-type">NDIS funding type</label>
+                <select id="funding-type" name="funding-type">
+                  <option value="">Please choose</option>
+                  <option value="self">Self-managed</option>
+                  <option value="plan">Plan-managed</option>
+                  <option value="agency">Agency-managed</option>
+                  <option value="pending">Applying / pending</option>
+                  <option value="review">In review / appealed</option>
+                </select>
+              </div>
+
+              <div class="form-group">
+                <label for="supports-requested">Supports requested <span class="required">*</span></label>
+                <textarea id="supports-requested"
+                          name="supports-requested"
+                          rows="4"
+                          required
+                          placeholder="E.g. personal care mornings and evenings, community access 2–3 times/week, support coordination, early support for school transition, allied health access."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="diagnosis-needs">Diagnosis / primary support needs</label>
+                <textarea id="diagnosis-needs"
+                          name="diagnosis-needs"
+                          rows="3"
+                          placeholder="E.g. autism, intellectual disability, psychosocial disability, physical disability, medical conditions (only share what is relevant and consented)."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="availability">Preferred days / times</label>
+                <textarea id="availability"
+                          name="availability"
+                          rows="3"
+                          placeholder="E.g. weekdays after school, weekday mornings, weekends, specific days, times or shifts."></textarea>
+              </div>
+
+            </div>
+
+
+            <!-- RIGHT COLUMN – REFERRER, SAFETY, CONTEXT -->
+            <div>
+
+              <h3 style="margin-bottom:0.8rem;">Referrer details</h3>
+
+              <div class="form-group">
+                <label for="referrer-name">Your name <span class="required">*</span></label>
+                <input id="referrer-name" name="referrer-name" type="text" required>
+              </div>
+
+              <div class="form-group">
+                <label for="referrer-role">Your role / relationship</label>
+                <input id="referrer-role"
+                       name="referrer-role"
+                       type="text"
+                       placeholder="Support coordinator, parent, psychologist, teacher, plan manager, etc.">
+              </div>
+
+              <div class="form-group">
+                <label for="referrer-organisation">Organisation (if applicable)</label>
+                <input id="referrer-organisation" name="referrer-organisation" type="text">
+              </div>
+
+              <div class="form-group">
+                <label for="referrer-email">Email address <span class="required">*</span></label>
+                <input id="referrer-email" name="referrer-email" type="email" required>
+              </div>
+
+              <div class="form-group">
+                <label for="referrer-phone">Phone number</label>
+                <input id="referrer-phone" name="referrer-phone" type="tel">
+              </div>
+
+              <hr class="form-divider">
+
+              <h3 style="margin-bottom:0.8rem;">Risk, safety &amp; behaviour considerations</h3>
+
+              <div class="form-group">
+                <label for="risk-notes">Risk / safety / behaviour notes</label>
+                <textarea id="risk-notes"
+                          name="risk-notes"
+                          rows="4"
+                          placeholder="E.g. behaviours of concern, triggers, de-escalation strategies, absconding risk, environmental risks, mobility risks, supervision needs, etc."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="communication-needs">Communication &amp; access needs</label>
+                <textarea id="communication-needs"
+                          name="communication-needs"
+                          rows="3"
+                          placeholder="Preferred language, communication style, use of devices or interpreters, sensory needs, cultural or faith considerations."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="current-team">Current providers / support team</label>
+                <textarea id="current-team"
+                          name="current-team"
+                          rows="3"
+                          placeholder="E.g. current support coordinator, therapists, support workers, school, behaviour support practitioner. Include contact details if you’d like us to liaise (with consent)."></textarea>
+              </div>
+
+              <div class="form-group">
+                <label for="other-info">Additional information</label>
+                <textarea id="other-info"
+                          name="other-info"
+                          rows="4"
+                          placeholder="Any other context that will help us understand the person’s goals, routines, strengths, and support environment."></textarea>
+              </div>
+
+              <p class="small">
+                <strong>Consent:</strong> By submitting this form, you confirm that the participant or
+                their guardian has provided informed consent for this referral and for Able Aide to
+                contact them and, where appropriate, relevant providers.
+              </p>
+
+            </div>
+
           </div>
 
-          <div class="form-group">
-            <label for="referrer-organisation">Organisation (if applicable)</label>
-            <input id="referrer-organisation" name="referrer-organisation" type="text">
+          <button type="submit" class="btn btn-primary" style="margin-top:1.5rem;">
+            Submit referral
+          </button>
+        </form>
+
+      </div>
+    </section>
+
+
+    <!-- WHAT HAPPENS NEXT -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">What Happens Next?</h2>
+
+        <div class="grid grid-3">
+          <div class="step-card">
+            <div class="step-number">1</div>
+            <h3>We review the referral</h3>
+            <p class="small">
+              We carefully review supports requested, location, risk notes, communication needs and
+              funding type to determine suitability and capacity.
+            </p>
           </div>
 
-          <div class="form-group">
-            <label for="referrer-email">Email address</label>
-            <input id="referrer-email" name="referrer-email" type="email" required>
+          <div class="step-card">
+            <div class="step-number">2</div>
+            <h3>We confirm capacity</h3>
+            <p class="small">
+              If we can proceed, we contact the referrer and/or participant promptly. If we are at
+              capacity or not the right fit, we communicate this honestly and respectfully.
+            </p>
           </div>
 
-          <div class="form-group">
-            <label for="referrer-phone">Phone number</label>
-            <input id="referrer-phone" name="referrer-phone" type="tel">
-          </div>
-
-          <div class="form-group">
-            <label for="risk-notes">Risk, safety or behaviour considerations</label>
-            <textarea id="risk-notes" name="risk-notes" rows="4"
-                      placeholder="Behaviours of concern, absconding risks, aggression, environmental risks, etc."></textarea>
-          </div>
-
-          <div class="form-group">
-            <label for="other-info">Additional information</label>
-            <textarea id="other-info" name="other-info" rows="4"
-                      placeholder="Diagnoses, communication needs, family context, preferences, etc."></textarea>
+          <div class="step-card">
+            <div class="step-number">3</div>
+            <h3>We begin intake</h3>
+            <p class="small">
+              We gather any additional details, discuss goals and preferences, and start working
+              together on a safe, person-centred support plan.
+            </p>
           </div>
         </div>
+      </div>
+    </section>
 
+  </main>
+
+
+  <!-- FLOATING CTA BAR (GLOBAL) -->
+  <div class="floating-cta">
+    <div class="container floating-cta-inner">
+      <span class="floating-cta-text">
+        Need to discuss a referral or capacity today?
+      </span>
+      <div class="floating-cta-actions">
+        <a href="tel:61435039110" class="btn btn-secondary btn-sm">Call 0435 039 110</a>
+        <a href="/contact" class="btn btn-outline btn-sm">Request a callback</a>
+        <a href="/refer" class="btn btn-primary btn-sm">Submit referral</a>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- GLOBAL FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner footer-grid-5">
+
+      <div class="footer-col footer-brand">
+        <h3>Able Aide</h3>
+        <p>
+          Your Journey, Our Support – warm, person-centred disability supports across Greater Melbourne
+          and regional Victoria.
+        </p>
+        <p>
+          <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
+          <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
+        </p>
       </div>
 
-      <p class="small" style="margin-top:1rem;">
-        Please ensure you have informed consent from the participant or guardian before sharing their details.
+      <div class="footer-col">
+        <h3>Services</h3>
+        <ul class="footer-links">
+          <li><a href="/services/personal-care">Personal care &amp; daily living</a></li>
+          <li><a href="/services/community-participation">Community participation</a></li>
+          <li><a href="/services/support-coordination">Support coordination</a></li>
+          <li><a href="/services/allied-health-access">Allied health access</a></li>
+          <li><a href="/services/family-early-support">Family &amp; early support</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Participants &amp; families</h3>
+        <ul class="footer-links">
+          <li><a href="/about">About Able Aide</a></li>
+          <li><a href="/locations">Where we support</a></li>
+          <li><a href="/resources">NDIS resources</a></li>
+          <li><a href="/contact">Book a free chat</a></li>
+          <li><a href="/thanks">Thank you page</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>For professionals</h3>
+        <ul class="footer-links">
+          <li><a href="/refer">Refer a participant</a></li>
+          <li><a href="/careers">Careers at Able Aide</a></li>
+          <li><a href="/complaints">Compliments &amp; concerns</a></li>
+          <li><a href="/resources">Printable tools &amp; forms</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Connect</h3>
+        <ul class="footer-links">
+          <li><a href="https://www.facebook.com/able.aide" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/ableaide/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.tiktok.com/@ableaide" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://www.youtube.com/@AbleAide" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://x.com/AbleAideSupport" target="_blank" rel="noopener">X (Twitter)</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="small">
+        © <span id="year"></span> Able Aide. All rights reserved. ·
+        <a href="/privacy-policy" class="footer-link">Privacy Policy</a> ·
+        <a href="/terms-of-service" class="footer-link">Terms of Service</a> ·
+        <a href="/complaints" class="footer-link">Compliments &amp; Concerns</a>
       </p>
-
-      <button type="submit" class="btn btn-primary">Submit Referral</button>
-    </form>
-
-  </div>
-</section>
-
-
-<!-- WHAT HAPPENS NEXT -->
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">What Happens Next?</h2>
-
-    <div class="grid grid-3">
-
-      <div class="step-card">
-        <div class="step-number">1</div>
-        <h3>We review the referral</h3>
-        <p class="small">
-          We review supports requested, location, safety information and funding type to determine suitability.
-        </p>
-      </div>
-
-      <div class="step-card">
-        <div class="step-number">2</div>
-        <h3>We confirm capacity</h3>
-        <p class="small">
-          If we can proceed, we contact the referrer and/or participant promptly.  
-          If not, we communicate this honestly and respectfully.
-        </p>
-      </div>
-
-      <div class="step-card">
-        <div class="step-number">3</div>
-        <h3>We begin intake</h3>
-        <p class="small">
-          We gather any additional details needed, discuss goals, preferences, and begin building supports together.
-        </p>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="container footer-inner">
-
-    <div>
-      <strong>Able Aide</strong><br>
-      Your Journey, Our Support<br><br>
-
-      <strong>Phone:</strong>
-      <a href="tel:61435039110">0435 039 110</a><br>
-
-      <strong>Email:</strong>
-      <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
     </div>
 
-    <div>
-      <strong>Service Hours</strong><br>
-      Support Coordination: 8am – 7pm<br>
-      Core Supports: 24/7<br>
-      Allied Health: 9am – 6pm
-    </div>
+    <script>
+      document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+  </footer>
 
-    <div>
-      <strong>Where We Support</strong><br>
-      Melbourne · Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria
-    </div>
 
-    <div>
-      <strong>Follow Us</strong><br>
-      <a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a><br>
-      <a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a><br>
-      <a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a><br>
-      <a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a><br>
-      <a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a><br>
-      <a href="https://x.com/AbleAideSupport" target="_blank">X (Twitter)</a>
-    </div>
-
-  </div>
-
-  <div class="container footer-bottom">
-    <p class="small">© <span id="year"></span> Able Aide. All rights reserved.</p>
-  </div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
-</footer>
-
-<!-- JSON-LD SCHEMA -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Refer an NDIS Participant – Able Aide Referral Form",
-  "url": "https://ableaide.com.au/refer",
-  "description": "Referral page for support coordinators, providers and families to refer an NDIS participant to Able Aide for disability support and support coordination.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Able Aide",
-    "url": "https://ableaide.com.au",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ableaide.com.au/assets/img/able-aide-logo.png"
+  <!-- JSON-LD SCHEMA -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Refer an NDIS Participant – Able Aide Referral Form",
+    "url": "https://ableaide.com.au/refer",
+    "description": "Referral page for support coordinators, providers and families to refer an NDIS participant to Able Aide for disability support and support coordination.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Able Aide",
+      "url": "https://ableaide.com.au",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ableaide.com.au/assets/img/able-aide-logo.png"
+      }
     }
   }
-}
-</script>
+  </script>
 
 </body>
 </html>

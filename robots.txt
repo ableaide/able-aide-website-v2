@@ -1,28 +1,24 @@
 User-agent: *
 Allow: /
 
-# Block internal utility pages
-Disallow: /thanks
-Disallow: /admin/
-Disallow: /draft/
-Disallow: /private/
-Disallow: /temp/
-Disallow: /test/
-
-# Block server files (precaution, even if not present)
-Disallow: /*.php$
-Disallow: /*.cgi$
-Disallow: /*.asp$
-Disallow: /*.aspx$
-
-# Block non-public assets (optional but recommended)
-Disallow: /assets/temp/
+# Disallow system / backend / irrelevant paths
 Disallow: /assets/raw/
+Disallow: /assets/private/
+Disallow: /admin/
+Disallow: /cms/
+Disallow: /drafts/
+Disallow: /tmp/
 
-# Allow important assets
-Allow: /assets/css/
-Allow: /assets/js/
-Allow: /assets/img/
+# Allow all HTML pages
+Allow: /*.html$
+
+# Block duplicate URLs if any appear
+Disallow: /*?*
+
+# Files/folders that should never be indexed
+Disallow: /netlify.toml
+Disallow: /_redirect
+Disallow: /404.html
 
 # Sitemap
 Sitemap: https://ableaide.com.au/sitemap.xml

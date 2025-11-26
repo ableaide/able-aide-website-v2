@@ -1,95 +1,70 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- Homepage -->
+  <!-- ROOT PAGES -->
   <url>
     <loc>https://ableaide.com.au/</loc>
-    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
-  </url>
-
-  <!-- Main Pages -->
-  <url>
-    <loc>https://ableaide.com.au/about</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://ableaide.com.au/services</loc>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority>
   </url>
 
-  <url>
-    <loc>https://ableaide.com.au/refer</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <url><loc>https://ableaide.com.au/about.html</loc><priority>0.9</priority></url>
+  <url><loc>https://ableaide.com.au/contact.html</loc><priority>0.9</priority></url>
+  <url><loc>https://ableaide.com.au/refer.html</loc><priority>0.9</priority></url>
+  <url><loc>https://ableaide.com.au/complaints.html</loc><priority>0.7</priority></url>
+  <url><loc>https://ableaide.com.au/privacy-policy.html</loc><priority>0.6</priority></url>
+  <url><loc>https://ableaide.com.au/terms-of-service.html</loc><priority>0.6</priority></url>
+  <url><loc>https://ableaide.com.au/thanks.html</loc><priority>0.4</priority></url>
+  <url><loc>https://ableaide.com.au/404.html</loc><priority>0.1</priority></url>
 
-  <url>
-    <loc>https://ableaide.com.au/resources</loc>
-    <changefreq>weekly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- REVIEWS -->
+  <url><loc>https://ableaide.com.au/reviews/</loc><priority>0.8</priority></url>
 
-  <url>
-    <loc>https://ableaide.com.au/contact</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
+  <!-- SERVICES -->
+  <url><loc>https://ableaide.com.au/services/</loc><priority>0.9</priority></url>
+  <url><loc>https://ableaide.com.au/services/personal-care.html</loc><priority>0.8</priority></url>
+  <url><loc>https://ableaide.com.au/services/community-participation.html</loc><priority>0.8</priority></url>
+  <url><loc>https://ableaide.com.au/services/support-coordination.html</loc><priority>0.8</priority></url>
+  <url><loc>https://ableaide.com.au/services/allied-health-access.html</loc><priority>0.8</priority></url>
+  <url><loc>https://ableaide.com.au/services/family-early-support.html</loc><priority>0.8</priority></url>
 
-  <!-- Privacy & Legal -->
-  <url>
-    <loc>https://ableaide.com.au/privacy-policy</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.5</priority>
-  </url>
+  <!-- LOCATIONS ROOT + 10 SUBURBS -->
+  <url><loc>https://ableaide.com.au/locations/</loc><priority>0.9</priority></url>
 
-  <url>
-    <loc>https://ableaide.com.au/terms</loc>
-    <changefreq>yearly</changefreq>
-    <priority>0.4</priority>
-  </url>
+  <url><loc>https://ableaide.com.au/locations/melbourne.html</loc><priority>0.8</priority></url>
+  <url><loc>https://ableaide.com.au/locations/geelong.html</loc><priority>0.8</priority></url>
+  <url><loc>https://ableaide.com.au/locations/ballarat.html</loc><priority>0.8</priority></url>
+  <url><loc>https://ableaide.com.au/locations/bendigo.html</loc><priority>0.8</priority></url>
+  <url><loc>https://ableaide.com.au/locations/shepparton.html</loc><priority>0.8</priority></url> <!-- optional if exists -->
+  <url><loc>https://ableaide.com.au/locations/dandenong.html</loc><priority>0.8</priority></url>
+  <url><loc>https://ableaide.com.au/locations/frankston.html</loc><priority>0.8</priority></url>
+  <url><loc>https://ableaide.com.au/locations/epping.html</loc><priority>0.8</priority></url>
+  <url><loc>https://ableaide.com.au/locations/werribee.html</loc><priority>0.8</priority></url>
+  <url><loc>https://ableaide.com.au/locations/ringwood.html</loc><priority>0.8</priority></url>
+  <url><loc>https://ableaide.com.au/locations/mornington-peninsula.html</loc><priority>0.8</priority></url>
 
-  <!-- Service Pages -->
-  <url>
-    <loc>https://ableaide.com.au/services/personal-care</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- RESOURCES SECTION -->
+  <url><loc>https://ableaide.com.au/resources/resources.html</loc><priority>0.9</priority></url>
+  <url><loc>https://ableaide.com.au/resources/downloads.html</loc><priority>0.8</priority></url>
+  <url><loc>https://ableaide.com.au/resources/ndis-guides.html</loc><priority>0.8</priority></url>
+  <url><loc>https://ableaide.com.au/resources/templates.html</loc><priority>0.8</priority></url>
 
-  <url>
-    <loc>https://ableaide.com.au/services/community-participation</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- BLOG -->
+  <url><loc>https://ableaide.com.au/blog/</loc><priority>0.7</priority></url>
+  <url><loc>https://ableaide.com.au/blog/community-access-ideas-ndis.html</loc><priority>0.7</priority></url>
+  <url><loc>https://ableaide.com.au/blog/how-to-access-allied-health-ndis.html</loc><priority>0.7</priority></url>
+  <url><loc>https://ableaide.com.au/blog/how-to-prepare-for-ndis-plan-review.html</loc><priority>0.7</priority></url>
+  <url><loc>https://ableaide.com.au/blog/ndis-early-childhood-pathway-explained.html</loc><priority>0.7</priority></url>
+  <url><loc>https://ableaide.com.au/blog/what-personal-care-includes-ndis.html</loc><priority>0.7</priority></url>
 
-  <url>
-    <loc>https://ableaide.com.au/services/support-coordination</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
+  <!-- CASE STUDIES -->
+  <url><loc>https://ableaide.com.au/case-studies/</loc><priority>0.7</priority></url>
+  <url><loc>https://ableaide.com.au/case-studies/building-confidence-in-the-community.html</loc><priority>0.7</priority></url>
+  <url><loc>https://ableaide.com.au/case-studies/helping-participant-get-unstuck-with-therapies.html</loc><priority>0.7</priority></url>
+  <url><loc>https://ableaide.com.au/case-studies/safe-transition-home-after-hospital.html</loc><priority>0.7</priority></url>
+  <url><loc>https://ableaide.com.au/case-studies/supporting-family-early-childhood-routines.html</loc><priority>0.7</priority></url>
 
-  <url>
-    <loc>https://ableaide.com.au/services/allied-health-access</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <url>
-    <loc>https://ableaide.com.au/services/family-early-support</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-  </url>
-
-  <!-- Optional Future Additions (if needed) -->
-  <!--
-  <url>
-    <loc>https://ableaide.com.au/services/early-intervention</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  -->
+  <!-- CAREERS -->
+  <url><loc>https://ableaide.com.au/careers/</loc><priority>0.6</priority></url>
 
 </urlset>

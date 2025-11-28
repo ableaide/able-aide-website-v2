@@ -90,8 +90,7 @@
              class="logo-img"
              width="180"
              height="46"
-             decoding="async"
-             style="height:46px; width:auto;">
+             decoding="async">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
@@ -107,11 +106,7 @@
               <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/allied-health-access">Allied health access</a></li>
               <li><a href="/services/family-early-support">Early & family support</a></li>
-              <li>
-                <a href="/services/plan-management">
-                  Plan management <span class="small">(Coming soon)</span>
-                </a>
-              </li>
+              <li><a href="/services/plan-management">Plan management <span class="small">(Coming soon)</span></a></li>
             </ul>
           </li>
           <li><a href="/locations" aria-current="page">Locations</a></li>
@@ -156,11 +151,9 @@
           <img
             src="/assets/img/locations-hero.webp"
             alt="Ballarat lake and community spaces"
-            class="hero-card-img"
+            class="hero-img"
             loading="lazy"
-            decoding="async"
-            width="1600"
-            height="1067">
+            decoding="async">
 
           <h2>Supporting Ballarat & Surrounds</h2>
           <p class="small">
@@ -334,7 +327,7 @@
 
   <!-- FLOATING CTA -->
   <div class="floating-cta" id="floatingCta">
-    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button">
+    <button class="floating-cta-toggle" id="floatingCtaToggle">
       <span class="icon">💬</span>
       <span>Need support?</span>
     </button>
@@ -364,8 +357,7 @@
         navToggle.setAttribute('aria-expanded', String(!isOpen));
       });
 
-      const navLinks = mainNav.querySelectorAll('a');
-      navLinks.forEach(link => {
+      mainNav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
           if (window.innerWidth <= 900) {
             mainNav.classList.remove('open');

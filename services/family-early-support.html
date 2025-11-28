@@ -137,7 +137,7 @@
         alt="Parent and child receiving gentle family-centred support"
         loading="lazy"
         decoding="async"
-        style="width:100%; border-radius:12px; margin-bottom:1rem;">
+        class="hero-image-main">
       <h2 class="small">Warm, steady support for children, siblings and families.</h2>
       <a href="/contact" class="btn btn-primary btn-block">Book a Free Chat</a>
     </aside>
@@ -458,8 +458,9 @@
 
     if (navToggle && mainNav) {
       navToggle.addEventListener('click', function () {
-        mainNav.classList.toggle('open');
-        navToggle.setAttribute('aria-expanded', mainNav.classList.contains('open'));
+        var isOpen = mainNav.classList.contains('open');
+        mainNav.classList.toggle('open', !isOpen);
+        navToggle.setAttribute('aria-expanded', String(!isOpen));
       });
 
       mainNav.querySelectorAll('a').forEach(function (link) {

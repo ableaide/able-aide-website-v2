@@ -1,57 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- ROOT -->
-  <url><loc>https://ableaide.com.au/</loc></url>
+  <!-- =============================
+       ROOT / MAIN PAGES
+  ============================== -->
+  <url>
+    <loc>https://ableaide.com.au/</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
 
-  <!-- TOP LEVEL -->
-  <url><loc>https://ableaide.com.au/about</loc></url>
-  <url><loc>https://ableaide.com.au/services</loc></url>
-  <url><loc>https://ableaide.com.au/locations</loc></url>
-  <url><loc>https://ableaide.com.au/refer</loc></url>
-  <url><loc>https://ableaide.com.au/resources</loc></url>
-  <url><loc>https://ableaide.com.au/careers</loc></url>
-  <url><loc>https://ableaide.com.au/contact</loc></url>
-  <url><loc>https://ableaide.com.au/privacy-policy</loc></url>
-  <url><loc>https://ableaide.com.au/terms-of-service</loc></url>
-  <url><loc>https://ableaide.com.au/complaints</loc></url>
+  <url>
+    <loc>https://ableaide.com.au/about</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.85</priority>
+  </url>
 
-  <!-- SERVICES -->
-  <url><loc>https://ableaide.com.au/services/personal-care</loc></url>
-  <url><loc>https://ableaide.com.au/services/community-participation</loc></url>
-  <url><loc>https://ableaide.com.au/services/support-coordination</loc></url>
-  <url><loc>https://ableaide.com.au/services/allied-health-access</loc></url>
-  <url><loc>https://ableaide.com.au/services/family-early-support</loc></url>
-  <url><loc>https://ableaide.com.au/services/plan-management</loc></url>
+  <url>
+    <loc>https://ableaide.com.au/services</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.90</priority>
+  </url>
 
-  <!-- RESOURCES HUB -->
-  <url><loc>https://ableaide.com.au/resources</loc></url>
-  <url><loc>https://ableaide.com.au/resources/downloads</loc></url>
-  <url><loc>https://ableaide.com.au/resources/templates</loc></url>
-  <url><loc>https://ableaide.com.au/resources/ndis-guides</loc></url>
+  <url>
+    <loc>https://ableaide.com.au/locations</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.80</priority>
+  </url>
 
-  <!-- EXTRA RESOURCE PAGES (if exist) -->
-  <url><loc>https://ableaide.com.au/resources/melbourne-ndis-guide</loc></url>
-  <url><loc>https://ableaide.com.au/resources/south-east-melbourne-ndis</loc></url>
-  <url><loc>https://ableaide.com.au/resources/ndis-review-guide</loc></url>
-  <url><loc>https://ableaide.com.au/resources/goal-setting-guide</loc></url>
-  <url><loc>https://ableaide.com.au/resources/evidence-reports-checklist</loc></url>
-  <url><loc>https://ableaide.com.au/resources/support-worker-guide</loc></url>
-  <url><loc>https://ableaide.com.au/resources/support-worker-family-tips</loc></url>
-  <url><loc>https://ableaide.com.au/resources/participant-rights-guide</loc></url>
+  <url>
+    <loc>https://ableaide.com.au/reviews</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.70</priority>
+  </url>
 
-  <!-- LOCATION PAGES -->
-  <url><loc>https://ableaide.com.au/locations/melbourne</loc></url>
-  <url><loc>https://ableaide.com.au/locations/frankston</loc></url>
-  <url><loc>https://ableaide.com.au/locations/dandenong</loc></url>
-  <url><loc>https://ableaide.com.au/locations/ringwood</loc></url>
-  <url><loc>https://ableaide.com.au/locations/epping</loc></url>
-  <url><loc>https://ableaide.com.au/locations/sunshine</loc></url>
-  <url><loc>https://ableaide.com.au/locations/werribee</loc></url>
-  <url><loc>https://ableaide.com.au/locations/mornington-peninsula</loc></url>
-  <url><loc>https://ableaide.com.au/locations/geelong</loc></url>
-  <url><loc>https://ableaide.com.au/locations/ballarat</loc></url>
-  <url><loc>https://ableaide.com.au/locations/bendigo</loc></url>
-  <url><loc>https://ableaide.com.au/locations/shepparton</loc></url>
+  <url>
+    <loc>https://ableaide.com.au/refer</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/resources</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.80</priority>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/careers</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.60</priority>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/contact</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.90</priority>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/privacy-policy</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/terms-of-service</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.40</priority>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/complaints</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.50</priority>
+  </url>
+
+  <!-- =============================
+       SERVICE PAGES
+  ============================== -->
+  <url>
+    <loc>https://ableaide.com.au/services/personal-care</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/services/community-participation</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/services/support-coordination</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/services/allied-health-access</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/services/family-early-support</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/services/plan-management</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- =============================
+       RESOURCE HUB CATEGORY PAGES
+  ============================== -->
+  <url>
+    <loc>https://ableaide.com.au/resources/downloads</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/resources/templates</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.70</priority>
+  </url>
+
+  <url>
+    <loc>https://ableaide.com.au/resources/ndis-guides</loc>
+    <lastmod>2025-01-15</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.75</priority>
+  </url>
+
+  <!-- =============================
+       RESOURCE ARTICLES (GUIDES)
+  ============================== -->
+  <url><loc>https://ableaide.com.au/resources/melbourne-ndis-guide</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://ableaide.com.au/resources/south-east-melbourne-ndis</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.65</priority></url>
+  <url><loc>https://ableaide.com.au/resources/ndis-review-guide</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ableaide.com.au/resources/goal-setting-guide</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.75</priority></url>
+  <url><loc>https://ableaide.com.au/resources/evidence-reports-checklist</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://ableaide.com.au/resources/support-worker-guide</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://ableaide.com.au/resources/support-worker-family-tips</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+  <url><loc>https://ableaide.com.au/resources/participant-rights-guide</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.70</priority></url>
+
+  <!-- =============================
+       LOCATION PAGES
+  ============================== -->
+  <url><loc>https://ableaide.com.au/locations/melbourne</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://ableaide.com.au/locations/frankston</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://ableaide.com.au/locations/dandenong</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://ableaide.com.au/locations/ringwood</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://ableaide.com.au/locations/epping</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://ableaide.com.au/locations/sunshine</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://ableaide.com.au/locations/werribee</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://ableaide.com.au/locations/mornington-peninsula</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://ableaide.com.au/locations/geelong</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://ableaide.com.au/locations/ballarat</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://ableaide.com.au/locations/bendigo</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.80</priority></url>
+  <url><loc>https://ableaide.com.au/locations/shepparton</loc><lastmod>2025-01-15</lastmod><changefreq>yearly</changefreq><priority>0.80</priority></url>
 
 </urlset>

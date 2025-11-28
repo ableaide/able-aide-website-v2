@@ -2,12 +2,11 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Case Study: Early Childhood & Family Support – Able Aide</title>
+  <title>Case Study: Supporting a Family With Early Childhood Routines – Able Aide</title>
 
   <!-- Canonical -->
   <link rel="canonical" href="https://ableaide.com.au/case-studies/supporting-family-early-childhood-routines">
 
-  <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Description -->
@@ -15,8 +14,9 @@
         content="How Able Aide supported a family to create calmer routines, smoother transitions and stronger communication for their young child through early childhood-focused NDIS supports.">
 
   <!-- OG -->
-  <meta property="og:title" content="Early Childhood & Family Support – Able Aide Case Study">
-  <meta property="og:description" content="A real case study showing how families benefit from gentle, routine-based early childhood support.">
+  <meta property="og:title" content="Supporting a Family With Early Childhood Routines – Able Aide Case Study">
+  <meta property="og:description"
+        content="A real case study showing how families benefit from calm, routine-based early childhood support.">
   <meta property="og:image" content="/assets/img/case-early-childhood-routines.webp">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://ableaide.com.au/case-studies/supporting-family-early-childhood-routines">
@@ -42,7 +42,8 @@
         "url": "https://ableaide.com.au/assets/img/able-aide-logo.webp"
       }
     },
-    "mainEntityOfPage": "https://ableaide.com.au/case-studies/supporting-family-early-childhood-routines",
+    "mainEntityOfPage":
+      "https://ableaide.com.au/case-studies/supporting-family-early-childhood-routines",
     "datePublished": "2025-01-15",
     "dateModified": "2025-11-27"
   }
@@ -56,11 +57,13 @@
     <div class="container top-trust-bar-inner">
       <div class="top-trust-left">
         <span class="top-trust-badge">NDIS registration in progress</span>
-        <span class="top-trust-badge">Self-managed &amp; plan-managed participants</span>
-        <span class="top-trust-badge">Greater Melbourne &amp; regional Victoria</span>
+        <span class="top-trust-badge">Supporting self-managed &amp; plan-managed participants</span>
+        <span class="top-trust-badge">Greater Melbourne, Geelong, Ballarat, Bendigo & regional VIC</span>
       </div>
       <div class="top-trust-right">
-        <span class="top-trust-phone">Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a></span>
+        <span class="top-trust-phone">
+          Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a>
+        </span>
         <a href="/refer" class="top-trust-link">Quick referral form →</a>
       </div>
     </div>
@@ -72,7 +75,7 @@
 
       <a href="/" class="logo" aria-label="Able Aide Home">
         <img src="/assets/img/able-aide-logo.webp"
-             alt="Able Aide"
+             alt="Able Aide logo"
              class="logo-img"
              style="height:46px; width:auto;">
         <span class="logo-mark">Able Aide</span>
@@ -110,8 +113,7 @@
         <a href="/contact" class="btn btn-primary">Book a free chat</a>
       </div>
 
-      <!-- Mobile -->
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
       </button>
 
@@ -134,9 +136,12 @@
         </div>
 
         <div class="hero-card">
-          <img src="/assets/img/case-early-childhood-routines.webp"
-               alt="Early childhood family support"
-               style="width:100%; border-radius:12px; margin-bottom:1rem;">
+          <img
+            src="/assets/img/case-early-childhood-routines.webp"
+            alt="Early childhood family support"
+            class="hero-img"
+            loading="lazy"
+            decoding="async">
 
           <h2>Gentle support for children &amp; families</h2>
           <p class="small">
@@ -236,7 +241,7 @@
           <li><a href="/resources">Resources</a></li>
           <li><a href="/reviews">Reviews</a></li>
           <li><a href="/careers">Careers</a></li>
-          <li><a href="/case-studies" aria-current="page">Case Estudios</a></li>
+          <li><a href="/case-studies" aria-current="page">Case Studies</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
@@ -244,7 +249,7 @@
       <div class="footer-col">
         <h3>Where we support</h3>
         <p>
-          Greater Melbourne (Frankston, Dandenong, Ringwood, Epping, Werribee, Sunshine & surrounds)<br>
+          Greater Melbourne (Frankston, Dandenong, Ringwood, Epping, Werribee, Sunshine &amp; surrounds)<br>
           Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria
         </p>
       </div>
@@ -268,7 +273,7 @@
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <!-- SCRIPTS -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
@@ -276,7 +281,6 @@
     (function () {
       const navToggle = document.getElementById('navToggle');
       const mainNav = document.getElementById('mainNav');
-
       if (navToggle && mainNav) {
         navToggle.addEventListener('click', function () {
           const open = mainNav.classList.contains('open');

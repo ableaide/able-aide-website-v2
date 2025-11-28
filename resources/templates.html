@@ -35,18 +35,11 @@
   <!-- Preload logo -->
   <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
 
-  <!-- Small nav animation overrides -->
+  <!-- Mobile nav smoother -->
   <style>
     @media (max-width: 900px) {
-      .main-nav {
-        display: block;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.25s ease;
-      }
-      .main-nav.open {
-        max-height: 500px;
-      }
+      .main-nav { display:block; max-height:0; overflow:hidden; transition:max-height .25s ease; }
+      .main-nav.open { max-height:500px; }
     }
   </style>
 
@@ -65,18 +58,8 @@
       {
         "@type": "BreadcrumbList",
         "itemListElement": [
-          {
-            "@type": "ListItem",
-            "position": 1,
-            "name": "Home",
-            "item": "https://ableaide.com.au/"
-          },
-          {
-            "@type": "ListItem",
-            "position": 2,
-            "name": "Templates",
-            "item": "https://ableaide.com.au/resources/templates"
-          }
+          { "@type":"ListItem","position":1,"name":"Home","item":"https://ableaide.com.au/" },
+          { "@type":"ListItem","position":2,"name":"Templates","item":"https://ableaide.com.au/resources/templates" }
         ]
       }
     ]
@@ -86,19 +69,19 @@
 
 <body>
 
-  <!-- GLOBAL TOP TRUST BAR -->
+  <!-- TOP TRUST BAR -->
   <div class="top-trust-bar">
     <div class="container top-trust-bar-inner">
       <div class="top-trust-left">
         <span class="top-trust-badge">NDIS registration in progress</span>
-        <span class="top-trust-badge">Supporting self-managed &amp; plan-managed participants</span>
-        <span class="top-trust-badge">Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton &amp; regional VIC</span>
+        <span class="top-trust-badge">Self-managed & plan-managed</span>
+        <span class="top-trust-badge">Greater Melbourne & Regional VIC</span>
       </div>
       <div class="top-trust-right">
         <span class="top-trust-phone">
-          Call: <a href="tel:61435039110" class="top-trust-link" aria-label="Call Able Aide on 0435 039 110">0435 039 110</a>
+          Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a>
         </span>
-        <a href="/refer" class="top-trust-link">Quick referral form →</a>
+        <a href="/refer" class="top-trust-link">Quick referral →</a>
       </div>
     </div>
   </div>
@@ -108,18 +91,12 @@
     <div class="container header-inner">
 
       <a href="/" class="logo" aria-label="Able Aide Home">
-        <img src="/assets/img/able-aide-logo.webp"
-             alt="Able Aide logo"
-             class="logo-img"
-             style="height:46px; width:auto; margin-bottom:0.2rem;"
-             width="180"
-             height="46"
-             decoding="async">
+        <img src="/assets/img/able-aide-logo.webp" alt="Able Aide Logo" class="logo-img">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
 
-      <nav class="main-nav" aria-label="Main Navigation" id="mainNav">
+      <nav class="main-nav" id="mainNav">
         <ul class="nav-list">
 
           <li><a href="/about">About</a></li>
@@ -127,28 +104,24 @@
           <li class="nav-has-children">
             <a href="/services">Services</a>
             <ul class="nav-submenu">
-              <li><a href="/services/personal-care">Personal care &amp; daily living</a></li>
+              <li><a href="/services/personal-care">Personal care</a></li>
               <li><a href="/services/community-participation">Community participation</a></li>
               <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/allied-health-access">Allied health access</a></li>
-              <li><a href="/services/family-early-support">Early &amp; family support</a></li>
-              <li>
-                <a href="/services/plan-management">
-                  Plan management <span class="small">(Coming soon)</span>
-                </a>
-              </li>
+              <li><a href="/services/family-early-support">Early & family support</a></li>
+              <li><a href="/services/plan-management">Plan management <span class="small">(Coming soon)</span></a></li>
             </ul>
           </li>
 
           <li><a href="/locations">Locations</a></li>
-          <li><a href="/refer">Refer a participant</a></li>
+          <li><a href="/refer">Refer</a></li>
 
           <li class="nav-has-children">
-            <a href="/resources" class="active" aria-current="page">Resources</a>
+            <a href="/resources" class="active">Resources</a>
             <ul class="nav-submenu">
-              <li><a href="/resources">Resource Hub Overview</a></li>
-              <li><a href="/resources/ndis-guides">NDIS Guides &amp; Articles</a></li>
-              <li><a href="/resources/downloads">Downloads Library</a></li>
+              <li><a href="/resources">Resource Hub</a></li>
+              <li><a href="/resources/ndis-guides">NDIS Guides</a></li>
+              <li><a href="/resources/downloads">Downloads</a></li>
               <li><a href="/resources/templates" aria-current="page">Templates</a></li>
             </ul>
           </li>
@@ -160,222 +133,190 @@
       </nav>
 
       <div class="header-cta">
-        <a href="/refer" class="btn btn-outline">Refer a participant</a>
-        <a href="/contact" class="btn btn-primary">Book a free chat</a>
+        <a href="/refer" class="btn btn-outline">Refer</a>
+        <a href="/contact" class="btn btn-primary">Book a chat</a>
       </div>
 
-      <!-- MOBILE NAV TOGGLE -->
-      <button class="nav-toggle" id="navToggle" type="button"
-              aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
-        <span></span>
-      </button>
-
+      <button class="nav-toggle" id="navToggle"><span></span></button>
     </div>
   </header>
 
   <main>
 
     <!-- HERO -->
-    <section class="hero" style="padding:4rem 0 4rem;">
-      <div class="container hero-inner" style="gap:3rem;">
+    <section class="hero">
+      <div class="container hero-inner">
 
         <div class="hero-text">
-          <h1 style="font-size:2.4rem;">Free NDIS Templates</h1>
-          <p style="font-size:1.05rem;">
-            Editable and printable templates designed for Victorian families, support coordinators,
-            allied health professionals and disability support workers.
+          <h1>Free NDIS Templates</h1>
+          <p>
+            Editable and printable templates for Victorian families, support coordinators,
+            allied health and disability workers.
           </p>
-          <p class="hero-note" style="font-size:1rem;">
-            Download Word or PDF versions to help with planning, routines, behaviour support, communication
-            and everyday documentation.
+          <p class="hero-note">
+            Download Word or PDF files covering routines, communication, behaviour support,
+            shift notes and more.
           </p>
         </div>
 
-        <div class="hero-image">
-          <div class="hero-card" style="padding:1.6rem;">
+        <aside class="hero-card">
+          <img src="/assets/img/ndis-templates-hero.webp"
+               alt="NDIS templates preview"
+               class="hero-img"
+               loading="lazy">
 
-            <img
-              src="/assets/img/ndis-templates-hero.webp"
-              alt="NDIS templates and disability support files"
-              style="width:100%; border-radius:14px; margin-bottom:1.4rem;"
-              loading="lazy"
-              decoding="async"
-            >
-
-            <h2 style="font-size:1.3rem;">Template Categories</h2>
-            <ul class="hero-highlights">
-              <li>Participant profiles</li>
-              <li>Behaviour &amp; safety tools</li>
-              <li>Daily logs &amp; shift reports</li>
-              <li>Routine planners</li>
-              <li>Communication templates</li>
-            </ul>
-
-          </div>
-        </div>
+          <h2>Template Categories</h2>
+          <ul class="hero-highlights">
+            <li>Participant profiles</li>
+            <li>Behaviour & safety</li>
+            <li>Daily logs & reporting</li>
+            <li>Routine planners</li>
+            <li>Communication tools</li>
+          </ul>
+        </aside>
 
       </div>
     </section>
 
     <!-- PARTICIPANT PROFILES -->
-    <section class="home-section" style="padding:3.8rem 0;">
+    <section class="section">
       <div class="container">
 
-        <header class="section-header" style="margin-bottom:2rem;">
-          <h2 style="font-size:2rem;">Participant Profile Templates</h2>
-          <p style="font-size:1.05rem;">Useful for families, workers and allied health teams.</p>
-        </header>
+        <h2 class="section-title">Participant Profile Templates</h2>
+        <p class="section-intro">Helpful for workers, families and allied health teams.</p>
 
-        <div class="card-grid" style="gap:2rem;">
+        <div class="card-grid">
 
-          <article class="card" style="padding:1.4rem;">
+          <article class="card">
             <h3>Communication Profile</h3>
             <p>Document communication methods, sensory needs and preferences.</p>
             <a href="/assets/docs/communication-profile.docx" download class="card-link">Download Word →</a>
           </article>
 
-          <article class="card" style="padding:1.4rem;">
-            <h3>Participant Snapshot Template</h3>
+          <article class="card">
+            <h3>Participant Snapshot</h3>
             <p>A one-page overview for workers, schools or therapists.</p>
             <a href="/assets/docs/participant-snapshot.docx" download class="card-link">Download Word →</a>
           </article>
 
-          <article class="card" style="padding:1.4rem;">
+          <article class="card">
             <h3>Sensory Needs Checklist</h3>
-            <p>Track sensory triggers, preferences and calming strategies.</p>
+            <p>Track sensory triggers, preferences and calming supports.</p>
             <a href="/assets/docs/sensory-checklist.pdf" download class="card-link">Download PDF →</a>
           </article>
 
         </div>
-
       </div>
     </section>
 
     <!-- BEHAVIOUR & SAFETY -->
-    <section class="home-section section-alt" style="padding:3.8rem 0;">
+    <section class="section section-alt">
       <div class="container">
 
-        <header class="section-header" style="margin-bottom:2rem;">
-          <h2 style="font-size:2rem;">Behaviour &amp; Safety Templates</h2>
-          <p style="font-size:1.05rem;">Evidence-friendly, structured and NDIS-compliant.</p>
-        </header>
+        <h2 class="section-title">Behaviour & Safety Templates</h2>
+        <p class="section-intro">Structured, practical and NDIS-friendly tools.</p>
 
-        <div class="card-grid" style="gap:2rem;">
+        <div class="card-grid">
 
-          <article class="card" style="padding:1.4rem;">
+          <article class="card">
             <h3>Behaviour Support Summary</h3>
             <p>Track triggers and calming strategies.</p>
             <a href="/assets/docs/behaviour-summary.pdf" download class="card-link">Download PDF →</a>
           </article>
 
-          <article class="card" style="padding:1.4rem;">
+          <article class="card">
             <h3>Incident Form Template</h3>
-            <p>Document incidents clearly and professionally.</p>
+            <p>Record incidents clearly and professionally.</p>
             <a href="/assets/docs/incident-form.pdf" download class="card-link">Download PDF →</a>
           </article>
 
-          <article class="card" style="padding:1.4rem;">
+          <article class="card">
             <h3>Safety Plan Template</h3>
-            <p>Plan safety responses for home, school and community environments.</p>
+            <p>Plan responses for home, school or community environments.</p>
             <a href="/assets/docs/safety-plan.docx" download class="card-link">Download Word →</a>
           </article>
 
         </div>
-
       </div>
     </section>
 
-    <!-- DAILY ROUTINES & SCHEDULES -->
-    <section class="home-section" style="padding:3.8rem 0;">
+    <!-- ROUTINES -->
+    <section class="section">
       <div class="container">
 
-        <header class="section-header" style="margin-bottom:2rem;">
-          <h2 style="font-size:2rem;">Daily Routine &amp; Scheduling Templates</h2>
-          <p style="font-size:1.05rem;">Support smoother days and predictable weekly rhythms.</p>
-        </header>
+        <h2 class="section-title">Daily Routine & Scheduling Templates</h2>
+        <p class="section-intro">Create smoother days and predictable weekly rhythms.</p>
 
-        <div class="card-grid" style="gap:2rem;">
+        <div class="card-grid">
 
-          <article class="card" style="padding:1.4rem;">
+          <article class="card">
             <h3>Weekly Support Schedule</h3>
-            <p>Plan shifts, therapy, routines and appointments.</p>
+            <p>Plan shifts, therapy and appointments.</p>
             <a href="/assets/docs/weekly-support-schedule.pdf" download class="card-link">Download PDF →</a>
           </article>
 
-          <article class="card" style="padding:1.4rem;">
+          <article class="card">
             <h3>Daily Routine Planner</h3>
-            <p>Create visual or written routines for participants.</p>
+            <p>Create visual or written routines.</p>
             <a href="/assets/docs/daily-routine-planner.docx" download class="card-link">Download Word →</a>
           </article>
 
-          <article class="card" style="padding:1.4rem;">
-            <h3>Appointment &amp; Therapy Tracker</h3>
-            <p>Track ongoing therapy programs, capacity building supports and goals.</p>
+          <article class="card">
+            <h3>Appointment & Therapy Tracker</h3>
+            <p>Track therapy programs and goals.</p>
             <a href="/assets/docs/therapy-tracker.pdf" download class="card-link">Download PDF →</a>
           </article>
 
         </div>
-
       </div>
     </section>
 
-    <!-- WORKER DOCUMENTATION -->
-    <section class="home-section section-alt" style="padding:3.8rem 0;">
+    <!-- WORKER DOCUMENTS -->
+    <section class="section section-alt">
       <div class="container">
 
-        <header class="section-header" style="margin-bottom:2rem;">
-          <h2 style="font-size:2rem;">Support Worker Documentation</h2>
-          <p style="font-size:1.05rem;">Consistency, clarity and professionalism for every shift.</p>
-        </header>
+        <h2 class="section-title">Support Worker Documentation</h2>
+        <p class="section-intro">Clear, consistent and professional shift tools.</p>
 
-        <div class="card-grid" style="gap:2rem;">
+        <div class="card-grid">
 
-          <article class="card" style="padding:1.4rem;">
+          <article class="card">
             <h3>Daily Support Log</h3>
-            <p>Record progress, behaviours, communication and activities.</p>
+            <p>Record activities, communication and behaviours.</p>
             <a href="/assets/docs/daily-support-log.pdf" download class="card-link">Download PDF →</a>
           </article>
 
-          <article class="card" style="padding:1.4rem;">
+          <article class="card">
             <h3>Shift Report Template</h3>
-            <p>Document the outcome of each shift.</p>
+            <p>Summarise each shift effectively.</p>
             <a href="/assets/docs/shift-report-template.docx" download class="card-link">Download Word →</a>
           </article>
 
-          <article class="card" style="padding:1.4rem;">
+          <article class="card">
             <h3>Medication Checklist</h3>
-            <p>Track medication routines and administration notes.</p>
+            <p>Track medication routines accurately.</p>
             <a href="/assets/docs/medication-checklist.pdf" download class="card-link">Download PDF →</a>
           </article>
 
         </div>
-
       </div>
     </section>
 
-    <!-- FULL TOOLKIT ZIP -->
-    <section class="home-section" style="padding:3.8rem 0;">
+    <!-- FULL TOOLKIT -->
+    <section class="section">
       <div class="container center">
-        <h2 style="font-size:2rem;">Download the Complete Toolkit</h2>
-        <p style="font-size:1.05rem;">
-          Includes every template in one ZIP file — perfect for families and support coordinators.
-        </p>
-        <a href="/assets/toolkit/ndis-toolkit.zip"
-           class="btn btn-primary"
-           style="margin-top:1.4rem;">
-          Download Full Toolkit (ZIP)
-        </a>
+        <h2>Download the Complete Toolkit</h2>
+        <p>Includes every template in one ZIP file.</p>
+        <a href="/assets/toolkit/ndis-toolkit.zip" class="btn btn-primary">Download Full Toolkit (ZIP)</a>
       </div>
     </section>
 
     <!-- CTA -->
-    <section class="home-section final-cta" style="padding:3.8rem 0;">
+    <section class="home-section final-cta">
       <div class="container final-cta-inner">
         <div>
-          <h2 style="font-size:2rem;">Need help using these templates?</h2>
-          <p style="font-size:1.05rem;">
-            We can walk you through setup, routines or planning tools for participants and families.
-          </p>
+          <h2>Need help using these templates?</h2>
+          <p>We can walk you through routines, planning tools or documentation.</p>
         </div>
         <div class="final-cta-actions">
           <a href="/contact" class="btn btn-primary">Talk to Able Aide</a>
@@ -391,24 +332,18 @@
 
       <div class="footer-col">
         <h3>Able Aide</h3>
-        <p>
-          Your Journey, Our Support – warm, person-centred disability supports across Greater Melbourne
-          and regional Victoria.
-        </p>
-        <p>
-          <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
-          <strong>Email:</strong>
-          <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
-        </p>
+        <p>Your Journey, Our Support across Victoria.</p>
+        <p><strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a></p>
+        <p><strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a></p>
       </div>
 
       <div class="footer-col">
-        <h3>Quick links</h3>
+        <h3>Quick Links</h3>
         <ul class="footer-links">
           <li><a href="/about">About</a></li>
           <li><a href="/services">Services</a></li>
           <li><a href="/locations">Locations</a></li>
-          <li><a href="/refer">Refer a participant</a></li>
+          <li><a href="/refer">Refer</a></li>
           <li><a href="/resources">Resources</a></li>
           <li><a href="/careers">Careers</a></li>
           <li><a href="/contact">Contact</a></li>
@@ -416,22 +351,19 @@
       </div>
 
       <div class="footer-col">
-        <h3>Where we support</h3>
-        <p>
-          Greater Melbourne (Frankston, Dandenong, Ringwood, Epping, Werribee, Sunshine &amp; surrounds)<br>
-          Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria
-        </p>
+        <h3>Where We Support</h3>
+        <p>Greater Melbourne · Geelong · Ballarat · Bendigo · Shepparton</p>
       </div>
 
       <div class="footer-col">
-        <h3>Connect with us</h3>
+        <h3>Follow Us</h3>
         <ul class="footer-links">
-          <li><a href="https://www.facebook.com/able.aide" target="_blank" rel="noopener">Facebook</a></li>
-          <li><a href="https://www.instagram.com/ableaide/" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://www.tiktok.com/@able-aide" target="_blank" rel="noopener">TikTok</a></li>
-          <li><a href="https://www.youtube.com/@AbleAide" target="_blank" rel="noopener">YouTube</a></li>
-          <li><a href="https://x.com/AbleAideSupport" target="_blank" rel="noopener">X (Twitter)</a></li>
+          <li><a href="https://www.facebook.com/able.aide">Facebook</a></li>
+          <li><a href="https://www.instagram.com/ableaide/">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/ableaide/">LinkedIn</a></li>
+          <li><a href="https://www.tiktok.com/@ableaide">TikTok</a></li>
+          <li><a href="https://www.youtube.com/@AbleAide">YouTube</a></li>
+          <li><a href="https://x.com/AbleAideSupport">X</a></li>
         </ul>
       </div>
 
@@ -439,30 +371,24 @@
 
     <div class="container footer-bottom">
       <p class="small">
-        © <span id="year"></span> Able Aide. All rights reserved. ·
-        <a href="/privacy-policy" class="footer-link">Privacy Policy</a> ·
-        <a href="/terms-of-service" class="footer-link">Terms of Service</a>
+        © <span id="year"></span> Able Aide. All rights reserved.
+        · <a href="/privacy-policy">Privacy Policy</a>
+        · <a href="/terms-of-service">Terms</a>
       </p>
     </div>
   </footer>
 
   <!-- FLOATING CTA -->
   <div class="floating-cta" id="floatingCta">
-    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button"
-            aria-label="Open support options"
-            style="padding:0.45rem 0.8rem; box-shadow:0 10px 20px rgba(11,114,133,0.35); font-size:0.85rem;">
-      <span class="icon">💬</span>
-      <span>Need support?</span>
+    <button class="floating-cta-toggle" id="floatingCtaToggle">
+      <span class="icon">💬</span> Need support?
     </button>
-
-    <div class="floating-cta-panel" style="box-shadow:0 12px 28px rgba(15,23,42,0.25);">
+    <div class="floating-cta-panel">
       <div class="floating-cta-title">Talk to Able Aide</div>
-      <div class="floating-cta-text">
-        Quick ways to reach us about NDIS supports, referrals or questions.
-      </div>
+      <div class="floating-cta-text">Quick ways to reach us.</div>
       <div class="floating-cta-links">
-        <a href="tel:61435039110" aria-label="Call Able Aide on 0435 039 110">📞 Call 0435 039 110</a>
-        <a href="/contact">✉️ Send an enquiry</a>
+        <a href="tel:61435039110">📞 Call 0435 039 110</a>
+        <a href="/contact">✉️ Send enquiry</a>
         <a href="/refer">📝 Refer a participant</a>
       </div>
     </div>
@@ -470,44 +396,13 @@
 
   <!-- SCRIPTS -->
   <script>
-    // Dynamic year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Mobile nav toggle + auto-close
-    (function () {
-      var navToggle = document.getElementById('navToggle');
-      var mainNav = document.getElementById('mainNav');
+    document.getElementById("navToggle").onclick =
+      () => document.getElementById("mainNav").classList.toggle("open");
 
-      if (navToggle && mainNav) {
-        navToggle.addEventListener('click', function () {
-          var isOpen = mainNav.classList.contains('open');
-          mainNav.classList.toggle('open', !isOpen);
-          navToggle.setAttribute('aria-expanded', String(!isOpen));
-        });
-
-        var navLinks = mainNav.querySelectorAll('a');
-        navLinks.forEach(function (link) {
-          link.addEventListener('click', function () {
-            if (window.innerWidth <= 900) {
-              mainNav.classList.remove('open');
-              navToggle.setAttribute('aria-expanded', 'false');
-            }
-          });
-        });
-      }
-    })();
-
-    // Floating CTA toggle
-    (function () {
-      var floatingCta = document.getElementById('floatingCta');
-      var floatingToggle = document.getElementById('floatingCtaToggle');
-
-      if (floatingCta && floatingToggle) {
-        floatingToggle.addEventListener('click', function () {
-          floatingCta.classList.toggle('open');
-        });
-      }
-    })();
+    document.getElementById("floatingCtaToggle").onclick =
+      () => document.getElementById("floatingCta").classList.toggle("open");
   </script>
 
 </body>

@@ -1,4 +1,81 @@
+##############################################
+# Able Aide — SEO-Optimised robots.txt
+# Version: SEO-MAX 2025
+##############################################
+
+# ========== GLOBAL RULES ==========
 User-agent: *
 Allow: /
 
+# Allow essential rendering assets for Googlebot
+Allow: /*.css$
+Allow: /*.js$
+Allow: /assets/
+Allow: /fonts/
+Allow: /images/
+Allow: /uploads/
+
+# ========== BLOCK SENSITIVE / SYSTEM PATHS ==========
+Disallow: /admin/
+Disallow: /administrator/
+Disallow: /backend/
+Disallow: /server-status/
+Disallow: /cgi-bin/
+Disallow: /tmp/
+Disallow: /private/
+Disallow: /logs/
+Disallow: /scripts/
+Disallow: /config/
+Disallow: /backup/
+Disallow: /old/
+
+# ========== PREVENT BAD INDEXING OR RECORDING ==========
+# Prevent query strings from polluting Google index
+Disallow: /*?    
+Disallow: /*?*    
+
+# Block search results pages (if any future system is added)
+Disallow: /search/
+
+# Prevent indexing of file types that should not appear in SERPs
+Disallow: /*.php$
+Disallow: /*.cgi$
+Disallow: /*.py$
+Disallow: /*.log$
+Disallow: /*.sql$
+Disallow: /*.json$
+
+# ========== ALLOW GOOD RESOURCES (CRITICAL FOR SEO) ==========
+Allow: /*.jpg$
+Allow: /*.jpeg$
+Allow: /*.png$
+Allow: /*.webp$
+Allow: /*.svg$
+Allow: /*.woff$
+Allow: /*.woff2$
+Allow: /*.ttf$
+
+# ========== SPECIAL BOT HANDLING ==========
+# Google Ads / Meta Ads landing pages (no restriction)
+User-agent: Google AdsBot
+Allow: /
+
+User-agent: FacebookExternalHit
+Allow: /
+
+# Block junk crawlers known to waste bandwidth (optional)
+User-agent: AhrefsBot
+Disallow: /
+
+User-agent: SemrushBot
+Disallow: /
+
+User-agent: MJ12bot
+Disallow: /
+
+# ========== SITEMAP ==========
 Sitemap: https://ableaide.com.au/sitemap.xml
+
+##############################################
+# END OF FILE
+##############################################

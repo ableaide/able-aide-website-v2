@@ -90,8 +90,7 @@
              class="logo-img"
              width="180"
              height="46"
-             decoding="async"
-             style="height:46px; width:auto;">
+             decoding="async">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
@@ -158,11 +157,9 @@
           <img
             src="/assets/img/locations-hero.webp"
             alt="Dandenong community spaces"
-            class="hero-card-img"
+            class="hero-img"
             loading="lazy"
-            decoding="async"
-            width="1600"
-            height="1067">
+            decoding="async">
 
           <h2>Supporting Dandenong & Surrounds</h2>
           <p class="small">
@@ -366,8 +363,7 @@
         navToggle.setAttribute('aria-expanded', String(!isOpen));
       });
 
-      const navLinks = mainNav.querySelectorAll('a');
-      navLinks.forEach(link => {
+      mainNav.querySelectorAll('a').forEach(link => {
         link.addEventListener('click', () => {
           if (window.innerWidth <= 900) {
             mainNav.classList.remove('open');
@@ -380,7 +376,6 @@
     (function () {
       const floatingCta = document.getElementById('floatingCta');
       const toggle = document.getElementById('floatingCtaToggle');
-
       toggle.addEventListener('click', () => {
         floatingCta.classList.toggle('open');
       });

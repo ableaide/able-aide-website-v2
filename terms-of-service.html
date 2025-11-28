@@ -31,14 +31,12 @@
   <style>
     @media (max-width: 900px) {
       .main-nav {
-        display: block;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.25s ease;
+        display:block;
+        max-height:0;
+        overflow:hidden;
+        transition:max-height .25s ease;
       }
-      .main-nav.open {
-        max-height: 550px;
-      }
+      .main-nav.open { max-height:550px; }
     }
   </style>
 
@@ -94,8 +92,7 @@
   <div class="container header-inner">
 
     <a href="/" class="logo">
-      <img src="/assets/img/able-aide-logo.webp"
-           alt="Able Aide Logo" class="logo-img" width="180" height="46">
+      <img src="/assets/img/able-aide-logo.webp" alt="Able Aide Logo" class="logo-img">
       <span class="logo-mark">Able Aide</span>
       <span class="logo-tagline">Your Journey, Our Support</span>
     </a>
@@ -130,9 +127,7 @@
       <a href="/contact" class="btn btn-primary">Book a Free Chat</a>
     </div>
 
-    <button class="nav-toggle" id="navToggle">
-      <span></span>
-    </button>
+    <button class="nav-toggle" id="navToggle"><span></span></button>
 
   </div>
 </header>
@@ -142,19 +137,24 @@
 <!-- HERO -->
 <section class="hero">
   <div class="container hero-inner">
+
     <div class="hero-text">
       <h1>Terms of Service</h1>
       <p class="hero-subtext">These terms explain how Able Aide provides services, how your information is handled, and your rights under Australian law and the NDIS Code of Conduct.</p>
     </div>
 
     <aside class="hero-card">
+      <!-- FIXED HERO IMAGE -->
       <img src="/assets/img/able-aide-ndis-about-hero.webp"
            alt="Support worker meeting with participant"
-           loading="lazy" decoding="async" width="1600" height="1067"
-           style="width:100%; border-radius:12px; margin-bottom:1rem;">
+           class="hero-img"
+           loading="lazy"
+           decoding="async">
+
       <h2>Your rights and responsibilities</h2>
       <p class="small">We aim to be transparent, fair and respectful in every interaction.</p>
     </aside>
+
   </div>
 </section>
 
@@ -178,8 +178,6 @@
       <li>Family & early support</li>
       <li>Plan Management <strong>(Coming Soon)</strong></li>
     </ul>
-
-    <p>Services are delivered according to NDIS Practice Standards, with respect for your rights, preferences, culture, communication style and safety.</p>
 
     <h2 class="section-title">4. Participant Responsibilities</h2>
     <p>Participants and families agree to:</p>
@@ -307,7 +305,7 @@
 
 <!-- FLOATING CTA -->
 <div class="floating-cta" id="floatingCta">
-  <button class="floating-cta-toggle" id="floatingCtaToggle" style="padding:0.45rem 0.8rem;">
+  <button class="floating-cta-toggle" id="floatingCtaToggle">
     <span class="icon">💬</span><span>Need help?</span>
   </button>
   <div class="floating-cta-panel">
@@ -325,29 +323,26 @@
 <script>
   document.getElementById("year").textContent = new Date().getFullYear();
 
-  // Mobile nav
-  (function () {
-    var navToggle = document.getElementById('navToggle');
-    var mainNav = document.getElementById('mainNav');
-    navToggle.addEventListener('click', function () {
-      mainNav.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', mainNav.classList.contains('open'));
-    });
-    mainNav.querySelectorAll('a').forEach(function (link) {
-      link.addEventListener('click', function () {
-        if (window.innerWidth <= 900) {
-          mainNav.classList.remove('open');
-          navToggle.setAttribute('aria-expanded', 'false');
-        }
-      });
-    });
-  })();
+  const navToggle = document.getElementById('navToggle');
+  const mainNav = document.getElementById('mainNav');
 
-  // Floating CTA
-  document.getElementById('floatingCtaToggle')
-    .addEventListener('click', function () {
-      document.getElementById('floatingCta').classList.toggle('open');
+  navToggle.addEventListener('click', () => {
+    mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', mainNav.classList.contains('open'));
+  });
+
+  mainNav.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => {
+      if (window.innerWidth <= 900) {
+        mainNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
     });
+  });
+
+  document.getElementById('floatingCtaToggle').addEventListener('click', () => {
+    document.getElementById('floatingCta').classList.toggle('open');
+  });
 </script>
 
 </body>

@@ -67,7 +67,6 @@
     "dateModified": "2025-11-27"
   }
   </script>
-
 </head>
 
 <body>
@@ -97,7 +96,9 @@
         <img src="/assets/img/able-aide-logo.webp"
              alt="Able Aide logo"
              class="logo-img"
-             style="height:46px; width:auto; margin-bottom:0.2rem;">
+             width="180"
+             height="46"
+             decoding="async">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
@@ -158,9 +159,11 @@
           </p>
         </div>
 
-        <div class="hero-card">
+        <aside class="hero-card">
           <img src="/assets/img/able-aide-ndis-family-early-support-hero.webp"
                alt="Parent and child playing during early childhood support session"
+               loading="lazy"
+               decoding="async"
                style="width:100%; border-radius:12px; margin-bottom:1rem;">
 
           <h2>Support for young children &amp; families</h2>
@@ -176,7 +179,7 @@
 
           <a href="/services/family-early-support" class="btn btn-outline btn-block">Family &amp; early support</a>
           <a href="/contact" class="btn btn-primary btn-block" style="margin-top:0.5rem;">Talk to our team</a>
-        </div>
+        </aside>
 
       </div>
     </section>
@@ -385,13 +388,14 @@
           <li><a href="/reviews">Reviews</a></li>
           <li><a href="/careers">Careers</a></li>
           <li><a href="/contact">Contact</a></li>
+          <li><a href="/complaints">Complaints</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h3>Where we support</h3>
         <p>
-          Greater Melbourne (Frankston, Dandenong, Ringwood, Epping, Werribee, Sunshine & surrounds)<br>
+          Greater Melbourne (Frankston, Dandenong, Ringwood, Epping, Werribee, Sunshine &amp; surrounds)<br>
           Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria
         </p>
       </div>
@@ -399,12 +403,12 @@
       <div class="footer-col">
         <h3>Connect with us</h3>
         <ul class="footer-links">
-          <li><a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a></li>
-          <li><a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a></li>
-          <li><a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a></li>
-          <li><a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a></li>
-          <li><a href="https://x.com/AbleAideSupport" target="_blank">X (Twitter)</a></li>
+          <li><a href="https://www.facebook.com/able.aide" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/ableaide/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.tiktok.com/@ableaide" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://www.youtube.com/@AbleAide" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://x.com/AbleAideSupport" target="_blank" rel="noopener">X (Twitter)</a></li>
         </ul>
       </div>
 
@@ -419,6 +423,25 @@
     </div>
   </footer>
 
+  <!-- FLOATING CTA -->
+  <div class="floating-cta" id="floatingCta">
+    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button">
+      <span class="icon">💬</span>
+      <span>Need support?</span>
+    </button>
+    <div class="floating-cta-panel">
+      <div class="floating-cta-title">Talk to Able Aide</div>
+      <div class="floating-cta-text">
+        Quick ways to reach us about NDIS supports, referrals or questions.
+      </div>
+      <div class="floating-cta-links">
+        <a href="tel:61435039110">📞 Call 0435 039 110</a>
+        <a href="/contact">✉️ Send an enquiry</a>
+        <a href="/refer">📝 Make a referral</a>
+      </div>
+    </div>
+  </div>
+
   <!-- SCRIPTS -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
@@ -427,11 +450,34 @@
     (function () {
       var navToggle = document.getElementById('navToggle');
       var mainNav = document.getElementById('mainNav');
+
       if (navToggle && mainNav) {
         navToggle.addEventListener('click', function () {
           var isOpen = mainNav.classList.contains('open');
           mainNav.classList.toggle('open', !isOpen);
           navToggle.setAttribute('aria-expanded', String(!isOpen));
+        });
+
+        // Close nav on link click (mobile)
+        mainNav.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            if (window.innerWidth <= 900) {
+              mainNav.classList.remove('open');
+              navToggle.setAttribute('aria-expanded', 'false');
+            }
+          });
+        });
+      }
+    })();
+
+    // Floating CTA toggle
+    (function () {
+      var floatingCta = document.getElementById('floatingCta');
+      var floatingToggle = document.getElementById('floatingCtaToggle');
+
+      if (floatingCta && floatingToggle) {
+        floatingToggle.addEventListener('click', function () {
+          floatingCta.classList.toggle('open');
         });
       }
     })();

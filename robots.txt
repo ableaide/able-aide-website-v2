@@ -1,24 +1,4 @@
 User-agent: *
 Allow: /
 
-# Disallow system / backend / irrelevant paths
-Disallow: /assets/raw/
-Disallow: /assets/private/
-Disallow: /admin/
-Disallow: /cms/
-Disallow: /drafts/
-Disallow: /tmp/
-
-# Allow all HTML pages
-Allow: /*.html$
-
-# Block duplicate URLs if any appear
-Disallow: /*?*
-
-# Files/folders that should never be indexed
-Disallow: /netlify.toml
-Disallow: /_redirect
-Disallow: /404.html
-
-# Sitemap
 Sitemap: https://ableaide.com.au/sitemap.xml

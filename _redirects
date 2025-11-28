@@ -1,87 +1,47 @@
-# -----------------------------
-# 1. GLOBAL SETTINGS
-# -----------------------------
+# -------------------------------
+# CLEAN URL REDIRECTS (HTML → no extension)
+# -------------------------------
 
-# Force HTTPS
-http://ableaide.com.au/*   https://ableaide.com.au/:splat    301!
+/about.html              /about                301
+/services.html           /services             301
+/locations.html          /locations            301
+/refer.html              /refer                301
+/resources.html          /resources            301
+/contact.html            /contact              301
+/careers.html            /careers              301
+/privacy-policy.html     /privacy-policy       301
+/terms-of-service.html   /terms-of-service     301
+/complaints.html         /complaints           301
 
-# Remove trailing slashes (canonical URLs)
-https://ableaide.com.au/*/ https://ableaide.com.au/:splat    301!
+# SERVICES SUBPAGES
+/services/personal-care.html            /services/personal-care             301
+/services/community-participation.html  /services/community-participation   301
+/services/support-coordination.html     /services/support-coordination      301
+/services/allied-health-access.html     /services/allied-health-access      301
+/services/family-early-support.html     /services/family-early-support      301
+/services/plan-management.html          /services/plan-management           301
 
-# Clean URLs — allow visitors to use extension-less URLs
-# Example: /about → /about.html
-/about               /about.html               200
-/contact             /contact.html             200
-/refer               /refer.html               200
-/complaints          /complaints.html          200
-/privacy-policy      /privacy-policy.html      200
-/terms-of-service    /terms-of-service.html    200
-/thanks              /thanks.html              200
+# RESOURCE HUB PAGES
+/resources/downloads.html       /resources/downloads        301
+/resources/templates.html       /resources/templates        301
+/resources/ndis-guides.html     /resources/ndis-guides      301
 
-# -----------------------------
-# 2. SERVICE PAGES
-# -----------------------------
-/services                     /services/index.html                200
-/services/personal-care       /services/personal-care.html        200
-/services/community-participation  /services/community-participation.html 200
-/services/support-coordination     /services/support-coordination.html    200
-/services/allied-health-access     /services/allied-health-access.html    200
-/services/family-early-support     /services/family-early-support.html    200
+# LOCATION PAGES (HTML → clean URLs)
+# If any .html existed previously, they now redirect cleanly.
+# These ensure old links never break.
 
-# -----------------------------
-# 3. LOCATION PAGES
-# -----------------------------
-/locations                    /locations/index.html               200
-/locations/melbourne          /locations/melbourne.html           200
-/locations/geelong            /locations/geelong.html             200
-/locations/ballarat           /locations/ballarat.html            200
-/locations/bendigo            /locations/bendigo.html             200
-/locations/shepparton         /locations/shepparton.html          200
-/locations/dandenong          /locations/dandenong.html           200
-/locations/frankston          /locations/frankston.html           200
-/locations/epping             /locations/epping.html              200
-/locations/werribee           /locations/werribee.html            200
-/locations/ringwood           /locations/ringwood.html            200
-/locations/mornington-peninsula  /locations/mornington-peninsula.html 200
+# METRO
+/locations/melbourne.html            /locations/melbourne             301
+/locations/frankston.html            /locations/frankston             301
+/locations/dandenong.html            /locations/dandenong             301
+/locations/ringwood.html             /locations/ringwood              301
+/locations/epping.html               /locations/epping                301
+/locations/sunshine.html             /locations/sunshine              301
+/locations/werribee.html             /locations/werribee              301
+/locations/mornington-peninsula.html /locations/mornington-peninsula  301
 
-# -----------------------------
-# 4. RESOURCES SECTION
-# -----------------------------
-/resources                       /resources/resources.html        200
-/resources/downloads             /resources/downloads.html        200
-/resources/ndis-guides           /resources/ndis-guides.html      200
-/resources/templates             /resources/templates.html        200
-
-# Fix old path (resource.html → resources.html)
-# In case old Google link exists
-/resources/resource.html         /resources/resources.html        301!
-
-# -----------------------------
-# 5. BLOG
-# -----------------------------
-/blog                       /blog/index.html                     200
-/blog/community-access-ideas-ndis                 /blog/community-access-ideas-ndis.html                    200
-/blog/how-to-access-allied-health-ndis            /blog/how-to-access-allied-health-ndis.html               200
-/blog/how-to-prepare-for-ndis-plan-review         /blog/how-to-prepare-for-ndis-plan-review.html            200
-/blog/ndis-early-childhood-pathway-explained      /blog/ndis-early-childhood-pathway-explained.html         200
-/blog/what-personal-care-includes-ndis            /blog/what-personal-care-includes-ndis.html               200
-
-# -----------------------------
-# 6. CASE STUDIES
-# -----------------------------
-/case-studies                     /case-studies/index.html           200
-/case-studies/building-confidence-in-the-community    /case-studies/building-confidence-in-the-community.html 200
-/case-studies/helping-participant-get-unstuck-with-therapies   /case-studies/helping-participant-get-unstuck-with-therapies.html 200
-/case-studies/safe-transition-home-after-hospital    /case-studies/safe-transition-home-after-hospital.html 200
-/case-studies/supporting-family-early-childhood-routines   /case-studies/supporting-family-early-childhood-routines.html 200
-
-# -----------------------------
-# 7. REVIEWS & CAREERS
-# -----------------------------
-/reviews                     /reviews/index.html                 200
-/careers                     /careers/index.html                 200
-
-# -----------------------------
-# 8. FALLBACK (404)
-# -----------------------------
-/*     /404.html      404
+# REGIONAL
+/locations/geelong.html      /locations/geelong        301
+/locations/ballarat.html     /locations/ballarat       301
+/locations/bendigo.html      /locations/bendigo        301
+/locations/shepparton.html   /locations/shepparton     301

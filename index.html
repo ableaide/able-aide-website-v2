@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Able Aide – NDIS Disability Support Across Victoria</title>
+  <title>NDIS Disability Support Across Victoria – Able Aide</title>
 
   <!-- Canonical -->
   <link rel="canonical" href="https://ableaide.com.au/">
@@ -12,11 +12,11 @@
 
   <!-- Meta Description -->
   <meta name="description"
-        content="Warm, person-centred NDIS disability support across Victoria – including Greater Melbourne (Frankston, Dandenong, Ringwood, Epping, Werribee, Sunshine and surrounds), Geelong, Ballarat, Bendigo, Shepparton and regional areas. Personal care, community access, support coordination, allied health access & family support.">
+        content="Warm, person-centred NDIS disability support across Victoria – including Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton and regional communities. Personal care, community access, support coordination, allied health access, family support and plan-managed participants.">
 
-  <!-- Keywords (optional) -->
+  <!-- (Optional) Keywords -->
   <meta name="keywords"
-        content="NDIS provider Victoria, NDIS support Melbourne, Frankston NDIS, Dandenong NDIS, Ringwood NDIS, Epping NDIS, Werribee NDIS, Sunshine NDIS, disability support, personal care, support coordination, community access, allied health access">
+        content="NDIS provider Victoria, NDIS disability support, NDIS support Melbourne, Frankston NDIS, Dandenong NDIS, Ringwood NDIS, Epping NDIS, Werribee NDIS, Sunshine NDIS, Geelong NDIS, Ballarat NDIS, Bendigo NDIS, Shepparton NDIS">
 
   <!-- Favicon -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
@@ -27,8 +27,8 @@
   <!-- OpenGraph -->
   <meta property="og:title" content="Able Aide – NDIS Disability Support Across Victoria">
   <meta property="og:description"
-        content="Person-centred disability support across Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton and regional Victoria. NDIS registration in progress. Supporting plan-managed and self-managed participants.">
-  <meta property="og:image" content="/assets/img/og-image.png">
+        content="Warm, person-centred disability support across Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton and regional Victoria. NDIS registration in progress. Supporting plan-managed and self-managed participants.">
+  <meta property="og:image" content="/assets/img/og-image.webp">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ableaide.com.au/">
 
@@ -37,10 +37,73 @@
   <meta name="twitter:title" content="Able Aide – Disability Support Across Victoria">
   <meta name="twitter:description"
         content="Warm, reliable disability support that puts your goals, routines and family first. NDIS registration in progress.">
-  <meta name="twitter:image" content="/assets/img/og-image.png">
+  <meta name="twitter:image" content="/assets/img/og-image.webp">
 
   <!-- Styles -->
+  <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Preload logo -->
+  <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
+
+  <!-- Small nav animation overrides -->
+  <style>
+    @media (max-width: 900px) {
+      .main-nav {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.25s ease;
+      }
+      .main-nav.open {
+        max-height: 500px;
+      }
+    }
+  </style>
+
+  <!-- Schema: Organization + WebPage + Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Able Aide",
+        "url": "https://ableaide.com.au",
+        "logo": "https://ableaide.com.au/assets/img/able-aide-logo.webp",
+        "description": "Able Aide provides respectful, consistent and person-centred NDIS disability support across Victoria.",
+        "email": "enquiries@ableaide.com.au",
+        "telephone": "+61435039110",
+        "sameAs": [
+          "https://www.facebook.com/able.aide",
+          "https://www.instagram.com/ableaide/",
+          "https://www.linkedin.com/company/ableaide/",
+          "https://www.tiktok.com/@ableaide",
+          "https://www.youtube.com/@AbleAide",
+          "https://x.com/AbleAideSupport"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "name": "Able Aide – NDIS Disability Support Across Victoria",
+        "url": "https://ableaide.com.au/",
+        "description": "Warm, person-centred NDIS disability support across Victoria for self-managed and plan-managed participants.",
+        "inLanguage": "en-AU"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          {
+            "@type": "ListItem",
+            "position": 1,
+            "name": "Home",
+            "item": "https://ableaide.com.au/"
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -50,11 +113,13 @@
     <div class="container top-trust-bar-inner">
       <div class="top-trust-left">
         <span class="top-trust-badge">NDIS registration in progress</span>
-        <span class="top-trust-badge">Currently supporting self-managed &amp; plan-managed participants</span>
+        <span class="top-trust-badge">Supporting self-managed &amp; plan-managed participants</span>
         <span class="top-trust-badge">Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton &amp; regional VIC</span>
       </div>
       <div class="top-trust-right">
-        <span class="top-trust-phone">Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a></span>
+        <span class="top-trust-phone">
+          Call: <a href="tel:61435039110" class="top-trust-link" aria-label="Call Able Aide on 0435 039 110">0435 039 110</a>
+        </span>
         <a href="/refer" class="top-trust-link">Quick referral form →</a>
       </div>
     </div>
@@ -65,7 +130,13 @@
     <div class="container header-inner">
 
       <a href="/" class="logo" aria-label="Able Aide Home">
-        <img src="/assets/img/able-aide-logo.png" alt="Able Aide Logo" class="logo-img" style="height:46px; width:auto; margin-bottom:0.2rem;">
+        <img src="/assets/img/able-aide-logo.webp"
+             alt="Able Aide logo"
+             class="logo-img"
+             style="height:46px; width:auto; margin-bottom:0.2rem;"
+             width="180"
+             height="46"
+             decoding="async">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
@@ -82,7 +153,12 @@
               <li><a href="/services/community-participation">Community participation</a></li>
               <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/allied-health-access">Allied health access</a></li>
-              <li><a href="/services/family-early-support">Early family &amp; family support</a></li>
+              <li><a href="/services/family-early-support">Early &amp; family support</a></li>
+              <li>
+                <a href="/services/plan-management">
+                  Plan management <span class="small">(Coming soon)</span>
+                </a>
+              </li>
             </ul>
           </li>
 
@@ -90,6 +166,7 @@
           <li><a href="/refer">Refer a participant</a></li>
           <li><a href="/resources">Resources</a></li>
           <li><a href="/contact">Contact</a></li>
+          <li><a href="/careers">Careers</a></li>
         </ul>
       </nav>
 
@@ -100,7 +177,8 @@
       </div>
 
       <!-- MOBILE NAV TOGGLE -->
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation">
+      <button class="nav-toggle" id="navToggle" type="button"
+              aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
         <span></span>
       </button>
 
@@ -116,7 +194,7 @@
         <div class="hero-text">
           <h1>Your Journey, Our Support</h1>
           <p>
-            Warm, person-centred disability support across Victoria — including Greater Melbourne
+            Warm, person-centred NDIS disability support across Victoria – including Greater Melbourne
             (Frankston, Dandenong, Ringwood, Epping, Werribee, Sunshine and surrounding suburbs),
             Geelong, Ballarat, Bendigo, Shepparton and regional communities. We focus on consistent
             workers, clear communication and genuine respect for your routines, culture and family.
@@ -124,7 +202,7 @@
 
           <ul class="hero-highlights">
             <li>NDIS registration in progress</li>
-            <li>Currently supporting self-managed &amp; plan-managed participants</li>
+            <li>Supporting self-managed &amp; plan-managed participants</li>
             <li>Support for children, young people and adults</li>
           </ul>
 
@@ -142,14 +220,18 @@
         <div class="hero-image">
           <div class="hero-card">
             <img
-              src="/assets/img/able-aide-ndis-disability-support-homepage-hero.jpg"
+              src="/assets/img/able-aide-ndis-disability-support-homepage-hero.webp"
               alt="Support worker assisting participant at home"
               style="width:100%; border-radius:12px; margin-bottom:1rem;"
+              loading="lazy"
+              decoding="async"
+              width="1600"
+              height="1067"
             >
 
             <h2>Start with a gentle, no-pressure chat</h2>
             <p>
-              Tell us a little about your situation and goals — we’ll share how Able Aide can walk alongside
+              Tell us a little about your situation and goals – we’ll share how Able Aide can walk alongside
               you, without any obligation to proceed.
             </p>
 
@@ -251,12 +333,12 @@
           </article>
 
           <article class="card">
-            <h3>❓ Not sure what you need?</h3>
+            <h3>📋 Plan management <span class="small">(Coming soon)</span></h3>
             <p>
-              Many people feel unsure at first. We’ll listen, explain your options simply and help you decide
-              without any pressure.
+              Simple, stress-free NDIS invoice and budget management will be available once our registration
+              is finalised. You’re welcome to contact us for future enquiries.
             </p>
-            <a href="/contact" class="card-link">Talk to us →</a>
+            <a href="/services/plan-management" class="card-link">Learn more →</a>
           </article>
         </div>
       </div>
@@ -327,7 +409,7 @@
 
         <p class="regions-note">
           Not sure if we can come to you? <a href="/contact">Get in touch</a> and we’ll let you know
-          what’s possible.
+          what’s possible. You can also <a href="/locations">view all locations</a>.
         </p>
       </div>
     </section>
@@ -501,6 +583,7 @@
           <li><a href="/locations">Locations</a></li>
           <li><a href="/refer">Refer a participant</a></li>
           <li><a href="/resources">Resources</a></li>
+          <li><a href="/careers">Careers</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
@@ -536,19 +619,21 @@
     </div>
   </footer>
 
-  <!-- FLOATING CTA -->
+  <!-- FLOATING CTA (lighter styling) -->
   <div class="floating-cta" id="floatingCta">
-    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button">
+    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button"
+            aria-label="Open support options"
+            style="padding:0.45rem 0.8rem; box-shadow:0 10px 20px rgba(11,114,133,0.35); font-size:0.85rem;">
       <span class="icon">💬</span>
       <span>Need support?</span>
     </button>
-    <div class="floating-cta-panel">
+    <div class="floating-cta-panel" style="box-shadow:0 12px 28px rgba(15,23,42,0.25);">
       <div class="floating-cta-title">Talk to Able Aide</div>
       <div class="floating-cta-text">
         Quick ways to reach us about NDIS supports, referrals or questions.
       </div>
       <div class="floating-cta-links">
-        <a href="tel:61435039110">📞 Call 0435 039 110</a>
+        <a href="tel:61435039110" aria-label="Call Able Aide on 0435 039 110">📞 Call 0435 039 110</a>
         <a href="/contact">✉️ Send an enquiry</a>
         <a href="/refer">📝 Refer a participant</a>
       </div>
@@ -560,7 +645,7 @@
     // Dynamic year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Mobile nav toggle
+    // Mobile nav toggle + close on link click
     (function () {
       var navToggle = document.getElementById('navToggle');
       var mainNav = document.getElementById('mainNav');
@@ -568,11 +653,19 @@
       if (navToggle && mainNav) {
         navToggle.addEventListener('click', function () {
           var isOpen = mainNav.classList.contains('open');
-          if (isOpen) {
-            mainNav.classList.remove('open');
-          } else {
-            mainNav.classList.add('open');
-          }
+          mainNav.classList.toggle('open', !isOpen);
+          navToggle.setAttribute('aria-expanded', String(!isOpen));
+        });
+
+        // Close nav when a link is clicked (on mobile)
+        var navLinks = mainNav.querySelectorAll('a');
+        navLinks.forEach(function (link) {
+          link.addEventListener('click', function () {
+            if (window.innerWidth <= 900) {
+              mainNav.classList.remove('open');
+              navToggle.setAttribute('aria-expanded', 'false');
+            }
+          });
         });
       }
     })();

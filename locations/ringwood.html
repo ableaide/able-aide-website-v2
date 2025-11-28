@@ -2,45 +2,54 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NDIS Disability Support in Ringwood & Eastern Melbourne | Able Aide</title>
+  <title>NDIS Disability Support in Ringwood – Able Aide</title>
 
   <link rel="canonical" href="https://ableaide.com.au/locations/ringwood">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="description"
-        content="Warm, person-centred NDIS disability support in Ringwood and Melbourne’s eastern suburbs. Personal care, community access, support coordination, early supports and allied health access.">
+        content="Able Aide provides calm, person-centred NDIS disability support in Ringwood, Croydon, Mitcham, Heathmont, Vermont and surrounding eastern Melbourne suburbs.">
 
-  <meta name="keywords"
-        content="NDIS Ringwood, NDIS eastern suburbs, disability support Ringwood, support coordination Ringwood, personal care Ringwood, community access Ringwood">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
-  <link rel="shortcut icon" href="/favicon.ico">
-
-  <meta property="og:title" content="NDIS Disability Support in Ringwood & Eastern Melbourne | Able Aide">
+  <meta property="og:title" content="NDIS Disability Support in Ringwood – Able Aide">
   <meta property="og:description"
-        content="Able Aide provides respectful NDIS support across Ringwood, Box Hill, Croydon and eastern Melbourne.">
+        content="Reliable, respectful NDIS support across Ringwood and Melbourne's eastern suburbs, including Croydon, Heathmont, Mitcham, Vermont and surrounds.">
+  <meta property="og:image" content="/assets/img/victoria-map-coloured.webp">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="https://ableaide.com.au/locations/ringwood">
-  <meta property="og:image" content="/assets/img/og-image.png">
 
-  <meta name="twitter:card" content="summary_large_image">
-
+  <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ableaide.com.au/" },
+      { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://ableaide.com.au/locations" },
+      { "@type": "ListItem", "position": 3, "name": "Ringwood", "item": "https://ableaide.com.au/locations/ringwood" }
+    ]
+  }
+  </script>
 </head>
+
 <body>
 
   <!-- TOP TRUST BAR -->
   <div class="top-trust-bar">
-    <div class="container top-trust-inner">
-      <span class="top-trust-note">
-        NDIS registration in progress – supporting self-managed & plan-managed participants.
-      </span>
-      <span class="top-trust-actions">
-        <a href="tel:61435039110" class="top-trust-link">Call 0435 039 110</a>
-        <span class="top-trust-divider">·</span>
-        <a href="/refer" class="top-trust-link">Quick referral</a>
-      </span>
+    <div class="container top-trust-bar-inner">
+      <div class="top-trust-left">
+        <span class="top-trust-badge">NDIS registration in progress</span>
+        <span class="top-trust-badge">Self-managed & plan-managed</span>
+        <span class="top-trust-badge">Eastern Suburbs</span>
+      </div>
+      <div class="top-trust-right">
+        <span class="top-trust-phone">Call:
+          <a href="tel:61435039110" class="top-trust-link">0435 039 110</a>
+        </span>
+        <a href="/refer" class="top-trust-link">Quick referral →</a>
+      </div>
     </div>
   </div>
 
@@ -48,13 +57,13 @@
   <header class="site-header">
     <div class="container header-inner">
 
-      <a href="/" class="logo">
-        <img src="/assets/img/able-aide-logo.png" class="logo-img" alt="">
+      <a href="/" class="logo" aria-label="Able Aide Home">
+        <img src="/assets/img/able-aide-logo.webp" alt="Able Aide Logo" class="logo-img">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
 
-      <nav class="main-nav">
+      <nav class="main-nav" id="mainNav">
         <ul class="nav-list">
           <li><a href="/about">About</a></li>
 
@@ -62,260 +71,209 @@
             <a href="/services">Services</a>
             <ul class="nav-submenu">
               <li><a href="/services/personal-care">Personal care & daily living</a></li>
-              <li><a href="/services/community-participation">Community access</a></li>
+              <li><a href="/services/community-participation">Community participation</a></li>
               <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/allied-health-access">Allied health access</a></li>
-              <li><a href="/services/family-early-support">Family & early support</a></li>
+              <li><a href="/services/family-early-support">Early & family support</a></li>
+              <li><a href="/services/plan-management">Plan management <span class="small">(Coming soon)</span></a></li>
             </ul>
           </li>
 
           <li><a href="/locations" aria-current="page">Locations</a></li>
-          <li><a href="/resources">Resources</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/case-studies">Case studies</a></li>
-          <li><a href="/careers">Careers</a></li>
           <li><a href="/refer">Refer</a></li>
+          <li><a href="/resources">Resources</a></li>
           <li><a href="/contact">Contact</a></li>
+          <li><a href="/careers">Careers</a></li>
         </ul>
       </nav>
 
       <div class="header-cta">
-        <a href="/refer" class="btn btn-outline">Refer</a>
-        <a href="/contact" class="btn btn-primary">Free chat</a>
+        <a href="/refer" class="btn btn-outline">Refer a participant</a>
+        <a href="/contact" class="btn btn-primary">Book a free chat</a>
       </div>
 
+      <button class="nav-toggle" id="navToggle" type="button"><span></span></button>
     </div>
   </header>
 
   <main>
 
-    <!-- HERO -->
-    <section class="hero hero-location">
+    <!-- HERO WITH MAP -->
+    <section class="hero">
       <div class="container hero-inner">
 
         <div class="hero-text">
-          <h1>NDIS Disability Support in Ringwood & Eastern Melbourne</h1>
-
-          <p class="hero-subtext">
-            Able Aide provides warm, consistent and culturally respectful disability support across
-            Ringwood, Croydon, Box Hill and surrounding eastern Melbourne suburbs.
+          <h1>NDIS Disability Support in Ringwood</h1>
+          <p>
+            Able Aide supports participants across Ringwood and Melbourne's eastern suburbs with calm,
+            consistent and person-centred NDIS services tailored to individual needs, communication preferences
+            and goals.
           </p>
-
-          <p class="hero-subtext">
-            Whether you're looking for personal care, community access, support coordination or early
-            supports for your child, we work with you at your pace.
+          <p>
+            We proudly assist children, teens and adults — including those with higher or complex support needs.
           </p>
-
-          <div class="hero-actions">
-            <a href="/contact" class="btn btn-primary">Talk about supports in Ringwood</a>
-            <a href="/refer" class="btn btn-secondary">Refer a participant</a>
-          </div>
         </div>
 
         <aside class="hero-card">
-          <img src="/assets/img/able-aide-ndis-locations-generic.jpg"
-               alt="NDIS support in Ringwood"
-               style="width:100%; border-radius:12px; margin-bottom:1rem;">
+          <img src="/assets/img/victoria-map-coloured.webp"
+               alt="Victoria coverage map – Ringwood region"
+               class="hero-card-img"
+               loading="lazy">
 
-          <h2 class="section-title" style="font-size:1.4rem;">Supporting participants across the east</h2>
+          <h2>Supporting Ringwood & Surrounding Suburbs</h2>
           <p class="small">
-            We support participants in Ringwood, Ringwood East, Croydon, Mitcham, Box Hill, Blackburn,
-            Donvale and surrounding suburbs.
+            Ringwood · Ringwood East · Croydon · Mitcham · Heathmont · Vermont · Nunawading · Bayswater
           </p>
 
-          <a href="/contact" class="btn btn-primary btn-block">Check if we cover your suburb</a>
+          <a href="/contact" class="btn btn-primary btn-block">Talk to our team</a>
         </aside>
 
       </div>
     </section>
 
-    <!-- LAYOUT -->
-    <section class="section section-location">
-      <div class="container location-layout">
+    <!-- MAIN CONTENT -->
+    <section class="section">
+      <div class="container layout-with-sidebar">
 
         <!-- SIDEBAR -->
-        <aside class="location-sidebar">
+        <aside class="layout-sidebar layout-sidebar-sticky">
 
           <div class="sidebar-card">
-            <h3>How we help</h3>
-            <ul class="checklist small">
-              <li>Personal care & daily living</li>
-              <li>Community access & transport</li>
-              <li>Support coordination</li>
-              <li>Family & early support</li>
-              <li>Allied health access</li>
-            </ul>
-            <a href="/services" class="card-link">Explore services →</a>
-          </div>
-
-          <div class="sidebar-card">
-            <h3>Nearby suburbs</h3>
-            <ul class="pill-list">
-              <li>Ringwood East</li>
-              <li>Croydon</li>
-              <li>Mitcham</li>
-              <li>Box Hill</li>
-              <li>Blackburn</li>
-              <li>Donvale</li>
+            <h3>Other Locations</h3>
+            <ul class="sidebar-links">
+              <li><a href="/locations/melbourne">Melbourne</a></li>
+              <li><a href="/locations/frankston">Frankston</a></li>
+              <li><a href="/locations/dandenong">Dandenong</a></li>
+              <li><a href="/locations/epping">Epping</a></li>
+              <li><a href="/locations/werribee">Werribee</a></li>
+              <li><a href="/locations/sunshine">Sunshine</a></li>
+              <li><a href="/locations/mornington-peninsula">Mornington Peninsula</a></li>
+              <li><a href="/locations/geelong">Geelong</a></li>
+              <li><a href="/locations/ballarat">Ballarat</a></li>
+              <li><a href="/locations/bendigo">Bendigo</a></li>
+              <li><a href="/locations/shepparton">Shepparton</a></li>
             </ul>
           </div>
 
           <div class="sidebar-card">
-            <h3>NDIS safety</h3>
-            <p class="small">
-              We follow the NDIS Code of Conduct, worker screening, privacy standards and all safety requirements.
-            </p>
-            <a href="/complaints-feedback" class="card-link">Feedback & complaints →</a>
-          </div>
-
-          <div class="sidebar-card sidebar-contact">
-            <h3>Contact Able Aide</h3>
-            <p class="small">We're happy to chat with participants, families or coordinators.</p>
-            <p class="small">
-              <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
-              <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
-            </p>
-            <a href="/contact" class="btn btn-outline btn-block">Send enquiry</a>
+            <h3>Get Support</h3>
+            <a href="/contact" class="btn btn-primary btn-block">Contact Able Aide</a>
+            <a href="/refer" class="btn btn-outline btn-block">Make a referral</a>
           </div>
 
         </aside>
 
-        <!-- MAIN CONTENT -->
-        <div class="location-main">
+        <!-- MAIN COLUMN -->
+        <main class="layout-main">
 
-          <section class="section-block">
-            <h2>Person-centred disability support in Ringwood</h2>
-            <p>
-              The eastern suburbs are home to diverse cultures, families and communities. We adapt our support
-              to your routines, preferences, language and communication needs — ensuring it feels safe,
-              respectful and predictable.
-            </p>
-          </section>
+          <h2 class="section-title">How We Support Participants in Ringwood</h2>
+          <p class="section-intro">
+            We take a calm, respectful and relationship-focused approach.  
+            Our team listens first — ensuring your needs, routines and communication preferences shape the support you receive.
+          </p>
 
-          <section class="section-block">
-            <h2>NDIS supports available in Ringwood</h2>
+          <h3 style="margin-top:2rem;">How We Help</h3>
+          <ul class="hero-highlights">
+            <li>Personal care & daily living support</li>
+            <li>Community participation & social connection</li>
+            <li>Support coordination (for eligible participants)</li>
+            <li>Assistance connecting with allied health providers</li>
+            <li>Early childhood & family support</li>
+          </ul>
 
-            <h3>Personal care & daily living</h3>
-            <p>
-              Respectful, pace-matched support with showering, dressing, meals, mobility, household tasks and
-              daily routines.
-            </p>
+          <p style="margin-top:1rem;">
+            <a href="/services" class="btn btn-outline">Explore services →</a>
+          </p>
 
-            <h3>Community access</h3>
-            <p>
-              Assistance attending therapy, appointments, programs, worship, social outings, study and
-              everyday activities.
-            </p>
+          <h3 style="margin-top:2.5rem;">Suburbs We Support</h3>
+          <ul class="regions-list">
+            <li>Ringwood</li>
+            <li>Ringwood East</li>
+            <li>Croydon</li>
+            <li>Mitcham</li>
+            <li>Heathmont</li>
+            <li>Vermont</li>
+            <li>Nunawading</li>
+            <li>Bayswater</li>
+          </ul>
 
-            <h3>Support coordination</h3>
-            <p>
-              We help you understand your plan, connect with local providers and prepare confidently for
-              NDIS reviews.
-            </p>
+          <h3 style="margin-top:2.5rem;">Local Community Spots</h3>
+          <p class="small">We support participants to access community spaces when aligned with their goals:</p>
 
-            <h3>Early & family support</h3>
-            <p>
-              Practical routines, behavioural support and community engagement for young children and families.
-            </p>
+          <ul class="hero-highlights">
+            <li>Eastland Shopping Centre</li>
+            <li>Ringwood Lake Park</li>
+            <li>Mullum Mullum Creek Trail</li>
+            <li>Local libraries & community hubs</li>
+            <li>Recreation centres & therapy clinics</li>
+          </ul>
 
-            <h3>Allied health access</h3>
-            <p>
-              We help locate therapists, manage bookings, follow up and implement therapy recommendations.
-            </p>
-          </section>
+          <p style="margin-top:1.5rem;">
+            All activities are based on your comfort, routines and accessibility needs.
+          </p>
 
-          <section class="section-block">
-            <h2>Where we support in the eastern suburbs</h2>
-            <ul class="checklist">
-              <li>Ringwood & Ringwood East</li>
-              <li>Croydon & Croydon South</li>
-              <li>Mitcham & Nunawading</li>
-              <li>Box Hill & Blackburn</li>
-              <li>Donvale & Doncaster surrounds</li>
-            </ul>
-          </section>
+          <h3 style="margin-top:2rem;">Ready to Begin?</h3>
+          <p class="small">We can confirm support availability in Ringwood quickly.</p>
+          <a href="/contact" class="btn btn-primary">Enquire about support</a>
 
-          <section class="section-block">
-            <h2>Working with support coordinators</h2>
-            <p>
-              Communication is clear, timely and collaborative. We work alongside support coordinators,
-              therapists and families to keep participants safe and supported.
-            </p>
-            <a href="/refer" class="card-link">Make a referral →</a>
-          </section>
+        </main>
 
-          <section class="section-block">
-            <h2>Start a conversation about support in Ringwood</h2>
-            <p>No pressure — simply a friendly chat about your needs.</p>
-            <a href="/contact" class="btn btn-primary">Book a free chat</a>
-          </section>
+      </div>
+    </section>
 
+    <!-- CTA -->
+    <section class="home-section final-cta">
+      <div class="container final-cta-inner">
+        <div>
+          <h2>Need Support in Ringwood?</h2>
+          <p>Tell us your suburb — we’re here to help.</p>
         </div>
-
+        <div class="final-cta-actions">
+          <a href="/contact" class="btn btn-primary">Contact Able Aide</a>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- FLOATING CTA -->
-  <div class="floating-cta">
-    <a href="tel:61435039110" class="floating-cta-btn">Call 0435 039 110</a>
-    <a href="/contact" class="floating-cta-btn secondary">Request a call-back</a>
-  </div>
-
   <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container footer-inner footer-inner-wide">
+    <div class="container footer-inner">
 
       <div class="footer-col">
         <h3>Able Aide</h3>
-        <p>Warm, person-centred disability supports across Victoria.</p>
+        <p>Your Journey, Our Support — disability support across Victoria.</p>
+        <p><strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a></p>
+        <p><strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a></p>
       </div>
 
       <div class="footer-col">
-        <h3>Links</h3>
+        <h3>Quick links</h3>
         <ul class="footer-links">
           <li><a href="/about">About</a></li>
           <li><a href="/services">Services</a></li>
           <li><a href="/locations">Locations</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/case-studies">Case studies</a></li>
+          <li><a href="/refer">Refer a participant</a></li>
+          <li><a href="/resources">Resources</a></li>
           <li><a href="/careers">Careers</a></li>
-          <li><a href="/refer">Refer</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h3>NDIS Areas</h3>
-        <ul class="footer-links">
-          <li><a href="/locations/frankston">Frankston</a></li>
-          <li><a href="/locations/dandenong">Dandenong</a></li>
-          <li><a href="/locations/ringwood">Ringwood</a></li>
-          <li><a href="/locations/epping">Epping</a></li>
-          <li><a href="/locations/werribee">Werribee</a></li>
-          <li><a href="/locations/geelong">Geelong</a></li>
-          <li><a href="/locations/ballarat">Ballarat</a></li>
-          <li><a href="/locations/bendigo">Bendigo</a></li>
-          <li><a href="/locations/mornington-peninsula">Mornington Peninsula</a></li>
-        </ul>
+        <h3>Where we support</h3>
+        <p>Greater Melbourne · Geelong · Ballarat · Bendigo · Shepparton · Regional VIC</p>
       </div>
 
       <div class="footer-col">
-        <h3>Resources</h3>
+        <h3>Follow us</h3>
         <ul class="footer-links">
-          <li><a href="/resources">Participant resources</a></li>
-          <li><a href="/complaints-feedback">Complaints</a></li>
-          <li><a href="/privacy-policy">Privacy Policy</a></li>
-          <li><a href="/terms-of-service">Terms of Service</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3>Connect</h3>
-        <ul class="footer-links">
-          <li><a href="https://facebook.com/able.aide" target="_blank">Facebook</a></li>
-          <li><a href="https://instagram.com/ableaide" target="_blank">Instagram</a></li>
-          <li><a href="https://linkedin.com/company/ableaide" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.facebook.com/able.aide">Facebook</a></li>
+          <li><a href="https://www.instagram.com/ableaide/">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/ableaide/">LinkedIn</a></li>
+          <li><a href="https://www.tiktok.com/@ableaide">TikTok</a></li>
+          <li><a href="https://www.youtube.com/@AbleAide">YouTube</a></li>
+          <li><a href="https://x.com/AbleAideSupport">X</a></li>
         </ul>
       </div>
 
@@ -324,13 +282,39 @@
     <div class="container footer-bottom">
       <p class="small">
         © <span id="year"></span> Able Aide. All rights reserved.
+        · <a href="/privacy-policy">Privacy Policy</a>
+        · <a href="/terms-of-service">Terms of Service</a>
       </p>
     </div>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </footer>
+
+  <!-- FLOATING CTA -->
+  <div class="floating-cta" id="floatingCta">
+    <button class="floating-cta-toggle" id="floatingCtaToggle">
+      <span class="icon">💬</span> Need support?
+    </button>
+    <div class="floating-cta-panel">
+      <div class="floating-cta-title">Talk to Able Aide</div>
+      <div class="floating-cta-text">Quick ways to reach us.</div>
+      <div class="floating-cta-links">
+        <a href="tel:61435039110">📞 Call 0435 039 110</a>
+        <a href="/contact">✉️ Send enquiry</a>
+        <a href="/refer">📝 Refer a participant</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    const navToggle = document.getElementById("navToggle");
+    const mainNav = document.getElementById("mainNav");
+    navToggle.onclick = () => mainNav.classList.toggle("open");
+
+    document.getElementById("floatingCtaToggle").onclick = () =>
+      document.getElementById("floatingCta").classList.toggle("open");
+  </script>
 
 </body>
 </html>

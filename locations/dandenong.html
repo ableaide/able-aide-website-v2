@@ -2,45 +2,81 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NDIS Disability Support in Dandenong & South-East Melbourne | Able Aide</title>
+  <title>NDIS Disability Support in Dandenong – Able Aide</title>
 
+  <!-- Canonical -->
   <link rel="canonical" href="https://ableaide.com.au/locations/dandenong">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Meta Description -->
   <meta name="description"
-        content="Warm, person-centred NDIS disability support in Dandenong and surrounding south-east Melbourne suburbs. Personal care, community access, support coordination, allied health access and early support for families.">
+        content="Person-centred NDIS disability support in Dandenong, Noble Park, Keysborough, Springvale, Doveton and South-East Melbourne. Personal care, community access, support coordination and early support.">
 
-  <meta name="keywords"
-        content="NDIS Dandenong, NDIS provider Dandenong, disability support Dandenong, personal care Dandenong, NDIS south-east Melbourne, community access Dandenong, support coordination Dandenong">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
-  <link rel="shortcut icon" href="/favicon.ico">
-
-  <meta property="og:title" content="NDIS Disability Support in Dandenong & South-East Melbourne | Able Aide">
+  <!-- OpenGraph -->
+  <meta property="og:title" content="NDIS Disability Support in Dandenong – Able Aide">
   <meta property="og:description"
-        content="Person-centred NDIS support for participants in Dandenong with respectful personal care, community access and support coordination.">
+        content="Warm, respectful and reliable disability support for NDIS participants across Dandenong and South-East Melbourne.">
+  <meta property="og:image" content="/assets/img/locations-hero.webp">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="https://ableaide.com.au/locations/dandenong">
-  <meta property="og:image" content="/assets/img/og-image.png">
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NDIS Disability Support in Dandenong – Able Aide">
+  <meta name="twitter:description"
+        content="Supporting participants in Dandenong, Noble Park, Keysborough and surrounding suburbs.">
+  <meta name="twitter:image" content="/assets/img/locations-hero.webp">
 
+  <!-- Styles -->
+  <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Mobile nav animation -->
+  <style>
+    @media (max-width: 900px) {
+      .main-nav {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.25s ease;
+      }
+      .main-nav.open {
+        max-height: 500px;
+      }
+    }
+  </style>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ableaide.com.au/" },
+      { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://ableaide.com.au/locations" },
+      { "@type": "ListItem", "position": 3, "name": "Dandenong", "item": "https://ableaide.com.au/locations/dandenong" }
+    ]
+  }
+  </script>
 </head>
+
 <body>
 
-  <!-- TOP TRUST BAR -->
+  <!-- GLOBAL TOP TRUST BAR -->
   <div class="top-trust-bar">
-    <div class="container top-trust-inner">
-      <span class="top-trust-note">
-        NDIS registration in progress – supporting self-managed & plan-managed participants.
-      </span>
-      <span class="top-trust-actions">
-        <a href="tel:61435039110" class="top-trust-link">Call 0435 039 110</a>
-        <span class="top-trust-divider">·</span>
-        <a href="/refer" class="top-trust-link">Quick referral</a>
-      </span>
+    <div class="container top-trust-bar-inner">
+      <div class="top-trust-left">
+        <span class="top-trust-badge">NDIS registration in progress</span>
+        <span class="top-trust-badge">Supporting self-managed & plan-managed participants</span>
+        <span class="top-trust-badge">Dandenong, Noble Park, Keysborough & South-East Melbourne</span>
+      </div>
+      <div class="top-trust-right">
+        <span class="top-trust-phone">
+          Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a>
+        </span>
+        <a href="/refer" class="top-trust-link">Quick referral form →</a>
+      </div>
     </div>
   </div>
 
@@ -48,13 +84,19 @@
   <header class="site-header">
     <div class="container header-inner">
 
-      <a href="/" class="logo">
-        <img src="/assets/img/able-aide-logo.png" class="logo-img" alt="">
+      <a href="/" class="logo" aria-label="Able Aide Home">
+        <img src="/assets/img/able-aide-logo.webp"
+             alt="Able Aide logo"
+             class="logo-img"
+             width="180"
+             height="46"
+             decoding="async"
+             style="height:46px; width:auto;">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
 
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Main Navigation" id="mainNav">
         <ul class="nav-list">
           <li><a href="/about">About</a></li>
 
@@ -62,27 +104,34 @@
             <a href="/services">Services</a>
             <ul class="nav-submenu">
               <li><a href="/services/personal-care">Personal care & daily living</a></li>
-              <li><a href="/services/community-participation">Community access</a></li>
+              <li><a href="/services/community-participation">Community participation</a></li>
               <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/allied-health-access">Allied health access</a></li>
-              <li><a href="/services/family-early-support">Family & early support</a></li>
+              <li><a href="/services/family-early-support">Early & family support</a></li>
+              <li>
+                <a href="/services/plan-management">
+                  Plan management <span class="small">(Coming soon)</span>
+                </a>
+              </li>
             </ul>
           </li>
 
           <li><a href="/locations" aria-current="page">Locations</a></li>
-          <li><a href="/resources">Resources</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/case-studies">Case studies</a></li>
-          <li><a href="/careers">Careers</a></li>
           <li><a href="/refer">Refer</a></li>
+          <li><a href="/resources">Resources</a></li>
           <li><a href="/contact">Contact</a></li>
+          <li><a href="/careers">Careers</a></li>
         </ul>
       </nav>
 
       <div class="header-cta">
-        <a href="/refer" class="btn btn-outline">Refer</a>
-        <a href="/contact" class="btn btn-primary">Free chat</a>
+        <a href="/refer" class="btn btn-outline">Refer a participant</a>
+        <a href="/contact" class="btn btn-primary">Book a free chat</a>
       </div>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation">
+        <span></span>
+      </button>
 
     </div>
   </header>
@@ -90,230 +139,187 @@
   <main>
 
     <!-- HERO -->
-    <section class="hero hero-location">
+    <section class="hero">
       <div class="container hero-inner">
 
         <div class="hero-text">
-          <h1>NDIS Disability Support in Dandenong & South-East Melbourne</h1>
-
-          <p class="hero-subtext">
-            Able Aide provides warm, person-centred disability support to participants living in Dandenong and
-            surrounding south-east suburbs. We focus on calm, consistent workers, clear communication and support
-            that respects your home, culture and family.
+          <h1>NDIS Disability Support in Dandenong</h1>
+          <p>
+            Able Aide provides warm, calm and culturally respectful disability support across Dandenong
+            and South-East Melbourne.
           </p>
-
-          <p class="hero-subtext">
-            Whether you need personal care, community access, a new support coordinator or early support for
-            children, we're here to walk alongside you.
+          <p>
+            From daily living assistance to community access and family support, we walk alongside participants
+            to help them feel confident, safe and supported.
           </p>
-
-          <div class="hero-actions">
-            <a href="/contact" class="btn btn-primary">Talk about supports in Dandenong</a>
-            <a href="/refer" class="btn btn-secondary">Refer a participant</a>
-          </div>
         </div>
 
         <aside class="hero-card">
-          <img src="/assets/img/able-aide-ndis-locations-generic.jpg"
-               alt="NDIS support in Dandenong"
-               style="width:100%; border-radius:12px; margin-bottom:1rem;">
+          <img
+            src="/assets/img/locations-hero.webp"
+            alt="Dandenong community spaces"
+            class="hero-card-img"
+            loading="lazy"
+            decoding="async"
+            width="1600"
+            height="1067">
 
-          <h2 class="section-title" style="font-size:1.4rem;">Supporting participants across the south-east</h2>
+          <h2>Supporting Dandenong & Surrounds</h2>
           <p class="small">
-            We support participants in Dandenong, Dandenong North, Noble Park, Keysborough, Springvale,
-            Doveton, Endeavour Hills and surrounding suburbs.
+            Noble Park · Keysborough · Springvale · Doveton · Endeavour Hills · Mulgrave · Clayton South
           </p>
 
-          <a href="/contact" class="btn btn-primary btn-block">Check if we cover your suburb</a>
+          <a href="/contact" class="btn btn-primary btn-block">Talk to our team</a>
         </aside>
 
       </div>
     </section>
 
-    <!-- LOCATION LAYOUT -->
-    <section class="section section-location">
-      <div class="container location-layout">
+    <!-- MAIN CONTENT WITH SIDEBAR -->
+    <section class="section">
+      <div class="container layout-with-sidebar">
 
         <!-- SIDEBAR -->
-        <aside class="location-sidebar">
+        <aside class="layout-sidebar layout-sidebar-sticky">
 
           <div class="sidebar-card">
-            <h3>How we help</h3>
-            <ul class="checklist small">
-              <li>Personal care & daily living</li>
-              <li>Community access & appointments</li>
-              <li>Support coordination</li>
-              <li>Family & early support</li>
-              <li>Allied health access</li>
-            </ul>
-            <a href="/services" class="card-link">Explore all services →</a>
-          </div>
-
-          <div class="sidebar-card">
-            <h3>Nearby suburbs</h3>
-            <ul class="pill-list">
-              <li>Dandenong North</li>
-              <li>Noble Park</li>
-              <li>Keysborough</li>
-              <li>Springvale</li>
-              <li>Doveton</li>
-              <li>Endeavour Hills</li>
+            <h3>Other Locations</h3>
+            <ul class="sidebar-links">
+              <li><a href="/locations/melbourne">Melbourne</a></li>
+              <li><a href="/locations/frankston">Frankston</a></li>
+              <li><a href="/locations/ringwood">Ringwood</a></li>
+              <li><a href="/locations/epping">Epping</a></li>
+              <li><a href="/locations/werribee">Werribee</a></li>
+              <li><a href="/locations/sunshine">Sunshine</a></li>
+              <li><a href="/locations/mornington-peninsula">Mornington Peninsula</a></li>
+              <li><a href="/locations/geelong">Geelong</a></li>
+              <li><a href="/locations/ballarat">Ballarat</a></li>
+              <li><a href="/locations/bendigo">Bendigo</a></li>
+              <li><a href="/locations/shepparton">Shepparton</a></li>
             </ul>
           </div>
 
           <div class="sidebar-card">
-            <h3>NDIS safety</h3>
-            <p class="small">
-              We follow NDIS Code of Conduct, worker screening, privacy standards and clear incident processes.
-            </p>
-            <a href="/complaints-feedback" class="card-link">Feedback & complaints →</a>
-          </div>
-
-          <div class="sidebar-card sidebar-contact">
-            <h3>Contact our team</h3>
-            <p class="small">We’re happy to speak with participants, families or coordinators.</p>
-            <p class="small">
-              <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
-              <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
-            </p>
-            <a href="/contact" class="btn btn-outline btn-block">Send enquiry</a>
+            <h3>Get Support</h3>
+            <a href="/contact" class="btn btn-primary btn-block">Contact Able Aide</a>
+            <a href="/refer" class="btn btn-outline btn-block">Make a referral</a>
           </div>
 
         </aside>
 
-        <!-- MAIN CONTENT -->
-        <div class="location-main">
+        <!-- MAIN COLUMN -->
+        <main class="layout-main">
 
-          <section class="section-block">
-            <h2>Person-centred disability support in Dandenong</h2>
-            <p>
-              The Dandenong region is one of Melbourne’s most culturally diverse communities. We understand
-              that families have unique routines, communication styles, sensory needs and cultural expectations —
-              and our support adapts to those needs.
-            </p>
-            <p>
-              We focus on building trust, matching workers thoughtfully and communicating clearly with families,
-              carers and support coordinators.
-            </p>
-          </section>
+          <h2 class="section-title">How We Support Participants in Dandenong</h2>
+          <p class="section-intro">
+            We believe good support starts with listening — to your routines, your communication style,
+            your culture and what matters most to you and your family.
+          </p>
 
-          <section class="section-block">
-            <h2>NDIS supports we offer in Dandenong</h2>
+          <h3 style="margin-top:2rem;">How We Help</h3>
+          <ul class="hero-highlights">
+            <li>Personal care & daily living</li>
+            <li>Community access & transport</li>
+            <li>Support coordination</li>
+            <li>Linking with trusted local allied health</li>
+            <li>Early childhood & family-centred support</li>
+          </ul>
 
-            <h3>Personal care & daily living</h3>
-            <p>Respectful support for showering, dressing, meals, mobility, household tasks and routines.</p>
+          <p style="margin-top:1rem;">
+            <a href="/services" class="btn btn-outline">Explore services →</a>
+          </p>
 
-            <h3>Community access</h3>
-            <p>
-              Support to attend appointments, therapy, shopping, programs, mosque/church/temple,
-              social events and everyday community activities.
-            </p>
+          <h3 style="margin-top:2.5rem;">Nearby Suburbs We Support</h3>
+          <ul class="regions-list">
+            <li>Noble Park</li>
+            <li>Keysborough</li>
+            <li>Springvale</li>
+            <li>Endeavour Hills</li>
+            <li>Doveton</li>
+            <li>Mulgrave</li>
+            <li>Hallam</li>
+            <li>Clayton South</li>
+          </ul>
 
-            <h3>Support coordination</h3>
-            <p>
-              Helping you understand your plan, connect with local providers, solve issues and prepare
-              for NDIS reviews.
-            </p>
+          <h3 style="margin-top:2.5rem;">Local Community Spots</h3>
+          <p class="small">When aligned with your goals, we may support you to visit:</p>
 
-            <h3>Family & early support</h3>
-            <p>Calm, practical routines and community engagement for young children and overwhelmed families.</p>
+          <ul class="hero-highlights">
+            <li>Dandenong Plaza</li>
+            <li>Harmony Square</li>
+            <li>Dandenong Market</li>
+            <li>Local community centres, libraries & parks</li>
+          </ul>
 
-            <h3>Allied health access</h3>
-            <p>We assist with finding therapists, booking, follow-up and implementing therapy strategies (within scope).</p>
+          <p style="margin-top:1.5rem;">
+            All community activities are tailored to your interests, comfort and accessibility needs.
+          </p>
 
-          </section>
+          <h3 style="margin-top:2rem;">Ready to Begin?</h3>
+          <p class="small">We can confirm availability in Dandenong quickly.</p>
+          <a href="/contact" class="btn btn-primary">Enquire about support in Dandenong</a>
 
-          <section class="section-block">
-            <h2>Where we support around Dandenong</h2>
-            <ul class="checklist">
-              <li>Dandenong & Dandenong North</li>
-              <li>Noble Park & Keysborough</li>
-              <li>Springvale & Doveton</li>
-              <li>Endeavour Hills & nearby suburbs</li>
-            </ul>
-          </section>
+        </main>
 
-          <section class="section-block">
-            <h2>Working with support coordinators</h2>
-            <p>
-              We actively collaborate with support coordinators, local services and community organisations.
-              Communication is honest, realistic and always participant-centred.
-            </p>
-            <a href="/refer" class="card-link">Make a referral →</a>
-          </section>
+      </div>
+    </section>
 
-          <section class="section-block">
-            <h2>Start a conversation about support in Dandenong</h2>
-            <p>No pressure, no expectations — just a simple chat to understand your needs.</p>
-            <a href="/contact" class="btn btn-primary">Book a free chat</a>
-          </section>
-
+    <!-- CTA -->
+    <section class="home-section final-cta">
+      <div class="container final-cta-inner">
+        <div>
+          <h2>Need Support in Dandenong?</h2>
+          <p>Tell us your suburb — we’re here to help.</p>
         </div>
-
+        <div class="final-cta-actions">
+          <a href="/contact" class="btn btn-primary">Contact Able Aide</a>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- FLOATING CTA -->
-  <div class="floating-cta">
-    <a href="tel:61435039110" class="floating-cta-btn">Call 0435 039 110</a>
-    <a href="/contact" class="floating-cta-btn secondary">Request a call-back</a>
-  </div>
-
   <!-- FOOTER -->
   <footer class="site-footer">
-    <div class="container footer-inner footer-inner-wide">
+    <div class="container footer-inner">
 
       <div class="footer-col">
         <h3>Able Aide</h3>
-        <p>Warm, person-centred disability supports across Victoria.</p>
+        <p>Your Journey, Our Support — disability support across Victoria.</p>
+        <p><strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a></p>
+        <p><strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a></p>
       </div>
 
       <div class="footer-col">
-        <h3>Links</h3>
+        <h3>Quick links</h3>
         <ul class="footer-links">
           <li><a href="/about">About</a></li>
           <li><a href="/services">Services</a></li>
           <li><a href="/locations">Locations</a></li>
-          <li><a href="/blog">Blog</a></li>
-          <li><a href="/case-studies">Case studies</a></li>
+          <li><a href="/refer">Refer a participant</a></li>
+          <li><a href="/resources">Resources</a></li>
           <li><a href="/careers">Careers</a></li>
-          <li><a href="/refer">Refer</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h3>NDIS Areas</h3>
-        <ul class="footer-links">
-          <li><a href="/locations/frankston">Frankston</a></li>
-          <li><a href="/locations/dandenong">Dandenong</a></li>
-          <li><a href="/locations/ringwood">Ringwood</a></li>
-          <li><a href="/locations/epping">Epping</a></li>
-          <li><a href="/locations/werribee">Werribee</a></li>
-          <li><a href="/locations/geelong">Geelong</a></li>
-          <li><a href="/locations/ballarat">Ballarat</a></li>
-          <li><a href="/locations/bendigo">Bendigo</a></li>
-          <li><a href="/locations/mornington-peninsula">Mornington Peninsula</a></li>
-        </ul>
+        <h3>Where we support</h3>
+        <p>
+          Greater Melbourne (Frankston, Dandenong, Ringwood, Epping, Werribee, Sunshine & surrounds)<br>
+          Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria
+        </p>
       </div>
 
       <div class="footer-col">
-        <h3>Resources</h3>
-        <ul class="footer-links">
-          <li><a href="/resources">Participant resources</a></li>
-          <li><a href="/complaints-feedback">Complaints</a></li>
-          <li><a href="/privacy-policy">Privacy Policy</a></li>
-          <li><a href="/terms-of-service">Terms of Service</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3>Connect</h3>
+        <h3>Connect with us</h3>
         <ul class="footer-links">
           <li><a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a></li>
           <li><a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a></li>
           <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a></li>
+          <li><a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a></li>
+          <li><a href="https://x.com/AbleAideSupport" target="_blank">X</a></li>
         </ul>
       </div>
 
@@ -321,14 +327,65 @@
 
     <div class="container footer-bottom">
       <p class="small">
-        © <span id="year"></span> Able Aide. All rights reserved.
+        © <span id="year"></span> Able Aide. All rights reserved. ·
+        <a href="/privacy-policy" class="footer-link">Privacy Policy</a> ·
+        <a href="/terms-of-service" class="footer-link">Terms of Service</a>
       </p>
     </div>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </footer>
+
+  <!-- FLOATING CTA -->
+  <div class="floating-cta" id="floatingCta">
+    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button">
+      <span class="icon">💬</span>
+      <span>Need support?</span>
+    </button>
+
+    <div class="floating-cta-panel">
+      <div class="floating-cta-title">Talk to Able Aide</div>
+      <div class="floating-cta-text">Quick ways to reach us.</div>
+      <div class="floating-cta-links">
+        <a href="tel:61435039110">📞 Call 0435 039 110</a>
+        <a href="/contact">✉️ Send enquiry</a>
+        <a href="/refer">📝 Refer a participant</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    (function () {
+      const navToggle = document.getElementById('navToggle');
+      const mainNav = document.getElementById('mainNav');
+
+      navToggle.addEventListener('click', () => {
+        const isOpen = mainNav.classList.contains('open');
+        mainNav.classList.toggle('open', !isOpen);
+        navToggle.setAttribute('aria-expanded', String(!isOpen));
+      });
+
+      const navLinks = mainNav.querySelectorAll('a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 900) {
+            mainNav.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    })();
+
+    (function () {
+      const floatingCta = document.getElementById('floatingCta');
+      const toggle = document.getElementById('floatingCtaToggle');
+
+      toggle.addEventListener('click', () => {
+        floatingCta.classList.toggle('open');
+      });
+    })();
+  </script>
 
 </body>
 </html>

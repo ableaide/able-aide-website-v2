@@ -1,70 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="https://www.sitemaps.org/schemas/sitemap/0.9">
 
-  <!-- ROOT PAGES -->
-  <url>
-    <loc>https://ableaide.com.au/</loc>
-    <priority>1.0</priority>
-    <changefreq>weekly</changefreq>
-  </url>
+  <!-- ROOT -->
+  <url><loc>https://ableaide.com.au/</loc></url>
 
-  <url><loc>https://ableaide.com.au/about.html</loc><priority>0.9</priority></url>
-  <url><loc>https://ableaide.com.au/contact.html</loc><priority>0.9</priority></url>
-  <url><loc>https://ableaide.com.au/refer.html</loc><priority>0.9</priority></url>
-  <url><loc>https://ableaide.com.au/complaints.html</loc><priority>0.7</priority></url>
-  <url><loc>https://ableaide.com.au/privacy-policy.html</loc><priority>0.6</priority></url>
-  <url><loc>https://ableaide.com.au/terms-of-service.html</loc><priority>0.6</priority></url>
-  <url><loc>https://ableaide.com.au/thanks.html</loc><priority>0.4</priority></url>
-  <url><loc>https://ableaide.com.au/404.html</loc><priority>0.1</priority></url>
-
-  <!-- REVIEWS -->
-  <url><loc>https://ableaide.com.au/reviews/</loc><priority>0.8</priority></url>
+  <!-- TOP LEVEL -->
+  <url><loc>https://ableaide.com.au/about</loc></url>
+  <url><loc>https://ableaide.com.au/services</loc></url>
+  <url><loc>https://ableaide.com.au/locations</loc></url>
+  <url><loc>https://ableaide.com.au/refer</loc></url>
+  <url><loc>https://ableaide.com.au/resources</loc></url>
+  <url><loc>https://ableaide.com.au/careers</loc></url>
+  <url><loc>https://ableaide.com.au/contact</loc></url>
+  <url><loc>https://ableaide.com.au/privacy-policy</loc></url>
+  <url><loc>https://ableaide.com.au/terms-of-service</loc></url>
+  <url><loc>https://ableaide.com.au/complaints</loc></url>
 
   <!-- SERVICES -->
-  <url><loc>https://ableaide.com.au/services/</loc><priority>0.9</priority></url>
-  <url><loc>https://ableaide.com.au/services/personal-care.html</loc><priority>0.8</priority></url>
-  <url><loc>https://ableaide.com.au/services/community-participation.html</loc><priority>0.8</priority></url>
-  <url><loc>https://ableaide.com.au/services/support-coordination.html</loc><priority>0.8</priority></url>
-  <url><loc>https://ableaide.com.au/services/allied-health-access.html</loc><priority>0.8</priority></url>
-  <url><loc>https://ableaide.com.au/services/family-early-support.html</loc><priority>0.8</priority></url>
+  <url><loc>https://ableaide.com.au/services/personal-care</loc></url>
+  <url><loc>https://ableaide.com.au/services/community-participation</loc></url>
+  <url><loc>https://ableaide.com.au/services/support-coordination</loc></url>
+  <url><loc>https://ableaide.com.au/services/allied-health-access</loc></url>
+  <url><loc>https://ableaide.com.au/services/family-early-support</loc></url>
+  <url><loc>https://ableaide.com.au/services/plan-management</loc></url>
 
-  <!-- LOCATIONS ROOT + 10 SUBURBS -->
-  <url><loc>https://ableaide.com.au/locations/</loc><priority>0.9</priority></url>
+  <!-- RESOURCES HUB -->
+  <url><loc>https://ableaide.com.au/resources</loc></url>
+  <url><loc>https://ableaide.com.au/resources/downloads</loc></url>
+  <url><loc>https://ableaide.com.au/resources/templates</loc></url>
+  <url><loc>https://ableaide.com.au/resources/ndis-guides</loc></url>
 
-  <url><loc>https://ableaide.com.au/locations/melbourne.html</loc><priority>0.8</priority></url>
-  <url><loc>https://ableaide.com.au/locations/geelong.html</loc><priority>0.8</priority></url>
-  <url><loc>https://ableaide.com.au/locations/ballarat.html</loc><priority>0.8</priority></url>
-  <url><loc>https://ableaide.com.au/locations/bendigo.html</loc><priority>0.8</priority></url>
-  <url><loc>https://ableaide.com.au/locations/shepparton.html</loc><priority>0.8</priority></url> <!-- optional if exists -->
-  <url><loc>https://ableaide.com.au/locations/dandenong.html</loc><priority>0.8</priority></url>
-  <url><loc>https://ableaide.com.au/locations/frankston.html</loc><priority>0.8</priority></url>
-  <url><loc>https://ableaide.com.au/locations/epping.html</loc><priority>0.8</priority></url>
-  <url><loc>https://ableaide.com.au/locations/werribee.html</loc><priority>0.8</priority></url>
-  <url><loc>https://ableaide.com.au/locations/ringwood.html</loc><priority>0.8</priority></url>
-  <url><loc>https://ableaide.com.au/locations/mornington-peninsula.html</loc><priority>0.8</priority></url>
+  <!-- EXTRA RESOURCE PAGES (if exist) -->
+  <url><loc>https://ableaide.com.au/resources/melbourne-ndis-guide</loc></url>
+  <url><loc>https://ableaide.com.au/resources/south-east-melbourne-ndis</loc></url>
+  <url><loc>https://ableaide.com.au/resources/ndis-review-guide</loc></url>
+  <url><loc>https://ableaide.com.au/resources/goal-setting-guide</loc></url>
+  <url><loc>https://ableaide.com.au/resources/evidence-reports-checklist</loc></url>
+  <url><loc>https://ableaide.com.au/resources/support-worker-guide</loc></url>
+  <url><loc>https://ableaide.com.au/resources/support-worker-family-tips</loc></url>
+  <url><loc>https://ableaide.com.au/resources/participant-rights-guide</loc></url>
 
-  <!-- RESOURCES SECTION -->
-  <url><loc>https://ableaide.com.au/resources/resources.html</loc><priority>0.9</priority></url>
-  <url><loc>https://ableaide.com.au/resources/downloads.html</loc><priority>0.8</priority></url>
-  <url><loc>https://ableaide.com.au/resources/ndis-guides.html</loc><priority>0.8</priority></url>
-  <url><loc>https://ableaide.com.au/resources/templates.html</loc><priority>0.8</priority></url>
-
-  <!-- BLOG -->
-  <url><loc>https://ableaide.com.au/blog/</loc><priority>0.7</priority></url>
-  <url><loc>https://ableaide.com.au/blog/community-access-ideas-ndis.html</loc><priority>0.7</priority></url>
-  <url><loc>https://ableaide.com.au/blog/how-to-access-allied-health-ndis.html</loc><priority>0.7</priority></url>
-  <url><loc>https://ableaide.com.au/blog/how-to-prepare-for-ndis-plan-review.html</loc><priority>0.7</priority></url>
-  <url><loc>https://ableaide.com.au/blog/ndis-early-childhood-pathway-explained.html</loc><priority>0.7</priority></url>
-  <url><loc>https://ableaide.com.au/blog/what-personal-care-includes-ndis.html</loc><priority>0.7</priority></url>
-
-  <!-- CASE STUDIES -->
-  <url><loc>https://ableaide.com.au/case-studies/</loc><priority>0.7</priority></url>
-  <url><loc>https://ableaide.com.au/case-studies/building-confidence-in-the-community.html</loc><priority>0.7</priority></url>
-  <url><loc>https://ableaide.com.au/case-studies/helping-participant-get-unstuck-with-therapies.html</loc><priority>0.7</priority></url>
-  <url><loc>https://ableaide.com.au/case-studies/safe-transition-home-after-hospital.html</loc><priority>0.7</priority></url>
-  <url><loc>https://ableaide.com.au/case-studies/supporting-family-early-childhood-routines.html</loc><priority>0.7</priority></url>
-
-  <!-- CAREERS -->
-  <url><loc>https://ableaide.com.au/careers/</loc><priority>0.6</priority></url>
+  <!-- LOCATION PAGES -->
+  <url><loc>https://ableaide.com.au/locations/melbourne</loc></url>
+  <url><loc>https://ableaide.com.au/locations/frankston</loc></url>
+  <url><loc>https://ableaide.com.au/locations/dandenong</loc></url>
+  <url><loc>https://ableaide.com.au/locations/ringwood</loc></url>
+  <url><loc>https://ableaide.com.au/locations/epping</loc></url>
+  <url><loc>https://ableaide.com.au/locations/sunshine</loc></url>
+  <url><loc>https://ableaide.com.au/locations/werribee</loc></url>
+  <url><loc>https://ableaide.com.au/locations/mornington-peninsula</loc></url>
+  <url><loc>https://ableaide.com.au/locations/geelong</loc></url>
+  <url><loc>https://ableaide.com.au/locations/ballarat</loc></url>
+  <url><loc>https://ableaide.com.au/locations/bendigo</loc></url>
+  <url><loc>https://ableaide.com.au/locations/shepparton</loc></url>
 
 </urlset>

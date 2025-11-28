@@ -8,130 +8,310 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="description"
-        content="This page could not be found. Continue exploring Able Aide services, resources, referrals and NDIS support across Victoria. We’re here to help you find what you need.">
+        content="The page you're looking for isn't available. Use the links below to continue exploring Able Aide's NDIS support services across Victoria.">
 
+  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Page Not Found – Able Aide">
+  <meta property="og:description" content="The page you're looking for may have moved.">
+  <meta property="og:image" content="/assets/img/og-image.webp">
 
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <style>
+    .error-hero {
+      text-align: center;
+      padding: 3rem 1rem;
+    }
+    .error-hero img {
+      max-width: 420px;
+      border-radius: 12px;
+      width: 100%;
+      height: auto;
+    }
+    .error-box {
+      max-width: 760px;
+      margin: 2rem auto;
+      background: #ffffff;
+      border: 1px solid #e5e7eb;
+      padding: 2rem;
+      border-radius: 1rem;
+      text-align: center;
+      box-shadow: 0 10px 28px rgba(15,23,42,0.08);
+    }
+    .error-links {
+      margin-top: 2rem;
+      display: grid;
+      gap: 1.5rem;
+    }
+    .error-links h3 {
+      margin-bottom: 0.5rem;
+    }
+    .error-links ul {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      line-height: 1.7;
+    }
+    .error-links a {
+      color: #0b7285;
+      text-decoration: underline;
+    }
+    @media (min-width: 750px) {
+      .error-links {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+  </style>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "404 – Page Not Found",
+    "url": "https://ableaide.com.au/404"
+  }
+  </script>
 </head>
 
 <body>
 
+<!-- TOP TRUST BAR -->
+<div class="top-trust-bar">
+  <div class="container top-trust-bar-inner">
+    <div class="top-trust-left">
+      <span class="top-trust-badge">NDIS registration in progress</span>
+      <span class="top-trust-badge">Self-managed & plan-managed welcome</span>
+      <span class="top-trust-badge">Greater Melbourne & regional Victoria</span>
+    </div>
+    <div class="top-trust-right">
+      <span class="top-trust-phone">Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a></span>
+      <a href="/refer" class="top-trust-link">Quick referral →</a>
+    </div>
+  </div>
+</div>
+
 <!-- HEADER -->
 <header class="site-header">
   <div class="container header-inner">
+
     <a href="/" class="logo" aria-label="Able Aide Home">
-      <img src="/assets/img/able-aide-logo.png" alt="Able Aide Logo" class="logo-img">
-      <span class="logo-text">Able Aide</span>
+      <img src="/assets/img/able-aide-logo.webp"
+           alt="Able Aide Logo"
+           class="logo-img"
+           width="180" height="46">
+      <span class="logo-mark">Able Aide</span>
+      <span class="logo-tagline">Your Journey, Our Support</span>
     </a>
 
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="/about">About</a>
-      <a href="/services">Services</a>
-      <a href="/refer">Refer</a>
-      <a href="/resources">Resources</a>
-      <a href="/complaints">Complaints</a>
-      <a href="/contact" class="btn btn-primary">Contact</a>
+    <nav class="main-nav" id="mainNav">
+      <ul class="nav-list">
+        <li><a href="/about">About</a></li>
+
+        <li class="nav-has-children">
+          <a href="/services">Services</a>
+          <ul class="nav-submenu">
+            <li><a href="/services/personal-care">Personal Care & Daily Living</a></li>
+            <li><a href="/services/community-participation">Community Participation</a></li>
+            <li><a href="/services/support-coordination">Support Coordination</a></li>
+            <li><a href="/services/allied-health-access">Allied Health Access</a></li>
+            <li><a href="/services/family-early-support">Family & Early Support</a></li>
+            <li><a href="/services/plan-management">Plan Management <span class="small">(Coming Soon)</span></a></li>
+          </ul>
+        </li>
+
+        <li><a href="/locations">Locations</a></li>
+        <li><a href="/refer">Refer</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/careers">Careers</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/complaints">Complaints</a></li>
+      </ul>
     </nav>
+
+    <div class="header-cta">
+      <a href="/refer" class="btn btn-outline">Refer</a>
+      <a href="/contact" class="btn btn-primary">Book a Free Chat</a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false">
+      <span></span>
+    </button>
+
   </div>
 </header>
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-inner">
+<main>
 
-    <div>
-      <h1>Page Not Found</h1>
-      <p class="hero-subtext">
-        The page you're trying to reach may have moved, been updated, or is no longer available.
-      </p>
-      <p class="hero-subtext">
-        Let us guide you back to the right place.
+<!-- 404 IMAGE -->
+<section class="error-hero">
+  <img src="/assets/img/able-aide-ndis-community-access-support.webp"
+       alt="Friendly disability support worker walking with participant"
+       loading="lazy">
+</section>
+
+<!-- 404 BOX -->
+<section class="section">
+  <div class="container">
+
+    <div class="error-box">
+      <h1>Oops — this page is not available</h1>
+      <p class="small">
+        The link may be old, moved, or the page was renamed while we updated our website.
       </p>
 
-      <a href="/" class="btn btn-primary" style="margin-top:1rem;">Return to Home</a>
+      <p style="margin-top:1rem;">Here are some helpful links to get you back on track:</p>
+
+      <div class="error-links">
+
+        <!-- SERVICES -->
+        <div>
+          <h3>Our Services</h3>
+          <ul>
+            <li><a href="/services/personal-care">Personal Care & Daily Living</a></li>
+            <li><a href="/services/community-participation">Community Participation</a></li>
+            <li><a href="/services/support-coordination">Support Coordination</a></li>
+            <li><a href="/services/allied-health-access">Allied Health Access</a></li>
+            <li><a href="/services/family-early-support">Family & Early Support</a></li>
+            <li><a href="/services/plan-management">Plan Management (Coming Soon)</a></li>
+          </ul>
+        </div>
+
+        <!-- LOCATIONS -->
+        <div>
+          <h3>Popular Locations</h3>
+          <ul>
+            <li><a href="/locations/melbourne">Melbourne</a></li>
+            <li><a href="/locations/frankston">Frankston</a></li>
+            <li><a href="/locations/dandenong">Dandenong</a></li>
+            <li><a href="/locations/ringwood">Ringwood</a></li>
+            <li><a href="/locations/epping">Epping</a></li>
+            <li><a href="/locations/werribee">Werribee</a></li>
+          </ul>
+        </div>
+
+      </div>
+
+      <div style="margin-top:2rem;">
+        <a href="/" class="btn btn-primary">Return Home</a>
+      </div>
+
+      <p class="small" style="margin-top:1rem;">
+        Need help? Call us on <a href="tel:61435039110">0435 039 110</a>
+      </p>
+
     </div>
 
-    <aside class="hero-card">
-      <img src="/assets/img/able-aide-ndis-general-disability-support-1.jpg"
-           alt="NDIS support worker assisting participant"
-           style="width:100%; border-radius:12px; margin-bottom:1rem;">
-
-      <h2 class="section-title" style="font-size:1.4rem;">Helpful Shortcuts</h2>
-      <ul class="checklist small">
-        <li><a href="/services">Explore NDIS Services</a></li>
-        <li><a href="/refer">Make a Referral</a></li>
-        <li><a href="/resources">NDIS Guides & Resources</a></li>
-        <li><a href="/contact">Contact Our Team</a></li>
-        <li><a href="/complaints">Complaints & Feedback</a></li>
-      </ul>
-    </aside>
-
   </div>
 </section>
 
-<!-- CTA -->
-<section class="section">
-  <div class="container center">
-    <h2 class="section-title">Need Help Finding Something?</h2>
-    <p class="section-intro">If you're unsure what you're looking for, we’re happy to point you in the right direction.</p>
-    <a href="/contact" class="btn btn-primary">Get in Touch</a>
-  </div>
-</section>
+</main>
 
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="container footer-inner">
 
-    <div>
-      <strong>Able Aide</strong><br>
-      Your Journey, Our Support<br><br>
-      <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
-      <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
+    <div class="footer-col">
+      <h3>Able Aide</h3>
+      <p>Warm, person-centred disability support across Victoria.</p>
+      <p><strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
+         <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
+      </p>
     </div>
 
-    <div>
-      <strong>Service Hours</strong><br>
-      Support Coordination: 8am–7pm<br>
-      Core Supports: 24/7<br>
-      Allied Health Access: 9am–6pm
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/locations">Locations</a></li>
+        <li><a href="/refer">Refer</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/careers">Careers</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/complaints">Complaints</a></li>
+      </ul>
     </div>
 
-    <div>
-      <strong>Where We Support</strong><br>
-      Melbourne · Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria
+    <div class="footer-col">
+      <h3>Where We Support</h3>
+      <p>Greater Melbourne · Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria</p>
     </div>
 
-    <div>
-      <strong>Quick Links</strong><br>
-      <a href="/privacy-policy">Privacy Policy</a><br>
-      <a href="/terms-of-service">Terms of Service</a><br>
-      <a href="/complaints">Complaints</a><br>
-      <a href="/refer">Refer a Participant</a>
-    </div>
-
-    <div>
-      <strong>Follow Us</strong><br>
-      <a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a><br>
-      <a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a><br>
-      <a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a><br>
-      <a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a><br>
-      <a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a><br>
-      <a href="https://x.com/AbleAideSupport" target="_blank">X (Twitter)</a>
+    <div class="footer-col">
+      <h3>Connect</h3>
+      <ul class="footer-links">
+        <li><a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a></li>
+        <li><a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a></li>
+        <li><a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a></li>
+        <li><a href="https://x.com/AbleAideSupport" target="_blank">X</a></li>
+      </ul>
     </div>
 
   </div>
 
   <div class="container footer-bottom">
-    <p class="small">© <span id="year"></span> Able Aide. All rights reserved.</p>
+    <p class="small">
+      © <span id="year"></span> Able Aide. All rights reserved. ·
+      <a href="/privacy-policy" class="footer-link">Privacy Policy</a> ·
+      <a href="/terms-of-service" class="footer-link">Terms of Service</a>
+    </p>
   </div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </footer>
+
+<!-- FLOATING CTA -->
+<div class="floating-cta" id="floatingCta">
+  <button class="floating-cta-toggle" id="floatingCtaToggle">
+    <span class="icon">💬</span>
+    <span>Need help?</span>
+  </button>
+  <div class="floating-cta-panel">
+    <div class="floating-cta-title">Talk to Able Aide</div>
+    <div class="floating-cta-text">Quick ways to reach our team.</div>
+    <div class="floating-cta-links">
+      <a href="tel:61435039110">📞 Call 0435 039 110</a>
+      <a href="/contact">✉️ Send an enquiry</a>
+      <a href="/refer">📝 Make a referral</a>
+    </div>
+  </div>
+</div>
+
+<!-- JS -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Mobile nav
+  const navToggle = document.getElementById('navToggle');
+  const mainNav = document.getElementById('mainNav');
+
+  navToggle.addEventListener('click', function () {
+    mainNav.classList.toggle('open');
+    navToggle.setAttribute('aria-expanded', mainNav.classList.contains('open'));
+  });
+
+  mainNav.querySelectorAll('a').forEach(function (link) {
+    link.addEventListener('click', function () {
+      if (window.innerWidth <= 900) {
+        mainNav.classList.remove('open');
+        navToggle.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+
+  // Floating CTA
+  document.getElementById('floatingCtaToggle')
+    .addEventListener('click', () => {
+      document.getElementById('floatingCta').classList.toggle('open');
+    });
+</script>
 
 </body>
 </html>

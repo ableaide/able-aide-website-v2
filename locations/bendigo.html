@@ -4,59 +4,121 @@
   <meta charset="UTF-8">
   <title>NDIS Disability Support in Bendigo – Able Aide</title>
 
+  <!-- Canonical -->
   <link rel="canonical" href="https://ableaide.com.au/locations/bendigo">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Meta Description -->
   <meta name="description"
-        content="Able Aide provides warm, reliable NDIS disability support across Bendigo. Personal care, community access, support coordination, early childhood support and allied health access for self-managed and plan-managed participants.">
+        content="Warm, person-centred NDIS disability support across Bendigo, Kangaroo Flat, Eaglehawk, Strathfieldsaye and regional areas. Personal care, community access, support coordination and family support.">
 
-  <meta name="keywords"
-        content="NDIS Bendigo, disability support Bendigo, NDIS provider Bendigo, personal care Bendigo, support coordination Bendigo">
-
-  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
-  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
-  <link rel="shortcut icon" href="/favicon.ico">
-
+  <!-- OpenGraph -->
   <meta property="og:title" content="NDIS Disability Support in Bendigo – Able Aide">
   <meta property="og:description"
-        content="Person-centred NDIS services across Bendigo, including personal care, community access, support coordination and family support.">
-  <meta property="og:image" content="/assets/img/og-image.png">
+        content="Able Aide provides respectful, reliable NDIS disability support across Bendigo and surrounding suburbs.">
+  <meta property="og:image" content="/assets/img/locations-hero.webp">
   <meta property="og:type" content="website">
+  <meta property="og:url" content="https://ableaide.com.au/locations/bendigo">
 
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NDIS Disability Support in Bendigo – Able Aide">
+  <meta name="twitter:description"
+        content="Supporting participants in Bendigo, Kangaroo Flat, Eaglehawk and regional VIC with warm, person-centred disability support.">
+  <meta name="twitter:image" content="/assets/img/locations-hero.webp">
+
+  <!-- Styles -->
+  <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Mobile nav animation -->
+  <style>
+    @media (max-width: 900px) {
+      .main-nav {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.25s ease;
+      }
+      .main-nav.open {
+        max-height: 500px;
+      }
+    }
+  </style>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ableaide.com.au/" },
+      { "@type": "ListItem", "position": 2, "name": "Locations", "item": "https://ableaide.com.au/locations" },
+      { "@type": "ListItem", "position": 3, "name": "Bendigo", "item": "https://ableaide.com.au/locations/bendigo" }
+    ]
+  }
+  </script>
 </head>
 
 <body>
+
+  <!-- GLOBAL TOP TRUST BAR -->
+  <div class="top-trust-bar">
+    <div class="container top-trust-bar-inner">
+      <div class="top-trust-left">
+        <span class="top-trust-badge">NDIS registration in progress</span>
+        <span class="top-trust-badge">Supporting self-managed & plan-managed participants</span>
+        <span class="top-trust-badge">Bendigo, Kangaroo Flat, Eaglehawk & regional VIC</span>
+      </div>
+      <div class="top-trust-right">
+        <span class="top-trust-phone">
+          Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a>
+        </span>
+        <a href="/refer" class="top-trust-link">Quick referral form →</a>
+      </div>
+    </div>
+  </div>
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
 
-      <a href="/" class="logo">
-        <img src="/assets/img/able-aide-logo.png" alt="Able Aide Logo" class="logo-img">
+      <a href="/" class="logo" aria-label="Able Aide Home">
+        <img src="/assets/img/able-aide-logo.webp"
+             alt="Able Aide logo"
+             class="logo-img"
+             width="180"
+             height="46"
+             decoding="async"
+             style="height:46px; width:auto;">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
 
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Main Navigation" id="mainNav">
         <ul class="nav-list">
           <li><a href="/about">About</a></li>
-
           <li class="nav-has-children">
             <a href="/services">Services</a>
             <ul class="nav-submenu">
-              <li><a href="/services/personal-care">Personal Care</a></li>
-              <li><a href="/services/community-participation">Community Participation</a></li>
-              <li><a href="/services/support-coordination">Support Coordination</a></li>
-              <li><a href="/services/allied-health-access">Allied Health Access</a></li>
-              <li><a href="/services/family-early-support">Family & Early Support</a></li>
+              <li><a href="/services/personal-care">Personal care & daily living</a></li>
+              <li><a href="/services/community-participation">Community participation</a></li>
+              <li><a href="/services/support-coordination">Support coordination</a></li>
+              <li><a href="/services/allied-health-access">Allied health access</a></li>
+              <li><a href="/services/family-early-support">Early & family support</a></li>
+              <li>
+                <a href="/services/plan-management">
+                  Plan management <span class="small">(Coming soon)</span>
+                </a>
+              </li>
             </ul>
           </li>
-
+          <li><a href="/locations" aria-current="page">Locations</a></li>
           <li><a href="/refer">Refer</a></li>
           <li><a href="/resources">Resources</a></li>
           <li><a href="/contact">Contact</a></li>
+          <li><a href="/careers">Careers</a></li>
         </ul>
       </nav>
 
@@ -65,199 +127,261 @@
         <a href="/contact" class="btn btn-primary">Book a free chat</a>
       </div>
 
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation">
+        <span></span>
+      </button>
+
     </div>
   </header>
 
+  <main>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-inner">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
 
-      <div>
-        <h1>NDIS Disability Support in Bendigo</h1>
-        <p class="hero-subtext">
-          Able Aide provides warm, person-centred NDIS support to participants across Bendigo and the
-          surrounding region. We focus on reliability, trust, cultural understanding and communication that
-          makes you feel included and respected.
-        </p>
+        <div class="hero-text">
+          <h1>NDIS Disability Support in Bendigo</h1>
+          <p>
+            Able Aide supports participants across Bendigo with warm, person-centred and culturally aware NDIS services.
+          </p>
+          <p>
+            We work alongside families, young people and adults with diverse needs — always with respect, consistency and clear communication.
+          </p>
+        </div>
 
-        <p class="hero-subtext">
-          Whether you need daily living support, community access, help coordinating your plan or early
-          childhood support — we walk alongside you with care and consistency.
-        </p>
+        <aside class="hero-card">
+          <img
+            src="/assets/img/locations-hero.webp"
+            alt="Bendigo community spaces"
+            class="hero-card-img"
+            loading="lazy"
+            decoding="async"
+            width="1600"
+            height="1067">
 
-        <a href="/contact" class="btn btn-primary" style="margin-top:1rem;">Talk to our team</a>
-      </div>
+          <h2>Supporting Bendigo & Surrounds</h2>
+          <p class="small">
+            Kangaroo Flat · Eaglehawk · Strathdale · Epsom · Golden Square · Strathfieldsaye · Flora Hill
+          </p>
 
-      <aside class="hero-card">
-        <img src="/assets/img/location-hero.jpg"
-             alt="NDIS support in Bendigo"
-             style="width:100%; border-radius:12px; margin-bottom:1rem;">
-
-        <h2 class="section-title" style="font-size:1.4rem;">Supporting Bendigo with care that feels personal</h2>
-        <p class="small">
-          We take time to understand your goals, culture, communication style and daily routines — so your
-          supports feel safe, consistent and genuinely helpful.
-        </p>
-        <a href="/refer" class="btn btn-primary btn-block">Make a referral</a>
-      </aside>
-
-    </div>
-  </section>
-
-
-
-  <!-- MAIN CONTENT -->
-  <section class="section">
-    <div class="container location-layout">
-
-      <!-- SIDEBAR -->
-      <aside class="sidebar">
-        <h3>Our Services</h3>
-        <ul class="sidebar-links">
-          <li><a href="/services/personal-care">Personal Care</a></li>
-          <li><a href="/services/community-participation">Community Participation</a></li>
-          <li><a href="/services/support-coordination">Support Coordination</a></li>
-          <li><a href="/services/allied-health-access">Allied Health Access</a></li>
-          <li><a href="/services/family-early-support">Family & Early Support</a></li>
-        </ul>
-
-        <h3>Nearby Areas</h3>
-        <ul class="sidebar-links">
-          <li><a href="/locations/ballarat">Ballarat</a></li>
-          <li><a href="/locations/shepparton">Shepparton</a></li>
-          <li><a href="/locations/melbourne">Melbourne</a></li>
-        </ul>
-
-        <a href="/contact" class="btn btn-primary btn-block">Contact us</a>
-      </aside>
-
-
-      <!-- CONTENT -->
-      <div class="location-content">
-
-        <h2>Supporting participants across Bendigo</h2>
-        <p>
-          Able Aide supports NDIS participants throughout Bendigo, including:
-        </p>
-
-        <ul class="checklist">
-          <li>Bendigo Central</li>
-          <li>Kangaroo Flat</li>
-          <li>Epsom</li>
-          <li>Kennington</li>
-          <li>Strathfieldsaye</li>
-          <li>Golden Square</li>
-          <li>Maiden Gully</li>
-          <li>Ironbark & surrounding areas</li>
-        </ul>
-
-        <p>
-          If you're unsure whether we can support your area, reach out — we're happy to check availability.
-        </p>
-
-
-        <h2>NDIS services available in Bendigo</h2>
-
-        <h3>Personal care & daily living</h3>
-        <p>
-          Friendly, respectful support with showering, meals, mobility and daily routines — always delivered
-          with dignity and consistency.
-        </p>
-
-        <h3>Community access & appointments</h3>
-        <p>
-          Helping you stay connected through supported outings, programs, activities, appointments and
-          social participation.
-        </p>
-
-        <h3>Support coordination</h3>
-        <p>
-          Guidance to understand your plan, connect with the right providers and prepare for NDIS
-          reassessments and reviews.
-        </p>
-
-        <h3>Allied health access</h3>
-        <p>
-          Support to access OTs, physios, speech therapists, psychologists and assessment providers without
-          stress or long wait times.
-        </p>
-
-        <h3>Family & early support</h3>
-        <p>
-          Practical assistance for families navigating routines, behaviour support, early intervention and
-          therapy recommendations.
-        </p>
-
-
-        <h2>Why Bendigo participants choose Able Aide</h2>
-        <ul class="checklist">
-          <li>Reliable and consistent support workers</li>
-          <li>Respectful of culture, family & communication preferences</li>
-          <li>Clear, honest and frequent communication</li>
-          <li>Support for children, teenagers & adults</li>
-          <li>Warm, family-oriented philosophy</li>
-        </ul>
-
-
-        <h2>Ready to get started?</h2>
-        <p>
-          Whether you're an NDIS participant, family member or support coordinator, we're here to help.
-          Start with a simple, friendly conversation.
-        </p>
-
-        <a href="/contact" class="btn btn-primary">Book a chat</a>
+          <a href="/contact" class="btn btn-primary btn-block">Talk to our team</a>
+        </aside>
 
       </div>
+    </section>
 
-    </div>
-  </section>
+    <!-- MAIN CONTENT WITH SIDEBAR -->
+    <section class="section">
+      <div class="container layout-with-sidebar">
 
+        <!-- SIDEBAR -->
+        <aside class="layout-sidebar layout-sidebar-sticky">
 
+          <div class="sidebar-card">
+            <h3>Other Locations</h3>
+            <ul class="sidebar-links">
+              <li><a href="/locations/melbourne">Melbourne</a></li>
+              <li><a href="/locations/frankston">Frankston</a></li>
+              <li><a href="/locations/dandenong">Dandenong</a></li>
+              <li><a href="/locations/ringwood">Ringwood</a></li>
+              <li><a href="/locations/epping">Epping</a></li>
+              <li><a href="/locations/werribee">Werribee</a></li>
+              <li><a href="/locations/sunshine">Sunshine</a></li>
+              <li><a href="/locations/mornington-peninsula">Mornington Peninsula</a></li>
+              <li><a href="/locations/geelong">Geelong</a></li>
+              <li><a href="/locations/ballarat">Ballarat</a></li>
+              <li><a href="/locations/shepparton">Shepparton</a></li>
+            </ul>
+          </div>
 
+          <div class="sidebar-card">
+            <h3>Get Support</h3>
+            <a href="/contact" class="btn btn-primary btn-block">Contact Able Aide</a>
+            <a href="/refer" class="btn btn-outline btn-block">Make a referral</a>
+          </div>
+
+        </aside>
+
+        <!-- MAIN COLUMN -->
+        <main class="layout-main">
+
+          <h2 class="section-title">How We Support Participants in Bendigo</h2>
+          <p class="section-intro">
+            We take a calm, family-friendly and respectful approach to disability support —
+            ensuring your strengths, culture and communication needs guide everything we do.
+          </p>
+
+          <h3 style="margin-top:2rem;">How We Help</h3>
+          <ul class="hero-highlights">
+            <li>Personal care & daily living</li>
+            <li>Community access & transport</li>
+            <li>Support coordination</li>
+            <li>Linking with local allied health providers</li>
+            <li>Early childhood & family-centred support</li>
+          </ul>
+
+          <p style="margin-top:1rem;">
+            <a href="/services" class="btn btn-outline">Explore services →</a>
+          </p>
+
+          <h3 style="margin-top:2.5rem;">Nearby Suburbs We Support</h3>
+          <ul class="regions-list">
+            <li>Kangaroo Flat</li>
+            <li>Eaglehawk</li>
+            <li>Strathfieldsaye</li>
+            <li>Golden Square</li>
+            <li>Flora Hill</li>
+            <li>Strathdale</li>
+            <li>Epsom</li>
+            <li>White Hills</li>
+          </ul>
+
+          <h3 style="margin-top:2.5rem;">Local Community Spots</h3>
+          <p class="small">When aligned with your goals and preferences, we may support you to visit:</p>
+
+          <ul class="hero-highlights">
+            <li>Lake Weeroona</li>
+            <li>Bendigo Botanic Gardens</li>
+            <li>Library & community hubs</li>
+            <li>Shops, recreation centres & local parks</li>
+          </ul>
+
+          <p style="margin-top:1.5rem;">
+            Community activities are always tailored to your interests, routines and accessibility needs.
+          </p>
+
+          <h3 style="margin-top:2rem;">Ready to Begin?</h3>
+          <p class="small">We can confirm availability in Bendigo quickly.</p>
+          <a href="/contact" class="btn btn-primary">Enquire about support in Bendigo</a>
+
+        </main>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="home-section final-cta">
+      <div class="container final-cta-inner">
+        <div>
+          <h2>Need Support in Bendigo?</h2>
+          <p>Tell us your suburb — we’re here to help.</p>
+        </div>
+        <div class="final-cta-actions">
+          <a href="/contact" class="btn btn-primary">Contact Able Aide</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
 
-      <div>
-        <strong>Able Aide</strong><br>
-        Your Journey, Our Support<br><br>
-        <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
-        <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
+      <div class="footer-col">
+        <h3>Able Aide</h3>
+        <p>Your Journey, Our Support — disability support across Victoria.</p>
+        <p><strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a></p>
+        <p><strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a></p>
       </div>
 
-      <div>
-        <strong>Service Hours</strong><br>
-        Support Coordination: 8am – 7pm<br>
-        Core Supports: 24/7<br>
-        Allied Health: 9am – 6pm
+      <div class="footer-col">
+        <h3>Quick links</h3>
+        <ul class="footer-links">
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/locations">Locations</a></li>
+          <li><a href="/refer">Refer a participant</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/contact">Contact</a></li>
+        </ul>
       </div>
 
-      <div>
-        <strong>Where We Support</strong><br>
-        Melbourne · Geelong · Ballarat · Bendigo · Frankston · Dandenong · Epping · Werribee · Mornington Peninsula
+      <div class="footer-col">
+        <h3>Where we support</h3>
+        <p>
+          Greater Melbourne (Frankston, Dandenong, Ringwood, Epping, Werribee, Sunshine & surrounds)<br>
+          Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria
+        </p>
       </div>
 
-      <div>
-        <strong>Follow Us</strong><br>
-        <a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a><br>
-        <a href="https://www.instagram.com/ableaide" target="_blank">Instagram</a><br>
-        <a href="https://www.linkedin.com/company/ableaide" target="_blank">LinkedIn</a><br>
-        <a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a><br>
-        <a href="https://x.com/AbleAideSupport" target="_blank">X (Twitter)</a>
+      <div class="footer-col">
+        <h3>Connect with us</h3>
+        <ul class="footer-links">
+          <li><a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a></li>
+          <li><a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a></li>
+          <li><a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a></li>
+          <li><a href="https://x.com/AbleAideSupport" target="_blank">X</a></li>
+        </ul>
       </div>
 
     </div>
 
     <div class="container footer-bottom">
-      <p class="small">© <span id="year"></span> Able Aide. All rights reserved.</p>
+      <p class="small">
+        © <span id="year"></span> Able Aide. All rights reserved. ·
+        <a href="/privacy-policy" class="footer-link">Privacy Policy</a> ·
+        <a href="/terms-of-service" class="footer-link">Terms of Service</a>
+      </p>
     </div>
-
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
   </footer>
+
+  <!-- FLOATING CTA -->
+  <div class="floating-cta" id="floatingCta">
+    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button">
+      <span class="icon">💬</span>
+      <span>Need support?</span>
+    </button>
+
+    <div class="floating-cta-panel">
+      <div class="floating-cta-title">Talk to Able Aide</div>
+      <div class="floating-cta-text">Quick ways to reach us.</div>
+      <div class="floating-cta-links">
+        <a href="tel:61435039110">📞 Call 0435 039 110</a>
+        <a href="/contact">✉️ Send enquiry</a>
+        <a href="/refer">📝 Refer a participant</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    (function () {
+      const navToggle = document.getElementById('navToggle');
+      const mainNav = document.getElementById('mainNav');
+
+      navToggle.addEventListener('click', () => {
+        const isOpen = mainNav.classList.contains('open');
+        mainNav.classList.toggle('open', !isOpen);
+        navToggle.setAttribute('aria-expanded', String(!isOpen));
+      });
+
+      const navLinks = mainNav.querySelectorAll('a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 900) {
+            mainNav.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    })();
+
+    (function () {
+      const floatingCta = document.getElementById('floatingCta');
+      const toggle = document.getElementById('floatingCtaToggle');
+
+      toggle.addEventListener('click', () => {
+        floatingCta.classList.toggle('open');
+      });
+    })();
+  </script>
 
 </body>
 </html>

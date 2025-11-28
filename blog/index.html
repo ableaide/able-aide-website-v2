@@ -26,32 +26,80 @@
         content="NDIS resources and practical guides for participants, families and support coordinators across Victoria.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ableaide.com.au/blog">
-  <meta property="og:image" content="/assets/img/og-image.png">
+  <meta property="og:image" content="/assets/img/og-image.webp">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="NDIS Blog & Helpful Guides – Able Aide Victoria">
   <meta name="twitter:description"
         content="Warm, practical NDIS articles about plan reviews, personal care, early childhood supports, allied health and community access.">
-  <meta name="twitter:image" content="/assets/img/og-image.png">
+  <meta name="twitter:image" content="/assets/img/og-image.webp">
 
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Google Analytics (update G-XXXXXXX with your ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+
+  <!-- Meta Pixel (update YOUR_PIXEL_ID) -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod ?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)n._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','YOUR_PIXEL_ID'); fbq('track','PageView');
+  </script>
+  <noscript>
+    <img alt=""
+         height="1"
+         width="1"
+         style="display:none"
+         src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1">
+  </noscript>
 </head>
 
 <body>
 
-  <!-- HEADER (same structure as home, with Blog link added) -->
+  <!-- TOP TRUST BAR -->
+  <div class="top-trust-bar">
+    <div class="container top-trust-bar-inner">
+      <div class="top-trust-left">
+        <span class="top-trust-badge">NDIS registration in progress</span>
+        <span class="top-trust-badge">Resources for participants &amp; families</span>
+        <span class="top-trust-badge">Clear, calm NDIS information</span>
+      </div>
+      <div class="top-trust-right">
+        <span class="top-trust-phone">Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a></span>
+        <a href="/contact" class="top-trust-link">Ask a question →</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
 
       <a href="/" class="logo" aria-label="Able Aide Home">
-        <img src="/assets/img/able-aide-logo.png" alt="Able Aide Logo" class="logo-img" style="height:46px; width:auto; margin-bottom:0.2rem;">
+        <img src="/assets/img/able-aide-logo.webp"
+             alt="Able Aide logo"
+             class="logo-img"
+             width="180"
+             height="46">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
 
-      <nav class="main-nav" aria-label="Main Navigation">
+      <nav class="main-nav" aria-label="Main Navigation" id="mainNav">
         <ul class="nav-list">
           <li><a href="/about">About</a></li>
 
@@ -63,20 +111,28 @@
               <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/allied-health-access">Allied health access</a></li>
               <li><a href="/services/family-early-support">Family &amp; early support</a></li>
+              <li><a href="/services/plan-management">Plan management (coming soon)</a></li>
             </ul>
           </li>
 
-          <li><a href="/refer">Refer a participant</a></li>
+          <li><a href="/locations">Locations</a></li>
+          <li><a href="/refer">Refer</a></li>
           <li><a href="/resources">Resources</a></li>
           <li><a href="/blog" aria-current="page">Blog</a></li>
+          <li><a href="/careers">Careers</a></li>
           <li><a href="/contact">Contact</a></li>
+          <li><a href="/complaints">Complaints</a></li>
         </ul>
       </nav>
 
       <div class="header-cta">
-        <a href="/refer" class="btn btn-outline">Refer a participant</a>
+        <a href="/refer" class="btn btn-outline">Refer</a>
         <a href="/contact" class="btn btn-primary">Book a free chat</a>
       </div>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+      </button>
 
     </div>
   </header>
@@ -88,7 +144,7 @@
       <div class="container hero-inner">
 
         <div class="hero-text">
-          <h1>NDIS Blog & Helpful Guides</h1>
+          <h1>NDIS Blog &amp; Helpful Guides</h1>
           <p>
             Practical, easy-to-understand articles for NDIS participants, families, support coordinators
             and new support workers across Victoria.
@@ -98,10 +154,13 @@
             allied health and community access — without jargon.
           </p>
 
-          <!-- Search -->
+          <!-- Search (non-functional, but helpful UX) -->
           <form class="blog-search" role="search" aria-label="Search blog articles">
             <label class="visually-hidden" for="blog-search-input">Search blog</label>
-            <input id="blog-search-input" type="search" name="q" placeholder="Search articles (e.g. “plan review”, “personal care”)">
+            <input id="blog-search-input"
+                   type="search"
+                   name="q"
+                   placeholder="Search articles (e.g. “plan review”, “personal care”)">
             <button type="submit" class="btn btn-secondary">Search</button>
           </form>
 
@@ -117,13 +176,18 @@
         </div>
 
         <aside class="hero-card">
-          <img src="/assets/img/able-aide-ndis-blog-hero.jpg"
-               alt="NDIS participant and support worker reviewing information together"
-               style="width:100%; border-radius:12px; margin-bottom:1rem;">
+          <picture>
+            <source srcset="/assets/img/able-aide-ndis-services-hero.webp" type="image/webp">
+            <img src="/assets/img/able-aide-ndis-services-hero.jpg"
+                 alt="NDIS participant and support worker reviewing information together"
+                 loading="lazy"
+                 decoding="async"
+                 style="width:100%; border-radius:12px; margin-bottom:1rem;">
+          </picture>
 
           <h2 class="section-title" style="font-size:1.4rem;">Information that feels human</h2>
           <p class="small">
-            These blogs are general information only — not individual advice.  
+            These blogs are general information only — not individual advice.<br>
             If you’d like to talk about your specific situation, we’re happy to have a gentle, no-pressure chat.
           </p>
           <a href="/contact" class="btn btn-primary btn-block">Talk to Able Aide</a>
@@ -139,7 +203,7 @@
         <!-- MAIN CONTENT -->
         <div class="blog-main">
 
-          <!-- Latest / Featured Articles -->
+          <!-- Latest / Featured Articles with thumbnails -->
           <section aria-labelledby="latest-articles">
             <h2 id="latest-articles" class="section-title">Latest Articles</h2>
 
@@ -147,6 +211,16 @@
 
               <!-- 1: Plan Review -->
               <article class="card">
+                <a href="/blog/how-to-prepare-for-ndis-plan-review" class="card-image-link" aria-hidden="false">
+                  <picture>
+                    <source srcset="/assets/img/able-aide-ndis-disability-support-homepage-hero.webp" type="image/webp">
+                    <img src="/assets/img/able-aide-ndis-disability-support-homepage-hero.jpg"
+                         alt="Support coordinator and participant planning together"
+                         loading="lazy"
+                         decoding="async"
+                         style="width:100%; border-radius:8px; margin-bottom:0.75rem;">
+                  </picture>
+                </a>
                 <p class="badge badge-soft">Plan reviews</p>
                 <h3>
                   <a href="/blog/how-to-prepare-for-ndis-plan-review">
@@ -162,6 +236,16 @@
 
               <!-- 2: Personal Care -->
               <article class="card">
+                <a href="/blog/what-personal-care-includes-ndis" class="card-image-link">
+                  <picture>
+                    <source srcset="/assets/img/able-aide-ndis-personal-care-support.webp" type="image/webp">
+                    <img src="/assets/img/able-aide-ndis-personal-care-support.jpg"
+                         alt="Support worker helping with personal care at home"
+                         loading="lazy"
+                         decoding="async"
+                         style="width:100%; border-radius:8px; margin-bottom:0.75rem;">
+                  </picture>
+                </a>
                 <p class="badge badge-soft">Personal care</p>
                 <h3>
                   <a href="/blog/what-personal-care-includes-ndis">
@@ -177,6 +261,16 @@
 
               <!-- 3: Early Childhood -->
               <article class="card">
+                <a href="/blog/ndis-early-childhood-pathway-explained" class="card-image-link">
+                  <picture>
+                    <source srcset="/assets/img/able-aide-ndis-family-early-support-service.webp" type="image/webp">
+                    <img src="/assets/img/able-aide-ndis-family-early-support-service.jpg"
+                         alt="Parent and child engaging in early childhood support activities"
+                         loading="lazy"
+                         decoding="async"
+                         style="width:100%; border-radius:8px; margin-bottom:0.75rem;">
+                  </picture>
+                </a>
                 <p class="badge badge-soft">Early childhood</p>
                 <h3>
                   <a href="/blog/ndis-early-childhood-pathway-explained">
@@ -192,6 +286,16 @@
 
               <!-- 4: Allied Health -->
               <article class="card">
+                <a href="/blog/how-to-access-allied-health-ndis" class="card-image-link">
+                  <picture>
+                    <source srcset="/assets/img/able-aide-ndis-allied-health-access.webp" type="image/webp">
+                    <img src="/assets/img/able-aide-ndis-allied-health-access.jpg"
+                         alt="Allied health therapist supporting a participant"
+                         loading="lazy"
+                         decoding="async"
+                         style="width:100%; border-radius:8px; margin-bottom:0.75rem;">
+                  </picture>
+                </a>
                 <p class="badge badge-soft">Allied health</p>
                 <h3>
                   <a href="/blog/how-to-access-allied-health-ndis">
@@ -207,6 +311,16 @@
 
               <!-- 5: Community Access -->
               <article class="card">
+                <a href="/blog/community-access-ideas-ndis" class="card-image-link">
+                  <picture>
+                    <source srcset="/assets/img/able-aide-ndis-community-access-support.webp" type="image/webp">
+                    <img src="/assets/img/able-aide-ndis-community-access-support.jpg"
+                         alt="NDIS participant out in the community with support"
+                         loading="lazy"
+                         decoding="async"
+                         style="width:100%; border-radius:8px; margin-bottom:0.75rem;">
+                  </picture>
+                </a>
                 <p class="badge badge-soft">Community access</p>
                 <h3>
                   <a href="/blog/community-access-ideas-ndis">
@@ -223,11 +337,11 @@
             </div>
           </section>
 
-          <!-- CATEGORY SECTIONS -->
+          <!-- CATEGORY SECTIONS (text-based, like your original) -->
 
           <!-- Plan Reviews -->
           <section id="plan-reviews" class="blog-category-section">
-            <h2 class="section-title">Plan Reviews & NDIS Navigation</h2>
+            <h2 class="section-title">Plan Reviews &amp; NDIS Navigation</h2>
             <p class="section-intro">
               Articles to help you feel clearer and calmer around reviews, reassessments and planning.
             </p>
@@ -244,7 +358,7 @@
 
           <!-- Personal Care -->
           <section id="personal-care" class="blog-category-section">
-            <h2 class="section-title">Personal Care & Daily Living</h2>
+            <h2 class="section-title">Personal Care &amp; Daily Living</h2>
             <p class="section-intro">
               Understanding what respectful, person-centred daily living support can look like.
             </p>
@@ -261,7 +375,7 @@
 
           <!-- Early Childhood -->
           <section id="early-childhood" class="blog-category-section">
-            <h2 class="section-title">Early Childhood & Family Support</h2>
+            <h2 class="section-title">Early Childhood &amp; Family Support</h2>
             <p class="section-intro">
               Gentle information for parents and caregivers navigating early years, diagnoses and supports.
             </p>
@@ -278,7 +392,7 @@
 
           <!-- Allied Health -->
           <section id="allied-health" class="blog-category-section">
-            <h2 class="section-title">Allied Health & Therapy</h2>
+            <h2 class="section-title">Allied Health &amp; Therapy</h2>
             <p class="section-intro">
               Making OT, physio, speech, psychology and behaviour support feel more understandable.
             </p>
@@ -295,7 +409,7 @@
 
           <!-- Community Access -->
           <section id="community-access" class="blog-category-section">
-            <h2 class="section-title">Community Access & Social Participation</h2>
+            <h2 class="section-title">Community Access &amp; Social Participation</h2>
             <p class="section-intro">
               Ideas and guidance for feeling safer, more confident and more connected outside the home.
             </p>
@@ -356,7 +470,6 @@
               Not sure if we cover your area? <a href="/contact">Send us a message</a>.
             </p>
           </section>
-
         </aside>
 
       </div>
@@ -381,7 +494,7 @@
 
   </main>
 
-  <!-- FOOTER (same pattern as home) -->
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
 
@@ -402,10 +515,13 @@
         <ul class="footer-links">
           <li><a href="/about">About</a></li>
           <li><a href="/services">Services</a></li>
+          <li><a href="/locations">Locations</a></li>
           <li><a href="/refer">Refer a participant</a></li>
           <li><a href="/resources">Resources</a></li>
-          <li><a href="/blog">Blog</a></li>
+          <li><a href="/blog" aria-current="page">Blog</a></li>
+          <li><a href="/careers">Careers</a></li>
           <li><a href="/contact">Contact</a></li>
+          <li><a href="/complaints">Complaints</a></li>
         </ul>
       </div>
 
@@ -438,11 +554,88 @@
         <a href="/terms-of-service" class="footer-link">Terms of Service</a>
       </p>
     </div>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </footer>
+
+  <!-- FLOATING CTA -->
+  <div class="floating-cta" id="floatingCta">
+    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button">
+      <span class="icon">💬</span>
+      <span>Need support?</span>
+    </button>
+    <div class="floating-cta-panel">
+      <div class="floating-cta-title">Talk to Able Aide</div>
+      <div class="floating-cta-text">
+        Quick ways to reach us about NDIS supports, referrals or questions.
+      </div>
+      <div class="floating-cta-links">
+        <a href="tel:61435039110">📞 Call 0435 039 110</a>
+        <a href="/contact">✉️ Send an enquiry</a>
+        <a href="/refer">📝 Make a referral</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    (function () {
+      var navToggle = document.getElementById('navToggle');
+      var mainNav = document.getElementById('mainNav');
+
+      if (navToggle && mainNav) {
+        navToggle.addEventListener('click', function () {
+          var isOpen = mainNav.classList.contains('open');
+          if (isOpen) {
+            mainNav.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          } else {
+            mainNav.classList.add('open');
+            navToggle.setAttribute('aria-expanded', 'true');
+          }
+        });
+
+        // Close on link click (mobile)
+        mainNav.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            if (window.innerWidth <= 900) {
+              mainNav.classList.remove('open');
+              navToggle.setAttribute('aria-expanded', 'false');
+            }
+          });
+        });
+      }
+    })();
+
+    // Floating CTA toggle
+    (function () {
+      var floatingCta = document.getElementById('floatingCta');
+      var floatingToggle = document.getElementById('floatingCtaToggle');
+
+      if (floatingCta && floatingToggle) {
+        floatingToggle.addEventListener('click', function () {
+          floatingCta.classList.toggle('open');
+        });
+      }
+    })();
+  </script>
+
+  <!-- JSON-LD: Blog -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Blog",
+    "name": "Able Aide NDIS Blog & Helpful Guides",
+    "url": "https://ableaide.com.au/blog",
+    "description": "Practical NDIS guides, articles and resources for participants, families, carers and support coordinators.",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Able Aide",
+      "url": "https://ableaide.com.au"
+    }
+  }
+  </script>
 
 </body>
 </html>

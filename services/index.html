@@ -12,7 +12,7 @@
 
   <!-- SEO Description -->
   <meta name="description"
-        content="Explore Able Aide’s NDIS disability support services across Victoria — including personal care, community access, support coordination, allied health access and family support. Supporting Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton and regional Victoria.">
+        content="Explore Able Aide’s NDIS disability support services across Victoria — including personal care, community participation, support coordination, allied health access, early family support and plan management (coming soon).">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
@@ -23,8 +23,8 @@
   <!-- OpenGraph -->
   <meta property="og:title" content="Able Aide NDIS Services – Support Across Victoria">
   <meta property="og:description"
-        content="Warm, reliable NDIS supports including personal care, community access, support coordination, allied health access and early family support.">
-  <meta property="og:image" content="/assets/img/og-image.png">
+        content="Warm, reliable NDIS supports including personal care, community participation, support coordination, allied health access, early family support and plan management (coming soon).">
+  <meta property="og:image" content="/assets/img/og-image.webp">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ableaide.com.au/services">
 
@@ -32,309 +32,476 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Able Aide – NDIS Services Across Victoria">
   <meta name="twitter:description"
-        content="Person-centred disability support for adults, children, carers and support coordinators.">
-  <meta name="twitter:image" content="/assets/img/og-image.png">
+        content="Person-centred disability support for adults, children, carers and support coordinators across Victoria.">
+  <meta name="twitter:image" content="/assets/img/og-image.webp">
 
   <!-- Styles -->
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
+
+  <!-- Mobile nav animation -->
+  <style>
+    @media (max-width: 900px) {
+      .main-nav {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.25s ease;
+      }
+      .main-nav.open {
+        max-height: 600px;
+      }
+    }
+  </style>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Able Aide",
+        "url": "https://ableaide.com.au",
+        "logo": "https://ableaide.com.au/assets/img/able-aide-logo.webp",
+        "telephone": "+61435039110",
+        "email": "enquiries@ableaide.com.au",
+        "sameAs": [
+          "https://www.facebook.com/able.aide",
+          "https://www.instagram.com/ableaide/",
+          "https://www.linkedin.com/company/ableaide/",
+          "https://www.youtube.com/@AbleAide",
+          "https://www.tiktok.com/@ableaide",
+          "https://x.com/AbleAideSupport"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "name": "NDIS Disability Support Services",
+        "url": "https://ableaide.com.au/services",
+        "description": "NDIS disability support services across Victoria, including daily living, community access, support coordination, allied health access, early family support and plan management (coming soon)."
+      },
+      {
+        "@type": "Service",
+        "name": "NDIS Disability Support Services",
+        "provider": {
+          "@id": "https://ableaide.com.au#identity"
+        },
+        "areaServed": [
+          "Greater Melbourne",
+          "Frankston",
+          "Dandenong",
+          "Ringwood",
+          "Epping",
+          "Werribee",
+          "Sunshine",
+          "Geelong",
+          "Ballarat",
+          "Bendigo",
+          "Shepparton",
+          "Regional Victoria"
+        ],
+        "url": "https://ableaide.com.au/services"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
-  <!-- HEADER -->
-  <header class="site-header">
-    <div class="container header-inner">
-
-      <a href="/" class="logo" aria-label="Able Aide Home">
-        <img src="/assets/img/able-aide-logo.png"
-             alt="Able Aide Logo"
-             class="logo-img"
-             style="height:46px; width:auto; margin-bottom:0.2rem;">
-        <span class="logo-mark">Able Aide</span>
-        <span class="logo-tagline">Your Journey, Our Support</span>
-      </a>
-
-      <nav class="main-nav" aria-label="Main Navigation">
-        <ul class="nav-list">
-          <li><a href="/about">About</a></li>
-
-          <li class="nav-has-children">
-            <a href="/services" aria-current="page">Services</a>
-            <ul class="nav-submenu">
-              <li><a href="/services/personal-care">Personal care &amp; daily living</a></li>
-              <li><a href="/services/community-participation">Community participation</a></li>
-              <li><a href="/services/support-coordination">Support coordination</a></li>
-              <li><a href="/services/allied-health-access">Allied health access</a></li>
-              <li><a href="/services/family-early-support">Early &amp; family support</a></li>
-            </ul>
-          </li>
-
-          <li><a href="/refer">Refer a participant</a></li>
-          <li><a href="/resources">Resources</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </nav>
-
-      <div class="header-cta">
-        <a href="/refer" class="btn btn-outline">Refer a participant</a>
-        <a href="/contact" class="btn btn-primary">Book a free chat</a>
-      </div>
-
+<!-- TOP TRUST BAR -->
+<div class="top-trust-bar">
+  <div class="container top-trust-bar-inner">
+    <div class="top-trust-left">
+      <span class="top-trust-badge">NDIS registration in progress</span>
+      <span class="top-trust-badge">Supporting self-managed & plan-managed participants</span>
+      <span class="top-trust-badge">Greater Melbourne, Geelong, Ballarat, Bendigo & Shepparton</span>
     </div>
-  </header>
-
-
-
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-inner">
-
-      <div class="hero-text">
-        <h1>Our NDIS Disability Support Services</h1>
-        <p>
-          Our supports are built around your strengths, routines, safety, culture and goals.  
-          We take a calm, respectful and person-centred approach to every visit.
-        </p>
-        <p>
-          Supporting participants across Greater Melbourne (Frankston, Dandenong, Ringwood, Epping,
-          Werribee, Sunshine and more), Geelong, Ballarat, Bendigo, Shepparton and regional Victoria.
-        </p>
-
-        <ul class="hero-highlights">
-          <li>Personalised support for children, adults &amp; families</li>
-          <li>NDIS registration in progress</li>
-          <li>Currently supporting self-managed &amp; plan-managed participants</li>
-        </ul>
-
-        <div class="hero-actions">
-          <a href="/contact" class="btn btn-primary">Talk to Able Aide</a>
-          <a href="/refer" class="btn btn-secondary">Refer a participant</a>
-        </div>
-      </div>
-
-      <div class="hero-image">
-        <div class="hero-card">
-          <img src="/assets/img/able-aide-ndis-services-hero.jpg"
-               style="width:100%; border-radius:12px; margin-bottom:1rem;"
-               alt="NDIS support worker assisting participant">
-
-          <h2 style="font-size:1.2rem;">Unsure which support fits your needs?</h2>
-          <p class="small">We’ll listen first, then guide you gently through your options.</p>
-
-          <a href="/contact" class="btn btn-primary btn-block">Book a free, no-pressure chat</a>
-        </div>
-      </div>
-
+    <div class="top-trust-right">
+      <span class="top-trust-phone">Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a></span>
+      <a href="/refer" class="top-trust-link">Quick referral →</a>
     </div>
-  </section>
+  </div>
+</div>
 
+<!-- HEADER -->
+<header class="site-header">
+  <div class="container header-inner">
 
+    <a href="/" class="logo" aria-label="Able Aide Home">
+      <img src="/assets/img/able-aide-logo.webp"
+           alt="Able Aide Logo"
+           class="logo-img"
+           width="180"
+           height="46">
+      <span class="logo-mark">Able Aide</span>
+      <span class="logo-tagline">Your Journey, Our Support</span>
+    </a>
 
-  <!-- SERVICE ICON GRID -->
-  <section class="home-section">
-    <div class="container">
-      <header class="section-header">
-        <h2>What We Can Help You With</h2>
-        <p>Our services are designed to support your independence, wellbeing and participation in everyday life.</p>
-      </header>
+    <nav class="main-nav" aria-label="Main Navigation" id="mainNav">
+      <ul class="nav-list">
+        <li><a href="/about">About</a></li>
 
-      <div class="card-grid">
-        <article class="card">
-          <h3>🧼 Personal care &amp; daily living</h3>
-          <p class="small">Respectful support at home with routines, hygiene, meals, mobility and safety.</p>
-          <a href="/services/personal-care" class="card-link">Learn more →</a>
-        </article>
-
-        <article class="card">
-          <h3>🚐 Community participation</h3>
-          <p class="small">Appointments, programs, social outings, shopping and building confidence in the community.</p>
-          <a href="/services/community-participation" class="card-link">Learn more →</a>
-        </article>
-
-        <article class="card">
-          <h3>🧭 Support coordination</h3>
-          <p class="small">Helping you understand your plan, choose providers, resolve issues and prepare for reviews.</p>
-          <a href="/services/support-coordination" class="card-link">Learn more →</a>
-        </article>
-
-        <article class="card">
-          <h3>🩺 Allied health access</h3>
-          <p class="small">Connecting you with trusted OTs, physios, psychologists, speech therapists and assessors.</p>
-          <a href="/services/allied-health-access" class="card-link">Learn more →</a>
-        </article>
-
-        <article class="card">
-          <h3>👨‍👩‍👦 Early & family support</h3>
-          <p class="small">Helping families build routines, communication, engagement and developmental skills at home.</p>
-          <a href="/services/family-early-support" class="card-link">Learn more →</a>
-        </article>
-      </div>
-    </div>
-  </section>
-
-
-
-  <!-- HOW WE SUPPORT -->
-  <section class="home-section">
-    <div class="container">
-      <header class="section-header">
-        <h2>How We Work With You</h2>
-        <p>Good support is not just tasks — it’s trust, consistency and communication.</p>
-      </header>
-
-      <ol class="steps-list">
-        <li>
-          <h3>1. We listen first</h3>
-          <p class="small">
-            We take time to understand your goals, routines, culture, personality and communication
-            preferences before matching any support.
-          </p>
+        <li class="nav-has-children">
+          <a href="/services" aria-current="page">Services</a>
+          <ul class="nav-submenu">
+            <li><a href="/services/personal-care">Personal Care &amp; Daily Living</a></li>
+            <li><a href="/services/community-participation">Community Participation</a></li>
+            <li><a href="/services/support-coordination">Support Coordination</a></li>
+            <li><a href="/services/allied-health-access">Allied Health Access</a></li>
+            <li><a href="/services/family-early-support">Family &amp; Early Support</a></li>
+            <li><a href="/services/plan-management">Plan Management <span class="small">(Coming Soon)</span></a></li>
+          </ul>
         </li>
 
-        <li>
-          <h3>2. We build a support plan together</h3>
-          <p class="small">
-            Collaborating with you, your family, support coordinator and therapists ensures support fits
-            your life — not the other way around.
-          </p>
-        </li>
+        <li><a href="/locations">Locations</a></li>
+        <li><a href="/refer">Refer</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/careers">Careers</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/complaints">Complaints</a></li>
+      </ul>
+    </nav>
 
-        <li>
-          <h3>3. We stay flexible as your needs change</h3>
-          <p class="small">
-            Life evolves — your support should too.  
-            We adjust schedules, routines and approaches where possible.
-          </p>
-        </li>
-      </ol>
+    <div class="header-cta">
+      <a href="/refer" class="btn btn-outline">Refer</a>
+      <a href="/contact" class="btn btn-primary">Book a Free Chat</a>
     </div>
-  </section>
 
+    <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+      <span></span>
+    </button>
 
+  </div>
+</header>
 
-  <!-- WHERE WE SUPPORT -->
-  <section class="home-section regions">
-    <div class="container">
-      <header class="section-header">
-        <h2>Where We Provide Supports</h2>
-        <p>Supporting participants across Victoria, including:</p>
-      </header>
+<main>
 
-      <ul class="regions-list">
-        <li>Melbourne CBD</li>
-        <li>Frankston &amp; Mornington Peninsula</li>
-        <li>Dandenong &amp; South-East suburbs</li>
-        <li>Ringwood &amp; Eastern suburbs</li>
-        <li>Epping &amp; Northern suburbs</li>
-        <li>Werribee &amp; Western suburbs</li>
-        <li>Sunshine &amp; Brimbank area</li>
-        <li>Geelong &amp; surrounding areas</li>
-        <li>Ballarat</li>
-        <li>Bendigo</li>
-        <li>Shepparton</li>
-        <li>Other regional Victorian communities</li>
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-inner">
+
+    <div class="hero-text">
+      <h1>Our NDIS Disability Support Services</h1>
+      <p>
+        Our supports are built around your strengths, routines, culture and goals. We take a calm,
+        respectful and person-centred approach, so every visit feels safe and steady — not rushed.
+      </p>
+      <p>
+        Able Aide supports participants across Greater Melbourne (Frankston, Dandenong, Ringwood, Epping,
+        Werribee, Sunshine and surrounds), Geelong, Ballarat, Bendigo, Shepparton and regional Victoria.
+      </p>
+
+      <ul class="hero-highlights">
+        <li>Support for children, adults, families &amp; carers</li>
+        <li>NDIS registration in progress</li>
+        <li>Currently supporting self-managed &amp; plan-managed participants</li>
       </ul>
 
-      <p class="regions-note">
-        Not sure if we can come to your area?  
-        <a href="/contact">Get in touch</a> and we’ll let you know.
+      <div class="hero-actions">
+        <a href="/contact" class="btn btn-primary">Talk to Able Aide</a>
+        <a href="/refer" class="btn btn-secondary">Refer a participant</a>
+      </div>
+
+      <p class="hero-note">
+        We’ll listen first, then gently guide you through the services that best fit your situation.
       </p>
     </div>
-  </section>
 
+    <aside class="hero-card">
+      <img
+        src="/assets/img/able-aide-ndis-services-hero.webp"
+        alt="Support worker assisting participant with NDIS services"
+        loading="lazy"
+        decoding="async"
+        style="width:100%; border-radius:12px; margin-bottom:1rem;"
+      >
+      <h2 style="font-size:1.2rem;">Unsure which support is right?</h2>
+      <p class="small">
+        Many people feel unsure at first. We’ll explain your options in plain language and help you decide
+        at your own pace.
+      </p>
+      <a href="/contact" class="btn btn-primary btn-block">Book a free, no-pressure chat</a>
+    </aside>
 
+  </div>
+</section>
 
-  <!-- CTA -->
-  <section class="home-section final-cta">
-    <div class="container final-cta-inner">
-      <div>
-        <h2>Need help choosing the right supports?</h2>
-        <p>We’re here to make everything clearer, calmer and easier.</p>
-      </div>
-      <div class="final-cta-actions">
-        <a href="/contact" class="btn btn-primary">Book a free chat</a>
-        <a href="/refer" class="btn btn-outline">Refer a participant</a>
-      </div>
-    </div>
-  </section>
+<!-- SERVICE GRID -->
+<section class="home-section">
+  <div class="container">
+    <header class="section-header">
+      <h2>How Able Aide can support you</h2>
+      <p>
+        Each service is tailored to your routines, communication style, culture and goals — so supports feel
+        calm, consistent and genuinely helpful.
+      </p>
+    </header>
 
+    <div class="card-grid">
 
-
-  <!-- FOOTER -->
-  <footer class="site-footer">
-    <div class="container footer-inner">
-
-      <div class="footer-col">
-        <h3>Able Aide</h3>
-        <p>Your Journey, Our Support.</p>
-        <p><strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
-           <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a></p>
-      </div>
-
-      <div class="footer-col">
-        <h3>Quick Links</h3>
-        <ul class="footer-links">
-          <li><a href="/about">About</a></li>
-          <li><a href="/services" aria-current="page">Services</a></li>
-          <li><a href="/refer">Refer</a></li>
-          <li><a href="/resources">Resources</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
-      </div>
-
-      <div class="footer-col">
-        <h3>Where We Support</h3>
-        <p>
-          Greater Melbourne (Frankston, Dandenong, Ringwood, Epping, Werribee, Sunshine &amp; surrounds)<br>
-          Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria
+      <article class="card">
+        <h3>🧼 Personal Care &amp; Daily Living</h3>
+        <p class="small">
+          Respectful support with showering, dressing, meals, mobility, home routines and daily safety —
+          always at your pace.
         </p>
-      </div>
+        <a href="/services/personal-care" class="card-link">Learn more →</a>
+      </article>
 
-      <div class="footer-col">
-        <h3>Follow Us</h3>
-        <ul class="footer-links">
-          <li><a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a></li>
-          <li><a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a></li>
-          <li><a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a></li>
-          <li><a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a></li>
-          <li><a href="https://x.com/AbleAideSupport" target="_blank">X (Twitter)</a></li>
-        </ul>
-      </div>
+      <article class="card">
+        <h3>🚐 Community Participation</h3>
+        <p class="small">
+          Getting to appointments, programs, shopping, worship, learning and social activities with workers
+          who help you feel confident and included.
+        </p>
+        <a href="/services/community-participation" class="card-link">Learn more →</a>
+      </article>
+
+      <article class="card">
+        <h3>🧭 Support Coordination</h3>
+        <p class="small">
+          Making your plan work for you. We help you understand your funding, connect with providers, resolve
+          issues and prepare for plan reviews.
+        </p>
+        <a href="/services/support-coordination" class="card-link">Learn more →</a>
+      </article>
+
+      <article class="card">
+        <h3>🩺 Allied Health Access</h3>
+        <p class="small">
+          Coordinating with trusted therapists and clinics so you can access assessments, reports and therapy
+          supports with less stress.
+        </p>
+        <a href="/services/allied-health-access" class="card-link">Learn more →</a>
+      </article>
+
+      <article class="card">
+        <h3>👨‍👩‍👦 Family &amp; Early Support</h3>
+        <p class="small">
+          Gentle, family-centred support to build routines, communication and participation for children and
+          the people who care for them.
+        </p>
+        <a href="/services/family-early-support" class="card-link">Learn more →</a>
+      </article>
+
+      <article class="card">
+        <h3>📋 Plan Management <span class="small">(Coming Soon)</span></h3>
+        <p class="small">
+          Once registered, our plan management team will help you manage budgets, invoices and providers —
+          while you stay in control of your choices.
+        </p>
+        <a href="/services/plan-management" class="card-link">Read more →</a>
+      </article>
 
     </div>
+  </div>
+</section>
 
-    <div class="container footer-bottom">
-      <p class="small">© <span id="year"></span> Able Aide. All rights reserved.</p>
+<!-- HOW WE WORK -->
+<section class="home-section">
+  <div class="container">
+    <header class="section-header">
+      <h2>What it’s like to work with Able Aide</h2>
+      <p>
+        Good support is more than a roster. It’s trust, clear communication and a team that understands your
+        story, not just your diagnosis.
+      </p>
+    </header>
+
+    <ol class="steps-list">
+      <li>
+        <h3>1. We listen &amp; understand</h3>
+        <p class="small">
+          We talk with you — and your family or support coordinator if you wish — about your routines, goals,
+          culture, communication style and what a “good day” looks like.
+        </p>
+      </li>
+      <li>
+        <h3>2. We build a support plan together</h3>
+        <p class="small">
+          Together, we map out the right mix of services and match you with workers who fit your personality,
+          language, schedule and support needs.
+        </p>
+      </li>
+      <li>
+        <h3>3. We walk alongside you</h3>
+        <p class="small">
+          Supports begin at your pace, with regular check-ins so we can adjust as life and goals change —
+          staying flexible and responsive.
+        </p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<!-- WHERE WE SUPPORT -->
+<section class="home-section regions">
+  <div class="container">
+    <header class="section-header">
+      <h2>Where we provide supports</h2>
+      <p>
+        Able Aide supports NDIS participants across metropolitan, growth and regional areas in Victoria.
+      </p>
+    </header>
+
+    <ul class="regions-list">
+      <li>Melbourne CBD &amp; inner suburbs</li>
+      <li>Frankston &amp; Mornington Peninsula</li>
+      <li>Dandenong, Noble Park &amp; South-East suburbs</li>
+      <li>Ringwood, Box Hill &amp; Eastern suburbs</li>
+      <li>Epping, Craigieburn &amp; Northern suburbs</li>
+      <li>Werribee, Hoppers Crossing &amp; Western suburbs</li>
+      <li>Sunshine &amp; Brimbank area</li>
+      <li>Geelong &amp; surrounding areas</li>
+      <li>Ballarat</li>
+      <li>Bendigo</li>
+      <li>Shepparton</li>
+      <li>Other regional Victorian communities (ask us)</li>
+    </ul>
+
+    <p class="regions-note">
+      Not sure if we can come to you? <a href="/contact">Get in touch</a> and we’ll confirm availability.
+    </p>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="home-section final-cta">
+  <div class="container final-cta-inner">
+    <div>
+      <h2>Need help choosing the right supports?</h2>
+      <p>
+        Whether you’re an NDIS participant, family member or support coordinator, we’re here to make things
+        clearer, calmer and easier to navigate.
+      </p>
+    </div>
+    <div class="final-cta-actions">
+      <a href="/contact" class="btn btn-primary">Book a free chat</a>
+      <a href="/refer" class="btn btn-outline">Refer a participant</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <div class="container footer-inner">
+
+    <div class="footer-col">
+      <h3>Able Aide</h3>
+      <p>Warm, person-centred disability support across Victoria.</p>
+      <p>
+        <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
+        <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
+      </p>
     </div>
 
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
-  </footer>
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="/about">About</a></li>
+        <li><a href="/services" aria-current="page">Services</a></li>
+        <li><a href="/locations">Locations</a></li>
+        <li><a href="/refer">Refer</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/careers">Careers</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/complaints">Complaints</a></li>
+      </ul>
+    </div>
 
+    <div class="footer-col">
+      <h3>Where We Support</h3>
+      <p>
+        Greater Melbourne (Frankston, Dandenong, Ringwood, Epping, Werribee, Sunshine &amp; surrounds)<br>
+        Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria
+      </p>
+    </div>
 
+    <div class="footer-col">
+      <h3>Connect</h3>
+      <ul class="footer-links">
+        <li><a href="https://www.facebook.com/able.aide" target="_blank" rel="noopener">Facebook</a></li>
+        <li><a href="https://www.instagram.com/ableaide/" target="_blank" rel="noopener">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank" rel="noopener">LinkedIn</a></li>
+        <li><a href="https://www.youtube.com/@AbleAide" target="_blank" rel="noopener">YouTube</a></li>
+        <li><a href="https://www.tiktok.com/@ableaide" target="_blank" rel="noopener">TikTok</a></li>
+        <li><a href="https://x.com/AbleAideSupport" target="_blank" rel="noopener">X</a></li>
+      </ul>
+    </div>
 
-  <!-- JSON-LD STRUCTURED DATA -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Service",
-    "name": "NDIS Disability Support Services",
-    "provider": {
-      "@type": "Organization",
-      "name": "Able Aide",
-      "url": "https://ableaide.com.au"
-    },
-    "areaServed": [
-      "Melbourne", "Frankston", "Dandenong", "Ringwood", "Epping",
-      "Werribee", "Sunshine", "Geelong", "Ballarat", "Bendigo",
-      "Shepparton", "Regional Victoria"
-    ],
-    "description": "NDIS disability support services across Victoria, including daily living, community access, support coordination, allied health access and early family support.",
-    "url": "https://ableaide.com.au/services"
-  }
-  </script>
+  </div>
+
+  <div class="container footer-bottom">
+    <p class="small">
+      © <span id="year"></span> Able Aide. All rights reserved. ·
+      <a href="/privacy-policy" class="footer-link">Privacy Policy</a> ·
+      <a href="/terms-of-service" class="footer-link">Terms of Service</a>
+    </p>
+  </div>
+</footer>
+
+<!-- FLOATING CTA -->
+<div class="floating-cta" id="floatingCta">
+  <button class="floating-cta-toggle" id="floatingCtaToggle" type="button">
+    <span class="icon">💬</span>
+    <span>Need support?</span>
+  </button>
+  <div class="floating-cta-panel">
+    <div class="floating-cta-title">Talk to Able Aide</div>
+    <div class="floating-cta-text">
+      Quick ways to reach us about NDIS supports, referrals or questions.
+    </div>
+    <div class="floating-cta-links">
+      <a href="tel:61435039110">📞 Call 0435 039 110</a>
+      <a href="/contact">✉️ Send an enquiry</a>
+      <a href="/refer">📝 Refer a participant</a>
+    </div>
+  </div>
+</div>
+
+<!-- JS -->
+<script>
+  // Dynamic year
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Mobile nav toggle
+  (function () {
+    var navToggle = document.getElementById('navToggle');
+    var mainNav = document.getElementById('mainNav');
+
+    if (navToggle && mainNav) {
+      navToggle.addEventListener('click', function () {
+        mainNav.classList.toggle('open');
+        navToggle.setAttribute('aria-expanded', mainNav.classList.contains('open'));
+      });
+
+      mainNav.querySelectorAll('a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          if (window.innerWidth <= 900) {
+            mainNav.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    }
+  })();
+
+  // Floating CTA toggle
+  (function () {
+    var floatingCta = document.getElementById('floatingCta');
+    var floatingToggle = document.getElementById('floatingCtaToggle');
+
+    if (floatingCta && floatingToggle) {
+      floatingToggle.addEventListener('click', function () {
+        floatingCta.classList.toggle('open');
+      });
+    }
+  })();
+</script>
 
 </body>
 </html>

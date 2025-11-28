@@ -2,14 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Privacy Policy – Able Aide Victoria | NDIS Provider</title>
+  <title>Privacy Policy – Able Aide</title>
 
-  <!-- Canonical URL -->
   <link rel="canonical" href="https://ableaide.com.au/privacy-policy">
-
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
   <meta name="description"
-        content="Able Aide’s Privacy Policy. Learn how we protect your personal information, NDIS data, health details and sensitive information. Plain-English, legally compliant and aligned with NDIS Practice Standards.">
+        content="Learn how Able Aide collects, uses, stores and protects your personal information in line with the Australian Privacy Act, NDIS Practice Standards and best practice.">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
@@ -18,373 +17,424 @@
   <link rel="shortcut icon" href="/favicon.ico">
 
   <!-- OpenGraph -->
-  <meta property="og:title" content="Privacy Policy – Able Aide Victoria">
-  <meta property="og:description" content="Learn how Able Aide protects your personal information and NDIS data. Plain-English and legally compliant.">
-  <meta property="og:image" content="/assets/img/og-image.png">
+  <meta property="og:title" content="Privacy Policy – Able Aide">
+  <meta property="og:description"
+        content="How Able Aide handles your personal information, consistent with Australian privacy law and NDIS Practice Standards.">
+  <meta property="og:image" content="/assets/img/og-image.webp">
   <meta property="og:url" content="https://ableaide.com.au/privacy-policy">
-  <meta property="og:type" content="website">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="Privacy Policy – Able Aide Victoria">
-  <meta name="twitter:description" content="How Able Aide handles, stores and protects your NDIS information.">
-  <meta name="twitter:image" content="/assets/img/og-image.png">
+  <meta name="twitter:title" content="Privacy Policy – Able Aide">
+  <meta name="twitter:description"
+        content="How Able Aide protects your personal information under the Australian Privacy Act and NDIS Practice Standards.">
+  <meta name="twitter:image" content="/assets/img/og-image.webp">
 
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Preload Logo -->
+  <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
+
+  <!-- Mobile nav smoother transition -->
+  <style>
+    @media (max-width: 900px) {
+      .main-nav {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.25s ease;
+      }
+      .main-nav.open {
+        max-height: 550px;
+      }
+    }
+  </style>
+
+  <!-- Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Able Aide",
+        "url": "https://ableaide.com.au",
+        "logo": "https://ableaide.com.au/assets/img/able-aide-logo.webp",
+        "telephone": "+61435039110",
+        "email": "enquiries@ableaide.com.au",
+        "sameAs": [
+          "https://www.facebook.com/able.aide",
+          "https://www.instagram.com/ableaide/",
+          "https://www.linkedin.com/company/ableaide/",
+          "https://www.youtube.com/@AbleAide",
+          "https://www.tiktok.com/@ableaide",
+          "https://x.com/AbleAideSupport"
+        ]
+      },
+      {
+        "@type": "WebPage",
+        "name": "Privacy Policy",
+        "url": "https://ableaide.com.au/privacy-policy"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ableaide.com.au/" },
+          { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://ableaide.com.au/privacy-policy" }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
+<!-- TOP TRUST BAR -->
+<div class="top-trust-bar">
+  <div class="container top-trust-bar-inner">
+    <div class="top-trust-left">
+      <span class="top-trust-badge">NDIS registration in progress</span>
+      <span class="top-trust-badge">Supporting plan-managed & self-managed participants</span>
+      <span class="top-trust-badge">Across Greater Melbourne, Geelong, Ballarat, Bendigo & Shepparton</span>
+    </div>
+    <div class="top-trust-right">
+      <span class="top-trust-phone">Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a></span>
+      <a href="/refer" class="top-trust-link">Quick referral form →</a>
+    </div>
+  </div>
+</div>
+
 <!-- HEADER -->
 <header class="site-header">
   <div class="container header-inner">
-    <a href="/" class="logo">
-      <img src="/assets/img/able-aide-logo.png" alt="Able Aide Logo" class="logo-img">
-      <span class="logo-text">Able Aide</span>
+
+    <a href="/" class="logo" aria-label="Able Aide Home">
+      <img src="/assets/img/able-aide-logo.webp" alt="Able Aide Logo" class="logo-img" width="180" height="46">
+      <span class="logo-mark">Able Aide</span>
+      <span class="logo-tagline">Your Journey, Our Support</span>
     </a>
 
-    <nav class="main-nav">
-      <a href="/about">About</a>
-      <a href="/services">Services</a>
-      <a href="/refer">Refer</a>
-      <a href="/resources">Resources</a>
-      <a href="/contact" class="btn btn-primary">Contact</a>
+    <nav class="main-nav" id="mainNav">
+      <ul class="nav-list">
+        <li><a href="/about">About</a></li>
+
+        <li class="nav-has-children">
+          <a href="/services">Services</a>
+          <ul class="nav-submenu">
+            <li><a href="/services/personal-care">Personal Care & Daily Living</a></li>
+            <li><a href="/services/community-participation">Community Participation</a></li>
+            <li><a href="/services/support-coordination">Support Coordination</a></li>
+            <li><a href="/services/allied-health-access">Allied Health Access</a></li>
+            <li><a href="/services/family-early-support">Family & Early Support</a></li>
+            <li><a href="/services/plan-management">Plan Management <span class="small">(Coming Soon)</span></a></li>
+          </ul>
+        </li>
+
+        <li><a href="/locations">Locations</a></li>
+        <li><a href="/refer">Refer</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/careers">Careers</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/complaints">Complaints</a></li>
+      </ul>
     </nav>
+
+    <div class="header-cta">
+      <a href="/refer" class="btn btn-outline">Refer</a>
+      <a href="/contact" class="btn btn-primary">Book a Free Chat</a>
+    </div>
+
+    <button class="nav-toggle" id="navToggle" aria-expanded="false">
+      <span></span>
+    </button>
+
   </div>
 </header>
 
+<main>
 
 <!-- HERO -->
 <section class="hero">
   <div class="container hero-inner">
-    <div>
+    <div class="hero-text">
       <h1>Privacy Policy</h1>
-      <p class="hero-subtext">
-        Able Aide respects your privacy, your culture, your boundaries and your choices.
-        We take care to protect your information and comply with Australian privacy law
-        and NDIS Practice Standards.
-      </p>
+      <p class="hero-subtext">Your privacy is important to us. This policy explains how Able Aide collects, uses and protects your information under Australian privacy law and NDIS Practice Standards.</p>
     </div>
 
     <aside class="hero-card">
-      <img src="/assets/img/able-aide-ndis-general-disability-support-2.jpg"
-           alt="Privacy and NDIS information protection"
+      <img src="/assets/img/able-aide-ndis-about-hero.webp" 
+           alt="NDIS participant talking with support worker"
+           loading="lazy" decoding="async" width="1600" height="1067"
            style="width:100%; border-radius:12px; margin-bottom:1rem;">
-
-      <h2 style="font-size:1.4rem;">Your privacy matters</h2>
-      <p class="small">
-        We only collect information needed to provide safe, high-quality NDIS support.
-        You can request access, updates or corrections at any time.
-      </p>
-      <a href="/contact" class="btn btn-primary btn-block">Ask a privacy question</a>
+      <h2>Your information is handled with care</h2>
+      <p class="small">We follow the Australian Privacy Act 1988 (Cth), the Australian Privacy Principles (APPs) and NDIS requirements.</p>
     </aside>
   </div>
 </section>
 
-
-<!-- SECTION: ABOUT -->
+<!-- PRIVACY CONTENT -->
 <section class="section">
   <div class="container">
 
     <h2 class="section-title">1. About This Policy</h2>
-    <p>
-      This policy explains how Able Aide collects, uses, stores and protects your personal information.
-      It applies to all services we provide across Victoria.
-    </p>
-
-  </div>
-</section>
-
-
-<!-- SECTION: WHAT WE COLLECT -->
-<section class="section section-alt">
-  <div class="container">
+    <p>This Privacy Policy explains how Able Aide (“we”, “our”, “us”) manages personal information in accordance with:</p>
+    <ul>
+      <li>the <strong>Privacy Act 1988 (Cth)</strong></li>
+      <li>the <strong>Australian Privacy Principles (APPs)</strong></li>
+      <li>the <strong>NDIS Act 2013</strong> & NDIS Practice Standards</li>
+      <li>the <strong>NDIS Code of Conduct</strong></li>
+    </ul>
 
     <h2 class="section-title">2. What Personal Information We Collect</h2>
+    <p>We may collect the following information:</p>
 
-    <div class="grid grid-2" style="margin-top:1.5rem;">
-      <div>
-        <h3>2.1 Participant Information</h3>
-        <ul class="checklist small">
-          <li>Name, DOB and contact details</li>
-          <li>NDIS number and funding type</li>
-          <li>Suburb and preferred service times</li>
-          <li>Health or disability-related information</li>
-          <li>Cultural or language needs</li>
-          <li>Therapy recommendations (with consent)</li>
-          <li>Risk, behaviour or safety considerations</li>
-          <li>Emergency contact details</li>
-        </ul>
-      </div>
-
-      <div>
-        <h3>2.2 Referrer Information</h3>
-        <ul class="checklist small">
-          <li>Name and organisation</li>
-          <li>Role or relationship to participant</li>
-          <li>Email and phone number</li>
-          <li>Information provided during referral</li>
-        </ul>
-
-        <h3 style="margin-top:1.2rem;">2.3 Website & Form Information</h3>
-        <ul class="checklist small">
-          <li>Form submissions</li>
-          <li>Basic usage analytics</li>
-          <li>Standard cookies</li>
-        </ul>
-      </div>
-    </div>
-
-  </div>
-</section>
-
-
-<!-- SECTION: WHY WE COLLECT -->
-<section class="section">
-  <div class="container">
-
-    <h2 class="section-title">3. Why We Collect Information</h2>
-
-    <ul class="checklist">
-      <li>Provide safe, person-centred NDIS support</li>
-      <li>Understand your goals and needs</li>
-      <li>Match you with suitable workers</li>
-      <li>Communicate with you and your support team</li>
-      <li>Meet NDIS compliance and safety obligations</li>
-      <li>Improve our services</li>
-      <li>Respond to enquiries, referrals or incidents</li>
+    <h3>Participants & Families</h3>
+    <ul>
+      <li>Name, address, contact details</li>
+      <li>Date of birth</li>
+      <li>Health, disability and support information</li>
+      <li>NDIS plan details (goals, preferences, budgets)</li>
+      <li>Cultural, communication or language preferences</li>
+      <li>Emergency contact details</li>
     </ul>
 
-  </div>
-</section>
+    <h3>Support Coordinators & Referrers</h3>
+    <ul>
+      <li>Name and organisation</li>
+      <li>Contact and referral details</li>
+    </ul>
 
+    <h3>Website Visitors</h3>
+    <ul>
+      <li>IP address & device information</li>
+      <li>Pages visited and actions taken</li>
+      <li>Location data (approximate)</li>
+      <li>Browser type, session behaviour and traffic sources</li>
+    </ul>
 
-<!-- SECTION: HOW WE COLLECT -->
-<section class="section section-alt">
-  <div class="container">
+    <h3>Sensitive Information</h3>
+    <p>We may collect sensitive information such as:</p>
+    <ul>
+      <li>health and disability information</li>
+      <li>cultural background</li>
+      <li>language needs</li>
+      <li>religious or spiritual preferences (if relevant to supports)</li>
+    </ul>
+    <p><strong>We only collect sensitive information with your consent or as permitted by law.</strong></p>
 
-    <h2 class="section-title">4. How We Collect Information</h2>
-    <p>
-      We collect information through referrals, forms, phone calls, emails, meetings, support
-      coordination discussions and website analytics.
-    </p>
-    <p>
-      Where possible, we collect information directly from you.  
-      Information from others requires your consent, unless there is a serious safety risk.
-    </p>
+    <h2 class="section-title">3. How We Collect Information</h2>
+    <ul>
+      <li>directly from you (phone, email, forms, meetings)</li>
+      <li>through our website forms (via Formspree)</li>
+      <li>through support coordinators or referrers</li>
+      <li>via Google Analytics (GA4)</li>
+      <li>via Meta Pixel (Facebook/Instagram)</li>
+      <li>from publicly available sources where relevant</li>
+    </ul>
 
-  </div>
-</section>
+    <h2 class="section-title">4. Why We Collect Your Information</h2>
+    <p>We use your information to:</p>
+    <ul>
+      <li>provide disability support and services</li>
+      <li>understand your needs, preferences and goals</li>
+      <li>communicate with you and your chosen representatives</li>
+      <li>plan, manage and deliver supports safely</li>
+      <li>improve our website, services and communication</li>
+      <li>meet legal and regulatory requirements</li>
+    </ul>
 
+    <h2 class="section-title">5. Website Analytics & Cookies</h2>
+    <p>We use cookies and tracking technologies to improve your experience.</p>
 
-<!-- SECTION: SENSITIVE INFO -->
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">5. Sensitive & Health Information</h2>
-    <p class="section-intro">
-      As an NDIS provider, we handle sensitive information with the highest level of confidentiality.
-      We comply with the Australian Privacy Act and NDIS Practice Standards.
-    </p>
-  </div>
-</section>
+    <h3>Google Analytics (GA4)</h3>
+    <p>We use GA4 to collect anonymised information about:</p>
+    <ul>
+      <li>page views & behaviours</li>
+      <li>traffic sources (Google, social media, etc.)</li>
+      <li>device types (mobile/tablet/desktop)</li>
+      <li>general location (city-level)</li>
+    </ul>
 
+    <h3>Meta Pixel</h3>
+    <p>We use Meta Pixel for:</p>
+    <ul>
+      <li>advertising measurement</li>
+      <li>retargeting ads (Facebook/Instagram)</li>
+      <li>optimising our campaigns</li>
+    </ul>
 
-<!-- SECTION: STORAGE -->
-<section class="section section-alt">
-  <div class="container">
+    <p>You can opt out at any time:</p>
+    <ul>
+      <li><a href="https://support.google.com/analytics/answer/9019185" target="_blank">Google Analytics opt-out</a></li>
+      <li><a href="https://www.facebook.com/help/568137493302217" target="_blank">Meta ads preferences</a></li>
+    </ul>
+
     <h2 class="section-title">6. How We Store & Protect Your Information</h2>
-
-    <ul class="checklist">
-      <li>Encrypted digital systems</li>
-      <li>Strict access controls</li>
-      <li>Secure cloud-based NDIS-compliant storage</li>
-      <li>Password-protected devices</li>
-      <li>Confidentiality agreements</li>
-      <li>Regular privacy and safety training</li>
+    <p>Your information is stored securely using:</p>
+    <ul>
+      <li>protected digital systems</li>
+      <li>limited access controls</li>
+      <li>password-protected files</li>
+      <li>secure cloud storage</li>
     </ul>
 
-  </div>
-</section>
+    <h3>Website & Hosting</h3>
+    <p>Your website data (not participant files) is hosted securely by <strong>Netlify</strong> with global CDN protection.</p>
 
-
-<!-- SECTION: SHARING -->
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">7. When We Share Information</h2>
-
-    <p>We never sell your information.</p>
-
-    <ul class="checklist">
-      <li>You give consent</li>
-      <li>To deliver safe support</li>
-      <li>Required by law</li>
-      <li>To prevent a serious risk of harm</li>
-      <li>NDIS audit or compliance requirements</li>
+    <h2 class="section-title">7. Sharing Your Information</h2>
+    <p>We may share information only when necessary:</p>
+    <ul>
+      <li>with your nominated representatives</li>
+      <li>with support coordinators or therapists (with consent)</li>
+      <li>with plan managers (if relevant)</li>
+      <li>when required by law</li>
     </ul>
-  </div>
-</section>
+    <p><strong>We never sell your information.</strong></p>
 
-
-<!-- SECTION: RIGHTS -->
-<section class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">8. Your Rights</h2>
-
-    <ul class="checklist">
-      <li>Request a copy of your information</li>
-      <li>Ask to update or correct information</li>
-      <li>Withdraw consent</li>
-      <li>Know how your information is used</li>
-      <li>Make a privacy complaint</li>
-      <li>Use an advocate</li>
+    <h2 class="section-title">8. Overseas Data Disclosure</h2>
+    <p>Some data (analytics, hosting) may be processed by services located overseas, including:</p>
+    <ul>
+      <li>United States</li>
+      <li>European Union</li>
+      <li>Asia-Pacific regions</li>
     </ul>
-  </div>
-</section>
 
+    <h2 class="section-title">9. Accessing or Correcting Your Information</h2>
+    <p>You may request:</p>
+    <ul>
+      <li>a copy of your information</li>
+      <li>corrections to inaccurate details</li>
+      <li>updates to your preferences</li>
+    </ul>
+    <p>Email: <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a></p>
 
-<!-- SECTION: CHILDREN -->
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">9. Children & Young People</h2>
-    <p>
-      For participants under 18, information is collected with guardian consent unless the young
-      person can provide informed consent themselves.
-    </p>
-  </div>
-</section>
+    <h2 class="section-title">10. Making a Privacy Complaint</h2>
+    <p>If you have a concern about how your information has been handled, you can contact us:</p>
+    <p><strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a></p>
+    <p><strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a></p>
 
+    <h3>NDIS Commission</h3>
+    <p>You may also contact the NDIS Quality and Safeguards Commission:</p>
+    <p><a href="https://www.ndiscommission.gov.au" target="_blank">www.ndiscommission.gov.au</a> — <strong>1800 035 544</strong></p>
 
-<!-- SECTION: INTERPRETERS -->
-<section class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">10. Interpreters & Cultural Support</h2>
-    <p>
-      We can arrange interpreters or adjust communication styles to support language, culture or
-      faith preferences.
-    </p>
-  </div>
-</section>
-
-
-<!-- SECTION: WEBSITE -->
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">11. Website Cookies & Analytics</h2>
-    <p>
-      We use minimal analytics and standard cookies for website functionality.  
-      We do not use advertising trackers.
-    </p>
-  </div>
-</section>
-
-
-<!-- SECTION: COMPLAINTS -->
-<section class="section section-alt">
-  <div class="container">
-    <h2 class="section-title">12. Privacy Questions & Complaints</h2>
-
-    <p>You can contact us anytime:</p>
-
-    <p><strong>Email:</strong> enquiries@ableaide.com.au</p>
-    <p><strong>Phone:</strong> 0435 039 110</p>
-
-    <p>
-      If unresolved, you can contact the OAIC or NDIS Quality and Safeguards Commission.
-    </p>
+    <h2 class="section-title">11. Changes to This Policy</h2>
+    <p>This policy may be updated from time to time. The latest version will always be posted on this page.</p>
 
   </div>
 </section>
-
-
-<!-- SECTION: CHANGES -->
-<section class="section">
-  <div class="container">
-    <h2 class="section-title">13. Updates to This Policy</h2>
-    <p>
-      We may update this policy when laws or NDIS standards change.  
-      The latest version will always be available on this page.
-    </p>
-  </div>
-</section>
-
 
 <!-- CTA -->
-<section class="section">
+<section class="section section-alt">
   <div class="container center">
-    <h2 class="section-title">Have Questions About Privacy?</h2>
-    <p class="section-intro">We’re happy to explain anything in this policy in clear, simple language.</p>
-    <a href="/contact" class="btn btn-primary">Contact Able Aide</a>
+    <h2 class="section-title">Have Questions About Your Privacy?</h2>
+    <p class="section-intro">We’re here to help. Reach out if you want to understand how your information is handled.</p>
+    <a href="/contact" class="btn btn-primary">Contact Us</a>
   </div>
 </section>
 
+</main>
 
 <!-- FOOTER -->
 <footer class="site-footer">
   <div class="container footer-inner">
 
-    <div>
-      <strong>Able Aide</strong><br>
-      Your Journey, Our Support<br><br>
-
-      <strong>Phone:</strong>
-      <a href="tel:61435039110">0435 039 110</a><br>
-
-      <strong>Email:</strong>
-      <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
+    <div class="footer-col">
+      <h3>Able Aide</h3>
+      <p>Warm, person-centred disability support across Victoria.</p>
+      <p><strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
+         <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
+      </p>
     </div>
 
-    <div>
-      <strong>Service Hours</strong><br>
-      Support Coordination: 8am–7pm<br>
-      Core Supports: 24/7<br>
-      Allied Health: 9am–6pm
+    <div class="footer-col">
+      <h3>Quick Links</h3>
+      <ul class="footer-links">
+        <li><a href="/about">About</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/locations">Locations</a></li>
+        <li><a href="/refer">Refer</a></li>
+        <li><a href="/resources">Resources</a></li>
+        <li><a href="/careers">Careers</a></li>
+        <li><a href="/contact">Contact</a></li>
+        <li><a href="/complaints">Complaints</a></li>
+      </ul>
     </div>
 
-    <div>
-      <strong>Where We Support</strong><br>
-      Melbourne · Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria
+    <div class="footer-col">
+      <h3>Where We Support</h3>
+      <p>
+        Greater Melbourne · Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria
+      </p>
     </div>
 
-    <div>
-      <strong>Follow Us</strong><br>
-      <a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a><br>
-      <a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a><br>
-      <a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a><br>
-      <a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a><br>
-      <a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a><br>
-      <a href="https://x.com/AbleAideSupport" target="_blank">X (Twitter)</a>
+    <div class="footer-col">
+      <h3>Connect</h3>
+      <ul class="footer-links">
+        <li><a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a></li>
+        <li><a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a></li>
+        <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a></li>
+        <li><a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a></li>
+        <li><a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a></li>
+        <li><a href="https://x.com/AbleAideSupport" target="_blank">X</a></li>
+      </ul>
     </div>
 
   </div>
 
   <div class="container footer-bottom">
-    <p class="small">© <span id="year"></span> Able Aide. All rights reserved.</p>
+    <p class="small">
+      © <span id="year"></span> Able Aide. All rights reserved. · 
+      <a href="/privacy-policy" class="footer-link" aria-current="page">Privacy Policy</a> · 
+      <a href="/terms-of-service" class="footer-link">Terms of Service</a>
+    </p>
   </div>
-
-  <script>
-    document.getElementById('year').textContent = new Date().getFullYear();
-  </script>
 </footer>
 
+<!-- FLOATING CTA -->
+<div class="floating-cta" id="floatingCta">
+  <button class="floating-cta-toggle" id="floatingCtaToggle" style="padding:0.45rem 0.8rem;">
+    <span class="icon">💬</span><span>Need help?</span>
+  </button>
+  <div class="floating-cta-panel" style="box-shadow:0 12px 28px rgba(15,23,42,0.25);">
+    <div class="floating-cta-title">Talk to Able Aide</div>
+    <div class="floating-cta-text">Quick ways to reach our team.</div>
+    <div class="floating-cta-links">
+      <a href="tel:61435039110">📞 Call 0435 039 110</a>
+      <a href="/contact">✉️ Send an enquiry</a>
+      <a href="/refer">📝 Make a referral</a>
+    </div>
+  </div>
+</div>
 
-<!-- JSON-LD -->
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "WebPage",
-  "name": "Privacy Policy – Able Aide",
-  "url": "https://ableaide.com.au/privacy-policy",
-  "description": "Able Aide privacy policy explaining how we collect, use, store and protect personal information and NDIS data.",
-  "publisher": {
-    "@type": "Organization",
-    "name": "Able Aide",
-    "url": "https://ableaide.com.au",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://ableaide.com.au/assets/img/able-aide-logo.png"
-    }
-  }
-}
+<!-- JS -->
+<script>
+  document.getElementById("year").textContent = new Date().getFullYear();
+
+  // Mobile nav
+  (function () {
+    var navToggle = document.getElementById('navToggle');
+    var mainNav = document.getElementById('mainNav');
+
+    navToggle.addEventListener('click', function () {
+      mainNav.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', mainNav.classList.contains('open'));
+    });
+
+    mainNav.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        if (window.innerWidth <= 900) {
+          mainNav.classList.remove('open');
+          navToggle.setAttribute('aria-expanded', 'false');
+        }
+      });
+    });
+  })();
+
+  // Floating CTA
+  document.getElementById('floatingCtaToggle').addEventListener('click', function () {
+    document.getElementById('floatingCta').classList.toggle('open');
+  });
 </script>
 
 </body>

@@ -2,16 +2,21 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Able Aide – Complaints, Feedback & Improvements</title>
+  <title>Complaints & Feedback – Able Aide NDIS Support</title>
 
+  <!-- Canonical -->
   <link rel="canonical" href="https://ableaide.com.au/complaints">
+
+  <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Meta Description -->
   <meta name="description"
-        content="Submit complaints, feedback or compliments about Able Aide. We respond quickly, respectfully and confidentially. Learn how we manage complaints and how to escalate to the NDIS Commission if needed.">
+        content="Learn how to make a complaint or provide feedback about Able Aide’s disability support services. We handle all concerns respectfully, confidentially and in line with NDIS Practice Standards.">
 
+  <!-- Keywords -->
   <meta name="keywords"
-        content="NDIS complaints, NDIS feedback, Able Aide feedback, disability support complaints, NDIS Commission complaint, participant rights, Able Aide complaints process">
+        content="NDIS complaints, Able Aide complaints, NDIS feedback, disability support feedback, report concern, NDIS provider complaint">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
@@ -19,28 +24,98 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
   <link rel="shortcut icon" href="/favicon.ico">
 
-  <!-- Social -->
-  <meta property="og:title" content="Able Aide – Complaints, Feedback & Improvements">
-  <meta property="og:description" content="We take complaints seriously and respond with respect, confidentiality and transparency. Submit feedback or learn about your rights.">
-  <meta property="og:image" content="/assets/img/og-image.png">
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Complaints & Feedback – Able Aide NDIS Support">
+  <meta property="og:description"
+        content="Able Aide takes all concerns seriously and handles complaints with respect, privacy and care. Learn how to raise a complaint.">
+  <meta property="og:image" content="/assets/img/og-image.webp">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ableaide.com.au/complaints">
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Complaints & Feedback – Able Aide">
+  <meta name="twitter:description"
+        content="We handle concerns respectfully, safely and confidentially. Learn how to make a complaint.">
+  <meta name="twitter:image" content="/assets/img/og-image.webp">
 
   <!-- Styles -->
+  <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Preload Logo -->
+  <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
+
+  <!-- Mobile Nav Animation -->
+  <style>
+    @media (max-width: 900px) {
+      .main-nav {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.25s ease;
+      }
+      .main-nav.open {
+        max-height: 520px;
+      }
+    }
+  </style>
+
+  <!-- Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "name": "Able Aide",
+        "url": "https://ableaide.com.au",
+        "logo": "https://ableaide.com.au/assets/img/able-aide-logo.webp",
+        "email": "enquiries@ableaide.com.au",
+        "telephone": "+61435039110",
+        "description": "Able Aide provides warm, person-centred disability support across Victoria.",
+        "sameAs": [
+          "https://www.facebook.com/able.aide",
+          "https://www.instagram.com/ableaide/",
+          "https://www.linkedin.com/company/ableaide/",
+          "https://www.tiktok.com/@ableaide",
+          "https://www.youtube.com/@AbleAide",
+          "https://x.com/AbleAideSupport"
+        ]
+      },
+      {
+        "@type": "AboutPage",
+        "name": "Complaints & Feedback",
+        "url": "https://ableaide.com.au/complaints",
+        "inLanguage": "en-AU"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ableaide.com.au/" },
+          { "@type": "ListItem", "position": 2, "name": "Complaints", "item": "https://ableaide.com.au/complaints" }
+        ]
+      }
+    ]
+  }
+  </script>
+
 </head>
 
 <body>
 
-  <!-- TRUST BAR -->
-  <div class="trust-bar">
-    <div class="trust-bar-inner">
-      <span>⭐ NDIS Registration in Progress</span>
-      <span>✔ Supporting Plan-Managed & Self-Managed Participants</span>
-      <span>📞 <a href="tel:61435039110">0435 039 110</a></span>
-      <a href="/refer" class="trust-bar-cta">Refer a Participant →</a>
+  <!-- TOP TRUST BAR -->
+  <div class="top-trust-bar">
+    <div class="container top-trust-bar-inner">
+      <div class="top-trust-left">
+        <span class="top-trust-badge">NDIS registration in progress</span>
+        <span class="top-trust-badge">Supporting plan-managed &amp; self-managed participants</span>
+        <span class="top-trust-badge">Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton &amp; regional VIC</span>
+      </div>
+      <div class="top-trust-right">
+        <span class="top-trust-phone">Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a></span>
+        <a href="/refer" class="top-trust-link">Quick referral form →</a>
+      </div>
     </div>
   </div>
 
@@ -48,197 +123,208 @@
   <header class="site-header">
     <div class="container header-inner">
 
-      <a href="/" class="logo">
-        <img src="/assets/img/able-aide-logo.png" alt="Able Aide Logo" class="logo-img">
+      <a href="/" class="logo" aria-label="Able Aide Home">
+        <img src="/assets/img/able-aide-logo.webp"
+             alt="Able Aide logo"
+             class="logo-img"
+             width="180"
+             height="46"
+             decoding="async">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
 
-      <nav class="main-nav">
+      <nav class="main-nav" aria-label="Main Navigation" id="mainNav">
         <ul class="nav-list">
-
           <li><a href="/about">About</a></li>
 
           <li class="nav-has-children">
             <a href="/services">Services</a>
             <ul class="nav-submenu">
-              <li><a href="/services/personal-care">Personal Care</a></li>
-              <li><a href="/services/community-participation">Community Participation</a></li>
-              <li><a href="/services/support-coordination">Support Coordination</a></li>
-              <li><a href="/services/allied-health-access">Allied Health Access</a></li>
-              <li><a href="/services/family-early-support">Early & Family Support</a></li>
+              <li><a href="/services/personal-care">Personal care &amp; daily living</a></li>
+              <li><a href="/services/community-participation">Community participation</a></li>
+              <li><a href="/services/support-coordination">Support coordination</a></li>
+              <li><a href="/services/allied-health-access">Allied health access</a></li>
+              <li><a href="/services/family-early-support">Early &amp; family support</a></li>
+              <li><a href="/services/plan-management">Plan management <span class="small">(Coming soon)</span></a></li>
             </ul>
           </li>
 
+          <li><a href="/locations">Locations</a></li>
           <li><a href="/refer">Refer</a></li>
           <li><a href="/resources">Resources</a></li>
-          <li><a href="/complaints" aria-current="page">Complaints</a></li>
+          <li><a href="/careers">Careers</a></li>
           <li><a href="/contact">Contact</a></li>
+          <li><a href="/complaints" aria-current="page">Complaints</a></li>
         </ul>
       </nav>
 
       <div class="header-cta">
-        <a href="/refer" class="btn btn-outline">Refer</a>
-        <a href="/contact" class="btn btn-primary">Book Chat</a>
+        <a href="/refer" class="btn btn-outline">Refer a participant</a>
+        <a href="/contact" class="btn btn-primary">Book a free chat</a>
       </div>
+
+      <!-- MOBILE NAV TOGGLE -->
+      <button class="nav-toggle" id="navToggle" type="button"
+              aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+        <span></span>
+      </button>
+
     </div>
   </header>
 
-  <!-- HERO -->
-  <section class="hero">
-    <div class="container hero-inner">
-      <div>
-        <h1>Complaints, Feedback & Compliments</h1>
-        <p class="hero-subtext">
-          Your voice helps us improve. We handle all feedback with care, respect and confidentiality —
-          whether it's a complaint, suggestion or compliment.
-        </p>
+  <main>
 
-        <p class="hero-subtext">
-          You can submit feedback anonymously, or ask us to contact you.  
-          We always respond promptly, honestly and without judgment.
-        </p>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
+
+        <div class="hero-text">
+          <h1>Complaints & Feedback</h1>
+          <p class="hero-subtext">
+            Your experience matters. If something hasn’t felt right, we want to hear about it.
+          </p>
+          <p class="hero-subtext">
+            We handle all concerns with respect, confidentiality and without judgement.
+          </p>
+        </div>
+
+        <aside class="hero-card">
+          <img src="/assets/img/able-aide-ndis-about-hero.webp"
+               alt="Support worker speaking with participant"
+               loading="lazy"
+               decoding="async"
+               width="1600"
+               height="1067"
+               style="width:100%; border-radius:12px; margin-bottom:1rem;">
+          <h2>Your voice helps us improve</h2>
+          <p class="small">
+            Whether it’s a suggestion, concern or formal complaint, we respond promptly and fairly.
+          </p>
+        </aside>
+
       </div>
+    </section>
 
-      <aside class="hero-card">
-        <img src="/assets/img/able-aide-ndis-general-disability-support-1.jpg"
-             alt="Complaints and feedback"
-             style="width:100%; border-radius:12px; margin-bottom:1rem;">
+    <!-- HOW WE HANDLE COMPLAINTS -->
+    <section class="section">
+      <div class="container">
 
-        <h2 class="section-title" style="font-size:1.4rem;">We take all concerns seriously</h2>
-        <p class="small">
-          Every complaint is acknowledged and investigated respectfully, in line with NDIS Quality &
-          Safeguards Commission requirements.
+        <h2 class="section-title">How We Handle Complaints</h2>
+        <p class="section-intro">
+          Able Aide follows the NDIS Code of Conduct and Practice Standards. We take every concern seriously.
         </p>
 
-        <a href="#complaints-form" class="btn btn-primary btn-block">Submit Feedback</a>
-      </aside>
-    </div>
-  </section>
+        <ol class="steps-list">
+          <li>
+            <h3>1. You tell us your concern</h3>
+            <p class="small">
+              You can share your complaint by phone, email, form or in writing. You can remain anonymous.
+            </p>
+          </li>
 
-  <!-- HOW WE HANDLE COMPLAINTS -->
-  <section class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">How We Handle Complaints</h2>
+          <li>
+            <h3>2. We acknowledge your complaint</h3>
+            <p class="small">
+              We’ll confirm we’ve received your concern and explain what will happen next.
+            </p>
+          </li>
 
-      <div class="grid grid-3" style="margin-top:2rem;">
-        <div class="step-card">
-          <div class="step-number">1</div>
-          <h3>Acknowledgement</h3>
-          <p class="small">We acknowledge your complaint within 2 business days.</p>
-        </div>
+          <li>
+            <h3>3. We review the issue fairly</h3>
+            <p class="small">
+              We gather information respectfully and without judgement. You can have an advocate support you.
+            </p>
+          </li>
 
-        <div class="step-card">
-          <div class="step-number">2</div>
-          <h3>Review & Response</h3>
-          <p class="small">We investigate fairly and respond within 10 business days.</p>
-        </div>
+          <li>
+            <h3>4. We provide a clear outcome</h3>
+            <p class="small">
+              We explain the findings and any actions we will take to improve or resolve the situation.
+            </p>
+          </li>
+        </ol>
 
-        <div class="step-card">
-          <div class="step-number">3</div>
-          <h3>Resolution</h3>
-          <p class="small">We explain our findings, actions taken & preventive measures.</p>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- YOUR RIGHTS -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Your Rights</h2>
+    <!-- COMPLAINT FORM -->
+    <section class="section section-alt">
+      <div class="container">
 
-      <ul class="checklist" style="margin-top:1.4rem;">
-        <li>You can make a complaint without fear of negative consequences</li>
-        <li>You can remain anonymous</li>
-        <li>You can have a support person, advocate or interpreter</li>
-        <li>You can withdraw a complaint at any time</li>
-        <li>You can contact the NDIS Commission at any time</li>
-      </ul>
-    </div>
-  </section>
+        <h2 class="section-title">Submit a Complaint or Feedback</h2>
+        <p class="section-intro">
+          You can share as much or as little detail as you feel comfortable with.
+        </p>
 
-  <!-- NDIS ESCALATION -->
-  <section class="section section-alt">
-    <div class="container">
-      <h2 class="section-title">Escalating Your Concern</h2>
+        <form action="https://formspree.io/f/xpzvkaqk" method="POST" class="form">
 
-      <p class="section-intro">
-        If you feel your issue has not been resolved, or you prefer to speak with someone external, you can
-        contact the NDIS Quality & Safeguards Commission:
-      </p>
-
-      <p>
-        📞 <strong>1800 035 544</strong><br>
-        🌐 <a href="https://www.ndiscommission.gov.au/" target="_blank">ndiscommission.gov.au</a>
-      </p>
-
-      <p class="small">This is available Monday–Friday (except public holidays).</p>
-    </div>
-  </section>
-
-  <!-- COMPLAINTS FORM -->
-  <section class="section" id="complaints-form">
-    <div class="container">
-      <h2 class="section-title">Submit Complaints or Feedback</h2>
-      <p class="section-intro">You may provide as little or as much detail as you feel comfortable with.</p>
-
-      <form name="complaints" method="POST" data-netlify="true" enctype="multipart/form-data" class="form">
-        <input type="hidden" name="form-name" value="complaints">
-
-        <!-- Honeypot -->
-        <input type="text" name="bot-field" style="display:none;">
-
-        <div class="grid grid-2">
-
-          <!-- LEFT -->
-          <div>
-            <div class="form-group">
-              <label for="name">Your Name (optional)</label>
-              <input id="name" name="name" type="text" placeholder="Leave blank to stay anonymous">
-            </div>
-
-            <div class="form-group">
-              <label for="email">Email (optional)</label>
-              <input id="email" name="email" type="email">
-            </div>
-
-            <div class="form-group">
-              <label for="phone">Phone (optional)</label>
-              <input id="phone" name="phone" type="tel">
-            </div>
+          <div class="form-group">
+            <label for="name">Your name (optional)</label>
+            <input type="text" id="name" name="name">
           </div>
 
-          <!-- RIGHT -->
-          <div>
-            <div class="form-group">
-              <label for="type">Type of Feedback</label>
-              <select id="type" name="type" required>
-                <option value="">Please choose</option>
-                <option>Complaint</option>
-                <option>Feedback / Suggestion</option>
-                <option>Compliment</option>
-                <option>Safety Concern</option>
-              </select>
-            </div>
-
-            <div class="form-group">
-              <label for="details">Feedback / Complaint Details</label>
-              <textarea id="details" name="details" rows="6" required></textarea>
-            </div>
-
-            <div class="form-group">
-              <label for="file">Attach a file (optional)</label>
-              <input id="file" type="file" name="attachment">
-            </div>
+          <div class="form-group">
+            <label for="contact">Phone or email (optional)</label>
+            <input type="text" id="contact" name="contact">
           </div>
 
-        </div>
+          <div class="form-group">
+            <label for="feedback_type">Type of feedback *</label>
+            <select id="feedback_type" name="feedback_type" required>
+              <option value="complaint">Complaint</option>
+              <option value="concern">Concern</option>
+              <option value="suggestion">Suggestion</option>
+              <option value="compliment">Compliment</option>
+            </select>
+          </div>
 
-        <button type="submit" class="btn btn-primary">Submit Feedback</button>
-      </form>
-    </div>
-  </section>
+          <div class="form-group">
+            <label for="details">Your message *</label>
+            <textarea id="details" name="details" required></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-primary">Submit</button>
+
+        </form>
+
+        <p class="small" style="margin-top:1rem;">
+          If you prefer to speak to someone directly, you can call us on
+          <a href="tel:61435039110">0435 039 110</a>.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- NDIS COMMISSION INFO -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">If You're Not Satisfied</h2>
+        <p class="section-intro">
+          You can make a complaint directly to the NDIS Quality and Safeguards Commission.
+        </p>
+
+        <p>
+          <strong>NDIS Quality and Safeguards Commission</strong><br>
+          Phone: <a href="tel:1800035522">1800 035 544</a><br>
+          Website: <a href="https://www.ndiscommission.gov.au" target="_blank" rel="noopener">www.ndiscommission.gov.au</a>
+        </p>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-alt">
+      <div class="container center">
+        <h2 class="section-title">We’re Here to Listen</h2>
+        <p class="section-intro">
+          Whether it’s a complaint, concern or compliment — your voice helps us deliver better support.
+        </p>
+        <a href="/contact" class="btn btn-primary">Talk to our team</a>
+      </div>
+    </section>
+
+  </main>
 
   <!-- FOOTER -->
   <footer class="site-footer">
@@ -246,37 +332,44 @@
 
       <div class="footer-col">
         <h3>Able Aide</h3>
-        <p>Your Journey, Our Support – warm, person-centered supports across Victoria.</p>
-        <p><strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
-           <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a></p>
+        <p>Warm, person-centred disability supports across Greater Melbourne and regional Victoria.</p>
+        <p>
+          <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
+          <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
+        </p>
       </div>
 
       <div class="footer-col">
-        <h3>Quick Links</h3>
+        <h3>Quick links</h3>
         <ul class="footer-links">
           <li><a href="/about">About</a></li>
           <li><a href="/services">Services</a></li>
-          <li><a href="/refer">Refer</a></li>
+          <li><a href="/locations">Locations</a></li>
+          <li><a href="/refer">Refer a participant</a></li>
           <li><a href="/resources">Resources</a></li>
-          <li><a href="/complaints">Complaints</a></li>
+          <li><a href="/careers">Careers</a></li>
           <li><a href="/contact">Contact</a></li>
+          <li><a href="/complaints" aria-current="page">Complaints</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h3>Where We Support</h3>
-        <p>Greater Melbourne · Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria</p>
+        <h3>Where we support</h3>
+        <p>
+          Greater Melbourne (Frankston, Dandenong, Ringwood, Epping, Werribee, Sunshine &amp; surrounds)<br>
+          Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria
+        </p>
       </div>
 
       <div class="footer-col">
-        <h3>Connect</h3>
+        <h3>Connect with us</h3>
         <ul class="footer-links">
-          <li><a href="https://www.facebook.com/able.aide">Facebook</a></li>
-          <li><a href="https://www.instagram.com/ableaide/">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/company/ableaide/">LinkedIn</a></li>
-          <li><a href="https://www.tiktok.com/@ableaide">TikTok</a></li>
-          <li><a href="https://www.youtube.com/@AbleAide">YouTube</a></li>
-          <li><a href="https://x.com/AbleAideSupport">X</a></li>
+          <li><a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a></li>
+          <li><a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a></li>
+          <li><a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a></li>
+          <li><a href="https://x.com/AbleAideSupport" target="_blank">X</a></li>
         </ul>
       </div>
 
@@ -284,16 +377,67 @@
 
     <div class="container footer-bottom">
       <p class="small">
-        © <span id="year"></span> Able Aide. All rights reserved.
-        · <a href="/privacy-policy">Privacy Policy</a>
-        · <a href="/terms-of-service">Terms of Service</a>
+        © <span id="year"></span> Able Aide. All rights reserved. ·
+        <a href="/privacy-policy" class="footer-link">Privacy Policy</a> ·
+        <a href="/terms-of-service" class="footer-link">Terms of Service</a>
       </p>
     </div>
-
-    <script>
-      document.getElementById('year').textContent = new Date().getFullYear();
-    </script>
   </footer>
+
+  <!-- FLOATING CTA -->
+  <div class="floating-cta" id="floatingCta">
+    <button class="floating-cta-toggle" id="floatingCtaToggle"
+            type="button"
+            style="padding:0.45rem 0.8rem; box-shadow:0 10px 20px rgba(11,114,133,0.35); font-size:0.85rem;">
+      <span class="icon">💬</span>
+      <span>Need support?</span>
+    </button>
+    <div class="floating-cta-panel" style="box-shadow:0 12px 28px rgba(15,23,42,0.25);">
+      <div class="floating-cta-title">Talk to Able Aide</div>
+      <div class="floating-cta-text">Quick ways to get help or share concerns.</div>
+      <div class="floating-cta-links">
+        <a href="tel:61435039110">📞 Call 0435 039 110</a>
+        <a href="/contact">✉️ Send an enquiry</a>
+        <a href="/complaints">📝 Lodge a complaint</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    (function () {
+      var navToggle = document.getElementById('navToggle');
+      var mainNav = document.getElementById('mainNav');
+      if (navToggle && mainNav) {
+        navToggle.addEventListener('click', function () {
+          mainNav.classList.toggle('open');
+          navToggle.setAttribute('aria-expanded',
+            mainNav.classList.contains('open') ? 'true' : 'false');
+        });
+
+        mainNav.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            if (window.innerWidth <= 900) {
+              mainNav.classList.remove('open');
+              navToggle.setAttribute('aria-expanded', 'false');
+            }
+          });
+        });
+      }
+    })();
+
+    // Floating CTA
+    (function () {
+      var floating = document.getElementById('floatingCta');
+      var toggle = document.getElementById('floatingCtaToggle');
+      toggle.addEventListener('click', function () {
+        floating.classList.toggle('open');
+      });
+    })();
+  </script>
 
 </body>
 </html>

@@ -4,9 +4,13 @@
   <meta charset="UTF-8">
   <title>Community Access Ideas for NDIS Participants – Able Aide</title>
 
+  <!-- Canonical -->
   <link rel="canonical" href="https://ableaide.com.au/blog/community-access-ideas-ndis">
+
+  <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- SEO -->
   <meta name="description"
         content="Practical community access ideas for NDIS participants, including low-sensory outings, confidence-building activities and everyday participation options across Victoria.">
 
@@ -25,31 +29,79 @@
         content="Explore simple, realistic community access ideas for NDIS participants, including low-sensory, social and confidence-building activities.">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://ableaide.com.au/blog/community-access-ideas-ndis">
-  <meta property="og:image" content="/assets/img/og-image.png">
+  <meta property="og:image" content="/assets/img/og-image.webp">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Community Access Ideas for NDIS Participants – Able Aide">
   <meta name="twitter:description"
         content="NDIS-friendly ideas for community access and social participation with support workers.">
-  <meta name="twitter:image" content="/assets/img/og-image.png">
+  <meta name="twitter:image" content="/assets/img/og-image.webp">
 
+  <!-- Styles -->
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Google Analytics (update G-XXXXXXX with your ID) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXX');
+  </script>
+
+  <!-- Meta Pixel (update YOUR_PIXEL_ID) -->
+  <script>
+    !function(f,b,e,v,n,t,s){
+      if(f.fbq)return;n=f.fbq=function(){n.callMethod ?
+      n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+      if(!f._fbq)n._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+      n.queue=[];t=b.createElement(e);t.async=!0;
+      t.src=v;s=b.getElementsByTagName(e)[0];
+      s.parentNode.insertBefore(t,s)
+    }(window, document,'script','https://connect.facebook.net/en_US/fbevents.js');
+    fbq('init','YOUR_PIXEL_ID'); fbq('track','PageView');
+  </script>
+  <noscript>
+    <img alt=""
+         height="1"
+         width="1"
+         style="display:none"
+         src="https://www.facebook.com/tr?id=YOUR_PIXEL_ID&ev=PageView&noscript=1">
+  </noscript>
 </head>
 
 <body>
+
+  <!-- TOP TRUST BAR -->
+  <div class="top-trust-bar">
+    <div class="container top-trust-bar-inner">
+      <div class="top-trust-left">
+        <span class="top-trust-badge">NDIS registration in progress</span>
+        <span class="top-trust-badge">Supporting community access across Victoria</span>
+        <span class="top-trust-badge">Self-managed &amp; plan-managed participants</span>
+      </div>
+      <div class="top-trust-right">
+        <span class="top-trust-phone">Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a></span>
+        <a href="/contact" class="top-trust-link">Ask about community access →</a>
+      </div>
+    </div>
+  </div>
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
       <a href="/" class="logo" aria-label="Able Aide Home">
-        <img src="/assets/img/able-aide-logo.png" alt="Able Aide Logo" class="logo-img"
-             style="height:46px; width:auto; margin-bottom:0.2rem;">
+        <img src="/assets/img/able-aide-logo.webp"
+             alt="Able Aide logo"
+             class="logo-img"
+             width="180"
+             height="46">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
 
-      <nav class="main-nav" aria-label="Main Navigation">
+      <nav class="main-nav" aria-label="Main Navigation" id="mainNav">
         <ul class="nav-list">
           <li><a href="/about">About</a></li>
 
@@ -60,20 +112,29 @@
               <li><a href="/services/community-participation">Community participation</a></li>
               <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/allied-health-access">Allied health access</a></li>
-              <li><a href="/services/family-early-support">Early &amp; family support</a></li>
+              <li><a href="/services/family-early-support">Family &amp; early support</a></li>
+              <li><a href="/services/plan-management">Plan management (coming soon)</a></li>
             </ul>
           </li>
 
-          <li><a href="/refer">Refer a participant</a></li>
+          <li><a href="/locations">Locations</a></li>
+          <li><a href="/refer">Refer</a></li>
           <li><a href="/resources">Resources</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/careers">Careers</a></li>
           <li><a href="/contact">Contact</a></li>
+          <li><a href="/complaints">Complaints</a></li>
         </ul>
       </nav>
 
       <div class="header-cta">
-        <a href="/refer" class="btn btn-outline">Refer a participant</a>
+        <a href="/refer" class="btn btn-outline">Refer</a>
         <a href="/contact" class="btn btn-primary">Book a free chat</a>
       </div>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+      </button>
     </div>
   </header>
 
@@ -100,8 +161,10 @@
         </div>
 
         <aside class="hero-card">
-          <img src="/assets/img/able-aide-ndis-community-access-support.jpg"
+          <img src="/assets/img/able-aide-ndis-community-access-support.webp"
                alt="NDIS community access support outing"
+               loading="lazy"
+               decoding="async"
                style="width:100%; border-radius:12px; margin-bottom:1rem;">
 
           <h2 class="section-title" style="font-size:1.4rem;">Need gentle, step-by-step support?</h2>
@@ -320,9 +383,13 @@
         <ul class="footer-links">
           <li><a href="/about">About</a></li>
           <li><a href="/services">Services</a></li>
+          <li><a href="/locations">Locations</a></li>
           <li><a href="/refer">Refer a participant</a></li>
           <li><a href="/resources">Resources</a></li>
+          <li><a href="/blog">Blog</a></li>
+          <li><a href="/careers">Careers</a></li>
           <li><a href="/contact">Contact</a></li>
+          <li><a href="/complaints">Complaints</a></li>
         </ul>
       </div>
 
@@ -355,11 +422,88 @@
         <a href="/terms-of-service" class="footer-link">Terms of Service</a>
       </p>
     </div>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </footer>
+
+  <!-- FLOATING CTA -->
+  <div class="floating-cta" id="floatingCta">
+    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button">
+      <span class="icon">💬</span>
+      <span>Need support?</span>
+    </button>
+    <div class="floating-cta-panel">
+      <div class="floating-cta-title">Talk to Able Aide</div>
+      <div class="floating-cta-text">
+        Quick ways to reach us about NDIS supports, referrals or questions.
+      </div>
+      <div class="floating-cta-links">
+        <a href="tel:61435039110">📞 Call 0435 039 110</a>
+        <a href="/contact">✉️ Send an enquiry</a>
+        <a href="/refer">📝 Make a referral</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- JS -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    (function () {
+      var navToggle = document.getElementById('navToggle');
+      var mainNav = document.getElementById('mainNav');
+
+      if (navToggle && mainNav) {
+        navToggle.addEventListener('click', function () {
+          var isOpen = mainNav.classList.contains('open');
+          if (isOpen) {
+            mainNav.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          } else {
+            mainNav.classList.add('open');
+            navToggle.setAttribute('aria-expanded', 'true');
+          }
+        });
+
+        // Close nav on link click (mobile)
+        mainNav.querySelectorAll('a').forEach(function (link) {
+          link.addEventListener('click', function () {
+            if (window.innerWidth <= 900) {
+              mainNav.classList.remove('open');
+              navToggle.setAttribute('aria-expanded', 'false');
+            }
+          });
+        });
+      }
+    })();
+
+    // Floating CTA toggle
+    (function () {
+      var floatingCta = document.getElementById('floatingCta');
+      var floatingToggle = document.getElementById('floatingCtaToggle');
+
+      if (floatingCta && floatingToggle) {
+        floatingToggle.addEventListener('click', function () {
+          floatingCta.classList.toggle('open');
+        });
+      }
+    })();
+  </script>
+
+  <!-- JSON-LD: BlogPosting -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "Community Access Ideas for NDIS Participants",
+    "description": "Practical community access ideas for NDIS participants, including low-sensory outings, confidence-building activities and everyday participation options across Victoria.",
+    "url": "https://ableaide.com.au/blog/community-access-ideas-ndis",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Able Aide",
+      "url": "https://ableaide.com.au"
+    }
+  }
+  </script>
 
 </body>
 </html>

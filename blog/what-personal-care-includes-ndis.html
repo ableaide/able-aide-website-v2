@@ -4,49 +4,105 @@
   <meta charset="UTF-8">
   <title>What Personal Care Includes Under the NDIS – Able Aide</title>
 
+  <!-- Canonical -->
   <link rel="canonical" href="https://ableaide.com.au/blog/what-personal-care-includes-ndis">
+
+  <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Meta Description -->
   <meta name="description"
-        content="A clear guide to what personal care includes under the NDIS – showering, dressing, toileting, mealtime assistance, mobility support, routines and capacity-building.">
+        content="A clear guide to what personal care includes under the NDIS – showering, dressing, toileting, mobility support, mealtime assistance, routines and capacity-building.">
 
   <meta name="keywords"
-        content="NDIS personal care, NDIS daily living support, personal care Melbourne, NDIS support worker, disability support Victoria">
+        content="NDIS personal care, NDIS daily living support, personal care Melbourne, support worker Victoria, NDIS disability support services">
 
+  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
   <link rel="shortcut icon" href="/favicon.ico">
 
+  <!-- OpenGraph -->
   <meta property="og:title" content="What Personal Care Includes Under the NDIS – Able Aide">
   <meta property="og:description"
-        content="Learn what NDIS personal care covers – showering, dressing, medications, routines, mobility and more.">
+        content="Learn what NDIS personal care covers – showering, dressing, toileting, medications, routines, mobility and more.">
+  <meta property="og:image" content="/assets/img/og-image.webp">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://ableaide.com.au/blog/what-personal-care-includes-ndis">
-  <meta property="og:image" content="/assets/img/og-image.png">
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="What Personal Care Includes Under the NDIS – Able Aide">
   <meta name="twitter:description"
         content="A practical guide to what NDIS personal care covers for participants of all ages.">
-  <meta name="twitter:image" content="/assets/img/og-image.png">
+  <meta name="twitter:image" content="/assets/img/og-image.webp">
 
+  <!-- Styles -->
+  <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Schema.org Article -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BlogPosting",
+    "headline": "What Personal Care Includes Under the NDIS",
+    "description": "A detailed, easy-to-understand guide explaining what personal care includes under the NDIS.",
+    "image": "https://ableaide.com.au/assets/img/og-image.webp",
+    "author": {
+      "@type": "Organization",
+      "name": "Able Aide"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "Able Aide",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://ableaide.com.au/assets/img/able-aide-logo.webp"
+      }
+    },
+    "mainEntityOfPage": "https://ableaide.com.au/blog/what-personal-care-includes-ndis",
+    "datePublished": "2025-01-15",
+    "dateModified": "2025-11-27"
+  }
+  </script>
+
 </head>
 
 <body>
+
+  <!-- GLOBAL TOP TRUST BAR -->
+  <div class="top-trust-bar">
+    <div class="container top-trust-bar-inner">
+      <div class="top-trust-left">
+        <span class="top-trust-badge">NDIS registration in progress</span>
+        <span class="top-trust-badge">Supporting self-managed &amp; plan-managed participants</span>
+        <span class="top-trust-badge">Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton &amp; regional VIC</span>
+      </div>
+      <div class="top-trust-right">
+        <span class="top-trust-phone">
+          Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a>
+        </span>
+        <a href="/refer" class="top-trust-link">Quick referral form →</a>
+      </div>
+    </div>
+  </div>
 
   <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
 
       <a href="/" class="logo" aria-label="Able Aide Home">
-        <img src="/assets/img/able-aide-logo.png" alt="Able Aide Logo" class="logo-img" style="height:46px; width:auto; margin-bottom:0.2rem;">
+        <img src="/assets/img/able-aide-logo.webp"
+             alt="Able Aide logo"
+             class="logo-img"
+             style="height:46px; width:auto; margin-bottom:0.2rem;">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
 
-      <nav class="main-nav" aria-label="Main Navigation">
+      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
         <ul class="nav-list">
           <li><a href="/about">About</a></li>
 
@@ -58,12 +114,16 @@
               <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/allied-health-access">Allied health access</a></li>
               <li><a href="/services/family-early-support">Early &amp; family support</a></li>
+              <li><a href="/services/plan-management">Plan management <span class="small">(Coming soon)</span></a></li>
             </ul>
           </li>
 
-          <li><a href="/refer">Refer a participant</a></li>
+          <li><a href="/locations">Locations</a></li>
+          <li><a href="/refer">Refer</a></li>
           <li><a href="/resources">Resources</a></li>
+          <li><a href="/reviews">Reviews</a></li>
           <li><a href="/contact">Contact</a></li>
+          <li><a href="/careers">Careers</a></li>
         </ul>
       </nav>
 
@@ -71,6 +131,10 @@
         <a href="/refer" class="btn btn-outline">Refer a participant</a>
         <a href="/contact" class="btn btn-primary">Book a free chat</a>
       </div>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+      </button>
 
     </div>
   </header>
@@ -82,30 +146,37 @@
       <div class="container hero-inner">
 
         <div class="hero-text">
-          <p class="small"><a href="/resources">Resources</a> · NDIS Guide</p>
+          <p class="small"><a href="/blog">Blog</a> · NDIS Guide</p>
           <h1>What Personal Care Includes Under the NDIS</h1>
           <p class="hero-subtext">
-            Personal care is one of the most important supports in an NDIS plan.  
-            It helps people live safely, comfortably and independently at home and in their community.
+            Personal care is one of the most important supports in an NDIS plan — helping people live safely,
+            comfortably and with greater independence at home and in their community.
           </p>
           <p class="hero-subtext">
-            This guide explains exactly what personal care covers, who it’s for, and how Able Aide delivers it
-            with dignity and respect.
+            This guide explains exactly what personal care covers, who it’s for, and how Able Aide provides it
+            with dignity, consistency and respect.
           </p>
         </div>
 
-        <aside class="hero-card">
-          <img src="/assets/img/able-aide-ndis-disability-support-homepage-hero.jpg"
+        <div class="hero-card">
+          <img src="/assets/img/able-aide-ndis-personal-care-support.webp"
                alt="Support worker assisting participant with personal care"
                style="width:100%; border-radius:12px; margin-bottom:1rem;">
 
-          <h2 class="section-title" style="font-size:1.4rem;">Need personal care support?</h2>
+          <h2>Need personal care support?</h2>
           <p class="small">
-            Our team provides warm, respectful support with daily routines, at your pace and your comfort level.
+            Our team provides warm, respectful support with daily routines — always at your pace and comfort
+            level.
           </p>
+
+          <div class="hero-badge-group">
+            <span class="badge">Core supports 24/7</span>
+            <span class="badge badge-hours">Respectful, consistent workers</span>
+          </div>
+
           <a href="/services/personal-care" class="btn btn-outline btn-block">Personal care services</a>
           <a href="/contact" class="btn btn-primary btn-block" style="margin-top:0.5rem;">Talk to our team</a>
-        </aside>
+        </div>
 
       </div>
     </section>
@@ -113,124 +184,123 @@
     <!-- ARTICLE CONTENT -->
     <section class="section">
       <div class="container blog-article">
-
         <article>
+
           <h2 class="section-title">What does “personal care” mean?</h2>
           <p>
-            Personal care is support with daily tasks that help you look after your body, health and hygiene.
-            It’s funded under your NDIS plan when these tasks are difficult to manage independently due to a
-            disability.
+            Personal care includes support with daily tasks that help you look after your body, health and
+            hygiene. The NDIS funds personal care when disability makes these tasks difficult to manage
+            independently.
           </p>
 
           <p>
-            The goal is simple:  
-            <strong>to help you live safely, maintain your wellbeing and continue routines that matter to you.</strong>
+            The goal is simple:
+            <strong>to support your safety, wellbeing and routines — in a way that respects your preferences,
+            comfort and dignity.</strong>
           </p>
 
           <h2 class="section-title">What personal care includes (NDIS approved)</h2>
 
-          <h3>✔ Showering & bathing support</h3>
+          <h3>✔ Showering &amp; bathing support</h3>
           <ul class="checklist">
-            <li>Assistance with washing, hair care and hygiene</li>
+            <li>Assistance with washing, hygiene and grooming</li>
             <li>Setting up safe bathroom routines</li>
-            <li>Supporting independence where possible</li>
+            <li>Supporting independence wherever possible</li>
           </ul>
 
-          <h3>✔ Dressing & grooming</h3>
+          <h3>✔ Dressing &amp; grooming</h3>
           <ul class="checklist">
-            <li>Choosing clothes</li>
-            <li>Dressing / undressing</li>
-            <li>Brushing hair, shaving and grooming</li>
+            <li>Selecting clothing</li>
+            <li>Dressing and undressing</li>
+            <li>Hair brushing, shaving and personal grooming</li>
           </ul>
 
-          <h3>✔ Toileting & continence support</h3>
+          <h3>✔ Toileting &amp; continence support</h3>
           <ul class="checklist">
             <li>Using the toilet safely</li>
-            <li>Changing continence aids</li>
-            <li>Maintaining hygiene and privacy</li>
+            <li>Supporting continence needs</li>
+            <li>Maintaining comfort, privacy and hygiene</li>
           </ul>
 
           <h3>✔ Mealtime support</h3>
           <ul class="checklist">
             <li>Assistance preparing simple meals</li>
-            <li>Help with feeding where appropriate</li>
-            <li>Support following swallowing/texture plans (if provided by a professional)</li>
+            <li>Help with feeding (as appropriate)</li>
+            <li>Following swallowing or texture plans from professionals</li>
           </ul>
 
-          <h3>✔ Mobility & transfers</h3>
+          <h3>✔ Mobility &amp; transfers</h3>
           <ul class="checklist">
-            <li>Getting in and out of bed</li>
-            <li>Use of hoists, slide sheets and mobility aids</li>
-            <li>Safe movement around the home</li>
+            <li>Getting in/out of bed or chairs</li>
+            <li>Using hoists, slide sheets or mobility aids</li>
+            <li>Moving safely around the home</li>
           </ul>
 
           <h3>✔ Medication prompts (non-clinical)</h3>
           <p class="small">
-            Support workers can provide reminders but cannot administer medications that require clinical skills.
+            Support workers can remind participants to take medication — but cannot administer clinical doses
+            that require medical training.
           </p>
 
           <h3>✔ Daily routines & capacity-building</h3>
           <ul class="checklist">
             <li>Morning and evening routines</li>
-            <li>Developing independence where possible</li>
-            <li>Practising safe home skills</li>
+            <li>Practising safe, independent living skills</li>
+            <li>Building confidence over time</li>
           </ul>
 
           <h2 class="section-title">Who is personal care for?</h2>
           <p>NDIS personal care supports participants who:</p>
+
           <ul class="checklist">
             <li>Have physical disabilities</li>
             <li>Have developmental or cognitive disabilities</li>
-            <li>Need assistance due to mental health conditions</li>
+            <li>Require assistance due to mental health conditions</li>
             <li>Have sensory or neurological conditions</li>
             <li>Are children with early childhood needs</li>
           </ul>
 
-          <p>
-            Support is flexible — from 30 minutes to several hours, morning or night, 7 days a week.
-          </p>
+          <p>Support is flexible — from 30 minutes to several hours, mornings, evenings or overnight.</p>
 
           <h2 class="section-title">How Able Aide provides personal care</h2>
           <p>
-            We take a warm, consistent and respectful approach to personal care. Our workers:
+            Our approach is built on warmth, consistency and respect. Our support workers:
           </p>
+
           <ul class="checklist">
             <li>Respect your privacy, culture and communication style</li>
-            <li>Go at your pace — never rushing</li>
+            <li>Move at your pace — never rushing</li>
             <li>Maintain dignity at all times</li>
-            <li>Follow safety plans and clinical instructions</li>
-            <li>Support independence wherever possible</li>
+            <li>Follow all support plans, safety guidance and clinical recommendations</li>
+            <li>Encourage independence where possible</li>
           </ul>
 
           <p>
-            Personal care is more than tasks — it’s about trust, comfort and feeling safe with the person
-            supporting you.
+            Personal care is more than daily tasks — it’s about safety, trust and feeling comfortable with the
+            person supporting you.
           </p>
 
           <h2 class="section-title">How personal care fits into your NDIS plan</h2>
-          <p>
-            It is usually funded under:
-          </p>
+          <p>Personal care is usually funded under:</p>
+
           <ul class="checklist">
             <li><strong>Core Supports – Daily Activities</strong></li>
-            <li>Sometimes <strong>Capacity Building – Daily Living</strong> (for training, skill-building or routines)</li>
+            <li><strong>Capacity Building – Daily Living</strong> (for routines, training or skill-building)</li>
           </ul>
 
-          <p>
-            If you’re unsure how your funding works, we can help explain it clearly.
-          </p>
+          <p>If you’re unsure how your funding works, we can help explain it clearly.</p>
 
           <hr style="margin:2.5rem 0;">
 
           <h2 class="section-title">Need warm and respectful personal care?</h2>
           <p>
-            Able Aide supports NDIS participants across Melbourne, Geelong, Ballarat, Bendigo and regional
-            Victoria with daily living and personal care.
+            Able Aide supports participants across Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton
+            and regional Victoria with safe and consistent personal care.
           </p>
+
           <p><a href="/contact" class="btn btn-primary">Talk to Able Aide about personal care</a></p>
 
         </article>
-
       </div>
     </section>
 
@@ -257,8 +327,11 @@
         <ul class="footer-links">
           <li><a href="/about">About</a></li>
           <li><a href="/services">Services</a></li>
-          <li><a href="/refer">Refer a participant</a></li>
+          <li><a href="/locations">Locations</a></li>
+          <li><a href="/refer">Refer</a></li>
           <li><a href="/resources">Resources</a></li>
+          <li><a href="/reviews">Reviews</a></li>
+          <li><a href="/careers">Careers</a></li>
           <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
@@ -274,12 +347,12 @@
       <div class="footer-col">
         <h3>Connect with us</h3>
         <ul class="footer-links">
-          <li><a href="https://www.facebook.com/able.aide" target="_blank" rel="noopener">Facebook</a></li>
-          <li><a href="https://www.instagram.com/ableaide/" target="_blank" rel="noopener">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank" rel="noopener">LinkedIn</a></li>
-          <li><a href="https://www.tiktok.com/@ableaide" target="_blank" rel="noopener">TikTok</a></li>
-          <li><a href="https://www.youtube.com/@AbleAide" target="_blank" rel="noopener">YouTube</a></li>
-          <li><a href="https://x.com/AbleAideSupport" target="_blank" rel="noopener">X (Twitter)</a></li>
+          <li><a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a></li>
+          <li><a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a></li>
+          <li><a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a></li>
+          <li><a href="https://x.com/AbleAideSupport" target="_blank">X (Twitter)</a></li>
         </ul>
       </div>
 
@@ -292,11 +365,25 @@
         <a href="/terms-of-service" class="footer-link">Terms of Service</a>
       </p>
     </div>
-
-    <script>
-      document.getElementById("year").textContent = new Date().getFullYear();
-    </script>
   </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Mobile nav toggle
+    (function () {
+      var navToggle = document.getElementById('navToggle');
+      var mainNav = document.getElementById('mainNav');
+      if (navToggle && mainNav) {
+        navToggle.addEventListener('click', function () {
+          var isOpen = mainNav.classList.contains('open');
+          mainNav.classList.toggle('open', !isOpen);
+          navToggle.setAttribute('aria-expanded', String(!isOpen));
+        });
+      }
+    })();
+  </script>
 
 </body>
 </html>

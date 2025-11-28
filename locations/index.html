@@ -2,188 +2,357 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Areas We Support – Able Aide Victoria</title>
+  <title>Areas We Support – NDIS Disability Support Across Victoria</title>
 
+  <!-- Canonical -->
   <link rel="canonical" href="https://ableaide.com.au/locations">
+
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- Meta Description -->
   <meta name="description"
-        content="Able Aide provides warm, person-centred NDIS disability support across Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton and regional Victoria. View all suburbs we support across Victoria.">
+        content="Able Aide provides warm, person-centred NDIS disability support across Greater Melbourne, Frankston, Dandenong, Ringwood, Epping, Werribee, Sunshine, Geelong, Ballarat, Bendigo and Shepparton.">
 
-  <meta property="og:title" content="NDIS Support Areas – Able Aide Victoria">
+  <!-- OpenGraph -->
+  <meta property="og:title" content="Areas We Support – Able Aide">
   <meta property="og:description"
-        content="See all suburbs supported by Able Aide across Melbourne and regional Victoria, including Frankston, Dandenong, Ringwood, Werribee, Sunshine and more.">
+        content="Explore all Melbourne and Victorian suburbs supported by Able Aide. Warm, reliable and culturally aware NDIS disability support.">
   <meta property="og:type" content="website">
-  <meta property="og:image" content="/assets/img/able-aide-ndis-locations-hero.jpg">
   <meta property="og:url" content="https://ableaide.com.au/locations">
+  <meta property="og:image" content="/assets/img/victoria-map-coloured.webp">
 
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Areas We Support – Able Aide">
+  <meta name="twitter:description"
+        content="Support for participants across Greater Melbourne and regional Victoria.">
+  <meta name="twitter:image" content="/assets/img/victoria-map-coloured.webp">
+
+  <!-- Styles -->
+  <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <style>
+    /* Hero Map styling */
+    .hero-map-container {
+      max-width: 850px;
+      margin: 0 auto;
+    }
+    .hero-map-container img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+    }
+  </style>
+
+  <!-- NAV animation for mobile -->
+  <style>
+    @media (max-width: 900px) {
+      .main-nav {
+        display: block;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.25s ease;
+      }
+      .main-nav.open {
+        max-height: 500px;
+      }
+    }
+  </style>
+
+  <!-- Breadcrumb Schema -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "Home",
+        "item": "https://ableaide.com.au/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Locations",
+        "item": "https://ableaide.com.au/locations"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
 
-<!-- HEADER -->
-<header class="site-header">
-  <div class="container header-inner">
-    <a href="/" class="logo">
-      <img src="/assets/img/able-aide-logo.png" alt="Able Aide Logo" class="logo-img">
-      <span class="logo-mark">Able Aide</span>
-      <span class="logo-tagline">Your Journey, Our Support</span>
-    </a>
-
-    <nav class="main-nav">
-      <ul class="nav-list">
-        <li><a href="/about">About</a></li>
-
-        <li class="nav-has-children">
-          <a href="/services">Services</a>
-          <ul class="nav-submenu">
-            <li><a href="/services/personal-care">Personal Care</a></li>
-            <li><a href="/services/community-participation">Community Access</a></li>
-            <li><a href="/services/support-coordination">Support Coordination</a></li>
-            <li><a href="/services/allied-health-access">Allied Health Access</a></li>
-            <li><a href="/services/family-early-support">Family & Early Support</a></li>
-          </ul>
-        </li>
-
-        <li><a href="/refer">Refer</a></li>
-        <li><a href="/resources">Resources</a></li>
-        <li><a href="/locations" aria-current="page">Locations</a></li>
-        <li><a href="/contact">Contact</a></li>
-      </ul>
-    </nav>
-
-    <div class="header-cta">
-      <a href="/refer" class="btn btn-outline">Refer</a>
-      <a href="/contact" class="btn btn-primary">Book a free chat</a>
+  <!-- GLOBAL TOP TRUST BAR -->
+  <div class="top-trust-bar">
+    <div class="container top-trust-bar-inner">
+      <div class="top-trust-left">
+        <span class="top-trust-badge">NDIS registration in progress</span>
+        <span class="top-trust-badge">Supporting self-managed & plan-managed participants</span>
+        <span class="top-trust-badge">Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton & regional VIC</span>
+      </div>
+      <div class="top-trust-right">
+        <span class="top-trust-phone">
+          Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a>
+        </span>
+        <a href="/refer" class="top-trust-link">Quick referral form →</a>
+      </div>
     </div>
   </div>
-</header>
 
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
 
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-inner">
+      <a href="/" class="logo" aria-label="Able Aide Home">
+        <img src="/assets/img/able-aide-logo.webp"
+             alt="Able Aide logo"
+             class="logo-img"
+             style="height:46px; width:auto;"
+             width="180"
+             height="46"
+             decoding="async">
+        <span class="logo-mark">Able Aide</span>
+        <span class="logo-tagline">Your Journey, Our Support</span>
+      </a>
 
-    <div>
-      <h1>Areas We Support</h1>
-      <p class="hero-subtext">
-        Able Aide supports NDIS participants across Greater Melbourne and major Victorian regions
-        with warm, consistent and person-centred care.
-      </p>
-      <p class="hero-subtext">
-        Explore the suburbs we support below or contact us to confirm availability in your area.
-      </p>
+      <nav class="main-nav" id="mainNav">
+        <ul class="nav-list">
+          <li><a href="/about">About</a></li>
+
+          <li class="nav-has-children">
+            <a href="/services">Services</a>
+            <ul class="nav-submenu">
+              <li><a href="/services/personal-care">Personal care & daily living</a></li>
+              <li><a href="/services/community-participation">Community participation</a></li>
+              <li><a href="/services/support-coordination">Support coordination</a></li>
+              <li><a href="/services/allied-health-access">Allied health access</a></li>
+              <li><a href="/services/family-early-support">Early & family support</a></li>
+              <li>
+                <a href="/services/plan-management">
+                  Plan management <span class="small">(Coming soon)</span>
+                </a>
+              </li>
+            </ul>
+          </li>
+
+          <li><a href="/locations" aria-current="page">Locations</a></li>
+          <li><a href="/refer">Refer</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/careers">Careers</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="/refer" class="btn btn-outline">Refer a participant</a>
+        <a href="/contact" class="btn btn-primary">Book a free chat</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation">
+        <span></span>
+      </button>
+
     </div>
+  </header>
 
-    <aside class="hero-card">
-      <img src="/assets/img/able-aide-ndis-locations-hero.jpg"
-           alt="NDIS support available across Melbourne and Victoria"
-           style="width:100%; border-radius:12px; margin-bottom:1rem;">
+  <main>
 
-      <h2 class="section-title" style="font-size:1.4rem;">Not sure if we cover your suburb?</h2>
-      <p class="small">We can confirm same-day in most cases.</p>
-      <a href="/contact" class="btn btn-primary btn-block">Ask us</a>
-    </aside>
+    <!-- HERO WITH MAP -->
+    <section class="hero">
+      <div class="container hero-inner">
 
-  </div>
-</section>
+        <div class="hero-text">
+          <h1>Areas We Support Across Victoria</h1>
+          <p>
+            Able Aide delivers warm, safe and respectful NDIS support across Greater Melbourne,
+            major growth corridors and key regional Victorian centres.
+          </p>
+          <p>
+            Explore the suburbs we support below or contact us to confirm availability in your area.
+          </p>
+        </div>
 
+        <aside class="hero-card hero-map-container">
+          <img src="/assets/img/victoria-map-coloured.webp"
+               alt="Coloured map of Victoria showing Able Aide NDIS service areas"
+               width="1600"
+               height="1200"
+               loading="lazy"
+               decoding="async">
+        </aside>
 
-<!-- MAIN SECTION WITH SIDEBAR -->
-<section class="section">
-  <div class="container grid grid-3-1">
+      </div>
+    </section>
 
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="sidebar-box">
-        <h3>Locations</h3>
-        <ul class="sidebar-links">
-          <li><a href="/locations/frankston">Frankston</a></li>
-          <li><a href="/locations/dandenong">Dandenong</a></li>
-          <li><a href="/locations/ringwood">Ringwood</a></li>
-          <li><a href="/locations/epping">Epping</a></li>
-          <li><a href="/locations/werribee">Werribee</a></li>
-          <li><a href="/locations/sunshine">Sunshine</a></li>
+    <!-- MAIN CONTENT -->
+    <section class="home-section">
+      <div class="container">
+
+        <header class="section-header">
+          <h2>Supporting participants across Greater Melbourne & regional Victoria</h2>
+          <p>
+            Browse the suburbs and regions we support below. If your area is not listed,
+            reach out — we may still be able to come to you.
+          </p>
+        </header>
+
+        <h3>Metropolitan Melbourne</h3>
+        <ul class="regions-list">
+          <li><a href="/locations/melbourne">Melbourne (CBD & inner suburbs)</a></li>
+          <li><a href="/locations/frankston">Frankston & Mornington Peninsula</a></li>
+          <li><a href="/locations/dandenong">Dandenong & South-East suburbs</a></li>
+          <li><a href="/locations/ringwood">Ringwood & Eastern suburbs</a></li>
+          <li><a href="/locations/epping">Epping & Northern suburbs</a></li>
+          <li><a href="/locations/werribee">Werribee & Western suburbs</a></li>
+          <li><a href="/locations/sunshine">Sunshine & Brimbank region</a></li>
+        </ul>
+
+        <h3 style="margin-top:2rem;">Regional Victoria</h3>
+        <ul class="regions-list">
           <li><a href="/locations/geelong">Geelong</a></li>
           <li><a href="/locations/ballarat">Ballarat</a></li>
           <li><a href="/locations/bendigo">Bendigo</a></li>
           <li><a href="/locations/shepparton">Shepparton</a></li>
         </ul>
+
+        <p style="margin-top:1.5rem;">
+          Not sure if we can support your suburb?
+          <a href="/contact">Contact our team</a>.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="home-section final-cta">
+      <div class="container final-cta-inner">
+        <div>
+          <h2>Need Support in Your Area?</h2>
+          <p>Tell us your suburb — we’ll confirm availability same-day.</p>
+        </div>
+        <div class="final-cta-actions">
+          <a href="/contact" class="btn btn-primary">Contact Able Aide</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <div class="footer-col">
+        <h3>Able Aide</h3>
+        <p>Your Journey, Our Support — disability support across Victoria.</p>
+        <p>
+          <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
+          <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
+        </p>
       </div>
 
-      <div class="sidebar-box">
-        <h3>Contact Us</h3>
-        <a href="/contact" class="btn btn-primary btn-block">Book a Chat</a>
-        <a href="/refer" class="btn btn-outline btn-block">Make a Referral</a>
-      </div>
-
-      <div class="sidebar-box">
-        <h3>NDIS Safety</h3>
-        <ul class="sidebar-links small">
-          <li>WWCC checked staff</li>
-          <li>Police-checked workers</li>
-          <li>Ongoing training</li>
-          <li>Clear communication</li>
+      <div class="footer-col">
+        <h3>Quick links</h3>
+        <ul class="footer-links">
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/locations">Locations</a></li>
+          <li><a href="/refer">Refer a participant</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/contact">Contact</a></li>
         </ul>
       </div>
-    </aside>
 
+      <div class="footer-col">
+        <h3>Where we support</h3>
+        <p>
+          Greater Melbourne (Frankston, Dandenong, Ringwood, Epping, Werribee, Sunshine & surrounds)<br>
+          Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria
+        </p>
+      </div>
 
-    <!-- MAIN CONTENT -->
-    <div>
-
-      <h2 class="section-title">NDIS Support Across Victoria</h2>
-      <p class="section-intro">
-        We support participants across metropolitan, regional and growth areas with respectful,
-        consistent and family-focused support.
-      </p>
-
-      <h3>Greater Melbourne</h3>
-      <ul class="regions-list">
-        <li><a href="/locations/frankston">Frankston & Mornington Peninsula</a></li>
-        <li><a href="/locations/dandenong">Dandenong & South-East</a></li>
-        <li><a href="/locations/ringwood">Ringwood & Eastern Suburbs</a></li>
-        <li><a href="/locations/epping">Epping & Northern Suburbs</a></li>
-        <li><a href="/locations/werribee">Werribee & Western Suburbs</a></li>
-        <li><a href="/locations/sunshine">Sunshine & Brimbank Area</a></li>
-      </ul>
-
-      <h3>Regional Victoria</h3>
-      <ul class="regions-list">
-        <li><a href="/locations/geelong">Geelong</a></li>
-        <li><a href="/locations/ballarat">Ballarat</a></li>
-        <li><a href="/locations/bendigo">Bendigo</a></li>
-        <li><a href="/locations/shepparton">Shepparton</a></li>
-      </ul>
-
-      <p style="margin-top:1.5rem;">
-        If your suburb is not listed, we may still be able to support you.
-        <a href="/contact">Ask our team</a>.
-      </p>
+      <div class="footer-col">
+        <h3>Connect with us</h3>
+        <ul class="footer-links">
+          <li><a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a></li>
+          <li><a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a></li>
+          <li><a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a></li>
+          <li><a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a></li>
+          <li><a href="https://x.com/AbleAideSupport" target="_blank">X</a></li>
+        </ul>
+      </div>
 
     </div>
 
+    <div class="container footer-bottom">
+      <p class="small">
+        © <span id="year"></span> Able Aide. All rights reserved. ·
+        <a href="/privacy-policy" class="footer-link">Privacy Policy</a> ·
+        <a href="/terms-of-service" class="footer-link">Terms of Service</a>
+      </p>
+    </div>
+  </footer>
+
+  <!-- FLOATING CTA -->
+  <div class="floating-cta" id="floatingCta">
+    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button">
+      <span class="icon">💬</span>
+      <span>Need support?</span>
+    </button>
+
+    <div class="floating-cta-panel">
+      <div class="floating-cta-title">Talk to Able Aide</div>
+      <div class="floating-cta-text">Quick ways to reach us.</div>
+      <div class="floating-cta-links">
+        <a href="tel:61435039110">📞 Call 0435 039 110</a>
+        <a href="/contact">✉️ Send enquiry</a>
+        <a href="/refer">📝 Refer a participant</a>
+      </div>
+    </div>
   </div>
-</section>
 
+  <!-- SCRIPTS -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-<!-- CTA -->
-<section class="section section-alt">
-  <div class="container center">
-    <h2 class="section-title">Need Support in Your Area?</h2>
-    <p class="section-intro">Send us your suburb and we’ll confirm availability same-day.</p>
-    <a href="/contact" class="btn btn-primary">Contact Able Aide</a>
-  </div>
-</section>
+    // Mobile nav toggle
+    (function () {
+      const navToggle = document.getElementById('navToggle');
+      const mainNav = document.getElementById('mainNav');
 
+      navToggle.addEventListener('click', () => {
+        const isOpen = mainNav.classList.contains('open');
+        mainNav.classList.toggle('open', !isOpen);
+        navToggle.setAttribute('aria-expanded', String(!isOpen));
+      });
 
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="container footer-inner">
-    <!-- Same footer as home -->
-  </div>
-</footer>
+      const navLinks = mainNav.querySelectorAll('a');
+      navLinks.forEach(link => {
+        link.addEventListener('click', () => {
+          if (window.innerWidth <= 900) {
+            mainNav.classList.remove('open');
+            navToggle.setAttribute('aria-expanded', 'false');
+          }
+        });
+      });
+    })();
+
+    // Floating CTA toggle
+    (function () {
+      const floatingCta = document.getElementById('floatingCta');
+      const toggle = document.getElementById('floatingCtaToggle');
+
+      toggle.addEventListener('click', () => {
+        floatingCta.classList.toggle('open');
+      });
+    })();
+  </script>
 
 </body>
 </html>

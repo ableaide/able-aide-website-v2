@@ -1,78 +1,71 @@
 ###############################################
-# NETLIFY FULL SEO REDIRECT PACK – ABLE AIDE
+# NETLIFY SEO REDIRECT PACK – ABLE AIDE (SAFE)
 ###############################################
 
 ########## FORCE HTTPS ##########
-# Redirect ALL http → https
-http://*  https://ableaide.com.au/:splat 301!
+http://ableaide.com.au/*     https://ableaide.com.au/:splat    301!
+http://www.ableaide.com.au/* https://ableaide.com.au/:splat    301!
 
 ########## FORCE NON-WWW ##########
-# Redirect www → non-www
-https://www.ableaide.com.au/*   https://ableaide.com.au/:splat 301!
+https://www.ableaide.com.au/*  https://ableaide.com.au/:splat  301!
 
-########## REMOVE .html EXTENSIONS (GLOBAL) ##########
-# Automatically redirect any .html URL → clean version
-/*.html   /:splat   301
-
-########## TRAILING SLASH NORMALISATION ##########
-# Remove trailing slash EXCEPT root
-# (/about/ → /about)
-# Only applies to non-file requests
-/:path+/  /:path  301!
+########## REMOVE .html ONLY ##########
+# IMPORTANT: Do NOT use /*.html — it causes loops.
+# Use exact wildcard format supported by Netlify:
+# Example: /about.html → /about
+/(.*).html    /$1    301
 
 ########## ROOT ##########
-/index.html      /              301
+/index.html      /      301
 
-########## TOP-LEVEL PAGES ##########
-/about.html             /about                301!
-/services.html          /services             301!
-/locations.html         /locations            301!
-/refer.html             /refer                301!
-/resources.html         /resources            301!
-/contact.html           /contact              301!
-/careers.html           /careers              301!
-/privacy-policy.html    /privacy-policy       301!
-/terms-of-service.html  /terms-of-service     301!
-/complaints.html        /complaints           301!
-/reviews.html           /reviews              301!
+########## TOP PAGES ##########
+/about.html             /about                301
+/services.html          /services             301
+/locations.html         /locations            301
+/refer.html             /refer                301
+/resources.html         /resources            301
+/contact.html           /contact              301
+/careers.html           /careers              301
+/privacy-policy.html    /privacy-policy       301
+/terms-of-service.html  /terms-of-service     301
+/complaints.html        /complaints           301
+/reviews.html           /reviews              301
 
-# Extra: old resource folder location
-/resources/resource.html  /resources          301!
+# Old resource folder
+/resources/resource.html  /resources          301
 
-########## SERVICES ##########
-/services/personal-care.html            /services/personal-care             301!
-/services/community-participation.html  /services/community-participation   301!
-/services/support-coordination.html     /services/support-coordination      301!
-/services/allied-health-access.html     /services/allied-health-access      301!
-/services/family-early-support.html     /services/family-early-support      301!
-/services/plan-management.html          /services/plan-management           301!
+########## SERVICE PAGES ##########
+/services/personal-care.html            /services/personal-care            301
+/services/community-participation.html  /services/community-participation  301
+/services/support-coordination.html     /services/support-coordination     301
+/services/allied-health-access.html     /services/allied-health-access     301
+/services/family-early-support.html     /services/family-early-support     301
+/services/plan-management.html          /services/plan-management          301
 
-########## RESOURCES SUBPAGES ##########
-/resources/downloads.html    /resources/downloads     301!
-/resources/templates.html    /resources/templates     301!
-/resources/ndis-guides.html  /resources/ndis-guides   301!
+########## RESOURCE SUBPAGES ##########
+/resources/downloads.html    /resources/downloads     301
+/resources/templates.html    /resources/templates     301
+/resources/ndis-guides.html  /resources/ndis-guides   301
 
-########## LOCATION PAGES – METRO ##########
-/locations/melbourne.html            /locations/melbourne             301!
-/locations/frankston.html            /locations/frankston             301!
-/locations/dandenong.html            /locations/dandenong             301!
-/locations/ringwood.html             /locations/ringwood              301!
-/locations/epping.html               /locations/epping                301!
-/locations/sunshine.html             /locations/sunshine              301!
-/locations/werribee.html             /locations/werribee              301!
-/locations/mornington-peninsula.html /locations/mornington-peninsula  301!
+########## LOCATIONS – METRO ##########
+/locations/melbourne.html            /locations/melbourne             301
+/locations/frankston.html            /locations/frankston             301
+/locations/dandenong.html            /locations/dandenong             301
+/locations/ringwood.html             /locations/ringwood              301
+/locations/epping.html               /locations/epping                301
+/locations/sunshine.html             /locations/sunshine              301
+/locations/werribee.html             /locations/werribee              301
+/locations/mornington-peninsula.html /locations/mornington-peninsula  301
 
-########## LOCATION PAGES – REGIONAL ##########
-/locations/geelong.html      /locations/geelong        301!
-/locations/ballarat.html     /locations/ballarat       301!
-/locations/bendigo.html      /locations/bendigo        301!
-/locations/shepparton.html   /locations/shepparton     301!
+########## REGIONAL ##########
+/locations/geelong.html      /locations/geelong        301
+/locations/ballarat.html     /locations/ballarat       301
+/locations/bendigo.html      /locations/bendigo        301
+/locations/shepparton.html   /locations/shepparton     301
 
-########## LEGACY FALLBACK SAFETY ##########
-# If any random .php, .htm, or duplicate .html is hit → root
-/*.htm    /:splat   301
-/*.php    /:splat   301
+########## SAFETY FALLBACK ##########
+/(.*).php    /$1     301
+/(.*).htm    /$1     301
 
-########## 404 FALLBACK ##########
-# Anything not matching goes to the site's 404 page
+########## 404 ##########
 /*   /404.html   404

@@ -1,17 +1,5 @@
-###############################################
-# NETLIFY SEO REDIRECT PACK – ABLE AIDE (FINAL)
-###############################################
-
-########## FORCE HTTPS ##########
-http://ableaide.com.au/*        https://ableaide.com.au/:splat   301!
-http://www.ableaide.com.au/*    https://ableaide.com.au/:splat   301!
-
-########## FORCE NON-WWW ##########
-https://www.ableaide.com.au/*   https://ableaide.com.au/:splat   301!
-
 ################################################
 # PRETTY URL REWRITES (SERVE REAL .HTML FILES)
-# IMPORTANT: 200 rewrites MUST come before 301s
 ################################################
 
 /                       /index.html                          200
@@ -29,15 +17,15 @@ https://www.ableaide.com.au/*   https://ableaide.com.au/:splat   301!
 /resources/templates        /resources/templates.html        200
 /resources/ndis-guides      /resources/ndis-guides.html      200
 
-########## RESOURCE GUIDES (ALL LIVE PAGES) ##########
+########## RESOURCE GUIDES ##########
 /resources/melbourne-ndis-guide           /resources/melbourne-ndis-guide.html           200
 /resources/south-east-melbourne-ndis      /resources/south-east-melbourne-ndis.html      200
 /resources/ndis-review-guide              /resources/ndis-review-guide.html              200
 /resources/goal-setting-guide             /resources/goal-setting-guide.html             200
 /resources/evidence-reports-checklist     /resources/evidence-reports-checklist.html     200
-/resources/support-worker-guide            /resources/support-worker-guide.html            200
+/resources/support-worker-guide           /resources/support-worker-guide.html           200
 /resources/support-worker-family-tips     /resources/support-worker-family-tips.html     200
-/resources/participant-rights-guide        /resources/participant-rights-guide.html        200
+/resources/participant-rights-guide       /resources/participant-rights-guide.html       200
 
 ########## SERVICE PAGES ##########
 /services/personal-care                   /services/personal-care.html                   200
@@ -46,7 +34,6 @@ https://www.ableaide.com.au/*   https://ableaide.com.au/:splat   301!
 /services/allied-health-access            /services/allied-health-access.html            200
 /services/family-early-support            /services/family-early-support.html            200
 /services/plan-management                 /services/plan-management.html                 200
-
 
 ################################################
 # CANONICAL CLEANUP (.HTML → PRETTY URL)

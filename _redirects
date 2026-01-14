@@ -18,11 +18,6 @@ https://www.ableaide.com.au/*   https://ableaide.com.au/:splat   301!
 
 /about                  /about.html                          200
 /services               /services.html                       200
-/locations              /locations.html                      200
-/refer                  /refer.html                          200
-/resources              /resources.html                      200
-/contact                /contact.html                        200
-/careers                /careers.html                        200
 /reviews                /reviews.html                        200
 /faqs                   /faqs.html                           200
 /privacy-policy         /privacy-policy.html                 200

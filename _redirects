@@ -53,7 +53,6 @@ https://www.ableaide.com.au/*   https://ableaide.com.au/:splat   301!
 ################################################
 
 /index.html        /          301
-/:splat.html       /:splat    301
 
 ########## LEGACY / SAFETY ##########
 /:splat.php        /:splat    301

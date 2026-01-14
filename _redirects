@@ -2,8 +2,6 @@
 # PRETTY URL REWRITES (SERVE REAL .HTML FILES)
 ################################################
 
-/                       /index.html                          200
-
 /about                  /about.html                          200
 /services               /services.html                       200
 /reviews                /reviews.html                        200
@@ -45,5 +43,6 @@
 /:splat.php        /:splat    301
 /:splat.htm        /:splat    301
 
-########## FINAL 404 ##########
-/*   /404.html   404
+########## FINAL 404 (VALID STATUS CODE)
+########## All other URLs go to 404 page
+/*   /404.html   302

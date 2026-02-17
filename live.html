@@ -18,6 +18,7 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- ✅ Small but important additions -->
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0b3b5a">
   <meta name="format-detection" content="telephone=no">
@@ -58,7 +59,7 @@
   <link rel="preload" href="/assets/img/able-aide-ndis-disability-support-homepage-hero.webp" as="image">
   <link rel="preload" href="/assets/img/i-love-ndis-registered-provider.png" as="image">
 
-  <!-- Schema -->
+  <!-- ✅ UPDATED Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -155,7 +156,6 @@
   <header class="site-header">
     <div class="container header-inner">
 
-      <!-- IMPORTANT: logo link opens/closes exactly once -->
       <a href="/" class="logo" aria-label="Able Aide Home">
         <img src="/assets/img/able-aide-logo.webp"
              alt="Able Aide logo"
@@ -169,14 +169,14 @@
         <ul class="nav-list">
           <li><a href="/about">About</a></li>
 
-          <!-- Services dropdown -->
+          <!-- ✅ Accessible services dropdown -->
           <li class="nav-has-children">
             <button class="nav-parent-link"
                     type="button"
                     aria-haspopup="true"
                     aria-expanded="false"
                     aria-controls="servicesMenu"
-                    data-menu="servicesMenu">
+                    id="servicesBtn">
               Services
             </button>
             <ul class="nav-submenu" id="servicesMenu" aria-label="Services submenu" hidden>
@@ -190,14 +190,14 @@
             </ul>
           </li>
 
-          <!-- Locations dropdown -->
+          <!-- ✅ Locations dropdown -->
           <li class="nav-has-children">
             <button class="nav-parent-link"
                     type="button"
                     aria-haspopup="true"
                     aria-expanded="false"
                     aria-controls="locationsMenu"
-                    data-menu="locationsMenu">
+                    id="locationsBtn">
               Locations
             </button>
             <ul class="nav-submenu" id="locationsMenu" aria-label="Locations submenu" hidden>
@@ -215,14 +215,14 @@
 
           <li><a href="/refer">Refer a participant</a></li>
 
-          <!-- Resources dropdown -->
+          <!-- ✅ Resources dropdown -->
           <li class="nav-has-children">
             <button class="nav-parent-link"
                     type="button"
                     aria-haspopup="true"
                     aria-expanded="false"
                     aria-controls="resourcesMenu"
-                    data-menu="resourcesMenu">
+                    id="resourcesBtn">
               Resources
             </button>
             <ul class="nav-submenu" id="resourcesMenu" aria-label="Resources submenu" hidden>
@@ -283,7 +283,7 @@
 
           <p class="hero-note">
             Prefer a quick chat first? Call <a href="tel:+61435039110">0435 039 110</a> or email
-            <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>.
+            <a href="/cdn-cgi/l/email-protection#06636877736f746f63754667646a63676f62632865696b286773"><span class="__cf_email__" data-cfemail="294c47585c405b404c5a69484b454c48404d4c074a464407485c">[email&#160;protected]</span></a>.
           </p>
         </div>
 
@@ -311,6 +311,7 @@
       </div>
     </section>
 
+    <!-- ✅ NEW: Melbourne SC authority block (SEO + conversion) -->
     <section class="home-section">
       <div class="container">
         <header class="section-header">
@@ -323,6 +324,7 @@
       </div>
     </section>
 
+    <!-- MINI CTA STRIP -->
     <section class="mini-cta">
       <div class="container mini-cta-inner">
         <p><strong>Need supports quickly?</strong> We respond fast and keep Support Coordinators updated.</p>
@@ -333,6 +335,7 @@
       </div>
     </section>
 
+    <!-- TRUST BAR -->
     <section class="trust-bar">
       <div class="container trust-inner">
         <div class="trust-item">
@@ -359,6 +362,7 @@
         </header>
 
         <div class="card-grid">
+          <!-- ✅ Reordered: Melbourne priorities first -->
           <article class="card">
             <h3>🧭 Support coordination (Melbourne)</h3>
             <p>Helping you understand your plan, connect with providers and keep supports running smoothly.</p>
@@ -398,6 +402,7 @@
       </div>
     </section>
 
+    <!-- STEPS -->
     <section class="home-section">
       <div class="container">
         <header class="section-header">
@@ -422,6 +427,7 @@
       </div>
     </section>
 
+    <!-- SERVICE AREAS -->
     <section class="home-section regions">
       <div class="container">
         <header class="section-header">
@@ -441,12 +447,13 @@
 
         <p class="regions-note">
           We provide NDIS Support Coordination and Core Supports across metropolitan Melbourne.
-          For Plan Management enquiries (Australia-wide): <a href="mailto:planmanagement@ableaide.com.au">planmanagement@ableaide.com.au</a>.
+          For Plan Management enquiries (Australia-wide): <a href="/cdn-cgi/l/email-protection#5e2e323f30333f303f393b333b302a1e3f3c323b3f373a3b703d3133703f2b"><span class="__cf_email__" data-cfemail="17677b76797a76797670727a7279635776757b72767e73723974787a397662">[email&#160;protected]</span></a>.
           Not sure if we can support you in-person? <a href="/contact">Get in touch</a>.
         </p>
       </div>
     </section>
 
+    <!-- ✅ Plan Management national authority block (SEO) -->
     <section class="home-section">
       <div class="container">
         <header class="section-header">
@@ -459,6 +466,7 @@
       </div>
     </section>
 
+    <!-- RESOURCES -->
     <section class="home-section">
       <div class="container">
         <header class="section-header">
@@ -494,6 +502,7 @@
       </div>
     </section>
 
+    <!-- FUNDING -->
     <section class="home-section">
       <div class="container">
         <header class="section-header">
@@ -508,6 +517,7 @@
       </div>
     </section>
 
+    <!-- TESTIMONIALS -->
     <section class="home-section testimonials">
       <div class="container">
         <header class="section-header">
@@ -535,6 +545,7 @@
       </div>
     </section>
 
+    <!-- FINAL CTA -->
     <section class="home-section final-cta">
       <div class="container final-cta-inner">
         <div>
@@ -550,6 +561,7 @@
 
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
 
@@ -577,8 +589,8 @@
 
         <p>
           <strong>Phone:</strong> <a href="tel:+61435039110">0435 039 110</a><br>
-          <strong>General enquiries:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a><br>
-          <strong>Plan Management:</strong> <a href="mailto:planmanagement@ableaide.com.au">planmanagement@ableaide.com.au</a>
+          <strong>General enquiries:</strong> <a href="/cdn-cgi/l/email-protection#e1848f90948893888492a180838d8480888584cf828e8ccf8094"><span class="__cf_email__" data-cfemail="81e4eff0f4e8f3e8e4f2c1e0e3ede4e0e8e5e4afe2eeecafe0f4">[email&#160;protected]</span></a><br>
+          <strong>Plan Management:</strong> <a href="/cdn-cgi/l/email-protection#1d6d717c73707c737c7a78707873695d7c7f71787c747978337e7270337c68"><span class="__cf_email__" data-cfemail="93e3fff2fdfef2fdf2f4f6fef6fde7d3f2f1fff6f2faf7f6bdf0fcfebdf2e6">[email&#160;protected]</span></a>
         </p>
       </div>
 
@@ -625,6 +637,7 @@
     </div>
   </footer>
 
+  <!-- FLOATING CTA -->
   <div class="floating-cta" id="floatingCta">
     <button class="floating-cta-toggle" id="floatingCtaToggle" type="button" aria-expanded="false">
       <span class="icon">💬</span><span>Need support?</span>
@@ -634,46 +647,41 @@
       <div class="floating-cta-text">Quick ways to reach us.</div>
       <div class="floating-cta-links">
         <a href="tel:+61435039110">📞 Call 0435 039 110</a>
-        <a href="mailto:enquiries@ableaide.com.au">✉️ General enquiries</a>
-        <a href="mailto:planmanagement@ableaide.com.au">📋 Plan Management</a>
+        <a href="/cdn-cgi/l/email-protection#8beee5fafee2f9e2eef8cbeae9e7eeeae2efeea5e8e4e6a5eafe">✉️ General enquiries</a>
+        <a href="/cdn-cgi/l/email-protection#cfbfa3aea1a2aea1aea8aaa2aaa1bb8faeada3aaaea6abaae1aca0a2e1aeba">📋 Plan Management</a>
         <a href="/refer">📝 Refer a participant</a>
       </div>
     </div>
   </div>
 
-  <script>
-    // Footer year
-    const yearEl = document.getElementById("year");
-    if (yearEl) yearEl.textContent = new Date().getFullYear();
+  <!-- SCRIPTS -->
+  <script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Mobile nav
     const navToggle = document.getElementById("navToggle");
     const mainNav = document.getElementById("mainNav");
     const navOverlay = document.getElementById("navOverlay");
 
-    function closeAllSubmenus() {
-      document.querySelectorAll(".nav-has-children").forEach(li => li.classList.remove("open"));
-      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => btn.setAttribute("aria-expanded", "false"));
-      document.querySelectorAll(".nav-submenu").forEach(menu => menu.hidden = true);
-    }
-
     function openNav() {
-      if (!mainNav) return;
       mainNav.classList.add("open");
-      if (navOverlay) navOverlay.classList.add("open");
-      if (navToggle) navToggle.setAttribute("aria-expanded", "true");
-      if (navOverlay) navOverlay.setAttribute("aria-hidden", "false");
+      navOverlay.classList.add("open");
+      navToggle.setAttribute("aria-expanded", "true");
+      navOverlay.setAttribute("aria-hidden", "false");
       document.body.classList.add("nav-lock");
     }
 
     function closeNav() {
-      if (!mainNav) return;
       mainNav.classList.remove("open");
-      if (navOverlay) navOverlay.classList.remove("open");
-      if (navToggle) navToggle.setAttribute("aria-expanded", "false");
-      if (navOverlay) navOverlay.setAttribute("aria-hidden", "true");
+      navOverlay.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navOverlay.setAttribute("aria-hidden", "true");
       document.body.classList.remove("nav-lock");
-      closeAllSubmenus();
+
+      document.querySelectorAll(".nav-has-children.open").forEach(el => el.classList.remove("open"));
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => {
+        btn.setAttribute("aria-expanded", "false");
+      });
+      document.querySelectorAll(".nav-submenu").forEach(menu => menu.hidden = true);
     }
 
     if (navToggle && mainNav) {
@@ -688,42 +696,23 @@
         if (e.key === "Escape" && mainNav.classList.contains("open")) closeNav();
       });
 
-      // Close drawer on link click (mobile)
       document.querySelectorAll("#mainNav a").forEach(link => {
         link.addEventListener("click", () => {
           if (window.innerWidth <= 900) closeNav();
         });
       });
 
-      // Dropdown buttons (mobile + accessible)
+      // ✅ Dropdown toggles
       const parentButtons = document.querySelectorAll(".nav-has-children > .nav-parent-link");
       parentButtons.forEach(btn => {
         const li = btn.parentElement;
         const submenu = li.querySelector(".nav-submenu");
 
-        btn.addEventListener("click", (e) => {
-          e.stopPropagation();
-
-          // Close others
-          document.querySelectorAll(".nav-has-children").forEach(other => {
-            if (other !== li) other.classList.remove("open");
-          });
-          document.querySelectorAll(".nav-submenu").forEach(menu => {
-            if (submenu && menu !== submenu) menu.hidden = true;
-          });
-          document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(otherBtn => {
-            if (otherBtn !== btn) otherBtn.setAttribute("aria-expanded", "false");
-          });
-
+        btn.addEventListener("click", () => {
           const isOpen = li.classList.toggle("open");
           btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
           if (submenu) submenu.hidden = !isOpen;
         });
-      });
-
-      // Close dropdowns when clicking outside (desktop usability)
-      document.addEventListener("click", (e) => {
-        if (!mainNav.contains(e.target)) closeAllSubmenus();
       });
 
       window.addEventListener("resize", () => {
@@ -731,7 +720,6 @@
       });
     }
 
-    // Floating CTA
     const floatingToggle = document.getElementById("floatingCtaToggle");
     const floatingCta = document.getElementById("floatingCta");
     const floatingPanel = floatingCta ? floatingCta.querySelector(".floating-cta-panel") : null;

@@ -1,5 +1,5 @@
 /* =========================================================
-   Able Aide Global Styles – 2026 Production Build (FIXED)
+   Able Aide Global Styles – 2026 Production Build (CLICK FIX)
 ========================================================= */
 
 /* --------------------------
@@ -46,6 +46,30 @@ button:focus-visible{
   outline:3px solid rgba(11,114,133,.35);
   outline-offset:3px;
   border-radius:.5rem;
+}
+
+/* --------------------------
+   SKIP LINK
+--------------------------- */
+
+.skip-link{
+  position:absolute;
+  left:-999px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+}
+.skip-link:focus{
+  left:1rem;
+  top:1rem;
+  width:auto;
+  height:auto;
+  padding:.6rem .9rem;
+  background:#fff;
+  border:1px solid #e5e7eb;
+  border-radius:.75rem;
+  z-index:9999;
 }
 
 /* --------------------------
@@ -109,7 +133,7 @@ img{
 .top-trust-link{ color:#e6f6f9; }
 
 /* --------------------------
-   HEADER
+   HEADER (CRITICAL CLICK FIX)
 --------------------------- */
 
 .site-header{
@@ -120,27 +144,28 @@ img{
   z-index:80;
 }
 
+/* IMPORTANT: create a stacking context so z-index works reliably */
 .header-inner{
+  position:relative;
   display:flex;
   align-items:center;
   justify-content:space-between;
   padding:.75rem 0;
   gap:1rem;
-  position:relative; /* helps z-index behave predictably */
 }
 
-/* Logo (FIX: keep below nav, prevent click stealing) */
+/* Logo MUST NOT stretch over the nav */
 .logo{
   display:flex;
   align-items:center;
   gap:.65rem;
   color:inherit;
 
-  /* CRITICAL FIXES */
-  flex:0 0 auto;         /* do NOT stretch over nav */
-  max-width:260px;       /* keeps logo area tight */
+  flex:0 0 auto;
+  max-width:320px;
+
   position:relative;
-  z-index:1;             /* MUST be below nav */
+  z-index:81; /* LOWER than nav so it can't steal clicks */
 }
 
 .logo-img{ height:46px; width:auto; }
@@ -150,20 +175,20 @@ img{
 .logo-tagline{
   font-size:.85rem;
   color:#6b7280;
-  white-space:nowrap;
 }
 
 /* --------------------------
-   NAVIGATION
+   NAVIGATION (ON TOP)
 --------------------------- */
 
 .main-nav{
   display:flex;
   align-items:center;
 
-  /* CRITICAL FIX: nav must sit above logo */
+  flex:1 1 auto;
+
   position:relative;
-  z-index:5;
+  z-index:90; /* HIGHER than logo => nav always clickable */
 }
 
 .nav-list{
@@ -172,6 +197,9 @@ img{
   gap:1.25rem;
   margin:0;
   padding:0;
+
+  justify-content:center;
+  width:100%;
 }
 
 .nav-list > li > a,
@@ -184,6 +212,9 @@ img{
   border:0;
   cursor:pointer;
   font-family:inherit;
+
+  position:relative;
+  z-index:91;
 }
 
 .nav-list > li > button.nav-parent-link:hover{
@@ -206,7 +237,7 @@ img{
   padding:.5rem 0;
   margin:0;
   border:1px solid rgba(15,23,42,.08);
-  z-index:10;
+  z-index:200;
 }
 
 .nav-submenu li a{
@@ -222,16 +253,29 @@ img{
 
 /* Desktop hover + keyboard */
 @media(min-width:901px){
-  .nav-has-children:hover>.nav-submenu,
-  .nav-has-children:focus-within>.nav-submenu{
+  .nav-has-children:hover > .nav-submenu,
+  .nav-has-children:focus-within > .nav-submenu{
     display:block;
   }
 }
 
-.nav-has-children.open>.nav-submenu{ display:block; }
+/* If JS toggles open */
+.nav-has-children.open > .nav-submenu{ display:block; }
 
 /* --------------------------
-   NAV OVERLAY (mobile)
+   HEADER CTA
+--------------------------- */
+
+.header-cta{
+  display:flex;
+  gap:.6rem;
+  flex:0 0 auto;
+  position:relative;
+  z-index:90;
+}
+
+/* --------------------------
+   NAV OVERLAY (MOBILE)
 --------------------------- */
 
 .nav-overlay{
@@ -251,11 +295,6 @@ img{
   pointer-events:auto;
 }
 
-/* Body lock when drawer open */
-body.nav-lock{
-  overflow:hidden;
-}
-
 /* --------------------------
    BUTTONS
 --------------------------- */
@@ -270,6 +309,7 @@ body.nav-lock{
   font-size:.95rem;
   font-weight:500;
   cursor:pointer;
+  white-space:nowrap;
 }
 
 .btn-primary{
@@ -283,9 +323,8 @@ body.nav-lock{
   color:#0b7285;
 }
 
-/* Optional: if you use btn-secondary in HTML */
 .btn-secondary{
-  background:#111827;
+  background:#0f172a;
   color:#fff;
 }
 
@@ -319,8 +358,12 @@ body.nav-lock{
 }
 
 /* --------------------------
-   CARDS
+   SECTIONS / CARDS
 --------------------------- */
+
+.home-section{ padding:2.2rem 0; }
+
+.section-header{ margin-bottom:.75rem; }
 
 .card-grid{
   display:grid;
@@ -336,6 +379,20 @@ body.nav-lock{
   border:1px solid #e5e7eb;
 }
 
+.card-link{ font-weight:600; }
+
+/* --------------------------
+   TRUST BAR
+--------------------------- */
+
+.trust-bar{ padding:1.8rem 0; background:#f8fafc; }
+
+.trust-inner{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:1.2rem;
+}
+
 /* --------------------------
    REGIONS
 --------------------------- */
@@ -345,6 +402,25 @@ body.nav-lock{
   list-style:none;
   padding:0;
   margin:1.4rem 0 .6rem;
+}
+
+/* --------------------------
+   MINI CTA
+--------------------------- */
+
+.mini-cta{ padding:1.4rem 0; background:#0b7285; color:#e6f6f9; }
+
+.mini-cta-inner{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+}
+
+.mini-cta-actions{
+  display:flex;
+  gap:.6rem;
+  flex-wrap:wrap;
 }
 
 /* --------------------------
@@ -429,7 +505,7 @@ body.nav-lock{
   padding:.45rem .65rem;
   cursor:pointer;
   position:relative;
-  z-index:6; /* above header items */
+  z-index:95;
 }
 
 .nav-toggle span{
@@ -453,11 +529,6 @@ body.nav-lock{
 .nav-toggle span::before{ top:-7px; }
 .nav-toggle span::after{ top:7px; }
 
-.header-cta{
-  position:relative;
-  z-index:5; /* above logo */
-}
-
 @media(max-width:900px){
 
   .nav-toggle{ display:inline-flex; }
@@ -474,7 +545,7 @@ body.nav-lock{
     transform:translateX(110%);
     transition:transform .25s ease;
     overflow-y:auto;
-    z-index:60; /* drawer above overlay */
+    z-index:60;
   }
 
   .main-nav.open{ transform:translateX(0); }
@@ -482,6 +553,8 @@ body.nav-lock{
   .nav-list{
     flex-direction:column;
     gap:.25rem;
+    width:100%;
+    justify-content:flex-start;
   }
 
   .nav-list>li>a,
@@ -494,16 +567,17 @@ body.nav-lock{
     justify-content:space-between;
   }
 
-  .nav-has-children>a::after,
-  .nav-has-children>button::after{
+  /* Chevron */
+  .nav-has-children > a::after,
+  .nav-has-children > button::after{
     content:"▾";
     font-size:.9rem;
     color:#6b7280;
     transition:transform .2s ease;
   }
 
-  .nav-has-children.open>a::after,
-  .nav-has-children.open>button::after{
+  .nav-has-children.open > a::after,
+  .nav-has-children.open > button::after{
     transform:rotate(180deg);
   }
 
@@ -528,9 +602,46 @@ body.nav-lock{
   .card-grid{ grid-template-columns:repeat(2,1fr); }
   .footer-inner{ grid-template-columns:repeat(2,1fr); }
   .regions-list{ columns:1; }
+
+  .mini-cta-inner{ flex-direction:column; align-items:flex-start; }
 }
 
 @media(max-width:640px){
   .card-grid{ grid-template-columns:1fr; }
   .footer-inner{ grid-template-columns:1fr; }
+}
+/* =========================================================
+   FIX: header clicks going to home
+   Cause: logo anchor overlaps nav area on some widths.
+========================================================= */
+
+.site-header .header-inner{
+  position: relative;
+}
+
+/* Stop logo taking extra width */
+.site-header .logo{
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 360px;
+}
+
+/* Ensure nav stays above logo hitbox */
+.site-header .main-nav{
+  position: relative;
+  z-index: 90;
+}
+
+.site-header .nav-list a,
+.site-header .nav-list button{
+  position: relative;
+  z-index: 91;
+}
+
+/* Ensure overlay never blocks clicks unless open */
+.nav-overlay{
+  pointer-events: none;
+}
+.nav-overlay.open{
+  pointer-events: auto;
 }

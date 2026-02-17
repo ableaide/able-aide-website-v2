@@ -1,44 +1,4 @@
-# --------------------------------------------
-# Able Aide — Cloudflare Pages _redirects (FINAL)
-# --------------------------------------------
+# Able Aide — Cloudflare Pages _redirects (MINIMAL + SAFE)
 
-# 1) Canonical: strip .html everywhere
-/*.html                /:splat                     301
-
-# 2) Canonical: folder roots must have trailing slash
-/resources             /resources/                  301
-/locations             /locations/                  301
-
-# 3) Canonical: flat pages must NOT have trailing slash
-/about/                /about                       301
-/services/             /services                    301
-/refer/                /refer                       301
-/contact/              /contact                     301
-/careers/              /careers                     301
-/reviews/              /reviews                     301
-/faqs/                 /faqs                        301
-/privacy-policy/       /privacy-policy              301
-/terms-of-service/     /terms-of-service            301
-/complaints/           /complaints                  301
-
-# 4) Rewrites for flat pages (pretty URL -> real .html)
-# (200 rewrites)
-/about                 /about.html                  200
-/services              /services.html               200
-/refer                 /refer.html                  200
-/contact               /contact.html                200
-/careers               /careers.html                200
-/reviews               /reviews.html                200
-/faqs                  /faqs.html                   200
-/privacy-policy        /privacy-policy.html         200
-/terms-of-service      /terms-of-service.html       200
-/complaints            /complaints.html             200
-
-# 5) Folder index rewrites
-/resources/            /resources/index.html        200
-/locations/            /locations/index.html        200
-
-# 6) Sub-pages inside folders (slug -> slug.html)
-# Example: /locations/werribee -> /locations/werribee.html
-/locations/*           /locations/:splat.html       200
-/resources/*           /resources/:splat.html       200
+# Canonical: strip .html everywhere
+/*.html    /:splat    301

@@ -1,5 +1,5 @@
 /* =========================================================
-   Able Aide Global Styles – 2026 Production Build
+   Able Aide Global Styles – 2026 Production Build (UPDATED)
 ========================================================= */
 
 /* --------------------------
@@ -119,10 +119,11 @@ img{
   border-bottom:1px solid #e5e7eb;
   position:sticky;
   top:0;
-  z-index:80; /* raised to avoid layering issues */
+  z-index:80;
 }
 
 .header-inner{
+  position:relative; /* IMPORTANT: creates stacking context */
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -130,15 +131,16 @@ img{
   gap:1rem;
 }
 
-/* Logo */
-
+/* Logo (do NOT let it overlap nav clicks) */
 .logo{
   display:flex;
   align-items:center;
   gap:.65rem;
   color:inherit;
+  flex:0 0 auto;        /* prevents stretching */
+  max-width:320px;      /* prevents huge clickable box */
   position:relative;
-  z-index:86; /* ensure logo is above header background */
+  z-index:1;            /* keep BELOW nav */
 }
 
 .logo-img{height:46px;width:auto;}
@@ -151,14 +153,14 @@ img{
 }
 
 /* --------------------------
-   NAVIGATION
+   NAVIGATION (FORCE ABOVE LOGO)
 --------------------------- */
 
 .main-nav{
   display:flex;
   align-items:center;
   position:relative;
-  z-index:85; /* ensure nav links always clickable */
+  z-index:500;          /* nav above everything in header */
 }
 
 .nav-list{
@@ -171,6 +173,8 @@ img{
 
 .nav-list > li > a,
 .nav-list > li > button.nav-parent-link{
+  position:relative;
+  z-index:501;
   font-size:.95rem;
   font-weight:500;
   color:#111827;
@@ -186,7 +190,6 @@ img{
 }
 
 /* Dropdown structure */
-
 .nav-has-children{
   position:relative;
 }
@@ -204,6 +207,7 @@ img{
   padding:.5rem 0;
   margin:0;
   border:1px solid rgba(15,23,42,.08);
+  z-index:600; /* submenu above everything */
 }
 
 .nav-submenu li a{
@@ -218,7 +222,6 @@ img{
 }
 
 /* Desktop hover + keyboard */
-
 @media(min-width:901px){
   .nav-has-children:hover>.nav-submenu,
   .nav-has-children:focus-within>.nav-submenu{
@@ -227,7 +230,6 @@ img{
 }
 
 /* If JS toggles open */
-
 .nav-has-children.open>.nav-submenu{
   display:block;
 }
@@ -482,7 +484,6 @@ img{
   }
 
   /* Chevron */
-
   .nav-has-children>a::after,
   .nav-has-children>button::after{
     content:"▾";
@@ -513,8 +514,6 @@ img{
 
   .header-cta{
     display:none;
-    position:relative;
-    z-index:85;
   }
 
   .hero-inner{grid-template-columns:1fr;}

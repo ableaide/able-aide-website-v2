@@ -534,3 +534,33 @@ img{
   .card-grid{ grid-template-columns:1fr; }
   .footer-inner{ grid-template-columns:1fr; }
 }
+/* ================================
+   HOTFIX: Header click-through
+   (nav links going to home)
+================================ */
+
+/* create a stacking context */
+.header-inner{ position: relative; }
+
+/* keep logo hitbox tight */
+.logo{
+  flex: 0 0 auto;
+  width: auto;
+  max-width: 320px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+}
+
+/* FORCE nav + its links above logo */
+.main-nav{ position: relative; z-index: 9999; }
+.nav-list{ position: relative; z-index: 9999; }
+.nav-list > li{ position: relative; z-index: 9999; }
+.nav-list > li > a,
+.nav-list > li > button.nav-parent-link{
+  position: relative;
+  z-index: 10000;
+}
+
+/* submenu above everything */
+.nav-submenu{ z-index: 11000; }

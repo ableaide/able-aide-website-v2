@@ -3,27 +3,30 @@
 # --------------------------------------------
 
 # 1) CANONICAL: Strip .html (avoid duplicate URLs)
-#    (keeps /about.html working but redirects to /about)
-#    Put BEFORE any rewrites
+#    Example: /about.html -> /about
 /*.html    /:splat    301
 
-# 2) Optional: strip /index (if anyone visits /about/index)
-/:index    /          301
+# 2) Directory routes (folder pages)
+#    Make sure /resources and /locations resolve to their folder index pages
+/resources     /resources/     301
+/locations     /locations/     301
 
 # 3) Pretty URL rewrites (serve the real .html files)
-#    Only needed if Cloudflare isn't already mapping these.
-#    If your /about works already without this section, you can delete this block.
-#    Keep these as 200 rewrites.
-#/          /index.html                      200
-/about      /about.html                      200
-/services   /services.html                   200
-/locations  /locations.html                  200
-/refer      /refer.html                      200
-/resources  /resources.html                  200
-/contact    /contact.html                    200
-/careers    /careers.html                    200
-/reviews    /reviews.html                    200
-/faqs       /faqs.html                       200
-/privacy-policy   /privacy-policy.html       200
-/terms-of-service /terms-of-service.html     200
-/complaints       /complaints.html           200
+#    Use 200 rewrites for flat pages that are actually .html files
+/about              /about.html               200
+/services           /services.html            200
+/refer              /refer.html               200
+/contact            /contact.html             200
+/careers            /careers.html             200
+/reviews            /reviews.html             200
+/faqs               /faqs.html                200
+/privacy-policy     /privacy-policy.html      200
+/terms-of-service   /terms-of-service.html    200
+/complaints         /complaints.html          200
+
+# 4) Folder pages rewrites (serve index.html)
+#    These are directories in your repo: /resources/index.html, /locations/index.html
+/resources/*        /resources/:splat         200
+/locations/*        /locations/:splat         200
+/resources          /resources/index.html     200
+/locations          /locations/index.html     200

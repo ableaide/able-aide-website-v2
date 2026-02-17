@@ -1,4 +1,0 @@
-# Able Aide — Cloudflare Pages _redirects (MINIMAL + SAFE)
-
-# Canonical: strip .html everywhere
-/*.html    /:splat    301

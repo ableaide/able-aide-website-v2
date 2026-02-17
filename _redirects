@@ -1,81 +1,29 @@
-###############################################
-# NETLIFY SEO REDIRECT PACK – ABLE AIDE (FINAL)
-###############################################
+# --------------------------------------------
+# Able Aide — Cloudflare Pages _redirects
+# --------------------------------------------
 
-########## FORCE HTTPS ##########
-http://ableaide.com.au/*        https://ableaide.com.au/:splat   301!
-http://www.ableaide.com.au/*    https://ableaide.com.au/:splat   301!
+# 1) CANONICAL: Strip .html (avoid duplicate URLs)
+#    (keeps /about.html working but redirects to /about)
+#    Put BEFORE any rewrites
+/*.html    /:splat    301
 
-########## FORCE NON-WWW ##########
-https://www.ableaide.com.au/*   https://ableaide.com.au/:splat   301!
+# 2) Optional: strip /index (if anyone visits /about/index)
+/:index    /          301
 
-################################################
-# PRETTY URL REWRITES (SERVE REAL .HTML FILES)
-# IMPORTANT: 200 rewrites MUST come before 301s
-################################################
-
-/                       /index.html                          200
-
-/about                  /about.html                          200
-/services               /services.html                       200
-/locations              /locations.html                      200
-/refer                  /refer.html                          200
-/resources              /resources.html                      200
-/contact                /contact.html                        200
-/careers                /careers.html                        200
-/reviews                /reviews.html                        200
-/faqs                   /faqs.html                           200
-/privacy-policy         /privacy-policy.html                 200
-/terms-of-service       /terms-of-service.html               200
-/complaints             /complaints.html                     200
-
-########## RESOURCE HUB SUBPAGES ##########
-/resources/downloads        /resources/downloads.html        200
-/resources/templates        /resources/templates.html        200
-/resources/ndis-guides      /resources/ndis-guides.html      200
-
-########## RESOURCE GUIDES (ALL LIVE PAGES) ##########
-/resources/melbourne-ndis-guide           /resources/melbourne-ndis-guide.html           200
-/resources/south-east-melbourne-ndis      /resources/south-east-melbourne-ndis.html      200
-/resources/ndis-review-guide              /resources/ndis-review-guide.html              200
-/resources/goal-setting-guide             /resources/goal-setting-guide.html             200
-/resources/evidence-reports-checklist     /resources/evidence-reports-checklist.html     200
-/resources/support-worker-guide            /resources/support-worker-guide.html            200
-/resources/support-worker-family-tips     /resources/support-worker-family-tips.html     200
-/resources/participant-rights-guide        /resources/participant-rights-guide.html        200
-
-########## SERVICE PAGES ##########
-/services/personal-care                   /services/personal-care.html                   200
-/services/community-participation         /services/community-participation.html         200
-/services/support-coordination            /services/support-coordination.html            200
-/services/allied-health-access            /services/allied-health-access.html            200
-/services/family-early-support            /services/family-early-support.html            200
-/services/plan-management                 /services/plan-management.html                 200
-
-########## LOCATION PAGES ##########
-/locations/melbourne              /locations/melbourne.html              200
-/locations/frankston              /locations/frankston.html              200
-/locations/dandenong              /locations/dandenong.html              200
-/locations/ringwood               /locations/ringwood.html               200
-/locations/epping                 /locations/epping.html                 200
-/locations/sunshine               /locations/sunshine.html               200
-/locations/werribee               /locations/werribee.html               200
-/locations/mornington-peninsula   /locations/mornington-peninsula.html   200
-/locations/geelong                /locations/geelong.html                200
-/locations/ballarat               /locations/ballarat.html               200
-/locations/bendigo                /locations/bendigo.html                200
-/locations/shepparton             /locations/shepparton.html             200
-
-################################################
-# CANONICAL CLEANUP (.HTML → PRETTY URL)
-################################################
-
-/index.html        /          301
-/:splat.html       /:splat    301
-
-########## LEGACY / SAFETY ##########
-/:splat.php        /:splat    301
-/:splat.htm        /:splat    301
-
-########## FINAL 404 ##########
-/*   /404.html   404
+# 3) Pretty URL rewrites (serve the real .html files)
+#    Only needed if Cloudflare isn't already mapping these.
+#    If your /about works already without this section, you can delete this block.
+#    Keep these as 200 rewrites.
+#/          /index.html                      200
+/about      /about.html                      200
+/services   /services.html                   200
+/locations  /locations.html                  200
+/refer      /refer.html                      200
+/resources  /resources.html                  200
+/contact    /contact.html                    200
+/careers    /careers.html                    200
+/reviews    /reviews.html                    200
+/faqs       /faqs.html                       200
+/privacy-policy   /privacy-policy.html       200
+/terms-of-service /terms-of-service.html     200
+/complaints       /complaints.html           200

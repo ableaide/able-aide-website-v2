@@ -4,6 +4,15 @@
   <meta charset="UTF-8">
   <title>NDIS Resources & Guides Melbourne | Support Coordination & Core Supports – Able Aide</title>
 
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-651FXYJL03"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-651FXYJL03');
+  </script>
+
   <!-- Canonical -->
   <link rel="canonical" href="https://ableaide.com.au/resources">
 
@@ -167,6 +176,7 @@
         <ul class="nav-list">
           <li><a href="/about">About</a></li>
 
+          <!-- Services dropdown -->
           <li class="nav-has-children">
             <button class="nav-parent-link" type="button" aria-haspopup="true" aria-expanded="false">
               Services
@@ -182,9 +192,41 @@
             </ul>
           </li>
 
-          <li><a href="/locations">Locations</a></li>
+          <!-- ✅ Locations dropdown -->
+          <li class="nav-has-children">
+            <button class="nav-parent-link" type="button" aria-haspopup="true" aria-expanded="false">
+              Locations
+            </button>
+            <ul class="nav-submenu" aria-label="Locations submenu">
+              <li><a href="/locations">All locations</a></li>
+              <li><a href="/locations/melbourne">Melbourne (CBD &amp; inner)</a></li>
+              <li><a href="/locations/frankston">Frankston</a></li>
+              <li><a href="/locations/dandenong">Dandenong</a></li>
+              <li><a href="/locations/ringwood">Ringwood</a></li>
+              <li><a href="/locations/epping">Epping</a></li>
+              <li><a href="/locations/werribee">Werribee</a></li>
+              <li><a href="/locations/sunshine">Sunshine</a></li>
+              <li><a href="/locations/mornington-peninsula">Mornington Peninsula</a></li>
+            </ul>
+          </li>
+
           <li><a href="/refer">Refer a participant</a></li>
-          <li><a href="/resources" aria-current="page" class="active">Resources</a></li>
+
+          <!-- ✅ Resources dropdown (current page) -->
+          <li class="nav-has-children open">
+            <button class="nav-parent-link" type="button" aria-haspopup="true" aria-expanded="true">
+              Resources
+            </button>
+            <ul class="nav-submenu" aria-label="Resources submenu">
+              <li><a href="/resources" aria-current="page" class="active">All resources</a></li>
+              <li><a href="/resources/goal-setting-guide">NDIS Goal Setting Guide</a></li>
+              <li><a href="/resources/evidence-reports-checklist">Evidence &amp; Reports Checklist</a></li>
+              <li><a href="/resources/support-worker-guide">Support Worker Guide</a></li>
+              <li><a href="/resources/support-worker-family-tips">Tips for Families</a></li>
+              <li><a href="/resources/participant-rights-guide">Participant Rights Guide</a></li>
+            </ul>
+          </li>
+
           <li><a href="/reviews">Reviews</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/careers">Careers</a></li>
@@ -606,23 +648,36 @@
     const mainNav = document.getElementById("mainNav");
     const navOverlay = document.getElementById("navOverlay");
 
+    function closeAllDropdowns(exceptLi = null) {
+      document.querySelectorAll(".nav-has-children").forEach(li => {
+        if (li !== exceptLi) {
+          li.classList.remove("open");
+          const btn = li.querySelector(".nav-parent-link");
+          if (btn) btn.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+
     function openNav() {
       mainNav.classList.add("open");
-      navOverlay.classList.add("open");
+      if (navOverlay) {
+        navOverlay.classList.add("open");
+        navOverlay.setAttribute("aria-hidden", "false");
+      }
       navToggle.setAttribute("aria-expanded", "true");
-      navOverlay.setAttribute("aria-hidden", "false");
       document.body.classList.add("nav-lock");
     }
 
     function closeNav() {
       mainNav.classList.remove("open");
-      navOverlay.classList.remove("open");
+      if (navOverlay) {
+        navOverlay.classList.remove("open");
+        navOverlay.setAttribute("aria-hidden", "true");
+      }
       navToggle.setAttribute("aria-expanded", "false");
-      navOverlay.setAttribute("aria-hidden", "true");
       document.body.classList.remove("nav-lock");
 
-      document.querySelectorAll(".nav-has-children.open").forEach(el => el.classList.remove("open"));
-      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => btn.setAttribute("aria-expanded","false"));
+      closeAllDropdowns();
     }
 
     if (navToggle && mainNav) {
@@ -634,7 +689,10 @@
       if (navOverlay) navOverlay.addEventListener("click", closeNav);
 
       document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && mainNav.classList.contains("open")) closeNav();
+        if (e.key === "Escape") {
+          if (mainNav.classList.contains("open")) closeNav();
+          else closeAllDropdowns();
+        }
       });
 
       document.querySelectorAll("#mainNav a").forEach(link => {
@@ -643,14 +701,22 @@
         });
       });
 
-      // Services submenu toggle
+      // ✅ Dropdown toggles (Services, Locations, Resources)
       const parentButtons = document.querySelectorAll(".nav-has-children > .nav-parent-link");
       parentButtons.forEach(btn => {
-        btn.addEventListener("click", () => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
           const li = btn.parentElement;
-          const isOpen = li.classList.toggle("open");
-          btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          const isOpen = li.classList.contains("open");
+          closeAllDropdowns(li);
+          li.classList.toggle("open", !isOpen);
+          btn.setAttribute("aria-expanded", (!isOpen) ? "true" : "false");
         });
+      });
+
+      // Close dropdowns on outside click (desktop)
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".nav-has-children")) closeAllDropdowns();
       });
 
       window.addEventListener("resize", () => {

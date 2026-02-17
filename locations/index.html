@@ -27,21 +27,6 @@
   <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
 
-  <!-- Keep your existing mobile max-height behaviour -->
-  <style>
-    @media (max-width: 900px) {
-      .main-nav {
-        display: block;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.25s ease;
-      }
-      .main-nav.open {
-        max-height: 500px;
-      }
-    }
-  </style>
-
   <!-- ✅ UPDATED Schema: LocalBusiness + Breadcrumbs -->
   <script type="application/ld+json">
   {
@@ -120,9 +105,13 @@
         <ul class="nav-list">
           <li><a href="/about">About</a></li>
 
+          <!-- ✅ Services dropdown: button toggle so it works on mobile -->
           <li class="nav-has-children">
-            <a href="/services">Services</a>
+            <button class="nav-parent-link" type="button" aria-expanded="false">
+              Services
+            </button>
             <ul class="nav-submenu">
+              <li><a href="/services">All services</a></li>
               <li><a href="/services/support-coordination">Support coordination (Melbourne)</a></li>
               <li><a href="/services/personal-care">Personal care &amp; daily living (Melbourne)</a></li>
               <li><a href="/services/community-participation">Community participation (Melbourne)</a></li>
@@ -132,9 +121,40 @@
             </ul>
           </li>
 
-          <li><a href="/locations" aria-current="page">Locations</a></li>
+          <!-- ✅ Locations dropdown -->
+          <li class="nav-has-children">
+            <button class="nav-parent-link" type="button" aria-expanded="false">
+              Locations
+            </button>
+            <ul class="nav-submenu">
+              <li><a href="/locations" aria-current="page">All locations</a></li>
+              <li><a href="/locations/melbourne">Melbourne (CBD &amp; inner)</a></li>
+              <li><a href="/locations/frankston">Frankston</a></li>
+              <li><a href="/locations/dandenong">Dandenong</a></li>
+              <li><a href="/locations/ringwood">Ringwood</a></li>
+              <li><a href="/locations/epping">Epping</a></li>
+              <li><a href="/locations/werribee">Werribee</a></li>
+              <li><a href="/locations/sunshine">Sunshine</a></li>
+              <li><a href="/locations/mornington-peninsula">Mornington Peninsula</a></li>
+            </ul>
+          </li>
+
           <li><a href="/refer">Refer a participant</a></li>
-          <li><a href="/resources">Resources</a></li>
+
+          <!-- ✅ Resources dropdown -->
+          <li class="nav-has-children">
+            <button class="nav-parent-link" type="button" aria-expanded="false">
+              Resources
+            </button>
+            <ul class="nav-submenu">
+              <li><a href="/resources">All resources</a></li>
+              <li><a href="/resources/blog">Blog</a></li>
+              <li><a href="/resources/faqs">FAQs</a></li>
+              <li><a href="/resources/forms">Forms</a></li>
+              <li><a href="/resources/provider-resources">Provider resources</a></li>
+            </ul>
+          </li>
+
           <li><a href="/contact">Contact</a></li>
           <li><a href="/careers">Careers</a></li>
         </ul>
@@ -377,6 +397,7 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
+    // Mobile nav drawer toggle
     (function () {
       var navToggle = document.getElementById('navToggle');
       var mainNav = document.getElementById('mainNav');
@@ -388,6 +409,7 @@
           navToggle.setAttribute('aria-expanded', String(!isOpen));
         });
 
+        // Close drawer when clicking a normal link (not dropdown button)
         mainNav.querySelectorAll('a').forEach(function (link) {
           link.addEventListener('click', function () {
             if (window.innerWidth <= 900) {
@@ -399,6 +421,44 @@
       }
     })();
 
+    // ✅ Dropdown toggles (mobile tap + one-open-at-a-time)
+    (function () {
+      var parents = document.querySelectorAll('.nav-has-children');
+
+      function closeAll(except) {
+        parents.forEach(function (li) {
+          if (li !== except) {
+            li.classList.remove('open');
+            var btn = li.querySelector('button.nav-parent-link');
+            if (btn) btn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
+
+      parents.forEach(function (li) {
+        var btn = li.querySelector('button.nav-parent-link');
+        var submenu = li.querySelector('.nav-submenu');
+        if (!btn || !submenu) return;
+
+        btn.addEventListener('click', function (e) {
+          e.preventDefault();
+          var isOpen = li.classList.contains('open');
+          closeAll(li);
+          li.classList.toggle('open', !isOpen);
+          btn.setAttribute('aria-expanded', String(!isOpen));
+        });
+      });
+
+      document.addEventListener('click', function (e) {
+        if (!e.target.closest('.nav-has-children')) closeAll();
+      });
+
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') closeAll();
+      });
+    })();
+
+    // Floating CTA
     (function () {
       var floatingCta = document.getElementById('floatingCta');
       var floatingToggle = document.getElementById('floatingCtaToggle');

@@ -4,72 +4,155 @@
   <meta charset="UTF-8">
   <title>Support Worker Tips for Families – Communication & Routines | Able Aide</title>
 
-      <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-651FXYJL03"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-
-      gtag('config', 'G-651FXYJL03');
-    </script>
+  <!-- Canonical -->
   <link rel="canonical" href="https://ableaide.com.au/resources/support-worker-family-tips">
+
+  <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- SEO -->
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b3b5a">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Meta Description -->
   <meta name="description"
         content="Practical tips for families working with support workers: building routines, communication preferences, shift handover notes and keeping supports calm and consistent.">
 
+  <!-- OpenGraph -->
   <meta property="og:title" content="Support Worker Tips for Families – Able Aide">
   <meta property="og:description" content="Simple ways to help supports run smoothly: routines, communication and consistency.">
   <meta property="og:image" content="/assets/img/og-image.webp">
   <meta property="og:type" content="article">
   <meta property="og:url" content="https://ableaide.com.au/resources/support-worker-family-tips">
 
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Support Worker Tips for Families – Able Aide">
+  <meta name="twitter:description" content="Simple ways to help supports run smoothly: routines, communication and consistency.">
+  <meta name="twitter:image" content="/assets/img/og-image.webp">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
+  <!-- Styles -->
+  <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
+
+  <!-- Preload logo -->
+  <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
+
+  <!-- Schema: Article + Breadcrumb -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "headline": "Support Worker Tips for Families",
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://ableaide.com.au/resources/support-worker-family-tips"
+        },
+        "author": { "@type": "Organization", "name": "Able Aide" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Able Aide",
+          "logo": { "@type": "ImageObject", "url": "https://ableaide.com.au/assets/img/able-aide-logo.webp" }
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ableaide.com.au/" },
+          { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://ableaide.com.au/resources" },
+          { "@type": "ListItem", "position": 3, "name": "Support Worker Tips for Families", "item": "https://ableaide.com.au/resources/support-worker-family-tips" }
+        ]
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <!-- GLOBAL TOP TRUST BAR -->
   <div class="top-trust-bar">
     <div class="container top-trust-bar-inner">
       <div class="top-trust-left">
-        <span class="top-trust-badge">NDIS registration in progress</span>
+        <span class="top-trust-badge">Registered NDIS Provider · Provider No. 4050173180</span>
         <span class="top-trust-badge">Supporting self-managed &amp; plan-managed participants</span>
-        <span class="top-trust-badge">Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton &amp; regional VIC</span>
+        <span class="top-trust-badge">Greater Melbourne &amp; Regional VIC</span>
       </div>
       <div class="top-trust-right">
-        <span class="top-trust-phone">Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a></span>
+        <span class="top-trust-phone">
+          Call: <a href="tel:61435039110" class="top-trust-link" aria-label="Call Able Aide on 0435 039 110">0435 039 110</a>
+        </span>
         <a href="/refer" class="top-trust-link">Quick referral form →</a>
       </div>
     </div>
   </div>
 
+  <!-- HEADER -->
   <header class="site-header">
     <div class="container header-inner">
-      <a href="/" class="logo">
-        <img src="/assets/img/able-aide-logo.webp" alt="Able Aide logo" class="logo-img" decoding="async">
+
+      <a href="/" class="logo" aria-label="Able Aide Home">
+        <img src="/assets/img/able-aide-logo.webp"
+             alt="Able Aide logo"
+             class="logo-img"
+             width="180"
+             height="46"
+             decoding="async">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
 
-      <nav class="main-nav" id="mainNav">
+      <nav class="main-nav" aria-label="Main Navigation" id="mainNav">
         <ul class="nav-list">
           <li><a href="/about">About</a></li>
+
+          <!-- Services submenu toggle (mobile-friendly) -->
           <li class="nav-has-children">
-            <a href="/services">Services</a>
-            <ul class="nav-submenu">
+            <button class="nav-parent-link" type="button" aria-haspopup="true" aria-expanded="false">
+              Services
+            </button>
+            <ul class="nav-submenu" aria-label="Services submenu">
+              <li><a href="/services">All services overview</a></li>
               <li><a href="/services/personal-care">Personal care &amp; daily living</a></li>
               <li><a href="/services/community-participation">Community participation</a></li>
               <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/allied-health-access">Allied health access</a></li>
               <li><a href="/services/family-early-support">Early &amp; family support</a></li>
-              <li><a href="/services/plan-management">Plan management <span class="small">(Coming soon)</span></a></li>
+              <li><a href="/services/plan-management">Plan management</a></li>
             </ul>
           </li>
+
           <li><a href="/locations">Locations</a></li>
           <li><a href="/refer">Refer a participant</a></li>
-          <li><a href="/resources" class="active">Resources</a></li>
+
+          <li class="nav-has-children">
+            <a href="/resources" class="active" aria-current="page">Resources</a>
+            <ul class="nav-submenu" aria-label="Resources submenu">
+              <li><a href="/resources">Resource hub overview</a></li>
+              <li><a href="/resources/ndis-guides">NDIS guides &amp; articles</a></li>
+              <li><a href="/resources/downloads">Downloads library</a></li>
+              <li><a href="/resources/templates">Templates</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/reviews">Reviews</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/careers">Careers</a></li>
+          <li><a href="/complaints">Complaints</a></li>
         </ul>
       </nav>
 
@@ -78,13 +161,16 @@
         <a href="/contact" class="btn btn-primary">Book a free chat</a>
       </div>
 
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation">
+      <button class="nav-toggle" id="navToggle" type="button"
+              aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
         <span></span>
       </button>
+
     </div>
   </header>
 
-  <main>
+  <main id="main">
+
     <section class="hero simple-hero">
       <div class="container hero-inner">
         <div class="hero-text">
@@ -98,7 +184,10 @@
       <div class="container">
 
         <h2>1) Share routines (simple, not perfect)</h2>
-        <p>Write down the basics: preferred wake/sleep times, meal preferences, mobility needs, and what helps when the participant feels overwhelmed.</p>
+        <p>
+          Write down the basics: preferred wake/sleep times, meal preferences, mobility needs,
+          and what helps when the participant feels overwhelmed.
+        </p>
 
         <h2>2) Agree on communication</h2>
         <ul class="hero-highlights">
@@ -108,12 +197,21 @@
         </ul>
 
         <h2>3) Use short handover notes</h2>
-        <p>Even a few lines helps: what went well, what was difficult, and anything to watch for next time. This improves consistency across workers.</p>
+        <p>
+          Even a few lines helps: what went well, what was difficult, and anything to watch for next time.
+          This improves consistency across workers.
+        </p>
 
         <h2>4) Keep changes gentle</h2>
-        <p>Where possible, introduce changes slowly and explain them early. Consistency reduces stress for many participants.</p>
+        <p>
+          Where possible, introduce changes slowly and explain them early.
+          Consistency reduces stress for many participants.
+        </p>
 
-        <p>To learn more about choosing a worker, see our <a href="/resources/support-worker-guide">Support Worker Guide</a>.</p>
+        <p>
+          To learn more about choosing a worker, see our
+          <a href="/resources/support-worker-guide">Support Worker Guide</a>.
+        </p>
 
         <div style="margin-top:1.5rem;">
           <a href="/contact" class="btn btn-primary">Talk to Able Aide</a>
@@ -122,16 +220,22 @@
 
       </div>
     </section>
+
   </main>
 
+  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
       <div class="footer-col">
         <h3>Able Aide</h3>
-        <p>Your Journey, Our Support – warm, person-centred disability supports across Victoria.</p>
-        <p><strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
-           <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a></p>
+        <p>Registered NDIS Provider delivering reliable supports across Melbourne and regional Victoria.</p>
+        <p class="small"><strong>Provider No.:</strong> 4050173180</p>
+        <p>
+          <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
+          <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
+        </p>
       </div>
+
       <div class="footer-col">
         <h3>Quick links</h3>
         <ul class="footer-links">
@@ -140,15 +244,18 @@
           <li><a href="/locations">Locations</a></li>
           <li><a href="/refer">Refer a participant</a></li>
           <li><a href="/resources">Resources</a></li>
-          <li><a href="/faqs">FAQs</a></li>
+          <li><a href="/reviews">Reviews</a></li>
           <li><a href="/careers">Careers</a></li>
           <li><a href="/contact">Contact</a></li>
+          <li><a href="/complaints">Complaints</a></li>
         </ul>
       </div>
+
       <div class="footer-col">
         <h3>Where we support</h3>
         <p>Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton &amp; regional VIC</p>
       </div>
+
       <div class="footer-col">
         <h3>Connect with us</h3>
         <ul class="footer-links">
@@ -171,14 +278,105 @@
     </div>
   </footer>
 
+  <!-- FLOATING CTA -->
+  <div class="floating-cta" id="floatingCta">
+    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button" aria-label="Open support options" aria-expanded="false">
+      <span class="icon">💬</span>
+      <span>Need support?</span>
+    </button>
+
+    <div class="floating-cta-panel" aria-hidden="true">
+      <div class="floating-cta-title">Talk to Able Aide</div>
+      <div class="floating-cta-text">Quick ways to reach us about NDIS supports, referrals or questions.</div>
+      <div class="floating-cta-links">
+        <a href="tel:61435039110" aria-label="Call Able Aide on 0435 039 110">📞 Call 0435 039 110</a>
+        <a href="/contact">✉️ Send an enquiry</a>
+        <a href="/refer">📝 Refer a participant</a>
+      </div>
+    </div>
+  </div>
+
+  <!-- SCRIPTS -->
   <script>
+    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
+
+    // Drawer nav
     const navToggle = document.getElementById("navToggle");
     const mainNav = document.getElementById("mainNav");
-    navToggle.addEventListener("click", () => {
-      const opened = mainNav.classList.toggle("open");
-      navToggle.setAttribute("aria-expanded", opened);
-    });
+    const navOverlay = document.getElementById("navOverlay");
+
+    function openNav() {
+      mainNav.classList.add("open");
+      navToggle.setAttribute("aria-expanded", "true");
+      if (navOverlay) {
+        navOverlay.classList.add("open");
+        navOverlay.setAttribute("aria-hidden", "false");
+      }
+      document.body.classList.add("nav-lock");
+    }
+
+    function closeNav() {
+      mainNav.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      if (navOverlay) {
+        navOverlay.classList.remove("open");
+        navOverlay.setAttribute("aria-hidden", "true");
+      }
+      document.body.classList.remove("nav-lock");
+
+      // Close any open submenus
+      document.querySelectorAll(".nav-has-children.open").forEach(el => el.classList.remove("open"));
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => btn.setAttribute("aria-expanded","false"));
+    }
+
+    if (navToggle && mainNav) {
+      navToggle.addEventListener("click", () => {
+        const opened = mainNav.classList.contains("open");
+        opened ? closeNav() : openNav();
+      });
+
+      if (navOverlay) navOverlay.addEventListener("click", closeNav);
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && mainNav.classList.contains("open")) closeNav();
+      });
+
+      // Close nav on link click (mobile)
+      document.querySelectorAll("#mainNav a").forEach(link => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 900) closeNav();
+        });
+      });
+
+      // Services submenu toggle
+      const parentButtons = document.querySelectorAll(".nav-has-children > .nav-parent-link");
+      parentButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const li = btn.parentElement;
+          const isOpen = li.classList.toggle("open");
+          btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) closeNav();
+      });
+    }
+
+    // Floating CTA accessibility
+    const floatingToggle = document.getElementById("floatingCtaToggle");
+    const floatingCta = document.getElementById("floatingCta");
+    const floatingPanel = floatingCta ? floatingCta.querySelector(".floating-cta-panel") : null;
+
+    if (floatingToggle && floatingCta && floatingPanel) {
+      floatingToggle.addEventListener("click", () => {
+        const isOpen = floatingCta.classList.toggle("open");
+        floatingToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        floatingPanel.setAttribute("aria-hidden", isOpen ? "false" : "true");
+      });
+    }
   </script>
+
 </body>
 </html>

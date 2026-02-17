@@ -2,42 +2,52 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NDIS Resources & Guides – Able Aide Victoria</title>
+  <title>NDIS Resources & Guides Melbourne | Support Coordination & Core Supports – Able Aide</title>
 
-  
-    <!-- Google tag (gtag.js) -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-651FXYJL03"></script>
-    <script>
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-651FXYJL03"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-651FXYJL03');
+  </script>
 
-      gtag('config', 'G-651FXYJL03');
-    </script>
   <!-- Canonical -->
   <link rel="canonical" href="https://ableaide.com.au/resources">
 
   <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- SEO -->
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b3b5a">
+  <meta name="format-detection" content="telephone=no">
+
   <!-- Meta Description -->
   <meta name="description"
-        content="Explore NDIS resources, templates, guides and helpful tools for participants, families, support coordinators and workers across Victoria. Updated regularly.">
+        content="Free NDIS resources, planning guides and templates for participants and Support Coordinators across Melbourne and Victoria. Support Coordination and Core Supports guidance.">
 
   <!-- OpenGraph -->
-  <meta property="og:title" content="NDIS Resources & Guides – Able Aide Victoria">
+  <meta property="og:title" content="NDIS Resources & Guides Melbourne – Able Aide">
   <meta property="og:description"
-        content="Free NDIS guides, templates, forms and local VIC resources for participants and families.">
+        content="Free NDIS guides, templates, forms and local VIC resources for participants, families and Support Coordinators.">
   <meta property="og:image" content="/assets/img/og-image.webp">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ableaide.com.au/resources">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:title" content="NDIS Resources & Guides – Able Aide">
+  <meta name="twitter:title" content="NDIS Resources & Guides Melbourne – Able Aide">
   <meta name="twitter:description"
         content="Downloadable NDIS templates, VIC suburb guides, planning resources and more.">
   <meta name="twitter:image" content="/assets/img/og-image.webp">
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
+  <link rel="shortcut icon" href="/favicon.ico">
 
   <!-- Styles -->
   <link rel="preload" href="/assets/css/style.css" as="style">
@@ -46,35 +56,62 @@
   <!-- Preload logo -->
   <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
 
-  <!-- Small nav animation overrides -->
-  <style>
-    @media (max-width: 900px) {
-      .main-nav {
-        display: block;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.25s ease;
-      }
-      .main-nav.open {
-        max-height: 500px;
-      }
-    }
-  </style>
-
   <!-- Schema (WebPage + Breadcrumb) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebSite",
+        "@id": "https://ableaide.com.au/#website",
+        "url": "https://ableaide.com.au/",
+        "name": "Able Aide",
+        "inLanguage": "en-AU"
+      },
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://ableaide.com.au/#business",
+        "name": "Able Aide",
+        "url": "https://ableaide.com.au/",
+        "logo": "https://ableaide.com.au/assets/img/able-aide-logo.webp",
+        "image": "https://ableaide.com.au/assets/img/og-image.webp",
+        "description": "Able Aide is a Registered NDIS Provider delivering reliable disability supports across Melbourne and Plan Management Australia-wide.",
+        "email": "enquiries@ableaide.com.au",
+        "telephone": "+61435039110",
+        "identifier": "NDIS Provider Number 4050173180",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Melbourne",
+          "addressRegion": "VIC",
+          "addressCountry": "AU"
+        },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Melbourne" },
+          { "@type": "AdministrativeArea", "name": "Victoria" },
+          { "@type": "Country", "name": "Australia" }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/able.aide",
+          "https://www.instagram.com/ableaide/",
+          "https://www.linkedin.com/company/ableaide/",
+          "https://www.tiktok.com/@ableaide",
+          "https://www.youtube.com/@AbleAide",
+          "https://x.com/AbleAideSupport"
+        ]
+      },
+      {
         "@type": "WebPage",
-        "name": "NDIS Resources & Guides – Able Aide Victoria",
+        "@id": "https://ableaide.com.au/resources#webpage",
+        "name": "NDIS Resources & Guides Melbourne – Able Aide",
         "url": "https://ableaide.com.au/resources",
-        "description": "Free NDIS guides, templates, planning tools and helpful local Victorian resources.",
+        "description": "Free NDIS resources, planning guides and templates for participants and Support Coordinators across Melbourne and Victoria.",
+        "isPartOf": { "@id": "https://ableaide.com.au/#website" },
+        "about": { "@id": "https://ableaide.com.au/#business" },
         "inLanguage": "en-AU"
       },
       {
         "@type": "BreadcrumbList",
+        "@id": "https://ableaide.com.au/resources#breadcrumbs",
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -97,12 +134,17 @@
 
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Mobile nav overlay (required for drawer nav) -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
   <!-- GLOBAL TOP TRUST BAR -->
   <div class="top-trust-bar">
     <div class="container top-trust-bar-inner">
       <div class="top-trust-left">
-        <span class="top-trust-badge">NDIS registration in progress</span>
-        <span class="top-trust-badge">Supporting self-managed &amp; plan-managed participants</span>
+        <span class="top-trust-badge">Registered NDIS Provider · Provider No. 4050173180</span>
+        <span class="top-trust-badge">Supporting self-managed, plan-managed &amp; NDIA-managed participants</span>
         <span class="top-trust-badge">Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton &amp; regional VIC</span>
       </div>
       <div class="top-trust-right">
@@ -122,7 +164,6 @@
         <img src="/assets/img/able-aide-logo.webp"
              alt="Able Aide logo"
              class="logo-img"
-             style="height:46px; width:auto; margin-bottom:0.2rem;"
              width="180"
              height="46"
              decoding="async">
@@ -135,27 +176,61 @@
         <ul class="nav-list">
           <li><a href="/about">About</a></li>
 
+          <!-- Services dropdown -->
           <li class="nav-has-children">
-            <a href="/services">Services</a>
-            <ul class="nav-submenu">
+            <button class="nav-parent-link" type="button" aria-haspopup="true" aria-expanded="false">
+              Services
+            </button>
+            <ul class="nav-submenu" aria-label="Services submenu">
+              <li><a href="/services">All services overview</a></li>
+              <li><a href="/services/plan-management">Plan management</a></li>
               <li><a href="/services/personal-care">Personal care &amp; daily living</a></li>
               <li><a href="/services/community-participation">Community participation</a></li>
               <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/allied-health-access">Allied health access</a></li>
               <li><a href="/services/family-early-support">Early &amp; family support</a></li>
-              <li>
-                <a href="/services/plan-management">
-                  Plan management <span class="small">(Coming soon)</span>
-                </a>
-              </li>
             </ul>
           </li>
 
-          <li><a href="/locations">Locations</a></li>
+          <!-- ✅ Locations dropdown -->
+          <li class="nav-has-children">
+            <button class="nav-parent-link" type="button" aria-haspopup="true" aria-expanded="false">
+              Locations
+            </button>
+            <ul class="nav-submenu" aria-label="Locations submenu">
+              <li><a href="/locations">All locations</a></li>
+              <li><a href="/locations/melbourne">Melbourne (CBD &amp; inner)</a></li>
+              <li><a href="/locations/frankston">Frankston</a></li>
+              <li><a href="/locations/dandenong">Dandenong</a></li>
+              <li><a href="/locations/ringwood">Ringwood</a></li>
+              <li><a href="/locations/epping">Epping</a></li>
+              <li><a href="/locations/werribee">Werribee</a></li>
+              <li><a href="/locations/sunshine">Sunshine</a></li>
+              <li><a href="/locations/mornington-peninsula">Mornington Peninsula</a></li>
+            </ul>
+          </li>
+
           <li><a href="/refer">Refer a participant</a></li>
-          <li><a href="/resources" aria-current="page" class="active">Resources</a></li>
+
+          <!-- ✅ Resources dropdown (current page) -->
+          <li class="nav-has-children open">
+            <button class="nav-parent-link" type="button" aria-haspopup="true" aria-expanded="true">
+              Resources
+            </button>
+            <ul class="nav-submenu" aria-label="Resources submenu">
+              <li><a href="/resources" aria-current="page" class="active">All resources</a></li>
+              <li><a href="/resources/goal-setting-guide">NDIS Goal Setting Guide</a></li>
+              <li><a href="/resources/evidence-reports-checklist">Evidence &amp; Reports Checklist</a></li>
+              <li><a href="/resources/support-worker-guide">Support Worker Guide</a></li>
+              <li><a href="/resources/support-worker-family-tips">Tips for Families</a></li>
+              <li><a href="/resources/participant-rights-guide">Participant Rights Guide</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/reviews">Reviews</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/careers">Careers</a></li>
+          <li><a href="/complaints">Complaints</a></li>
         </ul>
       </nav>
 
@@ -174,18 +249,32 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
     <!-- HERO -->
     <section class="hero" style="padding:4rem 0 4rem;">
       <div class="container hero-inner" style="gap:3rem;">
 
         <div class="hero-text">
-          <h1 style="font-size:2.4rem; margin-bottom:1.4rem;">NDIS Resources &amp; Helpful Guides</h1>
+          <h1 style="font-size:2.4rem; margin-bottom:1.4rem;">NDIS Resources &amp; Guides for Melbourne Participants &amp; Coordinators</h1>
           <p style="font-size:1.05rem;">
             Practical, easy-to-understand tools for NDIS participants, families,
-            support coordinators and disability workers across Victoria.
+            Support Coordinators and disability workers across Melbourne and Victoria.
           </p>
+
+          <p style="margin-top:1rem;">
+            Able Aide supports NDIS participants across Melbourne with Support Coordination,
+            Core Supports and practical planning tools. These resources are designed to help
+            families and coordinators navigate the NDIS with more clarity.
+          </p>
+
+          <p style="margin-top:0.9rem;">
+            If you need personalised support, explore our
+            <a href="/services/support-coordination">Support Coordination services in Melbourne</a>
+            or our
+            <a href="/services/personal-care">Core Supports</a>.
+          </p>
+
           <p class="hero-note" style="font-size:1rem; margin-top:1rem;">
             Explore downloadable templates, planning tools, suburb-based guides and expert insights.
           </p>
@@ -253,7 +342,7 @@
                target="_blank" class="card-link" rel="noopener">See details →</a>
           </article>
 
-          <!-- NEW: Internal guides (for crawl + SEO) -->
+          <!-- Internal guides -->
           <article class="card" style="padding:1.4rem;">
             <h3 style="font-size:1.2rem;">NDIS Goal Setting Guide</h3>
             <p>Examples and tips to write clear, meaningful goals for plans and reviews.</p>
@@ -341,7 +430,7 @@
       </div>
     </section>
 
-    <!-- ALL RESOURCE GUIDES (crawl-friendly links) -->
+    <!-- ALL RESOURCE GUIDES -->
     <section class="home-section" style="padding:2.5rem 0;">
       <div class="container">
         <header class="section-header" style="margin-bottom:1.2rem;">
@@ -405,7 +494,7 @@
       <div class="container">
 
         <header class="section-header" style="margin-bottom:2rem;">
-          <h2 style="font-size:2rem; margin-bottom:0.8rem;">Where These Resources Are Most Helpful</h2>
+          <h2 style="font-size:2rem; margin-bottom:0.8rem;">Supporting Melbourne &amp; Regional Victoria Participants</h2>
           <p style="font-size:1.05rem;">Used by families, coordinators and therapists across Victoria.</p>
         </header>
 
@@ -417,6 +506,36 @@
           <li>Geelong · Ballarat · Bendigo · Shepparton</li>
         </ul>
 
+        <p style="margin-top:1rem;">
+          Our Support Coordination and Core Supports teams work across these areas.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="home-section">
+      <div class="container">
+        <header class="section-header">
+          <h2>NDIS Resources FAQs</h2>
+        </header>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>Are these resources free?</h3>
+            <p class="small">Yes. All guides and templates on this page are free to download and use.</p>
+          </article>
+
+          <article class="card">
+            <h3>Can Support Coordinators share these?</h3>
+            <p class="small">Yes. Coordinators are welcome to share our resources with participants and families.</p>
+          </article>
+
+          <article class="card">
+            <h3>Do you provide Support Coordination in Melbourne?</h3>
+            <p class="small">Yes. We provide Support Coordination and Core Supports across Melbourne.</p>
+          </article>
+        </div>
       </div>
     </section>
 
@@ -426,7 +545,7 @@
         <div>
           <h2 style="font-size:2rem;">Need help understanding the NDIS?</h2>
           <p style="font-size:1.05rem;">
-            We explain things simply and support families across Victoria.
+            We explain things simply and support families across Melbourne and Victoria.
           </p>
         </div>
         <div class="final-cta-actions">
@@ -451,6 +570,7 @@
           <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
           <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
         </p>
+        <p class="small"><strong>Provider No.:</strong> 4050173180</p>
       </div>
 
       <div class="footer-col">
@@ -461,8 +581,10 @@
           <li><a href="/locations">Locations</a></li>
           <li><a href="/refer">Refer a participant</a></li>
           <li><a href="/resources">Resources</a></li>
+          <li><a href="/reviews">Reviews</a></li>
           <li><a href="/careers">Careers</a></li>
           <li><a href="/contact">Contact</a></li>
+          <li><a href="/complaints">Complaints</a></li>
         </ul>
       </div>
 
@@ -499,13 +621,11 @@
 
   <!-- FLOATING CTA -->
   <div class="floating-cta" id="floatingCta">
-    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button"
-            aria-label="Open support options"
-            style="padding:0.45rem 0.8rem; box-shadow:0 10px 20px rgba(11,114,133,0.35); font-size:0.85rem;">
+    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button" aria-label="Open support options" aria-expanded="false">
       <span class="icon">💬</span>
       <span>Need support?</span>
     </button>
-    <div class="floating-cta-panel" style="box-shadow:0 12px 28px rgba(15,23,42,0.25);">
+    <div class="floating-cta-panel" aria-hidden="true">
       <div class="floating-cta-title">Talk to Able Aide</div>
       <div class="floating-cta-text">
         Quick ways to reach us about NDIS supports, referrals or questions.
@@ -520,44 +640,102 @@
 
   <!-- SCRIPTS -->
   <script>
-    // Dynamic year
+    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Mobile nav toggle + close on link click
-    (function () {
-      var navToggle = document.getElementById('navToggle');
-      var mainNav = document.getElementById('mainNav');
+    // Drawer nav
+    const navToggle = document.getElementById("navToggle");
+    const mainNav = document.getElementById("mainNav");
+    const navOverlay = document.getElementById("navOverlay");
 
-      if (navToggle && mainNav) {
-        navToggle.addEventListener('click', function () {
-          var isOpen = mainNav.classList.contains('open');
-          mainNav.classList.toggle('open', !isOpen);
-          navToggle.setAttribute('aria-expanded', String(!isOpen));
-        });
+    function closeAllDropdowns(exceptLi = null) {
+      document.querySelectorAll(".nav-has-children").forEach(li => {
+        if (li !== exceptLi) {
+          li.classList.remove("open");
+          const btn = li.querySelector(".nav-parent-link");
+          if (btn) btn.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
 
-        var navLinks = mainNav.querySelectorAll('a');
-        navLinks.forEach(function (link) {
-          link.addEventListener('click', function () {
-            if (window.innerWidth <= 900) {
-              mainNav.classList.remove('open');
-              navToggle.setAttribute('aria-expanded', 'false');
-            }
-          });
-        });
+    function openNav() {
+      mainNav.classList.add("open");
+      if (navOverlay) {
+        navOverlay.classList.add("open");
+        navOverlay.setAttribute("aria-hidden", "false");
       }
-    })();
+      navToggle.setAttribute("aria-expanded", "true");
+      document.body.classList.add("nav-lock");
+    }
 
-    // Floating CTA toggle
-    (function () {
-      var floatingCta = document.getElementById('floatingCta');
-      var floatingToggle = document.getElementById('floatingCtaToggle');
-
-      if (floatingCta && floatingToggle) {
-        floatingToggle.addEventListener('click', function () {
-          floatingCta.classList.toggle('open');
-        });
+    function closeNav() {
+      mainNav.classList.remove("open");
+      if (navOverlay) {
+        navOverlay.classList.remove("open");
+        navOverlay.setAttribute("aria-hidden", "true");
       }
-    })();
+      navToggle.setAttribute("aria-expanded", "false");
+      document.body.classList.remove("nav-lock");
+
+      closeAllDropdowns();
+    }
+
+    if (navToggle && mainNav) {
+      navToggle.addEventListener("click", () => {
+        const opened = mainNav.classList.contains("open");
+        opened ? closeNav() : openNav();
+      });
+
+      if (navOverlay) navOverlay.addEventListener("click", closeNav);
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          if (mainNav.classList.contains("open")) closeNav();
+          else closeAllDropdowns();
+        }
+      });
+
+      document.querySelectorAll("#mainNav a").forEach(link => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 900) closeNav();
+        });
+      });
+
+      // ✅ Dropdown toggles (Services, Locations, Resources)
+      const parentButtons = document.querySelectorAll(".nav-has-children > .nav-parent-link");
+      parentButtons.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          const li = btn.parentElement;
+          const isOpen = li.classList.contains("open");
+          closeAllDropdowns(li);
+          li.classList.toggle("open", !isOpen);
+          btn.setAttribute("aria-expanded", (!isOpen) ? "true" : "false");
+        });
+      });
+
+      // Close dropdowns on outside click (desktop)
+      document.addEventListener("click", (e) => {
+        if (!e.target.closest(".nav-has-children")) closeAllDropdowns();
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) closeNav();
+      });
+    }
+
+    // Floating CTA accessibility
+    const floatingToggle = document.getElementById("floatingCtaToggle");
+    const floatingCta = document.getElementById("floatingCta");
+    const floatingPanel = floatingCta ? floatingCta.querySelector(".floating-cta-panel") : null;
+
+    if (floatingToggle && floatingCta && floatingPanel) {
+      floatingToggle.addEventListener("click", () => {
+        const isOpen = floatingCta.classList.toggle("open");
+        floatingToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        floatingPanel.setAttribute("aria-hidden", isOpen ? "false" : "true");
+      });
+    }
   </script>
 
 </body>

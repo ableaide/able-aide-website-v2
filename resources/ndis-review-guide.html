@@ -17,8 +17,15 @@
   <!-- Canonical -->
   <link rel="canonical" href="https://ableaide.com.au/resources/ndis-review-guide">
 
+  <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- SEO -->
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b3b5a">
+  <meta name="format-detection" content="telephone=no">
+
+  <!-- Meta Description -->
   <meta name="description" content="A clear NDIS plan review guide to help participants and families prepare evidence, set practical goals, and feel confident ahead of a review.">
 
   <!-- OpenGraph -->
@@ -34,27 +41,18 @@
   <meta name="twitter:description" content="Step-by-step NDIS plan review preparation: evidence, goals, and what to expect.">
   <meta name="twitter:image" content="/assets/img/og-image.webp">
 
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
   <!-- Styles -->
   <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
 
   <!-- Preload logo -->
   <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
-
-  <!-- Mobile nav animation -->
-  <style>
-    @media (max-width: 900px) {
-      .main-nav {
-        display: block;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.25s ease;
-      }
-      .main-nav.open {
-        max-height: 500px;
-      }
-    }
-  </style>
 
   <!-- Schema: Article + Breadcrumb -->
   <script type="application/ld+json">
@@ -95,13 +93,19 @@
 </head>
 
 <body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Mobile nav overlay (required for drawer nav) -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
   <!-- GLOBAL TOP TRUST BAR -->
   <div class="top-trust-bar">
     <div class="container top-trust-bar-inner">
       <div class="top-trust-left">
-        <span class="top-trust-badge">NDIS registration in progress</span>
+        <span class="top-trust-badge">Registered NDIS Provider · Provider No. 4050173180</span>
         <span class="top-trust-badge">Supporting self-managed &amp; plan-managed participants</span>
-        <span class="top-trust-badge">Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton &amp; regional VIC</span>
+        <span class="top-trust-badge">Greater Melbourne &amp; Regional VIC</span>
       </div>
       <div class="top-trust-right">
         <span class="top-trust-phone">
@@ -120,7 +124,6 @@
         <img src="/assets/img/able-aide-logo.webp"
              alt="Able Aide logo"
              class="logo-img"
-             style="height:46px; width:auto; margin-bottom:0.2rem;"
              width="180"
              height="46"
              decoding="async">
@@ -131,20 +134,29 @@
       <nav class="main-nav" aria-label="Main Navigation" id="mainNav">
         <ul class="nav-list">
           <li><a href="/about">About</a></li>
+
+          <!-- ✅ Mobile-friendly Services submenu -->
           <li class="nav-has-children">
-            <a href="/services">Services</a>
-            <ul class="nav-submenu">
+            <button class="nav-parent-link" type="button" aria-haspopup="true" aria-expanded="false">
+              Services
+            </button>
+            <ul class="nav-submenu" aria-label="Services submenu">
+              <li><a href="/services">All services overview</a></li>
               <li><a href="/services/personal-care">Personal care &amp; daily living</a></li>
               <li><a href="/services/community-participation">Community participation</a></li>
               <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/allied-health-access">Allied health access</a></li>
               <li><a href="/services/family-early-support">Early &amp; family support</a></li>
-              <li><a href="/services/plan-management">Plan management <span class="small">(Coming soon)</span></a></li>
+              <li><a href="/services/plan-management">Plan management</a></li>
             </ul>
           </li>
+
           <li><a href="/locations">Locations</a></li>
           <li><a href="/refer">Refer a participant</a></li>
-          <li><a href="/resources" aria-current="page" class="active">Resources</a></li>
+
+          <li><a href="/resources" class="active" aria-current="page">Resources</a></li>
+
+          <li><a href="/reviews">Reviews</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/careers">Careers</a></li>
         </ul>
@@ -155,6 +167,7 @@
         <a href="/contact" class="btn btn-primary">Book a free chat</a>
       </div>
 
+      <!-- MOBILE NAV TOGGLE -->
       <button class="nav-toggle" id="navToggle" type="button"
               aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
         <span></span>
@@ -163,7 +176,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
     <!-- HERO -->
     <section class="hero" style="padding:4rem 0 3.5rem;">
@@ -171,7 +184,9 @@
 
         <div class="hero-text">
           <h1 style="font-size:2.35rem; margin-bottom:1.1rem;">NDIS Plan Review Guide</h1>
-          <p style="font-size:1.05rem;">Step-by-step preparation for an NDIS plan review, including evidence, goals and practical tips for families and participants.</p>
+          <p style="font-size:1.05rem;">
+            Step-by-step preparation for an NDIS plan review, including evidence, goals and practical tips for families and participants.
+          </p>
           <p class="hero-note" style="font-size:1rem; margin-top:1rem;">
             If you would like support tailored to your goals, you can <a href="/contact">talk to our team</a>.
           </p>
@@ -203,10 +218,9 @@
         <header class="section-header" style="margin-bottom:1.2rem;">
           <h2 style="font-size:1.85rem; margin-bottom:0.6rem;">What is an NDIS plan review?</h2>
         </header>
-        
-<p>An NDIS plan review checks whether the current plan is meeting the participant’s needs and goals. Reviews can be scheduled or requested when circumstances change.</p>
-<p class="small">If you’re preparing for a review, it can help to start gathering evidence early and writing down day-to-day impacts.</p>
 
+        <p>An NDIS plan review checks whether the current plan is meeting the participant’s needs and goals. Reviews can be scheduled or requested when circumstances change.</p>
+        <p class="small">If you’re preparing for a review, it can help to start gathering evidence early and writing down day-to-day impacts.</p>
       </div>
     </section>
 
@@ -215,23 +229,27 @@
         <header class="section-header" style="margin-bottom:1.2rem;">
           <h2 style="font-size:1.85rem; margin-bottom:0.6rem;">What evidence is helpful?</h2>
         </header>
-        
-<p>Evidence does not need to be complicated. Clear examples and recent reports are often most useful.</p>
-<div class="card-grid" style="gap:1.6rem; margin-top:1.2rem;">
-  <article class="card" style="padding:1.4rem;">
-    <h3 style="font-size:1.2rem;">Allied health reports</h3>
-    <p>Therapy reports, assessments, and recommendations that connect to functional needs and goals.</p>
-  </article>
-  <article class="card" style="padding:1.4rem;">
-    <h3 style="font-size:1.2rem;">Support observations</h3>
-    <p>Notes on what support is required, what happens without support, and what’s changed over time.</p>
-  </article>
-  <article class="card" style="padding:1.4rem;">
-    <h3 style="font-size:1.2rem;">Daily living impacts</h3>
-    <p>Examples from routines: personal care, safety, participation, behaviour, sensory needs, and fatigue.</p>
-  </article>
-</div>
 
+        <p>Evidence does not need to be complicated. Clear examples and recent reports are often most useful.</p>
+
+        <div class="card-grid" style="gap:1.6rem; margin-top:1.2rem;">
+          <article class="card" style="padding:1.4rem;">
+            <h3 style="font-size:1.2rem;">Allied health reports</h3>
+            <p>Therapy reports, assessments, and recommendations that connect to functional needs and goals.</p>
+          </article>
+          <article class="card" style="padding:1.4rem;">
+            <h3 style="font-size:1.2rem;">Support observations</h3>
+            <p>Notes on what support is required, what happens without support, and what’s changed over time.</p>
+          </article>
+          <article class="card" style="padding:1.4rem;">
+            <h3 style="font-size:1.2rem;">Daily living impacts</h3>
+            <p>Examples from routines: personal care, safety, participation, behaviour, sensory needs, and fatigue.</p>
+          </article>
+        </div>
+
+        <p style="margin-top:1.2rem;">
+          Also see our <a href="/resources/evidence-reports-checklist">Evidence &amp; Reports Checklist</a>.
+        </p>
       </div>
     </section>
 
@@ -240,14 +258,17 @@
         <header class="section-header" style="margin-bottom:1.2rem;">
           <h2 style="font-size:1.85rem; margin-bottom:0.6rem;">Setting clear, practical goals</h2>
         </header>
-        
-<p>Goals work best when they reflect what matters most to the participant and family. They can cover daily living, community participation, independence, wellbeing, communication, and maintaining safe routines.</p>
-<ul class="hero-highlights" style="margin-top:1rem;">
-  <li>Keep goals specific and meaningful</li>
-  <li>Link goals to the supports you actually need</li>
-  <li>Include safety, sustainability, and participation where relevant</li>
-</ul>
 
+        <p>Goals work best when they reflect what matters most to the participant and family. They can cover daily living, community participation, independence, wellbeing, communication, and maintaining safe routines.</p>
+        <ul class="hero-highlights" style="margin-top:1rem;">
+          <li>Keep goals specific and meaningful</li>
+          <li>Link goals to the supports you actually need</li>
+          <li>Include safety, sustainability, and participation where relevant</li>
+        </ul>
+
+        <p style="margin-top:1.2rem;">
+          Need examples? See our <a href="/resources/goal-setting-guide">NDIS Goal Setting Guide</a>.
+        </p>
       </div>
     </section>
 
@@ -256,13 +277,12 @@
         <header class="section-header" style="margin-bottom:1.2rem;">
           <h2 style="font-size:1.85rem; margin-bottom:0.6rem;">How Able Aide can help around a review</h2>
         </header>
-        
-<p>We can support families by providing clear support summaries, communicating with coordinators, and maintaining continuity of care before and after a plan change.</p>
-<p style="margin-top:1rem;">
-  <a href="/contact" class="btn btn-primary">Talk to us</a>
-  <a href="/services/support-coordination" class="btn btn-outline" style="margin-left:0.6rem;">Support coordination</a>
-</p>
 
+        <p>We can support families by providing clear support summaries, communicating with coordinators, and maintaining continuity of care before and after a plan change.</p>
+        <p style="margin-top:1rem;">
+          <a href="/contact" class="btn btn-primary">Talk to us</a>
+          <a href="/services/support-coordination" class="btn btn-outline" style="margin-left:0.6rem;">Support coordination</a>
+        </p>
       </div>
     </section>
 
@@ -288,10 +308,8 @@
 
       <div class="footer-col">
         <h3>Able Aide</h3>
-        <p>
-          Your Journey, Our Support – warm, person-centred disability supports across Greater Melbourne
-          and regional Victoria.
-        </p>
+        <p>Registered NDIS Provider delivering reliable supports across Melbourne and regional Victoria.</p>
+        <p class="small"><strong>Provider No.:</strong> 4050173180</p>
         <p>
           <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
           <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
@@ -335,7 +353,7 @@
 
     <div class="container footer-bottom">
       <p class="small">
-        © <span id="year"></span> Able Aide. All rights reserved. ·
+        © <span id="year"></span> Able Aide ·
         <a href="/privacy-policy" class="footer-link">Privacy Policy</a> ·
         <a href="/terms-of-service" class="footer-link">Terms of Service</a>
       </p>
@@ -345,12 +363,11 @@
   <!-- FLOATING CTA -->
   <div class="floating-cta" id="floatingCta">
     <button class="floating-cta-toggle" id="floatingCtaToggle" type="button"
-            aria-label="Open support options"
-            style="padding:0.45rem 0.8rem; box-shadow:0 10px 20px rgba(11,114,133,0.35); font-size:0.85rem;">
+            aria-label="Open support options" aria-expanded="false">
       <span class="icon">💬</span>
       <span>Need support?</span>
     </button>
-    <div class="floating-cta-panel" style="box-shadow:0 12px 28px rgba(15,23,42,0.25);">
+    <div class="floating-cta-panel" aria-hidden="true">
       <div class="floating-cta-title">Talk to Able Aide</div>
       <div class="floating-cta-text">
         Quick ways to reach us about NDIS supports, referrals or questions.
@@ -365,44 +382,77 @@
 
   <!-- SCRIPTS -->
   <script>
-    // Dynamic year
+    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Mobile nav toggle + close on link click
-    (function () {
-      var navToggle = document.getElementById('navToggle');
-      var mainNav = document.getElementById('mainNav');
+    // Drawer nav
+    const navToggle = document.getElementById("navToggle");
+    const mainNav = document.getElementById("mainNav");
+    const navOverlay = document.getElementById("navOverlay");
 
-      if (navToggle && mainNav) {
-        navToggle.addEventListener('click', function () {
-          var isOpen = mainNav.classList.contains('open');
-          mainNav.classList.toggle('open', !isOpen);
-          navToggle.setAttribute('aria-expanded', String(!isOpen));
+    function openNav() {
+      mainNav.classList.add("open");
+      navOverlay.classList.add("open");
+      navToggle.setAttribute("aria-expanded", "true");
+      navOverlay.setAttribute("aria-hidden", "false");
+      document.body.classList.add("nav-lock");
+    }
+
+    function closeNav() {
+      mainNav.classList.remove("open");
+      navOverlay.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navOverlay.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("nav-lock");
+
+      document.querySelectorAll(".nav-has-children.open").forEach(el => el.classList.remove("open"));
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => btn.setAttribute("aria-expanded","false"));
+    }
+
+    if (navToggle && mainNav) {
+      navToggle.addEventListener("click", () => {
+        const opened = mainNav.classList.contains("open");
+        opened ? closeNav() : openNav();
+      });
+
+      if (navOverlay) navOverlay.addEventListener("click", closeNav);
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && mainNav.classList.contains("open")) closeNav();
+      });
+
+      document.querySelectorAll("#mainNav a").forEach(link => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 900) closeNav();
         });
+      });
 
-        var navLinks = mainNav.querySelectorAll('a');
-        navLinks.forEach(function (link) {
-          link.addEventListener('click', function () {
-            if (window.innerWidth <= 900) {
-              mainNav.classList.remove('open');
-              navToggle.setAttribute('aria-expanded', 'false');
-            }
-          });
+      const parentButtons = document.querySelectorAll(".nav-has-children > .nav-parent-link");
+      parentButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const li = btn.parentElement;
+          const isOpen = li.classList.toggle("open");
+          btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
         });
-      }
-    })();
+      });
 
-    // Floating CTA toggle
-    (function () {
-      var floatingCta = document.getElementById('floatingCta');
-      var floatingToggle = document.getElementById('floatingCtaToggle');
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) closeNav();
+      });
+    }
 
-      if (floatingCta && floatingToggle) {
-        floatingToggle.addEventListener('click', function () {
-          floatingCta.classList.toggle('open');
-        });
-      }
-    })();
+    // Floating CTA accessibility
+    const floatingToggle = document.getElementById("floatingCtaToggle");
+    const floatingCta = document.getElementById("floatingCta");
+    const floatingPanel = floatingCta ? floatingCta.querySelector(".floating-cta-panel") : null;
+
+    if (floatingToggle && floatingCta && floatingPanel) {
+      floatingToggle.addEventListener("click", () => {
+        const isOpen = floatingCta.classList.toggle("open");
+        floatingToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        floatingPanel.setAttribute("aria-hidden", isOpen ? "false" : "true");
+      });
+    }
   </script>
 
 </body>

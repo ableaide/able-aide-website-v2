@@ -1,0 +1,29 @@
+# --------------------------------------------
+# Able Aide — Cloudflare Pages _redirects
+# --------------------------------------------
+
+# 1) CANONICAL: Strip .html (avoid duplicate URLs)
+#    (keeps /about.html working but redirects to /about)
+#    Put BEFORE any rewrites
+/*.html    /:splat    301
+
+# 2) Optional: strip /index (if anyone visits /about/index)
+/:index    /          301
+
+# 3) Pretty URL rewrites (serve the real .html files)
+#    Only needed if Cloudflare isn't already mapping these.
+#    If your /about works already without this section, you can delete this block.
+#    Keep these as 200 rewrites.
+#/          /index.html                      200
+/about      /about.html                      200
+/services   /services.html                   200
+/locations  /locations.html                  200
+/refer      /refer.html                      200
+/resources  /resources.html                  200
+/contact    /contact.html                    200
+/careers    /careers.html                    200
+/reviews    /reviews.html                    200
+/faqs       /faqs.html                       200
+/privacy-policy   /privacy-policy.html       200
+/terms-of-service /terms-of-service.html     200
+/complaints       /complaints.html           200

@@ -18,6 +18,10 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b3b5a">
+  <meta name="format-detection" content="telephone=no">
+
   <meta name="description" content="A practical Melbourne NDIS guide for participants and families. Learn about local supports, therapies, transport, and planning tips across Greater Melbourne.">
 
   <!-- OpenGraph -->
@@ -33,27 +37,16 @@
   <meta name="twitter:description" content="Local NDIS information and support options across Melbourne and surrounding suburbs.">
   <meta name="twitter:image" content="/assets/img/og-image.webp">
 
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
   <!-- Styles -->
   <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
-
-  <!-- Preload logo -->
   <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
-
-  <!-- Mobile nav animation -->
-  <style>
-    @media (max-width: 900px) {
-      .main-nav {
-        display: block;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.25s ease;
-      }
-      .main-nav.open {
-        max-height: 500px;
-      }
-    }
-  </style>
 
   <!-- Schema: Article + Breadcrumb -->
   <script type="application/ld+json">
@@ -94,13 +87,19 @@
 </head>
 
 <body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- overlay for mobile nav -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
   <!-- GLOBAL TOP TRUST BAR -->
   <div class="top-trust-bar">
     <div class="container top-trust-bar-inner">
       <div class="top-trust-left">
-        <span class="top-trust-badge">NDIS registration in progress</span>
+        <span class="top-trust-badge">Registered NDIS Provider · Provider No. 4050173180</span>
         <span class="top-trust-badge">Supporting self-managed &amp; plan-managed participants</span>
-        <span class="top-trust-badge">Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton &amp; regional VIC</span>
+        <span class="top-trust-badge">Greater Melbourne &amp; Regional VIC</span>
       </div>
       <div class="top-trust-right">
         <span class="top-trust-phone">
@@ -119,9 +118,6 @@
         <img src="/assets/img/able-aide-logo.webp"
              alt="Able Aide logo"
              class="logo-img"
-             style="height:46px; width:auto; margin-bottom:0.2rem;"
-             width="180"
-             height="46"
              decoding="async">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
@@ -130,20 +126,25 @@
       <nav class="main-nav" aria-label="Main Navigation" id="mainNav">
         <ul class="nav-list">
           <li><a href="/about">About</a></li>
+
           <li class="nav-has-children">
-            <a href="/services">Services</a>
-            <ul class="nav-submenu">
+            <button class="nav-parent-link" type="button" aria-haspopup="true" aria-expanded="false">
+              Services
+            </button>
+            <ul class="nav-submenu" aria-label="Services submenu">
+              <li><a href="/services">All services overview</a></li>
+              <li><a href="/services/plan-management">Plan management</a></li>
               <li><a href="/services/personal-care">Personal care &amp; daily living</a></li>
               <li><a href="/services/community-participation">Community participation</a></li>
               <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/allied-health-access">Allied health access</a></li>
               <li><a href="/services/family-early-support">Early &amp; family support</a></li>
-              <li><a href="/services/plan-management">Plan management <span class="small">(Coming soon)</span></a></li>
             </ul>
           </li>
+
           <li><a href="/locations">Locations</a></li>
           <li><a href="/refer">Refer a participant</a></li>
-          <li><a href="/resources" aria-current="page" class="active">Resources</a></li>
+          <li><a href="/resources" class="active">Resources</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/careers">Careers</a></li>
         </ul>
@@ -154,15 +155,14 @@
         <a href="/contact" class="btn btn-primary">Book a free chat</a>
       </div>
 
-      <button class="nav-toggle" id="navToggle" type="button"
-              aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
       </button>
 
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
     <!-- HERO -->
     <section class="hero" style="padding:4rem 0 3.5rem;">
@@ -170,107 +170,128 @@
 
         <div class="hero-text">
           <h1 style="font-size:2.35rem; margin-bottom:1.1rem;">Melbourne NDIS Guide</h1>
-          <p style="font-size:1.05rem;">A practical guide for participants, families and coordinators looking for local NDIS support options across Greater Melbourne.</p>
+          <p style="font-size:1.05rem;">
+            A practical guide for participants, families and coordinators looking for local NDIS support options
+            across Greater Melbourne.
+          </p>
           <p class="hero-note" style="font-size:1rem; margin-top:1rem;">
-            If you would like support tailored to your goals, you can <a href="/contact">talk to our team</a>.
+            If you’d like support tailored to your goals, you can <a href="/contact">talk to our team</a>.
           </p>
         </div>
 
-        <div class="hero-image">
-          <div class="hero-card" style="padding:1.6rem;">
-            <img
-              src="/assets/img/able-aide-ndis-general-disability-support-1.webp"
-              alt="NDIS supports and resources"
-              class="hero-img"
-              style="border-radius:14px; margin-bottom:1.2rem; width:100%;"
-              loading="lazy"
-              decoding="async">
-            <h2 style="font-size:1.25rem;">Quick links</h2>
-            <ul class="hero-highlights" style="margin-top:1rem;">
-              <li><a href="/resources" style="text-decoration:underline;">Back to Resources</a></li>
-              <li><a href="/services" style="text-decoration:underline;">Explore Services</a></li>
-              <li><a href="/contact" style="text-decoration:underline;">Book a free chat</a></li>
-            </ul>
-          </div>
-        </div>
+        <aside class="hero-card" style="padding:1.6rem;">
+          <img
+            src="/assets/img/able-aide-ndis-general-disability-support-1.webp"
+            alt="NDIS supports and resources"
+            class="hero-img"
+            style="border-radius:14px; margin-bottom:1.2rem; width:100%;"
+            loading="lazy"
+            decoding="async">
+
+          <h2 class="small">Quick links</h2>
+          <ul class="hero-highlights" style="margin-top:1rem;">
+            <li><a href="/resources">Back to Resources</a></li>
+            <li><a href="/services">Explore Services</a></li>
+            <li><a href="/contact">Book a free chat</a></li>
+          </ul>
+        </aside>
 
       </div>
     </section>
 
+    <!-- SECTION: Understanding supports -->
     <section class="home-section" style="padding:2.6rem 0;">
       <div class="container">
         <header class="section-header" style="margin-bottom:1.2rem;">
           <h2 style="font-size:1.85rem; margin-bottom:0.6rem;">Understanding NDIS supports in Melbourne</h2>
         </header>
-        
-<p>Melbourne has a wide range of NDIS-funded supports. The best outcomes usually come from supports that match the participant’s routines, communication preferences, culture, and goals.</p>
-<div class="card-grid" style="gap:1.6rem; margin-top:1.2rem;">
-  <article class="card" style="padding:1.4rem;">
-    <h3 style="font-size:1.2rem;">Core supports</h3>
-    <p>Help with daily living, personal care, and community participation, depending on needs and goals.</p>
-  </article>
-  <article class="card" style="padding:1.4rem;">
-    <h3 style="font-size:1.2rem;">Capacity Building</h3>
-    <p>Supports that build independence, skills, and confidence—often alongside therapists and coordinators.</p>
-  </article>
-  <article class="card" style="padding:1.4rem;">
-    <h3 style="font-size:1.2rem;">Allied health access</h3>
-    <p>Help coordinating therapy appointments and accessing evidence and reports when appropriate.</p>
-  </article>
-</div>
+
+        <p>
+          Melbourne has a wide range of NDIS-funded supports. The best outcomes usually come from supports that match
+          the participant’s routines, communication preferences, culture, and goals.
+        </p>
+
+        <div class="card-grid" style="gap:1.6rem; margin-top:1.2rem;">
+          <article class="card" style="padding:1.4rem;">
+            <h3 style="font-size:1.2rem;">Core supports</h3>
+            <p>Help with daily living, personal care, and community participation, depending on needs and goals.</p>
+          </article>
+
+          <article class="card" style="padding:1.4rem;">
+            <h3 style="font-size:1.2rem;">Capacity Building</h3>
+            <p>Supports that build independence, skills, and confidence—often alongside therapists and coordinators.</p>
+          </article>
+
+          <article class="card" style="padding:1.4rem;">
+            <h3 style="font-size:1.2rem;">Allied health access</h3>
+            <p>Help coordinating therapy appointments and accessing evidence and reports when appropriate.</p>
+          </article>
+        </div>
 
       </div>
     </section>
 
+    <!-- SECTION: Areas -->
     <section class="home-section" style="padding:2.6rem 0;">
       <div class="container">
         <header class="section-header" style="margin-bottom:1.2rem;">
           <h2 style="font-size:1.85rem; margin-bottom:0.6rem;">Melbourne areas commonly supported</h2>
         </header>
-        
-<p>Participants and families access NDIS supports across Greater Melbourne, including:</p>
-<ul class="regions-list" style="font-size:1.05rem; line-height:1.75;">
-  <li>Frankston &amp; Mornington Peninsula</li>
-  <li>Dandenong &amp; south-east suburbs</li>
-  <li>Ringwood &amp; eastern suburbs</li>
-  <li>Epping &amp; northern suburbs</li>
-  <li>Werribee &amp; western suburbs</li>
-  <li>Sunshine &amp; Brimbank area</li>
-</ul>
-<p class="small">Availability can vary depending on support needs and worker capacity. If you’re unsure, <a href="/contact">contact us</a> and we’ll confirm quickly.</p>
+
+        <p>Participants and families access NDIS supports across Greater Melbourne, including:</p>
+        <ul class="regions-list" style="font-size:1.05rem; line-height:1.75;">
+          <li>Frankston &amp; Mornington Peninsula</li>
+          <li>Dandenong &amp; south-east suburbs</li>
+          <li>Ringwood &amp; eastern suburbs</li>
+          <li>Epping &amp; northern suburbs</li>
+          <li>Werribee &amp; western suburbs</li>
+          <li>Sunshine &amp; Brimbank area</li>
+        </ul>
+
+        <p class="small">
+          Availability can vary depending on support needs and worker capacity. If you’re unsure,
+          <a href="/contact">contact us</a> and we’ll confirm quickly.
+        </p>
 
       </div>
     </section>
 
+    <!-- SECTION: Choosing a provider -->
     <section class="home-section" style="padding:2.6rem 0;">
       <div class="container">
         <header class="section-header" style="margin-bottom:1.2rem;">
           <h2 style="font-size:1.85rem; margin-bottom:0.6rem;">Choosing a support provider in Melbourne</h2>
         </header>
-        
-<p>When selecting an NDIS provider, it helps to look for:</p>
-<ul class="hero-highlights" style="margin-top:1rem;">
-  <li>Clear, timely communication with families and coordinators</li>
-  <li>Consistent support workers matched to preferences</li>
-  <li>Respect for culture, routines, and communication style</li>
-  <li>Transparent pricing aligned with the NDIS Price Guide</li>
-  <li>Safe worker screening and professional boundaries</li>
-</ul>
+
+        <p>When selecting an NDIS provider, it helps to look for:</p>
+        <ul class="hero-highlights" style="margin-top:1rem;">
+          <li>Clear, timely communication with families and coordinators</li>
+          <li>Consistent support workers matched to preferences</li>
+          <li>Respect for culture, routines, and communication style</li>
+          <li>Transparent pricing aligned with the NDIS Price Guide</li>
+          <li>Safe worker screening and professional boundaries</li>
+        </ul>
 
       </div>
     </section>
 
+    <!-- SECTION: Able Aide -->
     <section class="home-section" style="padding:2.6rem 0;">
       <div class="container">
         <header class="section-header" style="margin-bottom:1.2rem;">
           <h2 style="font-size:1.85rem; margin-bottom:0.6rem;">How Able Aide can support you</h2>
         </header>
-        
-<p>Able Aide provides warm, person-centred disability support across Melbourne for self-managed and plan-managed participants. We focus on calm, respectful supports that fit real life—at home and in the community.</p>
-<p style="margin-top:1rem;">
-  <a href="/services" class="btn btn-outline">Explore services</a>
-  <a href="/contact" class="btn btn-primary" style="margin-left:0.6rem;">Book a free chat</a>
-</p>
+
+        <p>
+          Able Aide provides warm, person-centred disability support across Melbourne for self-managed and plan-managed participants.
+          We focus on calm, respectful supports that fit real life—at home and in the community.
+        </p>
+
+        <p style="margin-top:1rem;">
+          <a href="/services" class="btn btn-outline">Explore services</a>
+          <a href="/services/support-coordination" class="btn btn-outline" style="margin-left:0.6rem;">Support coordination</a>
+          <a href="/contact" class="btn btn-primary" style="margin-left:0.6rem;">Book a free chat</a>
+        </p>
 
       </div>
     </section>
@@ -297,10 +318,8 @@
 
       <div class="footer-col">
         <h3>Able Aide</h3>
-        <p>
-          Your Journey, Our Support – warm, person-centred disability supports across Greater Melbourne
-          and regional Victoria.
-        </p>
+        <p>Registered NDIS Provider delivering reliable supports across Melbourne and regional Victoria.</p>
+        <p class="small"><strong>Provider No.:</strong> 4050173180</p>
         <p>
           <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
           <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
@@ -336,7 +355,7 @@
           <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank" rel="noopener">LinkedIn</a></li>
           <li><a href="https://www.tiktok.com/@ableaide" target="_blank" rel="noopener">TikTok</a></li>
           <li><a href="https://www.youtube.com/@AbleAide" target="_blank" rel="noopener">YouTube</a></li>
-          <li><a href="https://x.com/AbleAideSupport" target="_blank" rel="noopener">X (Twitter)</a></li>
+          <li><a href="https://x.com/AbleAideSupport" target="_blank" rel="noopener">X</a></li>
         </ul>
       </div>
 
@@ -353,65 +372,91 @@
 
   <!-- FLOATING CTA -->
   <div class="floating-cta" id="floatingCta">
-    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button"
-            aria-label="Open support options"
-            style="padding:0.45rem 0.8rem; box-shadow:0 10px 20px rgba(11,114,133,0.35); font-size:0.85rem;">
-      <span class="icon">💬</span>
-      <span>Need support?</span>
+    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button" aria-expanded="false">
+      <span class="icon">💬</span><span>Need support?</span>
     </button>
-    <div class="floating-cta-panel" style="box-shadow:0 12px 28px rgba(15,23,42,0.25);">
+    <div class="floating-cta-panel" aria-hidden="true">
       <div class="floating-cta-title">Talk to Able Aide</div>
-      <div class="floating-cta-text">
-        Quick ways to reach us about NDIS supports, referrals or questions.
-      </div>
+      <div class="floating-cta-text">Quick ways to reach us.</div>
       <div class="floating-cta-links">
-        <a href="tel:61435039110" aria-label="Call Able Aide on 0435 039 110">📞 Call 0435 039 110</a>
-        <a href="/contact">✉️ Send an enquiry</a>
+        <a href="tel:61435039110">📞 Call 0435 039 110</a>
+        <a href="mailto:enquiries@ableaide.com.au">✉️ General enquiries</a>
         <a href="/refer">📝 Refer a participant</a>
+        <a href="/contact">📩 Send an enquiry</a>
       </div>
     </div>
   </div>
 
   <!-- SCRIPTS -->
   <script>
-    // Dynamic year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Mobile nav toggle + close on link click
-    (function () {
-      var navToggle = document.getElementById('navToggle');
-      var mainNav = document.getElementById('mainNav');
+    const navToggle = document.getElementById("navToggle");
+    const mainNav = document.getElementById("mainNav");
+    const navOverlay = document.getElementById("navOverlay");
 
-      if (navToggle && mainNav) {
-        navToggle.addEventListener('click', function () {
-          var isOpen = mainNav.classList.contains('open');
-          mainNav.classList.toggle('open', !isOpen);
-          navToggle.setAttribute('aria-expanded', String(!isOpen));
+    function openNav() {
+      mainNav.classList.add("open");
+      navOverlay.classList.add("open");
+      navToggle.setAttribute("aria-expanded", "true");
+      navOverlay.setAttribute("aria-hidden", "false");
+      document.body.classList.add("nav-lock");
+    }
+
+    function closeNav() {
+      mainNav.classList.remove("open");
+      navOverlay.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navOverlay.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("nav-lock");
+
+      document.querySelectorAll(".nav-has-children.open").forEach(el => el.classList.remove("open"));
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => btn.setAttribute("aria-expanded","false"));
+    }
+
+    if (navToggle && mainNav) {
+      navToggle.addEventListener("click", () => {
+        const opened = mainNav.classList.contains("open");
+        opened ? closeNav() : openNav();
+      });
+
+      if (navOverlay) navOverlay.addEventListener("click", closeNav);
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && mainNav.classList.contains("open")) closeNav();
+      });
+
+      document.querySelectorAll("#mainNav a").forEach(link => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 900) closeNav();
         });
+      });
 
-        var navLinks = mainNav.querySelectorAll('a');
-        navLinks.forEach(function (link) {
-          link.addEventListener('click', function () {
-            if (window.innerWidth <= 900) {
-              mainNav.classList.remove('open');
-              navToggle.setAttribute('aria-expanded', 'false');
-            }
-          });
+      const parentButtons = document.querySelectorAll(".nav-has-children > .nav-parent-link");
+      parentButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const li = btn.parentElement;
+          const isOpen = li.classList.toggle("open");
+          btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
         });
-      }
-    })();
+      });
 
-    // Floating CTA toggle
-    (function () {
-      var floatingCta = document.getElementById('floatingCta');
-      var floatingToggle = document.getElementById('floatingCtaToggle');
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) closeNav();
+      });
+    }
 
-      if (floatingCta && floatingToggle) {
-        floatingToggle.addEventListener('click', function () {
-          floatingCta.classList.toggle('open');
-        });
-      }
-    })();
+    const floatingToggle = document.getElementById("floatingCtaToggle");
+    const floatingCta = document.getElementById("floatingCta");
+    const floatingPanel = floatingCta ? floatingCta.querySelector(".floating-cta-panel") : null;
+
+    if (floatingToggle && floatingCta && floatingPanel) {
+      floatingToggle.addEventListener("click", () => {
+        const isOpen = floatingCta.classList.toggle("open");
+        floatingToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        floatingPanel.setAttribute("aria-hidden", isOpen ? "false" : "true");
+      });
+    }
   </script>
 
 </body>

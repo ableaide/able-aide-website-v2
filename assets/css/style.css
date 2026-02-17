@@ -1,5 +1,6 @@
 /* =========================================================
-   Able Aide Global Styles – 2026 Production Build (CLICK FIX)
+   Able Aide Global Styles – 2026 Production Build (CLEAN FIX)
+   Fixes: header link clicks going to Home (logo hitbox/UL overlay)
 ========================================================= */
 
 /* --------------------------
@@ -8,18 +9,16 @@
 
 *,
 *::before,
-*::after {
-  box-sizing: border-box;
-}
+*::after { box-sizing: border-box; }
 
 html { scroll-behavior: smooth; }
 
-body {
-  margin: 0;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #1f2933;
-  background: #ffffff;
-  line-height: 1.6;
+body{
+  margin:0;
+  font-family:system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+  color:#1f2933;
+  background:#ffffff;
+  line-height:1.6;
 }
 
 h1,h2,h3,h4,h5{
@@ -31,10 +30,7 @@ h1,h2,h3,h4,h5{
 
 p{ margin:0 0 1rem; }
 
-a{
-  color:#0b7285;
-  text-decoration:none;
-}
+a{ color:#0b7285; text-decoration:none; }
 a:hover{ text-decoration:underline; }
 
 .small{ font-size:.9rem; color:#4b5563; }
@@ -47,6 +43,9 @@ button:focus-visible{
   outline-offset:3px;
   border-radius:.5rem;
 }
+
+/* Lock scroll when mobile nav open */
+body.nav-lock{ overflow:hidden; }
 
 /* --------------------------
    SKIP LINK
@@ -133,7 +132,7 @@ img{
 .top-trust-link{ color:#e6f6f9; }
 
 /* --------------------------
-   HEADER (CRITICAL CLICK FIX)
+   HEADER
 --------------------------- */
 
 .site-header{
@@ -144,7 +143,7 @@ img{
   z-index:80;
 }
 
-/* IMPORTANT: create a stacking context so z-index works reliably */
+/* Use flex. Keep hitboxes tight and predictable. */
 .header-inner{
   position:relative;
   display:flex;
@@ -154,7 +153,7 @@ img{
   gap:1rem;
 }
 
-/* Logo MUST NOT stretch over the nav */
+/* Logo must NOT stretch over nav */
 .logo{
   display:flex;
   align-items:center;
@@ -162,33 +161,34 @@ img{
   color:inherit;
 
   flex:0 0 auto;
-  max-width:320px;
+  max-width:360px;
 
   position:relative;
-  z-index:81; /* LOWER than nav so it can't steal clicks */
+  z-index:10; /* fine (nav links will remain clickable due to no overlay) */
 }
 
 .logo-img{ height:46px; width:auto; }
-
 .logo-mark{ font-weight:700; font-size:1.15rem; }
 
 .logo-tagline{
   font-size:.85rem;
   color:#6b7280;
+  white-space:nowrap;
 }
 
 /* --------------------------
-   NAVIGATION (ON TOP)
+   NAVIGATION (DESKTOP)
+   KEY FIX: nav-list MUST NOT be width:100% on desktop
 --------------------------- */
 
 .main-nav{
   display:flex;
   align-items:center;
-
+  justify-content:center;
   flex:1 1 auto;
 
   position:relative;
-  z-index:90; /* HIGHER than logo => nav always clickable */
+  z-index:20;
 }
 
 .nav-list{
@@ -198,8 +198,9 @@ img{
   margin:0;
   padding:0;
 
-  justify-content:center;
-  width:100%;
+  /* FIX: keep UL sized to content, not full header width */
+  width:auto;
+  justify-content:flex-start;
 }
 
 .nav-list > li > a,
@@ -213,13 +214,12 @@ img{
   cursor:pointer;
   font-family:inherit;
 
+  /* keep link hitbox above any weird stacking */
   position:relative;
-  z-index:91;
+  z-index:21;
 }
 
-.nav-list > li > button.nav-parent-link:hover{
-  text-decoration:underline;
-}
+.nav-list > li > button.nav-parent-link:hover{ text-decoration:underline; }
 
 /* Dropdown structure */
 .nav-has-children{ position:relative; }
@@ -271,7 +271,7 @@ img{
   gap:.6rem;
   flex:0 0 auto;
   position:relative;
-  z-index:90;
+  z-index:20;
 }
 
 /* --------------------------
@@ -312,21 +312,9 @@ img{
   white-space:nowrap;
 }
 
-.btn-primary{
-  background:#0b7285;
-  color:#fff;
-}
-
-.btn-outline{
-  background:#fff;
-  border-color:#0b7285;
-  color:#0b7285;
-}
-
-.btn-secondary{
-  background:#0f172a;
-  color:#fff;
-}
+.btn-primary{ background:#0b7285; color:#fff; }
+.btn-outline{ background:#fff; border-color:#0b7285; color:#0b7285; }
+.btn-secondary{ background:#0f172a; color:#fff; }
 
 /* --------------------------
    HERO
@@ -362,7 +350,6 @@ img{
 --------------------------- */
 
 .home-section{ padding:2.2rem 0; }
-
 .section-header{ margin-bottom:.75rem; }
 
 .card-grid{
@@ -484,7 +471,6 @@ img{
 }
 
 .footer-links li{ margin:.35rem 0; }
-
 .site-footer a{ color:#e5e7eb; }
 
 .footer-bottom{
@@ -609,101 +595,4 @@ img{
 @media(max-width:640px){
   .card-grid{ grid-template-columns:1fr; }
   .footer-inner{ grid-template-columns:1fr; }
-}
-/* =========================================================
-   FIX: header clicks going to home
-   Cause: logo anchor overlaps nav area on some widths.
-========================================================= */
-
-.site-header .header-inner{
-  position: relative;
-}
-
-/* Stop logo taking extra width */
-.site-header .logo{
-  flex: 0 0 auto;
-  width: auto;
-  max-width: 360px;
-}
-
-/* Ensure nav stays above logo hitbox */
-.site-header .main-nav{
-  position: relative;
-  z-index: 90;
-}
-
-.site-header .nav-list a,
-.site-header .nav-list button{
-  position: relative;
-  z-index: 91;
-}
-
-/* Ensure overlay never blocks clicks unless open */
-.nav-overlay{
-  pointer-events: none;
-}
-.nav-overlay.open{
-  pointer-events: auto;
-}
-/* =========================================================
-   HARD FIX: nav links clicking logo/home (overlay issue)
-========================================================= */
-
-/* Make header a strict 3-column layout:
-   [logo] [nav] [cta]  */
-.site-header .header-inner{
-  display: grid !important;
-  grid-template-columns: max-content 1fr max-content;
-  align-items: center;
-  gap: 1rem;
-}
-
-/* Stop logo from stretching */
-.site-header .logo{
-  display: inline-flex;
-  justify-self: start;
-  width: max-content;
-  max-width: 360px;
-  overflow: hidden;
-  position: relative;
-  z-index: 10;
-}
-
-/* Keep nav on top + clickable */
-.site-header .main-nav{
-  justify-self: center;
-  position: relative;
-  z-index: 50;
-}
-
-/* Keep CTAs on top + clickable */
-.site-header .header-cta{
-  justify-self: end;
-  position: relative;
-  z-index: 50;
-}
-
-/* Ensure links/buttons are always above any accidental overlay */
-.site-header .nav-list a,
-.site-header .nav-list button,
-.site-header .header-cta a{
-  position: relative;
-  z-index: 60;
-}
-
-/* If any invisible overlay exists inside header, stop it capturing clicks */
-.site-header .container,
-.site-header{
-  position: relative;
-}
-
-/* Mobile nav overlay should only capture clicks when open */
-.nav-overlay{ pointer-events: none; }
-.nav-overlay.open{ pointer-events: auto; }
-
-/* Mobile: keep your existing fixed drawer behavior */
-@media (max-width: 900px){
-  .site-header .header-inner{
-    display: flex !important; /* mobile uses your existing drawer layout */
-  }
 }

@@ -5,21 +5,26 @@
   <title>Able Aide Reviews – What Participants & Families Say</title>
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://ableaide.com.au/reviews/">
+  <link rel="canonical" href="https://ableaide.com.au/reviews">
 
   <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- SEO -->
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b7285">
+  <meta name="format-detection" content="telephone=no">
+
   <!-- Meta Description -->
   <meta name="description"
-        content="Real testimonials from families, participants and support coordinators across Victoria. Read reviews and share your experience with Able Aide on Google.">
+        content="Read testimonials from participants, families and support coordinators across Victoria. Share your experience with Able Aide by leaving a Google review.">
 
   <!-- OpenGraph -->
   <meta property="og:title" content="Able Aide Reviews – What People Say">
   <meta property="og:description" content="Warm, person-centred disability supports across Victoria. Read real reviews from participants, families and coordinators.">
   <meta property="og:image" content="/assets/img/og-image.webp">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ableaide.com.au/reviews/">
+  <meta property="og:url" content="https://ableaide.com.au/reviews">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -27,47 +32,128 @@
   <meta name="twitter:description" content="Warm, reliable disability support with consistent, respectful workers. Read real reviews.">
   <meta name="twitter:image" content="/assets/img/og-image.webp">
 
-  <!-- Favicon -->
+  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
+  <link rel="shortcut icon" href="/favicon.ico">
 
   <!-- Styles -->
   <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
 
-  <!-- Schema / Breadcrumbs -->
+  <!-- ✅ FULL Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    "itemListElement": [
+    "@graph": [
       {
-        "@type": "ListItem",
-        "position": 1,
-        "name": "Home",
-        "item": "https://ableaide.com.au/"
+        "@type": "LocalBusiness",
+        "@id": "https://ableaide.com.au/#business",
+        "name": "Able Aide",
+        "url": "https://ableaide.com.au/",
+        "logo": "https://ableaide.com.au/assets/img/able-aide-logo.webp",
+        "image": "https://ableaide.com.au/assets/img/og-image.webp",
+        "description": "Able Aide provides disability supports across Melbourne and Victoria, with a focus on clear communication, respectful workers and reliable follow-up.",
+        "email": "enquiries@ableaide.com.au",
+        "telephone": "+61435039110",
+        "identifier": "NDIS Provider Number 4050173180",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Melbourne",
+          "addressRegion": "VIC",
+          "addressCountry": "AU"
+        },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Melbourne" },
+          { "@type": "AdministrativeArea", "name": "Victoria" }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/able.aide",
+          "https://www.instagram.com/ableaide/",
+          "https://www.linkedin.com/company/ableaide/",
+          "https://www.tiktok.com/@ableaide",
+          "https://www.youtube.com/@AbleAide",
+          "https://x.com/AbleAideSupport"
+        ]
       },
       {
-        "@type": "ListItem",
-        "position": 2,
-        "name": "Reviews",
-        "item": "https://ableaide.com.au/reviews/"
+        "@type": "WebSite",
+        "@id": "https://ableaide.com.au/#website",
+        "url": "https://ableaide.com.au/",
+        "name": "Able Aide",
+        "publisher": { "@id": "https://ableaide.com.au/#business" },
+        "inLanguage": "en-AU"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://ableaide.com.au/reviews#webpage",
+        "name": "Able Aide Reviews – What Participants & Families Say",
+        "url": "https://ableaide.com.au/reviews",
+        "description": "Read testimonials from participants, families and support coordinators across Victoria and leave a Google review for Able Aide.",
+        "isPartOf": { "@id": "https://ableaide.com.au/#website" },
+        "about": { "@id": "https://ableaide.com.au/#business" },
+        "inLanguage": "en-AU"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://ableaide.com.au/reviews#breadcrumbs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ableaide.com.au/" },
+          { "@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://ableaide.com.au/reviews" }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://ableaide.com.au/reviews#testimonials",
+        "name": "Able Aide Testimonials",
+        "itemListElement": [
+          {
+            "@type": "Review",
+            "reviewBody": "Able Aide helped my son feel comfortable and supported. Their consistency and respect for our culture has made a huge difference to our home life.",
+            "author": { "@type": "Person", "name": "Parent of teenage participant" }
+          },
+          {
+            "@type": "Review",
+            "reviewBody": "As a support coordinator, communication matters. Able Aide are responsive, clear and always follow through. My participants feel genuinely safe and respected.",
+            "author": { "@type": "Person", "name": "NDIS Support Coordinator" }
+          },
+          {
+            "@type": "Review",
+            "reviewBody": "My support worker listens and never rushes me. I have more confidence going to appointments, shopping and visiting community places again.",
+            "author": { "@type": "Person", "name": "Adult participant" }
+          },
+          {
+            "@type": "Review",
+            "reviewBody": "They kept me updated throughout the whole process and matched workers based on personality. That level of care is rare.",
+            "author": { "@type": "Person", "name": "Family member" }
+          },
+          {
+            "@type": "Review",
+            "reviewBody": "The team is warm, professional and truly person-centred. Highly recommended for any coordinator seeking reliable supports for their participants.",
+            "author": { "@type": "Person", "name": "Support Coordinator" }
+          }
+        ]
       }
     ]
   }
   </script>
-
 </head>
 
 <body>
 
-  <!-- GLOBAL TOP TRUST BAR -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- Mobile nav overlay -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <!-- TOP TRUST BAR -->
   <div class="top-trust-bar">
     <div class="container top-trust-bar-inner">
       <div class="top-trust-left">
-        <span class="top-trust-badge">NDIS registration in progress</span>
-        <span class="top-trust-badge">Supporting self-managed &amp; plan-managed participants</span>
+        <span class="top-trust-badge">Registered NDIS Provider · Provider No. 4050173180</span>
+        <span class="top-trust-badge">Supporting self-managed, plan-managed &amp; NDIA-managed</span>
         <span class="top-trust-badge">Greater Melbourne, Geelong &amp; Regional VIC</span>
       </div>
       <div class="top-trust-right">
@@ -85,7 +171,7 @@
         <img src="/assets/img/able-aide-logo.webp"
              alt="Able Aide logo"
              class="logo-img"
-             style="height:46px; width:auto;">
+             decoding="async">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
@@ -95,14 +181,17 @@
           <li><a href="/about">About</a></li>
 
           <li class="nav-has-children">
-            <a href="/services">Services</a>
-            <ul class="nav-submenu">
+            <button class="nav-parent-link" type="button" aria-haspopup="true" aria-expanded="false">
+              Services
+            </button>
+            <ul class="nav-submenu" aria-label="Services submenu">
+              <li><a href="/services">All services overview</a></li>
+              <li><a href="/services/plan-management">Plan management</a></li>
               <li><a href="/services/personal-care">Personal care &amp; daily living</a></li>
               <li><a href="/services/community-participation">Community participation</a></li>
               <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/allied-health-access">Allied health access</a></li>
               <li><a href="/services/family-early-support">Early &amp; family support</a></li>
-              <li><a href="/services/plan-management">Plan management <span class="small">(Coming soon)</span></a></li>
             </ul>
           </li>
 
@@ -120,33 +209,44 @@
         <a href="/contact" class="btn btn-primary">Book a free chat</a>
       </div>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
       </button>
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
-    <!-- HERO / INTRO -->
+    <!-- HERO -->
     <section class="home-section">
       <div class="container">
         <header class="section-header">
           <h1>What people say about Able Aide</h1>
           <p>
-            Real words from participants, families and support coordinators across Victoria.  
-            Your feedback helps families and coordinators make confident choices.
+            Feedback from participants, families and Support Coordinators across Victoria.
+            Reviews help others choose supports with confidence.
           </p>
         </header>
 
-        <div style="margin-top:1.5rem;">
-          <a href="https://www.google.com/search?sca_esv=32d704b7dde9b1e2&sxsrf=AE3TifOII2fYgHKyljJSniJlXktTIKUhhw%3A1764306712013&q=Able%20Aide&stick=H4sIAAAAAAAAAONgU1I1qEhMMTczNTRPTrI0NTczSE2zMqgwTTGwtDA1M0o1NTO1MEoyW8TK6ZiUk6rgmJmSCgBv9m31NQAAAA&mat=CaYsGndPqkcH&ved=2ahUKEwj9suDWipSRAxX5k68BHRbAI5IQrMcEegQIGRAC"
+        <div style="margin-top:1.5rem; display:flex; gap:.75rem; flex-wrap:wrap;">
+          <a href="https://g.page/r/CbaCZeVihQldEBM/review"
              target="_blank"
              rel="noopener"
              class="btn btn-primary">
             ⭐ Leave a Google Review
           </a>
+
+          <a href="https://www.google.com/search?q=Able+Aide+reviews"
+             target="_blank"
+             rel="noopener"
+             class="btn btn-outline">
+            🔎 View on Google
+          </a>
         </div>
+
+        <p class="small" style="margin-top: .75rem;">
+          Prefer private feedback? Use <a href="/contact">our contact form</a>.
+        </p>
       </div>
     </section>
 
@@ -197,15 +297,31 @@
       </div>
     </section>
 
-    <!-- CTA — Leave a Review -->
-    <section class="final-cta">
+    <!-- SUPPORT COORDINATORS CTA -->
+    <section class="home-section">
+      <div class="container">
+        <div class="card" style="padding:1.25rem;">
+          <h2 style="margin:0 0 .5rem;">Support Coordinators</h2>
+          <p class="small" style="margin:0 0 1rem;">
+            If you’ve referred a participant to Able Aide and want to share feedback, we welcome coordinator reviews too.
+          </p>
+          <div>
+            <a class="btn btn-outline" href="/refer">Make a referral</a>
+            <a class="btn btn-primary" href="/contact" style="margin-left:.5rem;">Send feedback</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FINAL CTA -->
+    <section class="home-section final-cta">
       <div class="container final-cta-inner">
         <div>
           <h2>Share your experience with Able Aide</h2>
           <p>Your feedback helps families, coordinators and participants make confident decisions.</p>
         </div>
         <div class="final-cta-actions">
-          <a href="https://www.google.com/search?sca_esv=32d704b7dde9b1e2&sxsrf=AE3TifOII2fYgHKyljJSniJlXktTIKUhhw%3A1764306712013&q=Able%20Aide&stick=H4sIAAAAAAAAAONgU1I1qEhMMTczNTRPTrI0NTczSE2zMqgwTTGwtDA1M0o1NTO1MEoyW8TK6ZiUk6rgmJmSCgBv9m31NQAAAA&mat=CaYsGndPqkcH&ved=2ahUKEwj9suDWipSRAxX5k68BHRbAI5IQrMcEegQIGRAC"
+          <a href="https://g.page/r/CbaCZeVihQldEBM/review"
              target="_blank"
              rel="noopener"
              class="btn btn-outline">
@@ -219,10 +335,10 @@
 
   <!-- FLOATING CTA -->
   <div class="floating-cta" id="floatingCta">
-    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button" aria-label="Open support options">
+    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button" aria-label="Open support options" aria-expanded="false">
       <span class="icon">💬</span> <span>Need support?</span>
     </button>
-    <div class="floating-cta-panel">
+    <div class="floating-cta-panel" aria-hidden="true">
       <div class="floating-cta-title">Talk to Able Aide</div>
       <div class="floating-cta-text">Quick ways to reach us about NDIS supports, referrals or questions.</div>
       <div class="floating-cta-links">
@@ -271,12 +387,12 @@
       <div class="footer-col">
         <h3>Connect with us</h3>
         <ul class="footer-links">
-          <li><a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a></li>
-          <li><a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a></li>
-          <li><a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a></li>
-          <li><a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a></li>
-          <li><a href="https://x.com/AbleAideSupport" target="_blank">X (Twitter)</a></li>
+          <li><a href="https://www.facebook.com/able.aide" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/ableaide/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.tiktok.com/@ableaide" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://www.youtube.com/@AbleAide" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://x.com/AbleAideSupport" target="_blank" rel="noopener">X (Twitter)</a></li>
         </ul>
       </div>
 
@@ -291,29 +407,76 @@
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Mobile nav toggle
-    (function () {
-      var navToggle = document.getElementById('navToggle');
-      var mainNav = document.getElementById('mainNav');
-      if (navToggle && mainNav) {
-        navToggle.addEventListener('click', function () {
-          var open = mainNav.classList.contains('open');
-          mainNav.classList.toggle('open', !open);
-          navToggle.setAttribute('aria-expanded', String(!open));
-        });
-      }
-    })();
+    const navToggle = document.getElementById("navToggle");
+    const mainNav = document.getElementById("mainNav");
+    const navOverlay = document.getElementById("navOverlay");
 
-    // Floating CTA toggle
-    (function () {
-      var ctaToggle = document.getElementById('floatingCtaToggle');
-      var floatingCta = document.getElementById('floatingCta');
-      if (ctaToggle && floatingCta) {
-        ctaToggle.addEventListener('click', function () {
-          floatingCta.classList.toggle('open');
+    function openNav() {
+      mainNav.classList.add("open");
+      navOverlay.classList.add("open");
+      navToggle.setAttribute("aria-expanded", "true");
+      navOverlay.setAttribute("aria-hidden", "false");
+      document.body.classList.add("nav-lock");
+    }
+
+    function closeNav() {
+      mainNav.classList.remove("open");
+      navOverlay.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navOverlay.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("nav-lock");
+
+      document.querySelectorAll(".nav-has-children.open").forEach(el => el.classList.remove("open"));
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => btn.setAttribute("aria-expanded","false"));
+    }
+
+    if (navToggle && mainNav) {
+      navToggle.addEventListener("click", () => {
+        const opened = mainNav.classList.contains("open");
+        opened ? closeNav() : openNav();
+      });
+
+      if (navOverlay) navOverlay.addEventListener("click", closeNav);
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && mainNav.classList.contains("open")) closeNav();
+      });
+
+      document.querySelectorAll("#mainNav a").forEach(link => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 900) closeNav();
         });
-      }
-    })();
+      });
+
+      const parentButtons = document.querySelectorAll(".nav-has-children > .nav-parent-link");
+      parentButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const li = btn.parentElement;
+          const isOpen = li.classList.toggle("open");
+          btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        });
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) closeNav();
+      });
+    }
+
+    const floatingToggle = document.getElementById("floatingCtaToggle");
+    const floatingCta = document.getElementById("floatingCta");
+    const floatingPanel = floatingCta ? floatingCta.querySelector(".floating-cta-panel") : null;
+
+    if (floatingToggle && floatingCta && floatingPanel) {
+      floatingToggle.addEventListener("click", () => {
+        const isOpen = floatingCta.classList.toggle("open");
+        floatingToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        floatingPanel.setAttribute("aria-hidden", isOpen ? "false" : "true");
+      });
+    }
+  </script>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
 </body>

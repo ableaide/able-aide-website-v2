@@ -10,6 +10,11 @@
   <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- SEO -->
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b3b5a">
+  <meta name="format-detection" content="telephone=no">
+
   <!-- Meta Description -->
   <meta name="description"
         content="Download free NDIS PDFs, forms, checklists, planning tools and Victorian support resources. Includes schedules, profiles, routines, behaviour support templates and more.">
@@ -29,6 +34,12 @@
         content="Downloadable NDIS forms, checklists, templates and planning tools for VIC families.">
   <meta name="twitter:image" content="/assets/img/og-image.webp">
 
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
+  <link rel="shortcut icon" href="/favicon.ico">
+
   <!-- Styles -->
   <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
@@ -36,35 +47,62 @@
   <!-- Preload logo -->
   <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
 
-  <!-- Small nav animation overrides -->
-  <style>
-    @media (max-width: 900px) {
-      .main-nav {
-        display: block;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.25s ease;
-      }
-      .main-nav.open {
-        max-height: 500px;
-      }
-    }
-  </style>
-
   <!-- Schema -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@graph": [
       {
+        "@type": "WebSite",
+        "@id": "https://ableaide.com.au/#website",
+        "url": "https://ableaide.com.au/",
+        "name": "Able Aide",
+        "inLanguage": "en-AU"
+      },
+      {
+        "@type":"LocalBusiness",
+        "@id":"https://ableaide.com.au/#business",
+        "name":"Able Aide",
+        "url":"https://ableaide.com.au/",
+        "logo":"https://ableaide.com.au/assets/img/able-aide-logo.webp",
+        "image":"https://ableaide.com.au/assets/img/og-image.webp",
+        "description":"Able Aide is a Registered NDIS Provider delivering reliable disability supports across Melbourne and Plan Management Australia-wide.",
+        "email":"enquiries@ableaide.com.au",
+        "telephone":"+61435039110",
+        "identifier":"NDIS Provider Number 4050173180",
+        "address":{
+          "@type":"PostalAddress",
+          "addressLocality":"Melbourne",
+          "addressRegion":"VIC",
+          "addressCountry":"AU"
+        },
+        "areaServed":[
+          {"@type":"AdministrativeArea","name":"Victoria"},
+          {"@type":"AdministrativeArea","name":"Melbourne"},
+          {"@type":"Country","name":"Australia"}
+        ],
+        "sameAs":[
+          "https://www.facebook.com/able.aide",
+          "https://www.instagram.com/ableaide/",
+          "https://www.linkedin.com/company/ableaide/",
+          "https://www.tiktok.com/@ableaide",
+          "https://www.youtube.com/@AbleAide",
+          "https://x.com/AbleAideSupport"
+        ]
+      },
+      {
         "@type": "WebPage",
+        "@id": "https://ableaide.com.au/resources/downloads#webpage",
         "name": "NDIS Downloads – Forms, PDFs & Resources",
         "url": "https://ableaide.com.au/resources/downloads",
         "description": "Free NDIS downloads including schedules, templates, behaviour support tools and planning worksheets.",
+        "isPartOf": { "@id": "https://ableaide.com.au/#website" },
+        "about": { "@id": "https://ableaide.com.au/#business" },
         "inLanguage": "en-AU"
       },
       {
         "@type": "BreadcrumbList",
+        "@id":"https://ableaide.com.au/resources/downloads#breadcrumbs",
         "itemListElement": [
           {
             "@type": "ListItem",
@@ -75,6 +113,12 @@
           {
             "@type": "ListItem",
             "position": 2,
+            "name": "Resources",
+            "item": "https://ableaide.com.au/resources"
+          },
+          {
+            "@type": "ListItem",
+            "position": 3,
             "name": "Downloads",
             "item": "https://ableaide.com.au/resources/downloads"
           }
@@ -87,12 +131,17 @@
 
 <body>
 
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- NAV OVERLAY (for mobile drawer) -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
   <!-- GLOBAL TOP TRUST BAR -->
   <div class="top-trust-bar">
     <div class="container top-trust-bar-inner">
       <div class="top-trust-left">
-        <span class="top-trust-badge">NDIS registration in progress</span>
-        <span class="top-trust-badge">Supporting self-managed &amp; plan-managed participants</span>
+        <span class="top-trust-badge">Registered NDIS Provider · Provider No. 4050173180</span>
+        <span class="top-trust-badge">Supporting self-managed, plan-managed &amp; NDIA-managed participants</span>
         <span class="top-trust-badge">Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton &amp; regional VIC</span>
       </div>
       <div class="top-trust-right">
@@ -112,7 +161,6 @@
         <img src="/assets/img/able-aide-logo.webp"
              alt="Able Aide logo"
              class="logo-img"
-             style="height:46px; width:auto; margin-bottom:0.2rem;"
              width="180"
              height="46"
              decoding="async">
@@ -122,22 +170,21 @@
 
       <nav class="main-nav" aria-label="Main Navigation" id="mainNav">
         <ul class="nav-list">
-
           <li><a href="/about">About</a></li>
 
+          <!-- Mobile-friendly submenu -->
           <li class="nav-has-children">
-            <a href="/services">Services</a>
-            <ul class="nav-submenu">
+            <button class="nav-parent-link" type="button" aria-haspopup="true" aria-expanded="false">
+              Services
+            </button>
+            <ul class="nav-submenu" aria-label="Services submenu">
+              <li><a href="/services">All services overview</a></li>
+              <li><a href="/services/plan-management">Plan management</a></li>
               <li><a href="/services/personal-care">Personal care &amp; daily living</a></li>
               <li><a href="/services/community-participation">Community participation</a></li>
               <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/allied-health-access">Allied health access</a></li>
               <li><a href="/services/family-early-support">Early &amp; family support</a></li>
-              <li>
-                <a href="/services/plan-management">
-                  Plan management <span class="small">(Coming soon)</span>
-                </a>
-              </li>
             </ul>
           </li>
 
@@ -145,8 +192,10 @@
           <li><a href="/refer">Refer a participant</a></li>
 
           <li class="nav-has-children">
-            <a href="/resources" aria-current="page" class="active">Resources</a>
-            <ul class="nav-submenu">
+            <button class="nav-parent-link" type="button" aria-haspopup="true" aria-expanded="false">
+              Resources
+            </button>
+            <ul class="nav-submenu" aria-label="Resources submenu">
               <li><a href="/resources">Resource hub overview</a></li>
               <li><a href="/resources/ndis-guides">NDIS guides &amp; articles</a></li>
               <li><a href="/resources/downloads" aria-current="page">Downloads library</a></li>
@@ -154,9 +203,9 @@
             </ul>
           </li>
 
+          <li><a href="/reviews">Reviews</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/careers">Careers</a></li>
-
         </ul>
       </nav>
 
@@ -174,27 +223,31 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
     <!-- HERO -->
     <section class="hero" style="padding:4rem 0 4rem;">
       <div class="container hero-inner" style="gap:3rem;">
 
         <div class="hero-text">
-          <h1 style="font-size:2.4rem;">NDIS Downloads Library</h1>
+          <h1 style="font-size:2.4rem; margin-bottom:1.1rem;">NDIS Downloads Library</h1>
           <p style="font-size:1.05rem;">
             Free PDFs, forms, quick-reference sheets and planning tools to support NDIS participants,
-            families, coordinators and workers across Victoria.
+            families, Support Coordinators and workers across Victoria.
           </p>
-          <p class="hero-note" style="font-size:1rem;">
-            All downloads are printable and compatible with mobile, PC and tablets.
+          <p class="hero-note" style="font-size:1rem; margin-top:0.9rem;">
+            All downloads are printable and work on mobile, tablets and PC.
           </p>
+
+          <div class="hero-actions" style="margin-top:1.2rem;">
+            <a href="#popular-downloads" class="btn btn-primary">Browse popular downloads</a>
+            <a href="/contact" class="btn btn-secondary">Ask a question</a>
+          </div>
         </div>
 
         <div class="hero-image">
           <div class="hero-card" style="padding:1.6rem;">
 
-            <!-- UPDATED HERO IMAGE -->
             <img
               src="/assets/img/able-aide-ndis-general-disability-support-1.webp"
               alt="NDIS resource downloads"
@@ -204,13 +257,17 @@
               decoding="async"
             >
 
-            <h2 style="font-size:1.3rem;">Download Categories</h2>
-            <ul class="hero-highlights">
+            <h2 style="font-size:1.3rem;">Download categories</h2>
+            <ul class="hero-highlights" style="margin-top:0.9rem;">
               <li>Planning &amp; review tools</li>
               <li>Participant profiles</li>
               <li>Support worker resources</li>
               <li>Behaviour &amp; routine templates</li>
             </ul>
+
+            <a href="#full-toolkit" class="btn btn-outline btn-block" style="margin-top:1rem;">
+              Download full toolkit (ZIP)
+            </a>
 
           </div>
         </div>
@@ -218,13 +275,13 @@
       </div>
     </section>
 
-    <!-- MAIN DOWNLOADS -->
-    <section class="home-section" style="padding:3.8rem 0;">
+    <!-- POPULAR DOWNLOADS -->
+    <section class="home-section" id="popular-downloads" style="padding:3.8rem 0;">
       <div class="container">
 
         <header class="section-header" style="margin-bottom:2rem;">
-          <h2 style="font-size:2rem;">Popular Downloads</h2>
-          <p style="font-size:1.05rem;">Download our most used NDIS documents:</p>
+          <h2 style="font-size:2rem;">Popular downloads</h2>
+          <p style="font-size:1.05rem;">Our most-used NDIS documents for families and coordinators.</p>
         </header>
 
         <div class="card-grid" style="gap:2rem;">
@@ -252,32 +309,70 @@
       </div>
     </section>
 
-    <!-- SUPPORT WORKER RESOURCES -->
+    <!-- PLANNING & REVIEW TOOLS -->
     <section class="home-section section-alt" style="padding:3.8rem 0;">
       <div class="container">
 
         <header class="section-header" style="margin-bottom:2rem;">
-          <h2 style="font-size:2rem;">Support Worker Tools</h2>
-          <p style="font-size:1.05rem;">Useful forms for daily notes, routines and shift organisation.</p>
+          <h2 style="font-size:2rem;">Planning &amp; review tools</h2>
+          <p style="font-size:1.05rem;">Helpful checklists and worksheets for plan meetings and reviews.</p>
         </header>
 
         <div class="card-grid" style="gap:2rem;">
 
           <article class="card" style="padding:1.4rem;">
-            <h3>Daily Support Log</h3>
-            <p>Record progress, activities, behaviours and communication notes.</p>
-            <a href="/assets/docs/daily-support-log.pdf" download class="card-link">Download →</a>
+            <h3>Goal Setting Worksheet (PDF)</h3>
+            <p>Write clear goals linked to daily life, safety, participation and independence.</p>
+            <a href="/assets/docs/goal-setting-worksheet.pdf" download class="card-link">Download PDF →</a>
           </article>
 
           <article class="card" style="padding:1.4rem;">
-            <h3>Shift Report Template</h3>
-            <p>For workers to summarise shift outcomes clearly and professionally.</p>
+            <h3>Evidence Checklist (PDF)</h3>
+            <p>Know what to collect before a review: reports, letters, logs and examples.</p>
+            <a href="/assets/docs/evidence-checklist.pdf" download class="card-link">Download PDF →</a>
+          </article>
+
+          <article class="card" style="padding:1.4rem;">
+            <h3>Appointments &amp; Reports Tracker (Excel)</h3>
+            <p>Track referrals, appointments, due dates and reports across providers.</p>
+            <a href="/assets/docs/appointments-reports-tracker.xlsx" download class="card-link">Download Excel →</a>
+          </article>
+
+        </div>
+
+        <p class="small" style="margin-top:1.2rem;">
+          Don’t have these files yet? You can keep the cards here and upload the documents later — the links will work once the files exist in <code>/assets/docs/</code>.
+        </p>
+
+      </div>
+    </section>
+
+    <!-- SUPPORT WORKER RESOURCES -->
+    <section class="home-section" style="padding:3.8rem 0;">
+      <div class="container">
+
+        <header class="section-header" style="margin-bottom:2rem;">
+          <h2 style="font-size:2rem;">Support worker tools</h2>
+          <p style="font-size:1.05rem;">Simple forms for daily notes, routines and shift organisation.</p>
+        </header>
+
+        <div class="card-grid" style="gap:2rem;">
+
+          <article class="card" style="padding:1.4rem;">
+            <h3>Daily Support Log (PDF)</h3>
+            <p>Record progress, activities, behaviours and communication notes.</p>
+            <a href="/assets/docs/daily-support-log.pdf" download class="card-link">Download PDF →</a>
+          </article>
+
+          <article class="card" style="padding:1.4rem;">
+            <h3>Shift Report Template (Word)</h3>
+            <p>Summarise shift outcomes clearly and professionally.</p>
             <a href="/assets/docs/shift-report-template.docx" download class="card-link">Download Word →</a>
           </article>
 
           <article class="card" style="padding:1.4rem;">
-            <h3>Incident Recording Form</h3>
-            <p>Document incidents in line with NDIS standards.</p>
+            <h3>Incident Recording Form (PDF)</h3>
+            <p>Document incidents clearly (participant safety + internal follow-up).</p>
             <a href="/assets/docs/incident-form.pdf" download class="card-link">Download PDF →</a>
           </article>
 
@@ -286,14 +381,51 @@
       </div>
     </section>
 
+    <!-- BEHAVIOUR & ROUTINES -->
+    <section class="home-section section-alt" style="padding:3.8rem 0;">
+      <div class="container">
+
+        <header class="section-header" style="margin-bottom:2rem;">
+          <h2 style="font-size:2rem;">Behaviour &amp; routines</h2>
+          <p style="font-size:1.05rem;">Tools to support routines, regulation and consistent approaches at home and in the community.</p>
+        </header>
+
+        <div class="card-grid" style="gap:2rem;">
+
+          <article class="card" style="padding:1.4rem;">
+            <h3>Routine Planner (PDF)</h3>
+            <p>Create simple morning, after-school and evening routines with visual cues.</p>
+            <a href="/assets/docs/routine-planner.pdf" download class="card-link">Download PDF →</a>
+          </article>
+
+          <article class="card" style="padding:1.4rem;">
+            <h3>Trigger &amp; Response Tracker (PDF)</h3>
+            <p>Track triggers, early warning signs, responses and what helped.</p>
+            <a href="/assets/docs/trigger-response-tracker.pdf" download class="card-link">Download PDF →</a>
+          </article>
+
+          <article class="card" style="padding:1.4rem;">
+            <h3>Calming Strategies Card (PDF)</h3>
+            <p>A printable “what helps” card for families, schools and support workers.</p>
+            <a href="/assets/docs/calming-strategies-card.pdf" download class="card-link">Download PDF →</a>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
     <!-- FULL TOOLKIT -->
-    <section class="home-section" style="padding:3.8rem 0;">
+    <section class="home-section" id="full-toolkit" style="padding:3.8rem 0;">
       <div class="container center">
-        <h2 style="font-size:2rem;">Download the Full Toolkit</h2>
+        <h2 style="font-size:2rem;">Download the full toolkit</h2>
         <p style="font-size:1.05rem;">Includes schedules, profiles, logs, checklists and behavioural tools.</p>
         <a href="/assets/toolkit/ndis-toolkit.zip" class="btn btn-primary" style="margin-top:1.4rem;">
-          Download Complete Toolkit (ZIP)
+          Download complete toolkit (ZIP)
         </a>
+        <p class="small" style="margin-top:1rem;">
+          Tip: If you’re on mobile, use the ZIP on a laptop for easier editing and printing.
+        </p>
       </div>
     </section>
 
@@ -306,6 +438,7 @@
         </div>
         <div class="final-cta-actions">
           <a href="/contact" class="btn btn-primary">Talk to Able Aide</a>
+          <a href="/refer" class="btn btn-outline">Refer a participant</a>
         </div>
       </div>
     </section>
@@ -326,6 +459,7 @@
           <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
           <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
         </p>
+        <p class="small"><strong>Provider No.:</strong> 4050173180</p>
       </div>
 
       <div class="footer-col">
@@ -336,8 +470,10 @@
           <li><a href="/locations">Locations</a></li>
           <li><a href="/refer">Refer a participant</a></li>
           <li><a href="/resources">Resources</a></li>
+          <li><a href="/reviews">Reviews</a></li>
           <li><a href="/careers">Careers</a></li>
           <li><a href="/contact">Contact</a></li>
+          <li><a href="/complaints">Complaints</a></li>
         </ul>
       </div>
 
@@ -374,19 +510,15 @@
 
   <!-- FLOATING CTA -->
   <div class="floating-cta" id="floatingCta">
-    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button"
-            aria-label="Open support options"
-            style="padding:0.45rem 0.8rem; box-shadow:0 10px 20px rgba(11,114,133,0.35); font-size:0.85rem;">
+    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button" aria-expanded="false">
       <span class="icon">💬</span>
       <span>Need support?</span>
     </button>
-    <div class="floating-cta-panel" style="box-shadow:0 12px 28px rgba(15,23,42,0.25);">
+    <div class="floating-cta-panel" aria-hidden="true">
       <div class="floating-cta-title">Talk to Able Aide</div>
-      <div class="floating-cta-text">
-        Quick ways to reach us about NDIS supports, referrals or questions.
-      </div>
+      <div class="floating-cta-text">Quick ways to reach us about NDIS supports, referrals or questions.</div>
       <div class="floating-cta-links">
-        <a href="tel:61435039110" aria-label="Call Able Aide on 0435 039 110">📞 Call 0435 039 110</a>
+        <a href="tel:61435039110">📞 Call 0435 039 110</a>
         <a href="/contact">✉️ Send an enquiry</a>
         <a href="/refer">📝 Refer a participant</a>
       </div>
@@ -395,44 +527,79 @@
 
   <!-- SCRIPTS -->
   <script>
-    // Dynamic year
+    // Year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Mobile nav toggle + close on link click
-    (function () {
-      var navToggle = document.getElementById('navToggle');
-      var mainNav = document.getElementById('mainNav');
+    // Drawer nav (same pattern as your other pages)
+    const navToggle = document.getElementById("navToggle");
+    const mainNav = document.getElementById("mainNav");
+    const navOverlay = document.getElementById("navOverlay");
 
-      if (navToggle && mainNav) {
-        navToggle.addEventListener('click', function () {
-          var isOpen = mainNav.classList.contains('open');
-          mainNav.classList.toggle('open', !isOpen);
-          navToggle.setAttribute('aria-expanded', String(!isOpen));
+    function openNav() {
+      mainNav.classList.add("open");
+      navOverlay.classList.add("open");
+      navToggle.setAttribute("aria-expanded", "true");
+      navOverlay.setAttribute("aria-hidden", "false");
+      document.body.classList.add("nav-lock");
+    }
+
+    function closeNav() {
+      mainNav.classList.remove("open");
+      navOverlay.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navOverlay.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("nav-lock");
+
+      // Close any open submenus
+      document.querySelectorAll(".nav-has-children.open").forEach(el => el.classList.remove("open"));
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => btn.setAttribute("aria-expanded","false"));
+    }
+
+    if (navToggle && mainNav) {
+      navToggle.addEventListener("click", () => {
+        const opened = mainNav.classList.contains("open");
+        opened ? closeNav() : openNav();
+      });
+
+      if (navOverlay) navOverlay.addEventListener("click", closeNav);
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && mainNav.classList.contains("open")) closeNav();
+      });
+
+      document.querySelectorAll("#mainNav a").forEach(link => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 900) closeNav();
         });
+      });
 
-        var navLinks = mainNav.querySelectorAll('a');
-        navLinks.forEach(function (link) {
-          link.addEventListener('click', function () {
-            if (window.innerWidth <= 900) {
-              mainNav.classList.remove('open');
-              navToggle.setAttribute('aria-expanded', 'false');
-            }
-          });
+      // Submenu toggles
+      const parentButtons = document.querySelectorAll(".nav-has-children > .nav-parent-link");
+      parentButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+          const li = btn.parentElement;
+          const isOpen = li.classList.toggle("open");
+          btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
         });
-      }
-    })();
+      });
 
-    // Floating CTA toggle
-    (function () {
-      var floatingCta = document.getElementById('floatingCta');
-      var floatingToggle = document.getElementById('floatingCtaToggle');
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) closeNav();
+      });
+    }
 
-      if (floatingCta && floatingToggle) {
-        floatingToggle.addEventListener('click', function () {
-          floatingCta.classList.toggle('open');
-        });
-      }
-    })();
+    // Floating CTA
+    const floatingToggle = document.getElementById("floatingCtaToggle");
+    const floatingCta = document.getElementById("floatingCta");
+    const floatingPanel = floatingCta ? floatingCta.querySelector(".floating-cta-panel") : null;
+
+    if (floatingToggle && floatingCta && floatingPanel) {
+      floatingToggle.addEventListener("click", () => {
+        const isOpen = floatingCta.classList.toggle("open");
+        floatingToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        floatingPanel.setAttribute("aria-hidden", isOpen ? "false" : "true");
+      });
+    }
   </script>
 
 </body>

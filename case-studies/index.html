@@ -2,106 +2,196 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>NDIS Case Studies – Real Support Stories | Able Aide</title>
+  <title>NDIS Resources | Guides, Templates & Downloads – Able Aide</title>
 
   <!-- Canonical -->
-  <link rel="canonical" href="https://ableaide.com.au/case-studies">
+  <link rel="canonical" href="https://ableaide.com.au/resources">
 
   <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  <!-- ✅ Small but important additions (match home) -->
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b3b5a">
+  <meta name="format-detection" content="telephone=no">
+
   <!-- Meta Description -->
   <meta name="description"
-        content="Real NDIS case studies showing how Able Aide supports participants with hospital transitions, building confidence, early childhood routines and therapy coordination across Victoria.">
+        content="NDIS resources from Able Aide: downloads, templates and guides to help participants, families and Support Coordinators across Melbourne and Australia-wide Plan Management.">
 
   <!-- OpenGraph -->
-  <meta property="og:title" content="NDIS Case Studies – Able Aide">
-  <meta property="og:description"
-        content="Real support stories from participants, families and coordinators across Victoria.">
-  <meta property="og:image" content="/assets/img/og-image.webp">
+  <meta property="og:title" content="NDIS Resources – Able Aide">
+  <meta property="og:description" content="Downloads, templates and practical NDIS guides from Able Aide.">
+  <meta property="og:image" content="https://ableaide.com.au/assets/img/og-image.webp">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ableaide.com.au/case-studies">
+  <meta property="og:url" content="https://ableaide.com.au/resources">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="NDIS Resources – Able Aide">
+  <meta name="twitter:description" content="Downloads, templates and practical NDIS guides from Able Aide.">
+  <meta name="twitter:image" content="https://ableaide.com.au/assets/img/og-image.webp">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
+  <link rel="shortcut icon" href="/favicon.ico">
 
   <!-- Styles -->
   <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
 
-  <!-- Schema: CollectionPage -->
+  <!-- (Optional) Preload commonly used images -->
+  <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
+  <link rel="preload" href="/assets/img/i-love-ndis-registered-provider.png" as="image">
+
+  <!-- ✅ Schema (match home approach) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "NDIS Case Studies – Able Aide",
-    "description": "Real stories of how Able Aide supports NDIS participants across Victoria.",
-    "url": "https://ableaide.com.au/case-studies",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Able Aide",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://ableaide.com.au/assets/img/able-aide-logo.webp"
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://ableaide.com.au/#business",
+        "name": "Able Aide",
+        "url": "https://ableaide.com.au/",
+        "logo": "https://ableaide.com.au/assets/img/able-aide-logo.webp",
+        "image": "https://ableaide.com.au/assets/img/og-image.webp",
+        "description": "Able Aide is a Registered NDIS Provider delivering Support Coordination and Core Supports across Melbourne, with Plan Management available Australia-wide.",
+        "email": "enquiries@ableaide.com.au",
+        "telephone": "+61435039110",
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "NDIS Provider Registration Number",
+          "value": "4050173180"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Melbourne",
+          "addressRegion": "VIC",
+          "addressCountry": "AU"
+        },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Melbourne, Victoria" },
+          { "@type": "Country", "name": "Australia" }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/able.aide",
+          "https://www.instagram.com/ableaide/",
+          "https://www.linkedin.com/company/ableaide/",
+          "https://www.tiktok.com/@ableaide",
+          "https://www.youtube.com/@AbleAide",
+          "https://x.com/AbleAideSupport"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ableaide.com.au/#website",
+        "url": "https://ableaide.com.au/",
+        "name": "Able Aide",
+        "publisher": { "@id": "https://ableaide.com.au/#business" },
+        "inLanguage": "en-AU"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://ableaide.com.au/resources#webpage",
+        "name": "NDIS Resources | Guides, Templates & Downloads – Able Aide",
+        "url": "https://ableaide.com.au/resources",
+        "description": "NDIS resources from Able Aide: downloads, templates and guides to help participants, families and Support Coordinators across Melbourne and Australia-wide Plan Management.",
+        "isPartOf": { "@id": "https://ableaide.com.au/#website" },
+        "about": { "@id": "https://ableaide.com.au/#business" },
+        "inLanguage": "en-AU"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://ableaide.com.au/resources#breadcrumbs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ableaide.com.au/" },
+          { "@type": "ListItem", "position": 2, "name": "Resources", "item": "https://ableaide.com.au/resources" }
+        ]
+      },
+      {
+        "@type": "ItemList",
+        "@id": "https://ableaide.com.au/resources#items",
+        "name": "Resources",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "url": "https://ableaide.com.au/resources/downloads", "name": "Downloads" },
+          { "@type": "ListItem", "position": 2, "url": "https://ableaide.com.au/resources/templates", "name": "Templates" },
+          { "@type": "ListItem", "position": 3, "url": "https://ableaide.com.au/resources/ndis-guides", "name": "NDIS Guides" }
+        ]
       }
-    }
+    ]
   }
   </script>
-
 </head>
 
 <body>
 
-  <!-- GLOBAL TOP TRUST BAR -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- overlay for mobile nav -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <!-- TOP TRUST BAR (match home) -->
   <div class="top-trust-bar">
     <div class="container top-trust-bar-inner">
       <div class="top-trust-left">
-        <span class="top-trust-badge">NDIS registration in progress</span>
-        <span class="top-trust-badge">Supporting self-managed &amp; plan-managed participants</span>
-        <span class="top-trust-badge">Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton &amp; regional VIC</span>
+        <span class="top-trust-badge">Registered NDIS Provider · Provider No. 4050173180</span>
+        <span class="top-trust-badge">Support Coordination &amp; Core Supports: Melbourne</span>
+        <span class="top-trust-badge">Plan Management: Australia-wide</span>
       </div>
       <div class="top-trust-right">
         <span class="top-trust-phone">
-          Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a>
+          Call: <a href="tel:+61435039110" class="top-trust-link">0435 039 110</a>
         </span>
         <a href="/refer" class="top-trust-link">Quick referral form →</a>
       </div>
     </div>
   </div>
 
-  <!-- HEADER -->
+  <!-- HEADER (match home: accessible dropdown pattern) -->
   <header class="site-header">
     <div class="container header-inner">
 
       <a href="/" class="logo" aria-label="Able Aide Home">
         <img src="/assets/img/able-aide-logo.webp"
              alt="Able Aide logo"
-             class="logo-img">
+             class="logo-img"
+             decoding="async"
+             width="48"
+             height="48">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
 
-      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href="/about">About</a></li>
 
           <li class="nav-has-children">
-            <a href="/services">Services</a>
-            <ul class="nav-submenu">
+            <button class="nav-parent-link"
+                    type="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-controls="servicesMenu"
+                    id="servicesBtn">
+              Services
+            </button>
+            <ul class="nav-submenu" id="servicesMenu" aria-label="Services submenu" hidden>
+              <li><a href="/services">All services overview</a></li>
+              <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/personal-care">Personal care &amp; daily living</a></li>
               <li><a href="/services/community-participation">Community participation</a></li>
-              <li><a href="/services/support-coordination">Support coordination</a></li>
-              <li><a href="/services/allied-health-access">Allied health access</a></li>
               <li><a href="/services/family-early-support">Early &amp; family support</a></li>
-              <li><a href="/services/plan-management">Plan management <span class="small">(Coming soon)</span></a></li>
+              <li><a href="/services/allied-health-access">Allied health access</a></li>
+              <li><a href="/services/plan-management">Plan management</a></li>
             </ul>
           </li>
 
           <li><a href="/locations">Locations</a></li>
-          <li><a href="/refer">Refer</a></li>
-          <li><a href="/resources">Resources</a></li>
-          <li><a href="/reviews">Reviews</a></li>
-          <li><a href="/case-studies" aria-current="page">Case Studies</a></li>
+          <li><a href="/refer">Refer a participant</a></li>
+          <li><a href="/resources" aria-current="page">Resources</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/careers">Careers</a></li>
         </ul>
@@ -112,120 +202,180 @@
         <a href="/contact" class="btn btn-primary">Book a free chat</a>
       </div>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" type="button"
+              aria-label="Toggle navigation"
+              aria-controls="mainNav"
+              aria-expanded="false">
         <span></span>
       </button>
 
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
     <!-- HERO -->
     <section class="hero">
       <div class="container hero-inner">
 
         <div class="hero-text">
-          <h1>Real Stories of Support</h1>
-          <p class="hero-subtext">
-            These case studies share how Able Aide supports NDIS participants through transitions,
-            routines, confidence building and complex coordination — always with warmth, clarity and dignity.
+          <h1>NDIS Resources</h1>
+          <p class="hero-subhead">
+            Practical downloads, templates and guides to support participants, families and Support Coordinators.
+            <strong>Support Coordination &amp; Core Supports:</strong> Melbourne · <strong>Plan Management:</strong> Australia-wide.
+          </p>
+
+          <ul class="hero-highlights">
+            <li><strong>Registered NDIS Provider · Provider No. 4050173180</strong></li>
+            <li>Clear, plain-English resources</li>
+            <li>Built for participants, families &amp; Support Coordinators</li>
+          </ul>
+
+          <div class="hero-actions">
+            <a href="/resources/downloads" class="btn btn-primary">Browse downloads</a>
+            <a href="/resources/templates" class="btn btn-secondary">View templates</a>
+            <a href="/resources/ndis-guides" class="btn btn-outline">Read NDIS guides</a>
+          </div>
+
+          <p class="hero-trust">
+            ✔ Helpful information · ✔ Clear steps · ✔ Designed for real-world use
+          </p>
+
+          <p class="hero-note">
+            Need help right now? Call <a href="tel:+61435039110">0435 039 110</a> or email
+            <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>.
           </p>
         </div>
 
-        <div class="hero-card">
-          <img
-            src="/assets/img/case-study-community-confidence.webp"
-            alt="NDIS case study support example"
-            class="hero-img"
-            loading="lazy"
-            decoding="async">
-
-          <h2>Every story is unique</h2>
-          <p class="small">Names, details and identifying information are changed to protect privacy.</p>
+        <aside class="hero-card">
+          <h2>Quick links</h2>
+          <p class="small">Jump to the resource type you need.</p>
 
           <div class="hero-badge-group">
-            <span class="badge">Respectful support</span>
-            <span class="badge badge-hours">Child, youth &amp; adult NDIS support</span>
+            <span class="badge"><a class="badge-link" href="/resources/downloads">📄 Downloads</a></span>
+            <span class="badge"><a class="badge-link" href="/resources/templates">📋 Templates</a></span>
+            <span class="badge"><a class="badge-link" href="/resources/ndis-guides">📘 NDIS Guides</a></span>
           </div>
-        </div>
+
+          <p class="small" style="margin-top:1rem;">
+            Looking to refer a participant? Use our quick form.
+          </p>
+          <a href="/refer" class="btn btn-outline" style="margin-top:.5rem;">Quick referral form</a>
+        </aside>
 
       </div>
     </section>
 
-    <!-- CASE STUDY GRID -->
-    <section class="section">
+    <!-- RESOURCE CATEGORIES -->
+    <section class="home-section">
       <div class="container">
-
         <header class="section-header">
-          <h2>Case Studies</h2>
-          <p>Explore real examples of support outcomes across Victoria.</p>
+          <h2>Browse resources</h2>
+          <p>Find the right tools for your next step.</p>
         </header>
 
-        <div class="card-grid" style="margin-top:2rem;">
+        <div class="card-grid">
+          <article class="card">
+            <h3>📄 Downloads</h3>
+            <p>Useful forms and participant resources you can download anytime.</p>
+            <a href="/resources/downloads" class="card-link">Browse downloads →</a>
+          </article>
 
-          <a href="/case-studies/safe-transition-home-after-hospital" class="card">
-            <h3>Safe Transition Home After Hospital</h3>
-            <p class="small">
-              How consistent personal care, daily routines and coordination reduced risk,
-              improved stability and supported a safe return home.
-            </p>
-          </a>
+          <article class="card">
+            <h3>📋 Templates</h3>
+            <p>Easy-to-use templates to help you plan and organise supports.</p>
+            <a href="/resources/templates" class="card-link">View templates →</a>
+          </article>
 
-          <a href="/case-studies/building-confidence-in-the-community" class="card">
-            <h3>Building Confidence in the Community</h3>
-            <p class="small">
-              Supporting a participant to move from avoiding public places to feeling comfortable and
-              independent in the community.
-            </p>
-          </a>
+          <article class="card">
+            <h3>📘 NDIS Guides</h3>
+            <p>Step-by-step guides to help you understand plans, reviews and reports.</p>
+            <a href="/resources/ndis-guides" class="card-link">Read guides →</a>
+          </article>
 
-          <a href="/case-studies/supporting-family-early-childhood-routines" class="card">
-            <h3>Supporting a Family With Early Childhood Routines</h3>
-            <p class="small">
-              Helping a young child and their parents create calmer routines and build everyday skills.
-            </p>
-          </a>
-
-          <a href="/case-studies/helping-participant-get-unstuck-with-therapies" class="card">
-            <h3>Helping a Participant Get Unstuck With Therapies</h3>
-            <p class="small">
-              Aligning multiple therapists, reducing overwhelm and helping the participant make real progress.
-            </p>
-          </a>
-
+          <article class="card">
+            <h3>❓ FAQs</h3>
+            <p>Clear answers about services, pricing, support workers and getting started.</p>
+            <a href="/faqs" class="card-link">Read FAQs →</a>
+          </article>
         </div>
-
       </div>
     </section>
 
-    <!-- CTA -->
-    <section class="section section-alt">
-      <div class="container center">
-        <h2 class="section-title">Want to talk about your situation?</h2>
-        <p class="section-intro" style="max-width:640px; margin:auto;">
-          Every participant’s journey is different. We’re here to listen and help you plan supports
-          that feel safe, realistic and caring.
-        </p>
-        <a href="/contact" class="btn btn-primary">Book a free chat</a>
+    <!-- MINI CTA STRIP (match home style) -->
+    <section class="mini-cta">
+      <div class="container mini-cta-inner">
+        <p><strong>Need support now?</strong> We respond fast and keep Support Coordinators updated.</p>
+        <div class="mini-cta-actions">
+          <a class="btn btn-primary" href="/refer">Refer a participant</a>
+          <a class="btn btn-outline" href="/contact">Book a free chat</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPTIONAL: featured resource cards (safe placeholder) -->
+    <section class="home-section">
+      <div class="container">
+        <header class="section-header">
+          <h2>Popular guides</h2>
+          <p>Common topics participants and families ask about.</p>
+        </header>
+
+        <div class="card-grid">
+          <article class="card">
+            <h3>Understanding Support Coordination</h3>
+            <p class="small">What Support Coordination includes, who it’s for, and how to get started in Melbourne.</p>
+            <a href="/resources/ndis-guides" class="card-link">Explore guides →</a>
+          </article>
+
+          <article class="card">
+            <h3>Plan Management explained</h3>
+            <p class="small">How Plan Management works, invoices, budgets and getting set up Australia-wide.</p>
+            <a href="/services/plan-management" class="card-link">Plan Management →</a>
+          </article>
+
+          <article class="card">
+            <h3>Getting ready for an NDIS plan review</h3>
+            <p class="small">A practical checklist and what information helps with reviews and reports.</p>
+            <a href="/resources/templates" class="card-link">View templates →</a>
+          </article>
+        </div>
       </div>
     </section>
 
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (match home + add i love ndis badge) -->
   <footer class="site-footer">
     <div class="container footer-inner">
 
       <div class="footer-col">
         <h3>Able Aide</h3>
+        <p>Registered NDIS Provider delivering Support Coordination and Core Supports across Melbourne, with Plan Management Australia-wide.</p>
+        <p class="small"><strong>Provider No.:</strong> 4050173180</p>
+
+        <!-- ✅ I Love NDIS badge (same as home) -->
+        <div class="ndis-badge" aria-label="Registered NDIS Provider badge">
+          <img
+            src="/assets/img/i-love-ndis-registered-provider.png"
+            alt="I Love NDIS – Registered Provider"
+            loading="lazy"
+            decoding="async"
+            width="560"
+            height="222">
+          <p class="small ndis-provider-text">
+            <strong>Registered NDIS Provider</strong><br>
+            Provider No. 4050173180
+          </p>
+          <p class="small ndis-disclaimer">
+            Able Aide is a Registered NDIS Provider. The NDIS/NDIA does not endorse specific providers.
+          </p>
+        </div>
+
         <p>
-          Your Journey, Our Support – warm, person-centred disability supports across Greater Melbourne
-          and regional Victoria.
-        </p>
-        <p>
-          <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
-          <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
+          <strong>Phone:</strong> <a href="tel:+61435039110">0435 039 110</a><br>
+          <strong>General enquiries:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a><br>
+          <strong>Plan Management:</strong> <a href="mailto:planmanagement@ableaide.com.au">planmanagement@ableaide.com.au</a>
         </p>
       </div>
 
@@ -235,31 +385,29 @@
           <li><a href="/about">About</a></li>
           <li><a href="/services">Services</a></li>
           <li><a href="/locations">Locations</a></li>
-          <li><a href="/refer">Refer</a></li>
-          <li><a href="/resources">Resources</a></li>
-          <li><a href="/reviews">Reviews</a></li>
+          <li><a href="/refer">Refer a participant</a></li>
+          <li><a href="/resources" aria-current="page">Resources</a></li>
+          <li><a href="/faqs">FAQs</a></li>
           <li><a href="/careers">Careers</a></li>
           <li><a href="/contact">Contact</a></li>
+          <li><a href="/complaints">Complaints</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
         <h3>Where we support</h3>
-        <p>
-          Greater Melbourne (Frankston, Dandenong, Ringwood, Epping, Werribee, Sunshine &amp; surrounds)<br>
-          Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria
-        </p>
+        <p><strong>Support Coordination &amp; Core supports:</strong> Melbourne<br><strong>Plan Management:</strong> Australia-wide</p>
       </div>
 
       <div class="footer-col">
         <h3>Connect with us</h3>
         <ul class="footer-links">
-          <li><a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a></li>
-          <li><a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a></li>
-          <li><a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a></li>
-          <li><a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a></li>
-          <li><a href="https://x.com/AbleAideSupport" target="_blank">X (Twitter)</a></li>
+          <li><a href="https://www.facebook.com/able.aide" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/ableaide/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.tiktok.com/@ableaide" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://www.youtube.com/@AbleAide" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://x.com/AbleAideSupport" target="_blank" rel="noopener">X</a></li>
         </ul>
       </div>
 
@@ -267,29 +415,119 @@
 
     <div class="container footer-bottom">
       <p class="small">
-        © <span id="year"></span> Able Aide. All rights reserved. ·
-        <a href="/privacy-policy">Privacy Policy</a> ·
-        <a href="/terms-of-service">Terms of Service</a>
+        © <span id="year"></span> Able Aide ·
+        <a href="/privacy-policy" class="footer-link">Privacy Policy</a> ·
+        <a href="/terms-of-service" class="footer-link">Terms</a>
       </p>
     </div>
   </footer>
 
-  <!-- SCRIPTS -->
+  <!-- SCRIPTS (match index: overlay + dropdown + esc + resize) -->
   <script>
+    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Mobile nav toggle
-    (function () {
-      var navToggle = document.getElementById('navToggle');
-      var mainNav = document.getElementById('mainNav');
-      if (navToggle && mainNav) {
-        navToggle.addEventListener('click', function () {
-          var isOpen = mainNav.classList.contains('open');
-          mainNav.classList.toggle('open', !isOpen);
-          navToggle.setAttribute('aria-expanded', String(!isOpen));
+    const navToggle = document.getElementById("navToggle");
+    const mainNav = document.getElementById("mainNav");
+    const navOverlay = document.getElementById("navOverlay");
+
+    function isMobileNav() {
+      return window.innerWidth <= 900;
+    }
+
+    function closeAllDropdowns() {
+      document.querySelectorAll(".nav-has-children.open").forEach(li => li.classList.remove("open"));
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => {
+        btn.setAttribute("aria-expanded", "false");
+      });
+      document.querySelectorAll(".nav-submenu").forEach(menu => menu.hidden = true);
+    }
+
+    function openNav() {
+      if (!mainNav) return;
+      mainNav.classList.add("open");
+      navOverlay?.classList.add("open");
+      navToggle?.setAttribute("aria-expanded", "true");
+      navOverlay?.setAttribute("aria-hidden", "false");
+      document.body.classList.add("nav-lock");
+    }
+
+    function closeNav() {
+      if (!mainNav) return;
+      mainNav.classList.remove("open");
+      navOverlay?.classList.remove("open");
+      navToggle?.setAttribute("aria-expanded", "false");
+      navOverlay?.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("nav-lock");
+      closeAllDropdowns();
+    }
+
+    function toggleDropdown(btn) {
+      const li = btn.parentElement;
+      const submenu = li ? li.querySelector(".nav-submenu") : null;
+      const isOpen = li.classList.contains("open");
+
+      // Close other open dropdowns first
+      document.querySelectorAll(".nav-has-children.open").forEach(openLi => {
+        if (openLi !== li) openLi.classList.remove("open");
+      });
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(otherBtn => {
+        if (otherBtn !== btn) otherBtn.setAttribute("aria-expanded", "false");
+      });
+      document.querySelectorAll(".nav-submenu").forEach(menu => {
+        if (submenu !== menu) menu.hidden = true;
+      });
+
+      li.classList.toggle("open", !isOpen);
+      btn.setAttribute("aria-expanded", String(!isOpen));
+      if (submenu) submenu.hidden = isOpen;
+    }
+
+    if (navToggle && mainNav) {
+      navToggle.addEventListener("click", () => {
+        const opened = mainNav.classList.contains("open");
+        opened ? closeNav() : openNav();
+      });
+
+      navOverlay?.addEventListener("click", closeNav);
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          // close dropdowns first if any are open
+          if (document.querySelector(".nav-has-children.open")) {
+            closeAllDropdowns();
+            return;
+          }
+          if (mainNav.classList.contains("open")) closeNav();
+        }
+      });
+
+      // Close mobile nav on link click
+      document.querySelectorAll("#mainNav a").forEach(link => {
+        link.addEventListener("click", () => {
+          if (isMobileNav()) closeNav();
         });
-      }
-    })();
+      });
+
+      // Dropdown buttons
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          toggleDropdown(btn);
+        });
+      });
+
+      // Click outside closes dropdowns
+      document.addEventListener("click", (e) => {
+        const target = e.target;
+        if (!mainNav.contains(target) && !navToggle.contains(target)) closeAllDropdowns();
+      });
+
+      // Resize: ensure body unlock + overlay reset
+      window.addEventListener("resize", () => {
+        if (!isMobileNav()) closeNav();
+      });
+    }
   </script>
 
 </body>

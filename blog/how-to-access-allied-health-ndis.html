@@ -1,11 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-651FXYJL03"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-651FXYJL03');
+  </script>
+
   <meta charset="UTF-8">
-  <title>How to Access Allied Health Through the NDIS – Able Aide</title>
+  <title>How to Access Allied Health Through the NDIS | Able Aide</title>
 
   <link rel="canonical" href="https://ableaide.com.au/blog/how-to-access-allied-health-ndis">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ✅ Match other pages -->
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b3b5a">
+  <meta name="format-detection" content="telephone=no">
 
   <meta name="description"
         content="A clear, step-by-step guide to accessing allied health through the NDIS, including OT, speech therapy, psychology, physiotherapy and assessments. Learn how Able Aide can help you find the right therapists.">
@@ -21,6 +35,7 @@
   <meta property="og:description" content="Learn how NDIS participants can access OT, speech therapy, psychology, physiotherapy and assessments. Step-by-step guide.">
   <meta property="og:image" content="/assets/img/og-image.webp">
   <meta property="og:type" content="article">
+  <meta property="og:url" content="https://ableaide.com.au/blog/how-to-access-allied-health-ndis">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
@@ -29,56 +44,77 @@
   <meta name="twitter:image" content="/assets/img/og-image.webp">
 
   <!-- Styles -->
+  <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
 
+  <!-- Preload key images -->
+  <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
+  <link rel="preload" href="/assets/img/able-aide-ndis-allied-health-access.webp" as="image">
 </head>
 
 <body>
 
-  <!-- TOP TRUST BAR -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- overlay for mobile nav -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <!-- ✅ TOP TRUST BAR (updated: registered provider) -->
   <div class="top-trust-bar">
     <div class="container top-trust-bar-inner">
       <div class="top-trust-left">
-        <span class="top-trust-badge">NDIS registration in progress</span>
-        <span class="top-trust-badge">Self-managed & plan-managed welcome</span>
-        <span class="top-trust-badge">Allied health access across Victoria</span>
+        <span class="top-trust-badge">Registered NDIS Provider · Provider No. 4050173180</span>
+        <span class="top-trust-badge">Self-managed &amp; plan-managed participants</span>
+        <span class="top-trust-badge">Allied health access support across Victoria</span>
       </div>
       <div class="top-trust-right">
-        <span class="top-trust-phone">Call: <a href="tel:61435039110">0435 039 110</a></span>
-        <a href="/refer" class="top-trust-link">Quick referral →</a>
+        <span class="top-trust-phone">
+          Call: <a href="tel:+61435039110" class="top-trust-link">0435 039 110</a>
+        </span>
+        <a href="/refer" class="top-trust-link">Quick referral form →</a>
       </div>
     </div>
   </div>
 
-  <!-- HEADER -->
+  <!-- HEADER (match other pages) -->
   <header class="site-header">
     <div class="container header-inner">
 
       <a href="/" class="logo" aria-label="Able Aide Home">
-        <img src="/assets/img/able-aide-logo.webp" alt="Able Aide logo"
-             class="logo-img" width="180" height="46">
+        <img src="/assets/img/able-aide-logo.webp"
+             alt="Able Aide logo"
+             class="logo-img"
+             decoding="async">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
 
-      <nav class="main-nav" id="mainNav">
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href="/about">About</a></li>
 
           <li class="nav-has-children">
-            <a href="/services">Services</a>
-            <ul class="nav-submenu">
-              <li><a href="/services/personal-care">Personal care & daily living</a></li>
-              <li><a href="/services/community-participation">Community participation</a></li>
+            <button class="nav-parent-link"
+                    type="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-controls="servicesMenu"
+                    id="servicesBtn">
+              Services
+            </button>
+            <ul class="nav-submenu" id="servicesMenu" aria-label="Services submenu" hidden>
+              <li><a href="/services">All services overview</a></li>
               <li><a href="/services/support-coordination">Support coordination</a></li>
+              <li><a href="/services/personal-care">Personal care &amp; daily living</a></li>
+              <li><a href="/services/community-participation">Community participation</a></li>
+              <li><a href="/services/family-early-support">Early &amp; family support</a></li>
               <li><a href="/services/allied-health-access">Allied health access</a></li>
-              <li><a href="/services/family-early-support">Family & early support</a></li>
-              <li><a href="/services/plan-management">Plan management (coming soon)</a></li>
+              <li><a href="/services/plan-management">Plan management</a></li>
             </ul>
           </li>
 
           <li><a href="/locations">Locations</a></li>
-          <li><a href="/refer">Refer</a></li>
+          <li><a href="/refer">Refer a participant</a></li>
           <li><a href="/resources">Resources</a></li>
           <li><a href="/blog" aria-current="page">Blog</a></li>
           <li><a href="/careers">Careers</a></li>
@@ -88,26 +124,25 @@
       </nav>
 
       <div class="header-cta">
-        <a href="/refer" class="btn btn-outline">Refer</a>
+        <a href="/refer" class="btn btn-outline">Refer a participant</a>
         <a href="/contact" class="btn btn-primary">Book a free chat</a>
       </div>
 
-      <button class="nav-toggle" id="navToggle" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
       </button>
 
     </div>
   </header>
 
-
-  <main>
+  <main id="main">
 
     <!-- HERO -->
     <section class="hero">
       <div class="container hero-inner">
 
         <div class="hero-text">
-          <p class="small"><a href="/resources">Resources</a> · NDIS Guide</p>
+          <p class="small"><a href="/blog">Blog</a> · NDIS Guide</p>
 
           <h1>How to Access Allied Health Through the NDIS</h1>
 
@@ -119,25 +154,30 @@
           <p class="hero-subtext">
             This guide explains how to access allied health step-by-step using simple, clear language.
           </p>
+
+          <p class="small" style="margin-top:1rem;">
+            ✔ Registered NDIS Provider · Provider No. 4050173180
+          </p>
         </div>
 
         <aside class="hero-card">
           <img src="/assets/img/able-aide-ndis-allied-health-access.webp"
                alt="NDIS participant receiving allied health support"
-               class="hero-img">
+               class="hero-img"
+               loading="lazy"
+               decoding="async">
 
-          <h2 class="section-title" style="font-size:1.4rem;">Need help finding therapists?</h2>
+          <h2>Need help finding therapists?</h2>
           <p class="small">
             Able Aide helps participants connect with OTs, speech therapists, psychologists and physios across Victoria.
           </p>
 
-          <a href="/services/allied-health-access" class="btn btn-outline btn-block">Allied Health Access</a>
+          <a href="/services/allied-health-access" class="btn btn-outline btn-block">Allied health access</a>
           <a href="/contact" class="btn btn-primary btn-block" style="margin-top:0.5rem;">Talk to Able Aide</a>
         </aside>
 
       </div>
     </section>
-
 
     <!-- ARTICLE -->
     <section class="section">
@@ -145,8 +185,10 @@
         <article>
 
           <h2 class="section-title">What is “allied health” under the NDIS?</h2>
-          <p>Allied health refers to a range of therapists who support participants with communication, mobility,
-             daily living, emotional regulation and wellbeing.</p>
+          <p>
+            Allied health refers to a range of therapists who support participants with communication, mobility,
+            daily living, emotional regulation and wellbeing.
+          </p>
 
           <ul class="checklist">
             <li>Occupational therapy (OT)</li>
@@ -160,11 +202,10 @@
           </ul>
 
           <h2 class="section-title">What funding categories cover allied health?</h2>
-
           <ul class="checklist">
             <li><strong>Improved Daily Living</strong> (most common)</li>
             <li><strong>Improved Relationships</strong></li>
-            <li><strong>Improved Health & Wellbeing</strong></li>
+            <li><strong>Improved Health &amp; Wellbeing</strong></li>
             <li><strong>Core funding</strong> (in some circumstances)</li>
           </ul>
 
@@ -181,82 +222,145 @@
           </ul>
 
           <h3>2. Decide which therapy fits your goals</h3>
-          <p>Example: OT for daily living skills, speech therapy for communication, psychology for mental health.</p>
+          <p class="small">
+            Example: OT for daily living skills, speech therapy for communication, psychology for mental health,
+            physio for movement, pain or strength.
+          </p>
 
-          <h3>3. Contact therapy providers</h3>
+          <h3>3. Check your plan type and budgets</h3>
           <ul class="checklist">
-            <li>Explain your goals</li>
-            <li>Check availability & waitlists</li>
-            <li>Check if they travel to your area</li>
-            <li>Confirm if they accept your funding type</li>
+            <li><strong>Plan-managed:</strong> you can use registered and non-registered providers</li>
+            <li><strong>Self-managed:</strong> you can use most providers and pay invoices directly</li>
+            <li><strong>NDIA-managed:</strong> you’ll generally need NDIS registered providers</li>
           </ul>
 
-          <h3>4. Compare wait times</h3>
+          <h3>4. Contact therapy providers</h3>
+          <ul class="checklist">
+            <li>Explain your goals and preferred session type (clinic / home / telehealth)</li>
+            <li>Check availability &amp; waitlists</li>
+            <li>Confirm service area and travel fees (if any)</li>
+            <li>Confirm their rates and how they invoice</li>
+          </ul>
+
+          <h3>5. Compare wait times</h3>
           <p>Many clinics have long waits — sometimes months.</p>
 
-          <p><strong>Able Aide can assist:</strong></p>
+          <p><strong>Able Aide can assist by:</strong></p>
           <ul class="checklist">
-            <li>Contacting multiple clinics</li>
-            <li>Finding shorter waitlists</li>
-            <li>Coordinating assessments</li>
-            <li>Ensuring reports meet NDIS standards</li>
+            <li>Contacting multiple providers on your behalf</li>
+            <li>Finding shorter waitlists where possible</li>
+            <li>Coordinating assessment bookings</li>
+            <li>Helping you understand therapy recommendations</li>
+            <li>Ensuring reports align with your goals and NDIS needs</li>
           </ul>
 
-          <h3>5. Begin therapy</h3>
-          <p>The therapist will complete an assessment, set goals and begin ongoing sessions.</p>
+          <h3>6. Start therapy and set a plan</h3>
+          <p>
+            The therapist will usually begin with an assessment, then agree on goals, frequency and what progress
+            looks like.
+          </p>
 
-          <h3>6. Review and adjust as needed</h3>
+          <h3>7. Review and adjust</h3>
           <ul class="checklist">
-            <li>Switch therapists if not the right fit</li>
-            <li>Request culturally matched workers</li>
-            <li>Ask for home visits if required</li>
+            <li>Change approach or frequency if it’s not helping</li>
+            <li>Switch therapists if it’s not the right fit</li>
+            <li>Request culturally safe or language-matched supports where possible</li>
+            <li>Ask for home visits if travel is a barrier</li>
           </ul>
 
           <h2 class="section-title">Do you need a referral?</h2>
-          <p>No. Most allied health does not require a GP or specialist referral unless it is a medical assessment.</p>
+          <p>
+            Usually no — most allied health providers accept self-referrals. A GP referral may be required for some
+            medical assessments or other funding pathways (not the NDIS).
+          </p>
 
-          <h2 class="section-title">How Able Aide supports allied health access</h2>
+          <h2 class="section-title">What to ask a therapist before you start</h2>
           <ul class="checklist">
-            <li>Finding suitable therapists</li>
-            <li>Coordinating appointments</li>
-            <li>Organising assessments</li>
-            <li>Helping CALD families</li>
-            <li>Understanding reports and recommendations</li>
-            <li>Reducing wait times</li>
+            <li>Do you have experience with my disability / age group?</li>
+            <li>Do you offer home visits or telehealth?</li>
+            <li>What is your wait time for the first appointment?</li>
+            <li>How do you set goals and measure progress?</li>
+            <li>Can you provide reports for plan reviews if needed?</li>
+            <li>What are your fees, cancellation policy and travel charges?</li>
           </ul>
 
           <hr>
 
-          <h2 class="section-title">Need help accessing allied health?</h2>
-          <p>We provide warm, person-centred support to help you connect with the right therapists.</p>
+          <h2 class="section-title">How Able Aide supports allied health access</h2>
+          <ul class="checklist">
+            <li>Finding suitable therapists based on goals, location and preferences</li>
+            <li>Coordinating appointments and communication between providers</li>
+            <li>Organising assessments and supporting follow-through at home</li>
+            <li>Supporting CALD families and cultural safety needs</li>
+            <li>Helping you understand reports and next steps</li>
+          </ul>
 
-          <p><a href="/contact" class="btn btn-primary">Talk to us about Allied Health Access</a></p>
+          <p class="center" style="margin-top:1.5rem;">
+            <a href="/services/allied-health-access" class="btn btn-outline">Allied health access support</a>
+            <a href="/contact" class="btn btn-primary" style="margin-left:.5rem;">Talk to Able Aide</a>
+          </p>
 
         </article>
       </div>
     </section>
 
+    <!-- FINAL CTA -->
+    <section class="home-section final-cta">
+      <div class="container final-cta-inner">
+        <div>
+          <h2>Need help accessing allied health?</h2>
+          <p>We can help you find the right therapists and make the process feel clearer and calmer.</p>
+        </div>
+        <div class="final-cta-actions">
+          <a href="/contact" class="btn btn-primary">Book a free chat</a>
+          <a href="/refer" class="btn btn-outline">Refer a participant</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-
-  <!-- FOOTER -->
+  <!-- FOOTER (updated + I Love NDIS badge) -->
   <footer class="site-footer">
     <div class="container footer-inner">
 
       <div class="footer-col">
         <h3>Able Aide</h3>
-        <p>Your Journey, Our Support — warm disability supports across Victoria.</p>
-        <p><strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
-           <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a></p>
+        <p>Registered NDIS Provider delivering Support Coordination and Core Supports across Melbourne, with Plan Management Australia-wide.</p>
+        <p class="small"><strong>Provider No.:</strong> 4050173180</p>
+
+        <!-- ✅ I Love NDIS badge -->
+        <div class="ndis-badge" aria-label="Registered NDIS Provider badge">
+          <img
+            src="/assets/img/i-love-ndis-registered-provider.png"
+            alt="I Love NDIS – Registered Provider"
+            loading="lazy"
+            decoding="async"
+            width="560"
+            height="222">
+          <p class="small ndis-provider-text">
+            <strong>Registered NDIS Provider</strong><br>
+            Provider No. 4050173180
+          </p>
+          <p class="small ndis-disclaimer">
+            Able Aide is a Registered NDIS Provider. The NDIS/NDIA does not endorse specific providers.
+          </p>
+        </div>
+
+        <p>
+          <strong>Phone:</strong> <a href="tel:+61435039110">0435 039 110</a><br>
+          <strong>General enquiries:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a><br>
+          <strong>Plan Management:</strong> <a href="mailto:planmanagement@ableaide.com.au">planmanagement@ableaide.com.au</a>
+        </p>
       </div>
 
       <div class="footer-col">
-        <h3>Quick Links</h3>
+        <h3>Quick links</h3>
         <ul class="footer-links">
           <li><a href="/about">About</a></li>
           <li><a href="/services">Services</a></li>
           <li><a href="/locations">Locations</a></li>
-          <li><a href="/refer">Refer</a></li>
+          <li><a href="/refer">Refer a participant</a></li>
           <li><a href="/resources">Resources</a></li>
           <li><a href="/blog">Blog</a></li>
           <li><a href="/careers">Careers</a></li>
@@ -266,75 +370,214 @@
       </div>
 
       <div class="footer-col">
-        <h3>Where We Support</h3>
-        <p>Greater Melbourne · Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria</p>
+        <h3>Where we support</h3>
+        <p><strong>Community participation &amp; core supports:</strong> Melbourne<br><strong>Plan Management:</strong> Australia-wide</p>
       </div>
 
       <div class="footer-col">
-        <h3>Connect with Us</h3>
+        <h3>Connect with us</h3>
         <ul class="footer-links">
-          <li><a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a></li>
-          <li><a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a></li>
-          <li><a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a></li>
-          <li><a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a></li>
-          <li><a href="https://x.com/AbleAideSupport" target="_blank">X</a></li>
+          <li><a href="https://www.facebook.com/able.aide" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/ableaide/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.tiktok.com/@ableaide" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://www.youtube.com/@AbleAide" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://x.com/AbleAideSupport" target="_blank" rel="noopener">X</a></li>
         </ul>
       </div>
 
     </div>
 
     <div class="container footer-bottom">
-      <p class="small">© <span id="year"></span> Able Aide. All rights reserved.</p>
+      <p class="small">
+        © <span id="year"></span> Able Aide ·
+        <a href="/privacy-policy" class="footer-link">Privacy Policy</a> ·
+        <a href="/terms-of-service" class="footer-link">Terms of Service</a>
+      </p>
     </div>
   </footer>
 
-
   <!-- FLOATING CTA -->
   <div class="floating-cta" id="floatingCta">
-    <button class="floating-cta-toggle" id="floatingCtaToggle">
-      <span class="icon">💬</span>
-      <span>Need help?</span>
+    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button" aria-expanded="false">
+      <span class="icon">💬</span><span>Need support?</span>
     </button>
-    <div class="floating-cta-panel">
+    <div class="floating-cta-panel" aria-hidden="true">
       <div class="floating-cta-title">Talk to Able Aide</div>
-      <div class="floating-cta-text">Quick ways to reach our team.</div>
+      <div class="floating-cta-text">Quick ways to reach us about NDIS supports, referrals or questions.</div>
       <div class="floating-cta-links">
-        <a href="tel:61435039110">📞 Call 0435 039 110</a>
-        <a href="/contact">✉️ Send an enquiry</a>
-        <a href="/refer">📝 Make a referral</a>
+        <a href="tel:+61435039110">📞 Call 0435 039 110</a>
+        <a href="mailto:enquiries@ableaide.com.au">✉️ General enquiries</a>
+        <a href="mailto:planmanagement@ableaide.com.au">📋 Plan Management</a>
+        <a href="/refer">📝 Refer a participant</a>
       </div>
     </div>
   </div>
 
-
-  <!-- JS -->
+  <!-- SCRIPTS (match other pages: overlay + dropdown + esc + resize + floating CTA) -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Mobile nav toggle
-    const navToggle = document.getElementById('navToggle');
-    const mainNav   = document.getElementById('mainNav');
+    const navToggle = document.getElementById("navToggle");
+    const mainNav = document.getElementById("mainNav");
+    const navOverlay = document.getElementById("navOverlay");
 
-    navToggle.addEventListener('click', () => {
-      mainNav.classList.toggle('open');
-      navToggle.setAttribute('aria-expanded', mainNav.classList.contains('open'));
-    });
+    function isMobileNav() {
+      return window.innerWidth <= 900;
+    }
 
-    mainNav.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        if (window.innerWidth <= 900) {
-          mainNav.classList.remove('open');
-          navToggle.setAttribute('aria-expanded', 'false');
+    function closeAllDropdowns() {
+      document.querySelectorAll(".nav-has-children.open").forEach(li => li.classList.remove("open"));
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => {
+        btn.setAttribute("aria-expanded", "false");
+      });
+      document.querySelectorAll(".nav-submenu").forEach(menu => menu.hidden = true);
+    }
+
+    function openNav() {
+      if (!mainNav) return;
+      mainNav.classList.add("open");
+      navOverlay?.classList.add("open");
+      navToggle?.setAttribute("aria-expanded", "true");
+      navOverlay?.setAttribute("aria-hidden", "false");
+      document.body.classList.add("nav-lock");
+    }
+
+    function closeNav() {
+      if (!mainNav) return;
+      mainNav.classList.remove("open");
+      navOverlay?.classList.remove("open");
+      navToggle?.setAttribute("aria-expanded", "false");
+      navOverlay?.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("nav-lock");
+      closeAllDropdowns();
+    }
+
+    function toggleDropdown(btn) {
+      const li = btn.parentElement;
+      const submenu = li ? li.querySelector(".nav-submenu") : null;
+      const isOpen = li.classList.contains("open");
+
+      document.querySelectorAll(".nav-has-children.open").forEach(openLi => {
+        if (openLi !== li) openLi.classList.remove("open");
+      });
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(otherBtn => {
+        if (otherBtn !== btn) otherBtn.setAttribute("aria-expanded", "false");
+      });
+      document.querySelectorAll(".nav-submenu").forEach(menu => {
+        if (submenu !== menu) menu.hidden = true;
+      });
+
+      li.classList.toggle("open", !isOpen);
+      btn.setAttribute("aria-expanded", String(!isOpen));
+      if (submenu) submenu.hidden = isOpen;
+    }
+
+    if (navToggle && mainNav) {
+      navToggle.addEventListener("click", () => {
+        const opened = mainNav.classList.contains("open");
+        opened ? closeNav() : openNav();
+      });
+
+      navOverlay?.addEventListener("click", closeNav);
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          if (document.querySelector(".nav-has-children.open")) {
+            closeAllDropdowns();
+            return;
+          }
+          if (mainNav.classList.contains("open")) closeNav();
         }
       });
-    });
+
+      document.querySelectorAll("#mainNav a").forEach(link => {
+        link.addEventListener("click", () => {
+          if (isMobileNav()) closeNav();
+        });
+      });
+
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          toggleDropdown(btn);
+        });
+      });
+
+      document.addEventListener("click", (e) => {
+        const target = e.target;
+        if (!mainNav.contains(target) && !navToggle.contains(target)) closeAllDropdowns();
+      });
+
+      window.addEventListener("resize", () => {
+        if (!isMobileNav()) closeNav();
+      });
+    }
 
     // Floating CTA
-    document.getElementById('floatingCtaToggle')
-      .addEventListener('click', () => {
-        document.getElementById('floatingCta').classList.toggle('open');
+    const floatingToggle = document.getElementById("floatingCtaToggle");
+    const floatingCta = document.getElementById("floatingCta");
+    const floatingPanel = floatingCta ? floatingCta.querySelector(".floating-cta-panel") : null;
+
+    if (floatingToggle && floatingCta && floatingPanel) {
+      floatingToggle.addEventListener("click", () => {
+        const isOpen = floatingCta.classList.toggle("open");
+        floatingToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        floatingPanel.setAttribute("aria-hidden", isOpen ? "false" : "true");
       });
+    }
+  </script>
+
+  <!-- ✅ Updated JSON-LD (Registered provider + Article + Breadcrumb) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://ableaide.com.au/#business",
+        "name": "Able Aide",
+        "url": "https://ableaide.com.au/",
+        "logo": "https://ableaide.com.au/assets/img/able-aide-logo.webp",
+        "telephone": "+61435039110",
+        "email": "enquiries@ableaide.com.au",
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "NDIS Provider Registration Number",
+          "value": "4050173180"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://ableaide.com.au/blog/how-to-access-allied-health-ndis#breadcrumbs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ableaide.com.au/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ableaide.com.au/blog" },
+          { "@type": "ListItem", "position": 3, "name": "Allied Health Access", "item": "https://ableaide.com.au/blog/how-to-access-allied-health-ndis" }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://ableaide.com.au/blog/how-to-access-allied-health-ndis#post",
+        "headline": "How to Access Allied Health Through the NDIS",
+        "description": "A clear, step-by-step guide to accessing allied health through the NDIS, including OT, speech therapy, psychology, physiotherapy and assessments. Learn how Able Aide can help you find the right therapists.",
+        "url": "https://ableaide.com.au/blog/how-to-access-allied-health-ndis",
+        "image": "https://ableaide.com.au/assets/img/able-aide-ndis-allied-health-access.webp",
+        "author": { "@type": "Organization", "name": "Able Aide" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Able Aide",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://ableaide.com.au/assets/img/able-aide-logo.webp"
+          }
+        },
+        "mainEntityOfPage": "https://ableaide.com.au/blog/how-to-access-allied-health-ndis",
+        "datePublished": "2026-02-17",
+        "dateModified": "2026-02-17"
+      }
+    ]
+  }
   </script>
 
 </body>

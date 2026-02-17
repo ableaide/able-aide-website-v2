@@ -2,16 +2,16 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Refer a Participant – Able Aide NDIS Support</title>
+  <title>Refer a Participant – Able Aide (Registered NDIS Provider)</title>
 
   <link rel="canonical" href="https://ableaide.com.au/refer">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="description"
-        content="Refer an NDIS participant to Able Aide for warm, consistent and person-centred support across Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton and regional Victoria.">
+        content="Refer an NDIS participant to Able Aide — Registered NDIS Provider (Provider No. 4050173180). We provide Support Coordination and Core supports across Melbourne, and Plan Management Australia-wide.">
 
   <meta name="keywords"
-        content="NDIS referral form, refer participant, Able Aide referral, support coordination referral, disability support referral">
+        content="NDIS referral form, refer participant, Able Aide referral, support coordination referral, disability support referral, plan management referral">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
@@ -20,9 +20,9 @@
   <link rel="shortcut icon" href="/favicon.ico">
 
   <!-- OpenGraph -->
-  <meta property="og:title" content="Refer a Participant – Able Aide NDIS Support">
+  <meta property="og:title" content="Refer a Participant – Able Aide (Registered NDIS Provider)">
   <meta property="og:description"
-        content="Support coordinators, families and carers can use this simple referral form to connect participants with Able Aide's person-centred support.">
+        content="Support Coordinators, families and carers can refer participants to Able Aide. Provider No. 4050173180. Support Coordination + Core supports (Melbourne) and Plan Management (Australia-wide).">
   <meta property="og:image" content="/assets/img/og-image.webp">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ableaide.com.au/refer">
@@ -31,25 +31,16 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Refer a Participant – Able Aide">
   <meta name="twitter:description"
-        content="Warm, person-centred disability support across Victoria. Make a referral using our easy form.">
+        content="Make a referral to Able Aide. Support Coordination + Core supports (Melbourne) and Plan Management (Australia-wide). Provider No. 4050173180.">
   <meta name="twitter:image" content="/assets/img/og-image.webp">
 
+  <!-- Styles -->
   <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
 
+  <!-- Preload images -->
   <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
-
-  <style>
-    @media (max-width: 900px) {
-      .main-nav {
-        display:block;
-        max-height:0;
-        overflow:hidden;
-        transition:max-height .25s ease;
-      }
-      .main-nav.open { max-height:520px; }
-    }
-  </style>
+  <link rel="preload" href="/assets/img/i-love-ndis-registered-provider.png" as="image">
 
   <!-- Schema -->
   <script type="application/ld+json">
@@ -57,13 +48,26 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": "LocalBusiness",
+        "@id": "https://ableaide.com.au/#business",
         "name": "Able Aide",
-        "url": "https://ableaide.com.au",
+        "url": "https://ableaide.com.au/",
         "logo": "https://ableaide.com.au/assets/img/able-aide-logo.webp",
-        "description": "Able Aide provides warm, reliable and person-centred NDIS disability support across Victoria.",
+        "image": "https://ableaide.com.au/assets/img/og-image.webp",
+        "description": "Able Aide is a Registered NDIS Provider delivering Support Coordination and Core supports across Melbourne, and Plan Management Australia-wide.",
         "email": "enquiries@ableaide.com.au",
         "telephone": "+61435039110",
+        "identifier": "NDIS Provider Number 4050173180",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Melbourne",
+          "addressRegion": "VIC",
+          "addressCountry": "AU"
+        },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Melbourne" },
+          { "@type": "Country", "name": "Australia" }
+        ],
         "sameAs": [
           "https://www.facebook.com/able.aide",
           "https://www.instagram.com/ableaide/",
@@ -74,13 +78,26 @@
         ]
       },
       {
-        "@type": "ContactPage",
-        "name": "Refer a Participant",
+        "@type": "WebSite",
+        "@id": "https://ableaide.com.au/#website",
+        "url": "https://ableaide.com.au/",
+        "name": "Able Aide",
+        "publisher": { "@id": "https://ableaide.com.au/#business" },
+        "inLanguage": "en-AU"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://ableaide.com.au/refer#webpage",
+        "name": "Refer a Participant – Able Aide",
         "url": "https://ableaide.com.au/refer",
+        "description": "Referral form for Support Coordinators, families and carers to refer NDIS participants to Able Aide.",
+        "isPartOf": { "@id": "https://ableaide.com.au/#website" },
+        "about": { "@id": "https://ableaide.com.au/#business" },
         "inLanguage": "en-AU"
       },
       {
         "@type": "BreadcrumbList",
+        "@id": "https://ableaide.com.au/refer#breadcrumbs",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ableaide.com.au/" },
           { "@type": "ListItem", "position": 2, "name": "Refer", "item": "https://ableaide.com.au/refer" }
@@ -89,18 +106,22 @@
     ]
   }
   </script>
-
 </head>
 
 <body>
+
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- overlay for mobile nav -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
 
   <!-- TOP TRUST BAR -->
   <div class="top-trust-bar">
     <div class="container top-trust-bar-inner">
       <div class="top-trust-left">
-        <span class="top-trust-badge">NDIS registration in progress</span>
-        <span class="top-trust-badge">Supporting self-managed &amp; plan-managed</span>
-        <span class="top-trust-badge">Greater Melbourne &amp; regional VIC</span>
+        <span class="top-trust-badge">Registered NDIS Provider · Provider No. 4050173180</span>
+        <span class="top-trust-badge">Support Coordination &amp; Core supports: Melbourne</span>
+        <span class="top-trust-badge">Plan Management: Australia-wide</span>
       </div>
       <div class="top-trust-right">
         <span class="top-trust-phone">Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a></span>
@@ -113,25 +134,25 @@
   <header class="site-header">
     <div class="container header-inner">
 
-      <a href="/" class="logo">
+      <a href="/" class="logo" aria-label="Able Aide Home">
         <img src="/assets/img/able-aide-logo.webp" alt="Able Aide logo" class="logo-img" decoding="async">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
 
-      <nav class="main-nav" id="mainNav">
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href="/about">About</a></li>
 
           <li class="nav-has-children">
-            <a href="/services">Services</a>
+            <a href="/services" class="nav-parent-link">Services</a>
             <ul class="nav-submenu">
+              <li><a href="/services/plan-management">Plan management</a></li>
+              <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/personal-care">Personal care</a></li>
               <li><a href="/services/community-participation">Community participation</a></li>
-              <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/allied-health-access">Allied health access</a></li>
               <li><a href="/services/family-early-support">Early &amp; family support</a></li>
-              <li><a href="/services/plan-management">Plan management <span class="small">(Coming soon)</span></a></li>
             </ul>
           </li>
 
@@ -144,31 +165,34 @@
       </nav>
 
       <div class="header-cta">
-        <a href="/refer" class="btn btn-outline">Refer</a>
+        <a href="mailto:planmanagement@ableaide.com.au" class="btn btn-outline">Plan Management</a>
         <a href="/contact" class="btn btn-primary">Book a free chat</a>
       </div>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation">
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
       </button>
 
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
     <!-- HERO -->
     <section class="hero">
       <div class="container hero-inner">
 
-        <div>
+        <div class="hero-text">
           <h1>Refer a Participant</h1>
-          <p>Support coordinators, families and carers can use this simple referral form.</p>
-          <p>We respond quickly and respectfully – with no pressure.</p>
+          <p>Support Coordinators, families and carers can use this simple referral form.</p>
+          <p class="hero-subtext">
+            We provide <strong>Support Coordination</strong> and <strong>Core supports</strong> in Melbourne,
+            and <strong>Plan Management</strong> Australia-wide.
+          </p>
+          <p class="small"><strong>Provider No.:</strong> 4050173180 · <strong>Effective from:</strong> 16/02/2026</p>
         </div>
 
-        <!-- FIXED HERO IMAGE -->
-        <div class="hero-card">
+        <aside class="hero-card">
           <img src="/assets/img/able-aide-ndis-community-access-support.webp"
                alt="Support worker assisting participant"
                class="hero-img"
@@ -179,7 +203,7 @@
           <p class="small">
             We contact the participant or family in a calm, respectful way – no pressure and no rush.
           </p>
-        </div>
+        </aside>
 
       </div>
     </section>
@@ -192,6 +216,24 @@
         <p class="section-intro">Please provide as much detail as you're comfortable sharing.</p>
 
         <form action="https://formspree.io/f/xpzvkaqk" method="POST" class="form">
+
+          <input type="hidden" name="_subject" value="New referral - Able Aide">
+          <input type="hidden" name="provider_number" value="4050173180">
+
+          <h3>Referral Type</h3>
+
+          <div class="form-group">
+            <label for="referral_type">What are you referring for? *</label>
+            <select id="referral_type" name="referral_type" required>
+              <option value="" selected disabled>Select…</option>
+              <option value="support_coordination_melbourne">Support Coordination (Melbourne)</option>
+              <option value="core_supports_melbourne">Core Supports (Melbourne)</option>
+              <option value="plan_management_australia_wide">Plan Management (Australia-wide)</option>
+              <option value="not_sure">Not sure – please advise</option>
+            </select>
+          </div>
+
+          <hr style="margin:2rem 0; opacity:0.3;">
 
           <h3>Your Details</h3>
 
@@ -240,8 +282,8 @@
           </div>
 
           <div class="form-group">
-            <label for="participant_suburb">Participant suburb *</label>
-            <input type="text" id="participant_suburb" name="participant_suburb" required>
+            <label for="participant_suburb">Suburb/State *</label>
+            <input type="text" id="participant_suburb" name="participant_suburb" placeholder="e.g., Tarneit VIC / Parramatta NSW" required>
           </div>
 
           <div class="form-group">
@@ -254,12 +296,17 @@
             <select id="funding_type" name="funding_type" required>
               <option value="self_managed">Self-managed</option>
               <option value="plan_managed">Plan-managed</option>
-              <option value="agency_managed">Agency-managed (once registered)</option>
+              <option value="agency_managed">NDIA-managed (Agency-managed)</option>
               <option value="not_sure">Not sure</option>
             </select>
           </div>
 
           <button type="submit" class="btn btn-primary">Submit referral</button>
+
+          <p class="small" style="margin-top:0.75rem;">
+            For Plan Management referrals Australia-wide, you can also email
+            <a href="mailto:planmanagement@ableaide.com.au">planmanagement@ableaide.com.au</a>.
+          </p>
 
         </form>
       </div>
@@ -270,7 +317,10 @@
       <div class="container center">
         <h2 class="section-title">Prefer to chat first?</h2>
         <p class="section-intro">We're happy to talk through your concerns and options.</p>
-        <a href="/contact" class="btn btn-primary">Contact Able Aide</a>
+        <div style="display:flex; gap:.75rem; justify-content:center; flex-wrap:wrap; margin-top:1rem;">
+          <a href="/contact" class="btn btn-primary">Contact Able Aide</a>
+          <a href="mailto:planmanagement@ableaide.com.au" class="btn btn-outline">Plan Management</a>
+        </div>
       </div>
     </section>
 
@@ -282,10 +332,22 @@
 
       <div class="footer-col">
         <h3>Able Aide</h3>
-        <p>Warm, person-centred disability supports across Victoria.</p>
+        <p>Registered NDIS Provider delivering Support Coordination and Core supports in Melbourne, and Plan Management Australia-wide.</p>
+        <p class="small"><strong>Provider No.:</strong> 4050173180 · <strong>Effective from:</strong> 16/02/2026</p>
+
+        <!-- ✅ NDIS badge -->
+        <div class="ndis-badge" aria-label="Registered NDIS Provider badge">
+          <img src="/assets/img/i-love-ndis-registered-provider.png" alt="I Love NDIS Registered Provider">
+          <p class="small">
+            <strong>Registered NDIS Provider</strong><br>
+            Provider No. 4050173180
+          </p>
+        </div>
+
         <p>
           <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
-          <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
+          <strong>General enquiries:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a><br>
+          <strong>Plan Management:</strong> <a href="mailto:planmanagement@ableaide.com.au">planmanagement@ableaide.com.au</a>
         </p>
       </div>
 
@@ -297,25 +359,27 @@
           <li><a href="/locations">Locations</a></li>
           <li><a href="/refer" aria-current="page">Refer</a></li>
           <li><a href="/resources">Resources</a></li>
+          <li><a href="/faqs">FAQs</a></li>
           <li><a href="/careers">Careers</a></li>
           <li><a href="/contact">Contact</a></li>
+          <li><a href="/complaints">Complaints</a></li>
         </ul>
       </div>
 
       <div class="footer-col">
-        <h3>Where we support</h3>
-        <p>Greater Melbourne · Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria</p>
+        <h3>Service areas</h3>
+        <p><strong>Support Coordination &amp; Core supports:</strong> Melbourne<br><strong>Plan Management:</strong> Australia-wide</p>
       </div>
 
       <div class="footer-col">
         <h3>Connect with us</h3>
         <ul class="footer-links">
-          <li><a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a></li>
-          <li><a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a></li>
-          <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a></li>
-          <li><a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a></li>
-          <li><a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a></li>
-          <li><a href="https://x.com/AbleAideSupport" target="_blank">X</a></li>
+          <li><a href="https://www.facebook.com/able.aide" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/ableaide/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.tiktok.com/@ableaide" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://www.youtube.com/@AbleAide" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://x.com/AbleAideSupport" target="_blank" rel="noopener">X</a></li>
         </ul>
       </div>
 
@@ -340,6 +404,7 @@
       <div class="floating-cta-text">Quick ways to reach us.</div>
       <div class="floating-cta-links">
         <a href="tel:61435039110">📞 Call 0435 039 110</a>
+        <a href="mailto:planmanagement@ableaide.com.au">📋 Plan Management</a>
         <a href="/contact">✉️ Send an enquiry</a>
         <a href="/refer">📝 Refer a participant</a>
       </div>
@@ -352,23 +417,62 @@
 
     const navToggle = document.getElementById("navToggle");
     const mainNav = document.getElementById("mainNav");
-    navToggle.addEventListener("click", () => {
-      mainNav.classList.toggle("open");
-      navToggle.setAttribute("aria-expanded", mainNav.classList.contains("open"));
-    });
+    const navOverlay = document.getElementById("navOverlay");
 
-    document.querySelectorAll("#mainNav a").forEach(link => {
-      link.addEventListener("click", () => {
-        if (window.innerWidth <= 900) {
-          mainNav.classList.remove("open");
-          navToggle.setAttribute("aria-expanded", "false");
-        }
+    function openNav() {
+      mainNav.classList.add("open");
+      navOverlay.classList.add("open");
+      navToggle.setAttribute("aria-expanded", "true");
+      navOverlay.setAttribute("aria-hidden", "false");
+      document.body.classList.add("nav-lock");
+    }
+
+    function closeNav() {
+      mainNav.classList.remove("open");
+      navOverlay.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navOverlay.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("nav-lock");
+      document.querySelectorAll(".nav-has-children.open").forEach(el => el.classList.remove("open"));
+    }
+
+    if (navToggle && mainNav) {
+      navToggle.addEventListener("click", () => {
+        const opened = mainNav.classList.contains("open");
+        opened ? closeNav() : openNav();
       });
-    });
 
-    document.getElementById("floatingCtaToggle").addEventListener("click", () => {
-      document.getElementById("floatingCta").classList.toggle("open");
-    });
+      if (navOverlay) navOverlay.addEventListener("click", closeNav);
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && mainNav.classList.contains("open")) closeNav();
+      });
+
+      document.querySelectorAll("#mainNav a").forEach(link => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 900) closeNav();
+        });
+      });
+
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(a => {
+        a.addEventListener("click", (e) => {
+          if (window.innerWidth <= 900) {
+            e.preventDefault();
+            a.parentElement.classList.toggle("open");
+          }
+        });
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) closeNav();
+      });
+    }
+
+    const floatingToggle = document.getElementById("floatingCtaToggle");
+    const floatingCta = document.getElementById("floatingCta");
+    if (floatingToggle && floatingCta) {
+      floatingToggle.addEventListener("click", () => floatingCta.classList.toggle("open"));
+    }
   </script>
 
 </body>

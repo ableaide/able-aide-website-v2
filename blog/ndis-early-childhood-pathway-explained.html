@@ -1,14 +1,28 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-651FXYJL03"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-651FXYJL03');
+  </script>
+
   <meta charset="UTF-8">
-  <title>NDIS Early Childhood Pathway Explained – Able Aide</title>
+  <title>NDIS Early Childhood Pathway Explained | Able Aide</title>
 
   <!-- Canonical -->
   <link rel="canonical" href="https://ableaide.com.au/blog/ndis-early-childhood-pathway-explained">
 
   <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- ✅ Match other pages -->
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#0b3b5a">
+  <meta name="format-detection" content="telephone=no">
 
   <!-- Meta Description -->
   <meta name="description"
@@ -42,53 +56,36 @@
   <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
 
-  <!-- Schema.org for BlogPosting -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "BlogPosting",
-    "headline": "NDIS Early Childhood Pathway Explained",
-    "description": "A gentle, easy-to-understand guide to the NDIS early childhood pathway, including who it is for and how to navigate it.",
-    "image": "https://ableaide.com.au/assets/img/og-image.webp",
-    "author": {
-      "@type": "Organization",
-      "name": "Able Aide"
-    },
-    "publisher": {
-      "@type": "Organization",
-      "name": "Able Aide",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://ableaide.com.au/assets/img/able-aide-logo.webp"
-      }
-    },
-    "mainEntityOfPage": "https://ableaide.com.au/blog/ndis-early-childhood-pathway-explained",
-    "datePublished": "2025-01-15",
-    "dateModified": "2025-11-27"
-  }
-  </script>
+  <!-- Preload key images -->
+  <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
+  <link rel="preload" href="/assets/img/able-aide-ndis-family-early-support-hero.webp" as="image">
 </head>
 
 <body>
 
-  <!-- GLOBAL TOP TRUST BAR -->
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- overlay for mobile nav -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <!-- ✅ TOP TRUST BAR (updated: registered provider) -->
   <div class="top-trust-bar">
     <div class="container top-trust-bar-inner">
       <div class="top-trust-left">
-        <span class="top-trust-badge">NDIS registration in progress</span>
+        <span class="top-trust-badge">Registered NDIS Provider · Provider No. 4050173180</span>
         <span class="top-trust-badge">Supporting self-managed &amp; plan-managed participants</span>
-        <span class="top-trust-badge">Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton &amp; regional VIC</span>
+        <span class="top-trust-badge">Greater Melbourne, Geelong &amp; regional VIC</span>
       </div>
       <div class="top-trust-right">
         <span class="top-trust-phone">
-          Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a>
+          Call: <a href="tel:+61435039110" class="top-trust-link">0435 039 110</a>
         </span>
         <a href="/refer" class="top-trust-link">Quick referral form →</a>
       </div>
     </div>
   </div>
 
-  <!-- HEADER -->
+  <!-- HEADER (match other pages) -->
   <header class="site-header">
     <div class="container header-inner">
 
@@ -96,35 +93,43 @@
         <img src="/assets/img/able-aide-logo.webp"
              alt="Able Aide logo"
              class="logo-img"
-             width="180"
-             height="46"
              decoding="async">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
 
-      <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
         <ul class="nav-list">
           <li><a href="/about">About</a></li>
 
           <li class="nav-has-children">
-            <a href="/services">Services</a>
-            <ul class="nav-submenu">
+            <button class="nav-parent-link"
+                    type="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-controls="servicesMenu"
+                    id="servicesBtn">
+              Services
+            </button>
+            <ul class="nav-submenu" id="servicesMenu" aria-label="Services submenu" hidden>
+              <li><a href="/services">All services overview</a></li>
+              <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/personal-care">Personal care &amp; daily living</a></li>
               <li><a href="/services/community-participation">Community participation</a></li>
-              <li><a href="/services/support-coordination">Support coordination</a></li>
-              <li><a href="/services/allied-health-access">Allied health access</a></li>
               <li><a href="/services/family-early-support">Early &amp; family support</a></li>
-              <li><a href="/services/plan-management">Plan management <span class="small">(Coming soon)</span></a></li>
+              <li><a href="/services/allied-health-access">Allied health access</a></li>
+              <li><a href="/services/plan-management">Plan management</a></li>
             </ul>
           </li>
 
           <li><a href="/locations">Locations</a></li>
-          <li><a href="/refer">Refer</a></li>
+          <li><a href="/refer">Refer a participant</a></li>
           <li><a href="/resources">Resources</a></li>
           <li><a href="/reviews">Reviews</a></li>
-          <li><a href="/contact">Contact</a></li>
+          <li><a href="/blog" aria-current="page">Blog</a></li>
           <li><a href="/careers">Careers</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/complaints">Complaints</a></li>
         </ul>
       </nav>
 
@@ -133,14 +138,14 @@
         <a href="/contact" class="btn btn-primary">Book a free chat</a>
       </div>
 
-      <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
         <span></span>
       </button>
 
     </div>
   </header>
 
-  <main>
+  <main id="main">
 
     <!-- HERO -->
     <section class="hero">
@@ -150,26 +155,29 @@
           <p class="small"><a href="/blog">Blog</a> · NDIS Guide</p>
           <h1>NDIS Early Childhood Pathway Explained</h1>
           <p class="hero-subtext">
-            When you first hear about the NDIS for your child, it can feel overwhelming — new words, new
-            professionals and a lot to understand.
+            When you first hear about the NDIS for your child, it can feel overwhelming — new words, new professionals,
+            and a lot to understand.
           </p>
           <p class="hero-subtext">
-            This guide breaks down the NDIS early childhood pathway in calm, simple language so you know what
-            to expect and how to advocate for your child with confidence.
+            This guide breaks down the NDIS early childhood pathway in calm, simple language so you know what to expect
+            and how to advocate for your child with confidence.
+          </p>
+          <p class="small" style="margin-top:1rem;">
+            ✔ Registered NDIS Provider · Provider No. 4050173180
           </p>
         </div>
 
         <aside class="hero-card">
-          <img src="/assets/img/able-aide-ndis-family-early-support-hero.webp"
-               alt="Parent and child playing during early childhood support session"
-               loading="lazy"
-               decoding="async"
-               style="width:100%; border-radius:12px; margin-bottom:1rem;">
+          <img
+            src="/assets/img/able-aide-ndis-family-early-support-hero.webp"
+            alt="Parent and child playing during early childhood support session"
+            class="hero-img"
+            loading="lazy"
+            decoding="async">
 
           <h2>Support for young children &amp; families</h2>
           <p class="small">
-            Able Aide provides gentle, family-centred supports for children and parents navigating early
-            childhood and the NDIS.
+            Able Aide provides gentle, family-centred supports for children and parents navigating early childhood and the NDIS.
           </p>
 
           <div class="hero-badge-group">
@@ -191,14 +199,12 @@
 
           <h2 class="section-title">What is the NDIS early childhood pathway?</h2>
           <p>
-            The early childhood pathway — sometimes called the <strong>early childhood approach</strong> — is
-            designed to help young children with disability or developmental concerns access support as early
-            as possible.
+            The early childhood pathway — sometimes called the <strong>early childhood approach</strong> — is designed to help
+            young children with disability or developmental concerns access support as early as possible.
           </p>
-
           <p>
-            The focus is on early intervention: providing the right support early in life so children can build
-            confidence, participate and develop everyday skills.
+            The focus is on early intervention: providing the right support early in life so children can build confidence,
+            participate and develop everyday skills.
           </p>
 
           <h2 class="section-title">Who is it for?</h2>
@@ -212,8 +218,7 @@
           </ul>
 
           <p>
-            Some children receive a full NDIS plan, while others access short-term supports through early
-            childhood partners.
+            Some children receive a full NDIS plan, while others access short-term supports through early childhood partners.
           </p>
 
           <h2 class="section-title">Typical steps in the early childhood pathway</h2>
@@ -221,21 +226,17 @@
 
           <h3>1. Noticing concerns</h3>
           <p>
-            You, a teacher, GP or therapist may notice differences in development, communication, behaviour or
-            social interaction.
+            You, a teacher, GP or therapist may notice differences in development, communication, behaviour or social interaction.
           </p>
 
           <h3>2. Talking to professionals</h3>
           <p>
-            Families often begin by speaking with a <strong>GP, paediatrician, maternal &amp; child health nurse,
-            kinder or school</strong>. They may recommend monitoring, assessments or referral to an early
-            childhood partner.
+            Families often begin by speaking with a <strong>GP, paediatrician, maternal &amp; child health nurse, kinder or school</strong>.
+            They may recommend monitoring, assessments or referral to an early childhood partner.
           </p>
 
           <h3>3. Contacting the early childhood team</h3>
-          <p>
-            The NDIS or your local early childhood partner may ask about:
-          </p>
+          <p>The NDIS or your local early childhood partner may ask about:</p>
 
           <ul class="checklist">
             <li>Your child's development and behaviour</li>
@@ -244,7 +245,7 @@
           </ul>
 
           <h3>4. Assessment &amp; eligibility</h3>
-          <p>The NDIS will consider whether your child may benefit from:</p>
+          <p>The NDIA will consider whether your child may benefit from:</p>
 
           <ul class="checklist">
             <li>Short-term early intervention supports</li>
@@ -252,14 +253,12 @@
           </ul>
 
           <p>
-            You may be asked to provide reports from therapists or doctors. If you don’t have these yet, that’s
-            okay — it can be part of your next steps.
+            You may be asked to provide reports from therapists or doctors. If you don’t have these yet, that’s okay —
+            it can be part of your next steps.
           </p>
 
           <h3>5. Planning meeting</h3>
-          <p>
-            If eligible, you’ll talk about:
-          </p>
+          <p>If eligible, you’ll talk about:</p>
 
           <ul class="checklist">
             <li>Your child’s strengths</li>
@@ -279,14 +278,12 @@
 
           <p>
             Services like <a href="/services/allied-health-access">Allied Health Access</a> and
-            <a href="/services/support-coordination">Support Coordination</a> can help you manage appointments,
-            waitlists and funding.
+            <a href="/services/support-coordination">Support Coordination</a> can help you manage appointments, waitlists and funding.
           </p>
 
           <h3>7. Reviewing progress</h3>
           <p>
-            Plans are reviewed regularly. You’ll discuss what’s improved, what’s still hard and what supports
-            may need to change.
+            Plans are reviewed regularly. You’ll discuss what’s improved, what’s still hard and what supports may need to change.
           </p>
 
           <h2 class="section-title">What supports can be included?</h2>
@@ -304,8 +301,7 @@
 
           <h2 class="section-title">Your role as a parent or caregiver</h2>
           <p>
-            You are the expert in your child. Professionals rely on your insight to understand how your child
-            manages daily life.
+            You are the expert in your child. Professionals rely on your insight to understand how your child manages daily life.
           </p>
 
           <ul class="checklist">
@@ -322,12 +318,8 @@
             <li><strong>Family &amp; Early Support:</strong> routines, behaviour strategies, participation at home</li>
             <li><strong>Allied Health Access:</strong> finding therapists, navigating waitlists, organising assessments</li>
             <li><strong>Support Coordination:</strong> linking services, problem-solving and preparing for reviews</li>
-            <li><strong>Respectful support workers:</strong> sensitive to your family's culture, routines and values</li>
+            <li><strong>Respectful support workers:</strong> sensitive to your family’s culture, routines and values</li>
           </ul>
-
-          <p>
-            Our focus is on calm, realistic support that fits your family.
-          </p>
 
           <h2 class="section-title">Helpful questions for your planning meeting</h2>
           <ul class="checklist">
@@ -343,8 +335,8 @@
 
           <h2 class="section-title">Feeling overwhelmed?</h2>
           <p>
-            Many parents tell us they feel confused or exhausted before they even begin. That’s completely
-            normal — the early childhood pathway can be a lot to take in.
+            Many parents tell us they feel confused or exhausted before they even begin. That’s completely normal —
+            the early childhood pathway can be a lot to take in.
           </p>
 
           <p>
@@ -359,21 +351,53 @@
       </div>
     </section>
 
+    <!-- FINAL CTA -->
+    <section class="home-section final-cta">
+      <div class="container final-cta-inner">
+        <div>
+          <h2>Want a calm, no-pressure chat?</h2>
+          <p>If you’re unsure where to start or what evidence to gather, we can guide you step-by-step.</p>
+        </div>
+        <div class="final-cta-actions">
+          <a href="/contact" class="btn btn-primary">Book a free chat</a>
+          <a href="/refer" class="btn btn-outline">Refer a participant</a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <!-- FOOTER -->
+  <!-- FOOTER (updated + I Love NDIS badge) -->
   <footer class="site-footer">
     <div class="container footer-inner">
 
       <div class="footer-col">
         <h3>Able Aide</h3>
+        <p>Registered NDIS Provider delivering Support Coordination and Core Supports across Melbourne, with Plan Management Australia-wide.</p>
+        <p class="small"><strong>Provider No.:</strong> 4050173180</p>
+
+        <!-- ✅ I Love NDIS badge -->
+        <div class="ndis-badge" aria-label="Registered NDIS Provider badge">
+          <img
+            src="/assets/img/i-love-ndis-registered-provider.png"
+            alt="I Love NDIS – Registered Provider"
+            loading="lazy"
+            decoding="async"
+            width="560"
+            height="222">
+          <p class="small ndis-provider-text">
+            <strong>Registered NDIS Provider</strong><br>
+            Provider No. 4050173180
+          </p>
+          <p class="small ndis-disclaimer">
+            Able Aide is a Registered NDIS Provider. The NDIS/NDIA does not endorse specific providers.
+          </p>
+        </div>
+
         <p>
-          Your Journey, Our Support – warm, person-centred disability supports across Greater Melbourne
-          and regional Victoria.
-        </p>
-        <p>
-          <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
-          <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
+          <strong>Phone:</strong> <a href="tel:+61435039110">0435 039 110</a><br>
+          <strong>General enquiries:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a><br>
+          <strong>Plan Management:</strong> <a href="mailto:planmanagement@ableaide.com.au">planmanagement@ableaide.com.au</a>
         </p>
       </div>
 
@@ -383,9 +407,10 @@
           <li><a href="/about">About</a></li>
           <li><a href="/services">Services</a></li>
           <li><a href="/locations">Locations</a></li>
-          <li><a href="/refer">Refer</a></li>
+          <li><a href="/refer">Refer a participant</a></li>
           <li><a href="/resources">Resources</a></li>
           <li><a href="/reviews">Reviews</a></li>
+          <li><a href="/blog" aria-current="page">Blog</a></li>
           <li><a href="/careers">Careers</a></li>
           <li><a href="/contact">Contact</a></li>
           <li><a href="/complaints">Complaints</a></li>
@@ -425,62 +450,185 @@
 
   <!-- FLOATING CTA -->
   <div class="floating-cta" id="floatingCta">
-    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button">
+    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button" aria-expanded="false">
       <span class="icon">💬</span>
       <span>Need support?</span>
     </button>
-    <div class="floating-cta-panel">
+    <div class="floating-cta-panel" aria-hidden="true">
       <div class="floating-cta-title">Talk to Able Aide</div>
-      <div class="floating-cta-text">
-        Quick ways to reach us about NDIS supports, referrals or questions.
-      </div>
+      <div class="floating-cta-text">Quick ways to reach us about NDIS supports, referrals or questions.</div>
       <div class="floating-cta-links">
-        <a href="tel:61435039110">📞 Call 0435 039 110</a>
+        <a href="tel:+61435039110">📞 Call 0435 039 110</a>
         <a href="/contact">✉️ Send an enquiry</a>
         <a href="/refer">📝 Make a referral</a>
       </div>
     </div>
   </div>
 
-  <!-- SCRIPTS -->
+  <!-- SCRIPTS (overlay + dropdown + esc + resize + floating CTA) -->
   <script>
     document.getElementById("year").textContent = new Date().getFullYear();
 
-    // Mobile nav toggle
-    (function () {
-      var navToggle = document.getElementById('navToggle');
-      var mainNav = document.getElementById('mainNav');
+    const navToggle = document.getElementById("navToggle");
+    const mainNav = document.getElementById("mainNav");
+    const navOverlay = document.getElementById("navOverlay");
 
-      if (navToggle && mainNav) {
-        navToggle.addEventListener('click', function () {
-          var isOpen = mainNav.classList.contains('open');
-          mainNav.classList.toggle('open', !isOpen);
-          navToggle.setAttribute('aria-expanded', String(!isOpen));
-        });
+    function isMobileNav() {
+      return window.innerWidth <= 900;
+    }
 
-        // Close nav on link click (mobile)
-        mainNav.querySelectorAll('a').forEach(function (link) {
-          link.addEventListener('click', function () {
-            if (window.innerWidth <= 900) {
-              mainNav.classList.remove('open');
-              navToggle.setAttribute('aria-expanded', 'false');
-            }
-          });
+    function closeAllDropdowns() {
+      document.querySelectorAll(".nav-has-children.open").forEach(li => li.classList.remove("open"));
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => {
+        btn.setAttribute("aria-expanded", "false");
+      });
+      document.querySelectorAll(".nav-submenu").forEach(menu => menu.hidden = true);
+    }
+
+    function openNav() {
+      if (!mainNav) return;
+      mainNav.classList.add("open");
+      navOverlay?.classList.add("open");
+      navToggle?.setAttribute("aria-expanded", "true");
+      navOverlay?.setAttribute("aria-hidden", "false");
+      document.body.classList.add("nav-lock");
+    }
+
+    function closeNav() {
+      if (!mainNav) return;
+      mainNav.classList.remove("open");
+      navOverlay?.classList.remove("open");
+      navToggle?.setAttribute("aria-expanded", "false");
+      navOverlay?.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("nav-lock");
+      closeAllDropdowns();
+    }
+
+    function toggleDropdown(btn) {
+      const li = btn.parentElement;
+      const submenu = li ? li.querySelector(".nav-submenu") : null;
+      const isOpen = li.classList.contains("open");
+
+      document.querySelectorAll(".nav-has-children.open").forEach(openLi => {
+        if (openLi !== li) openLi.classList.remove("open");
+      });
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(otherBtn => {
+        if (otherBtn !== btn) otherBtn.setAttribute("aria-expanded", "false");
+      });
+      document.querySelectorAll(".nav-submenu").forEach(menu => {
+        if (submenu !== menu) menu.hidden = true;
+      });
+
+      li.classList.toggle("open", !isOpen);
+      btn.setAttribute("aria-expanded", String(!isOpen));
+      if (submenu) submenu.hidden = isOpen;
+    }
+
+    if (navToggle && mainNav) {
+      navToggle.addEventListener("click", () => {
+        const opened = mainNav.classList.contains("open");
+        opened ? closeNav() : openNav();
+      });
+
+      navOverlay?.addEventListener("click", closeNav);
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape") {
+          if (document.querySelector(".nav-has-children.open")) {
+            closeAllDropdowns();
+            return;
+          }
+          if (mainNav.classList.contains("open")) closeNav();
+        }
+      });
+
+      document.querySelectorAll("#mainNav a").forEach(link => {
+        link.addEventListener("click", () => {
+          if (isMobileNav()) closeNav();
         });
+      });
+
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => {
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          toggleDropdown(btn);
+        });
+      });
+
+      document.addEventListener("click", (e) => {
+        const target = e.target;
+        if (!mainNav.contains(target) && !navToggle.contains(target)) closeAllDropdowns();
+      });
+
+      window.addEventListener("resize", () => {
+        if (!isMobileNav()) closeNav();
+      });
+    }
+
+    // Floating CTA
+    const floatingToggle = document.getElementById("floatingCtaToggle");
+    const floatingCta = document.getElementById("floatingCta");
+    const floatingPanel = floatingCta ? floatingCta.querySelector(".floating-cta-panel") : null;
+
+    if (floatingToggle && floatingCta && floatingPanel) {
+      floatingToggle.addEventListener("click", () => {
+        const isOpen = floatingCta.classList.toggle("open");
+        floatingToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        floatingPanel.setAttribute("aria-hidden", isOpen ? "false" : "true");
+      });
+    }
+  </script>
+
+  <!-- ✅ Updated JSON-LD (Registered provider + Breadcrumb + BlogPosting) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://ableaide.com.au/#business",
+        "name": "Able Aide",
+        "url": "https://ableaide.com.au/",
+        "logo": "https://ableaide.com.au/assets/img/able-aide-logo.webp",
+        "telephone": "+61435039110",
+        "email": "enquiries@ableaide.com.au",
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "NDIS Provider Registration Number",
+          "value": "4050173180"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://ableaide.com.au/blog/ndis-early-childhood-pathway-explained#breadcrumbs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ableaide.com.au/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ableaide.com.au/blog" },
+          { "@type": "ListItem", "position": 3, "name": "NDIS Early Childhood Pathway Explained", "item": "https://ableaide.com.au/blog/ndis-early-childhood-pathway-explained" }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://ableaide.com.au/blog/ndis-early-childhood-pathway-explained#post",
+        "headline": "NDIS Early Childhood Pathway Explained",
+        "description": "A calm, parent-friendly guide to the NDIS early childhood pathway – who it is for, how the process works, what supports may be available and how Able Aide supports children and families.",
+        "url": "https://ableaide.com.au/blog/ndis-early-childhood-pathway-explained",
+        "image": "https://ableaide.com.au/assets/img/og-image.webp",
+        "author": { "@type": "Organization", "name": "Able Aide" },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Able Aide",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://ableaide.com.au/assets/img/able-aide-logo.webp"
+          }
+        },
+        "mainEntityOfPage": "https://ableaide.com.au/blog/ndis-early-childhood-pathway-explained",
+        "datePublished": "2026-02-17",
+        "dateModified": "2026-02-17"
       }
-    })();
-
-    // Floating CTA toggle
-    (function () {
-      var floatingCta = document.getElementById('floatingCta');
-      var floatingToggle = document.getElementById('floatingCtaToggle');
-
-      if (floatingCta && floatingToggle) {
-        floatingToggle.addEventListener('click', function () {
-          floatingCta.classList.toggle('open');
-        });
-      }
-    })();
+    ]
+  }
   </script>
 
 </body>

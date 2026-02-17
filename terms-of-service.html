@@ -16,29 +16,28 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
   <link rel="shortcut icon" href="/favicon.ico">
 
-  <!-- OG -->
+  <!-- OpenGraph -->
   <meta property="og:title" content="Terms of Service – Able Aide">
   <meta property="og:description"
         content="Understand the terms under which Able Aide provides services, including NDIS rights, obligations and website use.">
   <meta property="og:image" content="/assets/img/og-image.webp">
+  <meta property="og:type" content="website">
   <meta property="og:url" content="https://ableaide.com.au/terms-of-service">
 
+  <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Terms of Service – Able Aide">
+  <meta name="twitter:description"
+        content="Understand the terms under which Able Aide provides services, including NDIS rights, obligations and website use.">
+  <meta name="twitter:image" content="/assets/img/og-image.webp">
 
+  <!-- Styles -->
+  <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
-  <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
 
-  <style>
-    @media (max-width: 900px) {
-      .main-nav {
-        display:block;
-        max-height:0;
-        overflow:hidden;
-        transition:max-height .25s ease;
-      }
-      .main-nav.open { max-height:550px; }
-    }
-  </style>
+  <!-- Preload images -->
+  <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
+  <link rel="preload" href="/assets/img/i-love-ndis-registered-provider.png" as="image">
 
   <!-- Schema -->
   <script type="application/ld+json">
@@ -46,20 +45,56 @@
     "@context": "https://schema.org",
     "@graph": [
       {
-        "@type": "Organization",
+        "@type": "LocalBusiness",
+        "@id": "https://ableaide.com.au/#business",
         "name": "Able Aide",
-        "url": "https://ableaide.com.au",
+        "url": "https://ableaide.com.au/",
         "logo": "https://ableaide.com.au/assets/img/able-aide-logo.webp",
+        "image": "https://ableaide.com.au/assets/img/og-image.webp",
+        "description": "Able Aide is a Registered NDIS Provider delivering reliable disability supports across Melbourne and Plan Management Australia-wide.",
         "email": "enquiries@ableaide.com.au",
-        "telephone": "+61435039110"
+        "telephone": "+61435039110",
+        "identifier": "NDIS Provider Number 4050173180",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Melbourne",
+          "addressRegion": "VIC",
+          "addressCountry": "AU"
+        },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Melbourne" },
+          { "@type": "Country", "name": "Australia" }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/able.aide",
+          "https://www.instagram.com/ableaide/",
+          "https://www.linkedin.com/company/ableaide/",
+          "https://www.tiktok.com/@ableaide",
+          "https://www.youtube.com/@AbleAide",
+          "https://x.com/AbleAideSupport"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ableaide.com.au/#website",
+        "url": "https://ableaide.com.au/",
+        "name": "Able Aide",
+        "publisher": { "@id": "https://ableaide.com.au/#business" },
+        "inLanguage": "en-AU"
       },
       {
         "@type": "WebPage",
-        "name": "Terms of Service",
-        "url": "https://ableaide.com.au/terms-of-service"
+        "@id": "https://ableaide.com.au/terms-of-service#webpage",
+        "name": "Terms of Service – Able Aide",
+        "url": "https://ableaide.com.au/terms-of-service",
+        "description": "Terms of Service for Able Aide including service terms, privacy, website use and complaints.",
+        "isPartOf": { "@id": "https://ableaide.com.au/#website" },
+        "about": { "@id": "https://ableaide.com.au/#business" },
+        "inLanguage": "en-AU"
       },
       {
         "@type": "BreadcrumbList",
+        "@id": "https://ableaide.com.au/terms-of-service#breadcrumbs",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ableaide.com.au/" },
           { "@type": "ListItem", "position": 2, "name": "Terms of Service", "item": "https://ableaide.com.au/terms-of-service" }
@@ -72,278 +107,343 @@
 
 <body>
 
-<!-- TOP TRUST BAR -->
-<div class="top-trust-bar">
-  <div class="container top-trust-bar-inner">
-    <div class="top-trust-left">
-      <span class="top-trust-badge">NDIS registration in progress</span>
-      <span class="top-trust-badge">Supporting plan-managed & self-managed participants</span>
-      <span class="top-trust-badge">Greater Melbourne & regional Victoria</span>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- overlay for mobile nav -->
+  <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
+  <!-- TOP TRUST BAR -->
+  <div class="top-trust-bar">
+    <div class="container top-trust-bar-inner">
+      <div class="top-trust-left">
+        <span class="top-trust-badge">Registered NDIS Provider · Provider No. 4050173180</span>
+        <span class="top-trust-badge">Core supports &amp; Support Coordination: Melbourne</span>
+        <span class="top-trust-badge">Plan Management: Australia-wide</span>
+      </div>
+      <div class="top-trust-right">
+        <span class="top-trust-phone">Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a></span>
+        <a href="/refer" class="top-trust-link">Quick referral form →</a>
+      </div>
     </div>
-    <div class="top-trust-right">
-      <span class="top-trust-phone">Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a></span>
-      <a href="/refer" class="top-trust-link">Quick referral form →</a>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="container header-inner">
+
+      <a href="/" class="logo" aria-label="Able Aide Home">
+        <img src="/assets/img/able-aide-logo.webp" alt="Able Aide Logo" class="logo-img" decoding="async">
+        <span class="logo-mark">Able Aide</span>
+        <span class="logo-tagline">Your Journey, Our Support</span>
+      </a>
+
+      <nav class="main-nav" id="mainNav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="/about">About</a></li>
+
+          <li class="nav-has-children">
+            <a href="/services" class="nav-parent-link">Services</a>
+            <ul class="nav-submenu">
+              <li><a href="/services/personal-care">Personal Care &amp; Daily Living</a></li>
+              <li><a href="/services/community-participation">Community Participation</a></li>
+              <li><a href="/services/support-coordination">Support Coordination</a></li>
+              <li><a href="/services/allied-health-access">Allied Health Access</a></li>
+              <li><a href="/services/family-early-support">Family &amp; Early Support</a></li>
+              <li><a href="/services/plan-management">Plan Management</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/locations">Locations</a></li>
+          <li><a href="/refer">Refer</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/complaints">Complaints</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-cta">
+        <a href="/refer" class="btn btn-outline">Refer</a>
+        <a href="/contact" class="btn btn-primary">Book a Free Chat</a>
+      </div>
+
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+        <span></span>
+      </button>
+
     </div>
-  </div>
-</div>
+  </header>
 
-<!-- HEADER -->
-<header class="site-header">
-  <div class="container header-inner">
+  <main id="main">
 
-    <a href="/" class="logo">
-      <img src="/assets/img/able-aide-logo.webp" alt="Able Aide Logo" class="logo-img">
-      <span class="logo-mark">Able Aide</span>
-      <span class="logo-tagline">Your Journey, Our Support</span>
-    </a>
+    <!-- HERO -->
+    <section class="hero">
+      <div class="container hero-inner">
 
-    <nav class="main-nav" id="mainNav" aria-label="Main navigation">
-      <ul class="nav-list">
-        <li><a href="/about">About</a></li>
+        <div class="hero-text">
+          <h1>Terms of Service</h1>
+          <p class="hero-subtext">
+            These terms explain how Able Aide provides services, how your information is handled, and your rights under Australian law and the NDIS Code of Conduct.
+          </p>
+          <p class="small"><strong>Provider No.:</strong> 4050173180</p>
+        </div>
 
-        <li class="nav-has-children">
-          <a href="/services">Services</a>
-          <ul class="nav-submenu">
-            <li><a href="/services/personal-care">Personal Care & Daily Living</a></li>
-            <li><a href="/services/community-participation">Community Participation</a></li>
-            <li><a href="/services/support-coordination">Support Coordination</a></li>
-            <li><a href="/services/allied-health-access">Allied Health Access</a></li>
-            <li><a href="/services/family-early-support">Family & Early Support</a></li>
-            <li><a href="/services/plan-management">Plan Management <span class="small">(Coming Soon)</span></a></li>
-          </ul>
-        </li>
+        <aside class="hero-card">
+          <img src="/assets/img/able-aide-ndis-about-hero.webp"
+               alt="Support worker meeting with participant"
+               class="hero-img"
+               loading="lazy"
+               decoding="async">
 
-        <li><a href="/locations">Locations</a></li>
-        <li><a href="/refer">Refer</a></li>
-        <li><a href="/resources">Resources</a></li>
-        <li><a href="/careers">Careers</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/complaints">Complaints</a></li>
-      </ul>
-    </nav>
+          <h2>Your rights and responsibilities</h2>
+          <p class="small">We aim to be transparent, fair and respectful in every interaction.</p>
+        </aside>
 
-    <div class="header-cta">
-      <a href="/refer" class="btn btn-outline">Refer</a>
-      <a href="/contact" class="btn btn-primary">Book a Free Chat</a>
+      </div>
+    </section>
+
+    <!-- TERMS -->
+    <section class="section">
+      <div class="container">
+
+        <h2 class="section-title">1. Who We Are</h2>
+        <p>
+          Able Aide (“we”, “us”, “our”) is a <strong>Registered NDIS Provider</strong> (Provider No. <strong>4050173180</strong>)
+          providing disability support services across Melbourne and Plan Management Australia-wide, in accordance with the NDIS Practice Standards and NDIS Code of Conduct.
+        </p>
+
+        <h2 class="section-title">2. Acceptance of These Terms</h2>
+        <p>By using our website, submitting an enquiry or receiving services from Able Aide, you agree to these Terms of Service.</p>
+
+        <h2 class="section-title">3. Services We Provide</h2>
+        <p>We provide the following supports:</p>
+        <ul>
+          <li>Personal care &amp; daily living</li>
+          <li>Community access</li>
+          <li>Support coordination</li>
+          <li>Allied health access</li>
+          <li>Family &amp; early support</li>
+          <li>Plan Management</li>
+        </ul>
+
+        <h2 class="section-title">4. Participant Responsibilities</h2>
+        <p>Participants and families agree to:</p>
+        <ul>
+          <li>provide accurate and updated information</li>
+          <li>treat workers with respect and safety</li>
+          <li>provide reasonable notice for cancellations</li>
+          <li>pay invoices in line with NDIS pricing arrangements</li>
+          <li>inform us of any concerns, risks or changes</li>
+        </ul>
+
+        <h2 class="section-title">5. Provider Responsibilities</h2>
+        <p>Able Aide agrees to:</p>
+        <ul>
+          <li>deliver services safely, respectfully and in line with the NDIS Code of Conduct</li>
+          <li>maintain confidentiality and protect personal information</li>
+          <li>communicate clearly and promptly</li>
+          <li>match workers based on suitability, skill and cultural fit</li>
+          <li>respond to complaints fairly and without judgement</li>
+        </ul>
+
+        <h2 class="section-title">6. Fees &amp; Payments</h2>
+        <p>Our fees are based on current NDIS Pricing Arrangements. Participants agree to ensure funding is available and invoices are paid on time.</p>
+
+        <h2 class="section-title">7. Cancellations</h2>
+        <p>Cancellations may incur charges consistent with NDIS rules. We understand emergencies happen — communication helps us support you better.</p>
+
+        <h2 class="section-title">8. Privacy &amp; Data</h2>
+        <p>Your personal information is handled according to our <a href="/privacy-policy">Privacy Policy</a>, the Privacy Act 1988 (Cth), and the NDIS Practice Standards.</p>
+
+        <h2 class="section-title">9. Website Use</h2>
+        <p>You agree not to misuse our website, submit harmful content, scrape data, or interfere with security. Website content is for general information only.</p>
+
+        <h2 class="section-title">10. Intellectual Property</h2>
+        <p>All content on this website — including text, branding, images and layout — is owned by Able Aide. It may not be copied, reproduced or used without permission.</p>
+
+        <h2 class="section-title">11. Limitation of Liability</h2>
+        <p>To the maximum extent permitted by Australian law:</p>
+        <ul>
+          <li>we are not liable for indirect or consequential losses</li>
+          <li>we are not liable for actions by third-party providers or websites</li>
+          <li>service outcomes depend on individual needs and circumstances</li>
+        </ul>
+        <p>Nothing in these terms limits your rights under Australian Consumer Law.</p>
+
+        <h2 class="section-title">12. Complaints &amp; Disputes</h2>
+        <p>You may make a complaint at any time:</p>
+        <p><strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a></p>
+        <p><strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a></p>
+
+        <h3>NDIS Quality &amp; Safeguards Commission</h3>
+        <p>If you are not satisfied, you may contact the NDIS Commission:</p>
+        <p><a href="https://www.ndiscommission.gov.au" target="_blank" rel="noopener">www.ndiscommission.gov.au</a> · 1800 035 544</p>
+
+        <h2 class="section-title">13. Changes to These Terms</h2>
+        <p>We may update these terms occasionally. The latest version will always be posted on this page.</p>
+
+      </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="section section-alt">
+      <div class="container center">
+        <h2 class="section-title">Have Questions About These Terms?</h2>
+        <p class="section-intro">We’re here to help explain anything in plain, simple language.</p>
+        <a href="/contact" class="btn btn-primary">Contact Us</a>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+
+      <div class="footer-col">
+        <h3>Able Aide</h3>
+        <p>Registered NDIS Provider delivering reliable disability supports across Melbourne and Plan Management Australia-wide.</p>
+        <p class="small"><strong>Provider No.:</strong> 4050173180</p>
+
+        <div class="ndis-badge" aria-label="Registered NDIS Provider badge">
+          <img src="/assets/img/i-love-ndis-registered-provider.png" alt="I Love NDIS Registered Provider">
+          <p class="small">
+            <strong>Registered NDIS Provider</strong><br>
+            Provider No. 4050173180
+          </p>
+        </div>
+
+        <p style="margin-top:1rem;">
+          <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
+          <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a><br>
+          <strong>Plan Management:</strong> <a href="mailto:planmanagement@ableaide.com.au">planmanagement@ableaide.com.au</a>
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="/about">About</a></li>
+          <li><a href="/services">Services</a></li>
+          <li><a href="/locations">Locations</a></li>
+          <li><a href="/refer">Refer</a></li>
+          <li><a href="/resources">Resources</a></li>
+          <li><a href="/faqs">FAQs</a></li>
+          <li><a href="/careers">Careers</a></li>
+          <li><a href="/contact">Contact</a></li>
+          <li><a href="/complaints">Complaints</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h3>Where we support</h3>
+        <p><strong>Core supports &amp; Support Coordination:</strong> Melbourne<br><strong>Plan Management:</strong> Australia-wide</p>
+      </div>
+
+      <div class="footer-col">
+        <h3>Connect</h3>
+        <ul class="footer-links">
+          <li><a href="https://www.facebook.com/able.aide" target="_blank" rel="noopener">Facebook</a></li>
+          <li><a href="https://www.instagram.com/ableaide/" target="_blank" rel="noopener">Instagram</a></li>
+          <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank" rel="noopener">LinkedIn</a></li>
+          <li><a href="https://www.youtube.com/@AbleAide" target="_blank" rel="noopener">YouTube</a></li>
+          <li><a href="https://www.tiktok.com/@ableaide" target="_blank" rel="noopener">TikTok</a></li>
+          <li><a href="https://x.com/AbleAideSupport" target="_blank" rel="noopener">X</a></li>
+        </ul>
+      </div>
+
     </div>
 
-    <button class="nav-toggle" id="navToggle"><span></span></button>
-
-  </div>
-</header>
-
-<main>
-
-<!-- HERO -->
-<section class="hero">
-  <div class="container hero-inner">
-
-    <div class="hero-text">
-      <h1>Terms of Service</h1>
-      <p class="hero-subtext">These terms explain how Able Aide provides services, how your information is handled, and your rights under Australian law and the NDIS Code of Conduct.</p>
-    </div>
-
-    <aside class="hero-card">
-      <!-- FIXED HERO IMAGE -->
-      <img src="/assets/img/able-aide-ndis-about-hero.webp"
-           alt="Support worker meeting with participant"
-           class="hero-img"
-           loading="lazy"
-           decoding="async">
-
-      <h2>Your rights and responsibilities</h2>
-      <p class="small">We aim to be transparent, fair and respectful in every interaction.</p>
-    </aside>
-
-  </div>
-</section>
-
-<!-- TERMS -->
-<section class="section">
-  <div class="container">
-
-    <h2 class="section-title">1. Who We Are</h2>
-    <p>Able Aide (“we”, “us”, “our”) provides disability support services to NDIS participants across Victoria. While our NDIS provider registration is in progress, we support self-managed and plan-managed participants.</p>
-
-    <h2 class="section-title">2. Acceptance of These Terms</h2>
-    <p>By using our website, submitting an enquiry or receiving services from Able Aide, you agree to these Terms of Service.</p>
-
-    <h2 class="section-title">3. Services We Provide</h2>
-    <p>We provide the following supports:</p>
-    <ul>
-      <li>Personal care & daily living</li>
-      <li>Community access</li>
-      <li>Support coordination</li>
-      <li>Allied health access</li>
-      <li>Family & early support</li>
-      <li>Plan Management <strong>(Coming Soon)</strong></li>
-    </ul>
-
-    <h2 class="section-title">4. Participant Responsibilities</h2>
-    <p>Participants and families agree to:</p>
-    <ul>
-      <li>provide accurate and updated information</li>
-      <li>treat workers with respect and safety</li>
-      <li>provide reasonable notice for cancellations</li>
-      <li>pay invoices in line with NDIS pricing arrangements</li>
-      <li>inform us of any concerns, risks or changes</li>
-    </ul>
-
-    <h2 class="section-title">5. Provider Responsibilities</h2>
-    <p>Able Aide agrees to:</p>
-    <ul>
-      <li>deliver services safely, respectfully and in line with the NDIS Code of Conduct</li>
-      <li>maintain confidentiality and protect personal information</li>
-      <li>communicate clearly and promptly</li>
-      <li>match workers based on suitability, skill and cultural fit</li>
-      <li>respond to complaints fairly and without judgement</li>
-    </ul>
-
-    <h2 class="section-title">6. Fees & Payments</h2>
-    <p>Our fees are based on current NDIS Pricing Arrangements. Participants agree to ensure funding is available and invoices are paid on time.</p>
-
-    <h2 class="section-title">7. Cancellations</h2>
-    <p>Cancellations may incur charges consistent with NDIS rules. We understand emergencies happen — communication helps us support you better.</p>
-
-    <h2 class="section-title">8. Privacy & Data</h2>
-    <p>Your personal information is handled according to our <a href="/privacy-policy">Privacy Policy</a>, the Privacy Act 1988 (Cth), and the NDIS Practice Standards.</p>
-
-    <h2 class="section-title">9. Website Use</h2>
-    <p>You agree not to misuse our website, submit harmful content, scrape data, or interfere with security. Website content is for general information only.</p>
-
-    <h2 class="section-title">10. Intellectual Property</h2>
-    <p>All content on this website — including text, branding, images and layout — is owned by Able Aide. It may not be copied, reproduced or used without permission.</p>
-
-    <h2 class="section-title">11. Limitation of Liability</h2>
-    <p>To the maximum extent permitted by Australian law:</p>
-    <ul>
-      <li>we are not liable for indirect or consequential losses</li>
-      <li>we are not liable for actions by third-party providers or websites</li>
-      <li>service outcomes depend on individual needs and circumstances</li>
-    </ul>
-    <p>Nothing in these terms limits your rights under Australian Consumer Law.</p>
-
-    <h2 class="section-title">12. Complaints & Disputes</h2>
-    <p>You may make a complaint at any time:</p>
-    <p><strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a></p>
-    <p><strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a></p>
-
-    <h3>NDIS Quality & Safeguards Commission</h3>
-    <p>If you are not satisfied, you may contact the NDIS Commission:</p>
-    <p><a href="https://www.ndiscommission.gov.au" target="_blank">www.ndiscommission.gov.au</a> · 1800 035 544</p>
-
-    <h2 class="section-title">13. Changes to These Terms</h2>
-    <p>We may update these terms occasionally. The latest version will always be posted on this page.</p>
-
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section section-alt">
-  <div class="container center">
-    <h2 class="section-title">Have Questions About These Terms?</h2>
-    <p class="section-intro">We’re here to help explain anything in plain, simple language.</p>
-    <a href="/contact" class="btn btn-primary">Contact Us</a>
-  </div>
-</section>
-
-</main>
-
-<!-- FOOTER -->
-<footer class="site-footer">
-  <div class="container footer-inner">
-
-    <div class="footer-col">
-      <h3>Able Aide</h3>
-      <p>Warm, person-centred disability support across Victoria.</p>
-      <p><strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
-         <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
+    <div class="container footer-bottom">
+      <p class="small">
+        © <span id="year"></span> Able Aide ·
+        <a href="/privacy-policy" class="footer-link">Privacy Policy</a> ·
+        <a href="/terms-of-service" class="footer-link" aria-current="page">Terms</a>
       </p>
     </div>
+  </footer>
 
-    <div class="footer-col">
-      <h3>Quick Links</h3>
-      <ul class="footer-links">
-        <li><a href="/about">About</a></li>
-        <li><a href="/services">Services</a></li>
-        <li><a href="/locations">Locations</a></li>
-        <li><a href="/refer">Refer</a></li>
-        <li><a href="/resources">Resources</a></li>
-        <li><a href="/careers">Careers</a></li>
-        <li><a href="/contact">Contact</a></li>
-        <li><a href="/complaints">Complaints</a></li>
-      </ul>
-    </div>
-
-    <div class="footer-col">
-      <h3>Where We Support</h3>
-      <p>Melbourne · Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria</p>
-    </div>
-
-    <div class="footer-col">
-      <h3>Connect</h3>
-      <ul class="footer-links">
-        <li><a href="https://www.facebook.com/able.aide" target="_blank">Facebook</a></li>
-        <li><a href="https://www.instagram.com/ableaide/" target="_blank">Instagram</a></li>
-        <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank">LinkedIn</a></li>
-        <li><a href="https://www.youtube.com/@AbleAide" target="_blank">YouTube</a></li>
-        <li><a href="https://www.tiktok.com/@ableaide" target="_blank">TikTok</a></li>
-        <li><a href="https://x.com/AbleAideSupport" target="_blank">X</a></li>
-      </ul>
-    </div>
-
-  </div>
-
-  <div class="container footer-bottom">
-    <p class="small">
-      © <span id="year"></span> Able Aide. All rights reserved. ·
-      <a href="/privacy-policy" class="footer-link">Privacy Policy</a> ·
-      <a href="/terms-of-service" class="footer-link" aria-current="page">Terms of Service</a>
-    </p>
-  </div>
-</footer>
-
-<!-- FLOATING CTA -->
-<div class="floating-cta" id="floatingCta">
-  <button class="floating-cta-toggle" id="floatingCtaToggle">
-    <span class="icon">💬</span><span>Need help?</span>
-  </button>
-  <div class="floating-cta-panel">
-    <div class="floating-cta-title">Talk to Able Aide</div>
-    <div class="floating-cta-text">Quick ways to reach us.</div>
-    <div class="floating-cta-links">
-      <a href="tel:61435039110">📞 Call 0435 039 110</a>
-      <a href="/contact">✉️ Send an enquiry</a>
-      <a href="/refer">📝 Make a referral</a>
+  <!-- FLOATING CTA -->
+  <div class="floating-cta" id="floatingCta">
+    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button">
+      <span class="icon">💬</span><span>Need help?</span>
+    </button>
+    <div class="floating-cta-panel">
+      <div class="floating-cta-title">Talk to Able Aide</div>
+      <div class="floating-cta-text">Quick ways to reach us.</div>
+      <div class="floating-cta-links">
+        <a href="tel:61435039110">📞 Call 0435 039 110</a>
+        <a href="mailto:enquiries@ableaide.com.au">✉️ General enquiries</a>
+        <a href="mailto:planmanagement@ableaide.com.au">📋 Plan Management</a>
+        <a href="/refer">📝 Make a referral</a>
+      </div>
     </div>
   </div>
-</div>
 
-<!-- JS -->
-<script>
-  document.getElementById("year").textContent = new Date().getFullYear();
+  <!-- SCRIPTS -->
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
 
-  const navToggle = document.getElementById('navToggle');
-  const mainNav = document.getElementById('mainNav');
+    const navToggle = document.getElementById("navToggle");
+    const mainNav = document.getElementById("mainNav");
+    const navOverlay = document.getElementById("navOverlay");
 
-  navToggle.addEventListener('click', () => {
-    mainNav.classList.toggle('open');
-    navToggle.setAttribute('aria-expanded', mainNav.classList.contains('open'));
-  });
+    function openNav() {
+      mainNav.classList.add("open");
+      navOverlay.classList.add("open");
+      navToggle.setAttribute("aria-expanded", "true");
+      navOverlay.setAttribute("aria-hidden", "false");
+      document.body.classList.add("nav-lock");
+    }
 
-  mainNav.querySelectorAll('a').forEach(link => {
-    link.addEventListener('click', () => {
-      if (window.innerWidth <= 900) {
-        mainNav.classList.remove('open');
-        navToggle.setAttribute('aria-expanded', 'false');
-      }
-    });
-  });
+    function closeNav() {
+      mainNav.classList.remove("open");
+      navOverlay.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navOverlay.setAttribute("aria-hidden", "true");
+      document.body.classList.remove("nav-lock");
+      document.querySelectorAll(".nav-has-children.open").forEach(el => el.classList.remove("open"));
+    }
 
-  document.getElementById('floatingCtaToggle').addEventListener('click', () => {
-    document.getElementById('floatingCta').classList.toggle('open');
-  });
-</script>
+    if (navToggle && mainNav) {
+      navToggle.addEventListener("click", () => {
+        const opened = mainNav.classList.contains("open");
+        opened ? closeNav() : openNav();
+      });
+
+      if (navOverlay) navOverlay.addEventListener("click", closeNav);
+
+      document.addEventListener("keydown", (e) => {
+        if (e.key === "Escape" && mainNav.classList.contains("open")) closeNav();
+      });
+
+      document.querySelectorAll("#mainNav a").forEach(link => {
+        link.addEventListener("click", () => {
+          if (window.innerWidth <= 900) closeNav();
+        });
+      });
+
+      // Mobile submenu tap
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(a => {
+        a.addEventListener("click", (e) => {
+          if (window.innerWidth <= 900) {
+            e.preventDefault();
+            a.parentElement.classList.toggle("open");
+          }
+        });
+      });
+
+      window.addEventListener("resize", () => {
+        if (window.innerWidth > 900) closeNav();
+      });
+    }
+
+    const floatingToggle = document.getElementById("floatingCtaToggle");
+    const floatingCta = document.getElementById("floatingCta");
+    if (floatingToggle && floatingCta) {
+      floatingToggle.addEventListener("click", () => floatingCta.classList.toggle("open"));
+    }
+  </script>
 
 </body>
 </html>

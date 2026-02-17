@@ -645,3 +645,65 @@ img{
 .nav-overlay.open{
   pointer-events: auto;
 }
+/* =========================================================
+   HARD FIX: nav links clicking logo/home (overlay issue)
+========================================================= */
+
+/* Make header a strict 3-column layout:
+   [logo] [nav] [cta]  */
+.site-header .header-inner{
+  display: grid !important;
+  grid-template-columns: max-content 1fr max-content;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Stop logo from stretching */
+.site-header .logo{
+  display: inline-flex;
+  justify-self: start;
+  width: max-content;
+  max-width: 360px;
+  overflow: hidden;
+  position: relative;
+  z-index: 10;
+}
+
+/* Keep nav on top + clickable */
+.site-header .main-nav{
+  justify-self: center;
+  position: relative;
+  z-index: 50;
+}
+
+/* Keep CTAs on top + clickable */
+.site-header .header-cta{
+  justify-self: end;
+  position: relative;
+  z-index: 50;
+}
+
+/* Ensure links/buttons are always above any accidental overlay */
+.site-header .nav-list a,
+.site-header .nav-list button,
+.site-header .header-cta a{
+  position: relative;
+  z-index: 60;
+}
+
+/* If any invisible overlay exists inside header, stop it capturing clicks */
+.site-header .container,
+.site-header{
+  position: relative;
+}
+
+/* Mobile nav overlay should only capture clicks when open */
+.nav-overlay{ pointer-events: none; }
+.nav-overlay.open{ pointer-events: auto; }
+
+/* Mobile: keep your existing fixed drawer behavior */
+@media (max-width: 900px){
+  .site-header .header-inner{
+    display: flex !important; /* mobile uses your existing drawer layout */
+  }
+}

@@ -1,78 +1,58 @@
-# --------------------------------------------
+# ============================================
 # Cloudflare Pages _redirects for Able Aide
-# Repo has top-level *.html files (contact.html, about.html, etc)
+# ============================================
 # This file enables clean URLs like /contact (serves /contact.html)
-# --------------------------------------------
+# ============================================
 
-# ============================
+# ========================================
 # 1) CANONICALISE TRAILING SLASH (TOP LEVEL)
-#    /contact/ -> /contact
-# ============================
-/about/              /about              301
-/contact/            /contact            301
-/faqs/               /faqs               301
-/refer/              /refer              301
-/privacy-policy/     /privacy-policy     301
-/terms-of-service/   /terms-of-service   301
-/complaints/         /complaints         301
-/thanks/             /thanks             301
-/live/               /live               301
+# /contact/ -> /contact
+# ========================================
+/about/              /about                    301
+/contact/            /contact                  301
+/faqs/               /faqs                     301
+/refer/              /refer                    301
+/privacy-policy/     /privacy-policy           301
+/terms-of-service/   /terms-of-service         301
+/complaints/         /complaints               301
+/thanks/             /thanks                   301
+/live/               /live                     301
 
 # Section hubs (folders) - canonical no-slash
-/services/           /services           301
-/resources/          /resources          301
-/locations/          /locations          301
-/reviews/            /reviews            301
-/careers/            /careers            301
-/blog/               /blog               301
-/case-studies/       /case-studies       301
+/services/           /services                 301
+/resources/          /resources                301
+/locations/          /locations                301
+/reviews/            /reviews                  301
+/careers/            /careers                  301
+/blog/               /blog                     301
+/case-studies/       /case-studies             301
 
-# ============================
+# ========================================
 # 2) CLEAN URL REWRITES (NO-SLASH)
-#    /contact -> /contact.html (served, URL stays clean)
-# ============================
-/about              /about.html              200
-/contact            /contact.html            200
-/faqs               /faqs.html               200
-/refer              /refer.html              200
-/privacy-policy     /privacy-policy.html     200
-/terms-of-service   /terms-of-service.html   200
-/complaints         /complaints.html         200
-/thanks             /thanks.html             200
-/live               /live.html               200
+# /contact -> /contact.html (served, URL stays clean)
+# ========================================
+/about               /about.html               200
+/contact             /contact.html             200
+/faqs                /faqs.html                200
+/refer               /refer.html               200
+/privacy-policy      /privacy-policy.html      200
+/terms-of-service    /terms-of-service.html    200
+/complaints          /complaints.html          200
+/thanks              /thanks.html              200
+/live                /live.html                200
 
-# Home (optional; usually not needed, but safe)
-#/                   /index.html              200
-
-# ============================
+# ========================================
 # 3) SECTION HUBS (FOLDER INDEX)
-#    /services -> /services/index.html
-# ============================
-/services           /services/index.html      200
-/resources          /resources/index.html     200
-/locations          /locations/index.html     200
-/reviews            /reviews/index.html       200
-/careers            /careers/index.html       200
-/blog               /blog/index.html          200
-/case-studies       /case-studies/index.html  200
+# /services -> /services/index.html
+# ========================================
+/services            /services/index.html      200
+/resources           /resources/index.html     200
+/locations           /locations/index.html     200
+/reviews             /reviews/index.html       200
+/careers             /careers/index.html       200
+/blog                /blog/index.html          200
+/case-studies        /case-studies/index.html  200
 
-# ============================
-# 4) STRIP .html EVERYWHERE (KEEP SEO CLEAN)
-#    /something.html -> /something
-#    /resources/page.html -> /resources/page
-# ============================
-/*.html             /:splat                   301
-/*/*.html           /:splat                   301
-/*/*/*.html         /:splat                   301
-
-# ============================
-# 5) OPTIONAL: STRIP /index (IF VISITED)
-#    /services/index -> /services
-# ============================
-/index              /                         301
-/*/index            /:splat                   301
-/*/*/index          /:splat                   301
-
-# ============================
-# 6) 404 (Cloudflare Pages will use 404.html automatically if present)
-# ============================
+# ========================================
+# 4) 404 (Cloudflare Pages uses 404.html automatically)
+# ========================================

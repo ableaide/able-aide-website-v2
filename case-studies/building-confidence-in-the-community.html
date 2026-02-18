@@ -165,7 +165,8 @@
         <span class="top-trust-phone">
           Call: <a href="tel:+61435039110" class="top-trust-link">0435 039 110</a>
         </span>
-        <a href="/refer" class="top-trust-link">Quick referral form →</a>
+        <!-- ✅ UPDATED -->
+        <a href="/refer.html" class="top-trust-link">Quick referral form →</a>
       </div>
     </div>
   </div>
@@ -187,7 +188,8 @@
 
       <nav class="main-nav" id="mainNav" aria-label="Main navigation">
         <ul class="nav-list">
-          <li><a href="/about">About</a></li>
+          <!-- ✅ UPDATED -->
+          <li><a href="/about.html">About</a></li>
 
           <li class="nav-has-children">
             <button class="nav-parent-link"
@@ -199,7 +201,8 @@
               Services
             </button>
             <ul class="nav-submenu" id="servicesMenu" aria-label="Services submenu" hidden>
-              <li><a href="/services">All services overview</a></li>
+              <!-- ✅ UPDATED -->
+              <li><a href="/services.html">All services overview</a></li>
               <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/personal-care">Personal care &amp; daily living</a></li>
               <li><a href="/services/community-participation">Community participation</a></li>
@@ -209,18 +212,26 @@
             </ul>
           </li>
 
-          <li><a href="/locations">Locations</a></li>
-          <li><a href="/refer">Refer a participant</a></li>
-          <li><a href="/resources">Resources</a></li>
-          <li><a href="/case-studies" aria-current="page">Case Studies</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/careers">Careers</a></li>
+          <!-- ✅ UPDATED -->
+          <li><a href="/locations.html">Locations</a></li>
+          <!-- ✅ UPDATED -->
+          <li><a href="/refer.html">Refer a participant</a></li>
+          <!-- ✅ UPDATED -->
+          <li><a href="/resources.html">Resources</a></li>
+          <!-- current section -->
+          <li><a href="/case-studies.html" aria-current="page">Case Studies</a></li>
+          <!-- ✅ UPDATED -->
+          <li><a href="/contact.html">Contact</a></li>
+          <!-- ✅ UPDATED -->
+          <li><a href="/careers.html">Careers</a></li>
         </ul>
       </nav>
 
       <div class="header-cta">
-        <a href="/refer" class="btn btn-outline">Refer a participant</a>
-        <a href="/contact" class="btn btn-primary">Book a free chat</a>
+        <!-- ✅ UPDATED -->
+        <a href="/refer.html" class="btn btn-outline">Refer a participant</a>
+        <!-- ✅ UPDATED -->
+        <a href="/contact.html" class="btn btn-primary">Book a free chat</a>
       </div>
 
       <!-- Mobile toggle -->
@@ -264,7 +275,8 @@
           <p class="small">Calm, step-by-step support for confidence, safety and independence.</p>
 
           <a href="/services/community-participation" class="btn btn-outline btn-block">Explore service</a>
-          <a href="/contact" class="btn btn-primary btn-block" style="margin-top:0.5rem;">Talk to our team</a>
+          <!-- ✅ UPDATED -->
+          <a href="/contact.html" class="btn btn-primary btn-block" style="margin-top:0.5rem;">Talk to our team</a>
         </aside>
 
       </div>
@@ -325,7 +337,8 @@
 
           <div class="center" style="margin-top:2rem;">
             <a href="/services/community-participation" class="btn btn-outline">Related Service</a>
-            <a href="/contact" class="btn btn-primary" style="margin-left:0.5rem;">Talk to Able Aide</a>
+            <!-- ✅ UPDATED -->
+            <a href="/contact.html" class="btn btn-primary" style="margin-left:0.5rem;">Talk to Able Aide</a>
           </div>
 
         </article>
@@ -372,15 +385,15 @@
       <div class="footer-col">
         <h3>Quick links</h3>
         <ul class="footer-links">
-          <li><a href="/about">About</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/locations">Locations</a></li>
-          <li><a href="/refer">Refer a participant</a></li>
-          <li><a href="/resources">Resources</a></li>
-          <li><a href="/case-studies" aria-current="page">Case Studies</a></li>
-          <li><a href="/careers">Careers</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/complaints">Complaints</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/locations.html">Locations</a></li>
+          <li><a href="/refer.html">Refer a participant</a></li>
+          <li><a href="/resources.html">Resources</a></li>
+          <li><a href="/case-studies.html" aria-current="page">Case Studies</a></li>
+          <li><a href="/careers.html">Careers</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/complaints.html">Complaints</a></li>
         </ul>
       </div>
 
@@ -406,115 +419,112 @@
     <div class="container footer-bottom">
       <p class="small">
         © <span id="year"></span> Able Aide ·
-        <a href="/privacy-policy" class="footer-link">Privacy Policy</a> ·
-        <a href="/terms-of-service" class="footer-link">Terms</a>
+        <!-- ✅ UPDATED -->
+        <a href="/privacy-policy.html" class="footer-link">Privacy Policy</a> ·
+        <!-- ✅ UPDATED -->
+        <a href="/terms-of-service.html" class="footer-link">Terms</a>
       </p>
     </div>
   </footer>
 
   <!-- SCRIPTS (match home: overlay + dropdown + esc + resize) -->
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // Year
+    var yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 
-    const navToggle = document.getElementById("navToggle");
-    const mainNav = document.getElementById("mainNav");
-    const navOverlay = document.getElementById("navOverlay");
+    var navToggle = document.getElementById("navToggle");
+    var mainNav = document.getElementById("mainNav");
+    var navOverlay = document.getElementById("navOverlay");
 
     function isMobileNav() {
       return window.innerWidth <= 900;
     }
 
-    function closeAllDropdowns() {
-      document.querySelectorAll(".nav-has-children.open").forEach(li => li.classList.remove("open"));
-      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => {
-        btn.setAttribute("aria-expanded", "false");
+    function closeAllDropdowns(exceptLi) {
+      document.querySelectorAll(".nav-has-children").forEach(function (li) {
+        if (li !== exceptLi) {
+          li.classList.remove("open");
+          var btn = li.querySelector(".nav-parent-link");
+          if (btn) btn.setAttribute("aria-expanded", "false");
+          var menu = li.querySelector(".nav-submenu");
+          if (menu) menu.hidden = true;
+        }
       });
-      document.querySelectorAll(".nav-submenu").forEach(menu => menu.hidden = true);
     }
 
     function openNav() {
       if (!mainNav) return;
       mainNav.classList.add("open");
-      navOverlay?.classList.add("open");
-      navToggle?.setAttribute("aria-expanded", "true");
-      navOverlay?.setAttribute("aria-hidden", "false");
+      if (navOverlay) {
+        navOverlay.classList.add("open");
+        navOverlay.setAttribute("aria-hidden", "false");
+      }
+      if (navToggle) navToggle.setAttribute("aria-expanded", "true");
       document.body.classList.add("nav-lock");
     }
 
     function closeNav() {
       if (!mainNav) return;
       mainNav.classList.remove("open");
-      navOverlay?.classList.remove("open");
-      navToggle?.setAttribute("aria-expanded", "false");
-      navOverlay?.setAttribute("aria-hidden", "true");
+      if (navOverlay) {
+        navOverlay.classList.remove("open");
+        navOverlay.setAttribute("aria-hidden", "true");
+      }
+      if (navToggle) navToggle.setAttribute("aria-expanded", "false");
       document.body.classList.remove("nav-lock");
-      closeAllDropdowns();
-    }
-
-    function toggleDropdown(btn) {
-      const li = btn.parentElement;
-      const submenu = li ? li.querySelector(".nav-submenu") : null;
-      const isOpen = li.classList.contains("open");
-
-      // Close other open dropdowns first
-      document.querySelectorAll(".nav-has-children.open").forEach(openLi => {
-        if (openLi !== li) openLi.classList.remove("open");
-      });
-      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(otherBtn => {
-        if (otherBtn !== btn) otherBtn.setAttribute("aria-expanded", "false");
-      });
-      document.querySelectorAll(".nav-submenu").forEach(menu => {
-        if (submenu !== menu) menu.hidden = true;
-      });
-
-      li.classList.toggle("open", !isOpen);
-      btn.setAttribute("aria-expanded", String(!isOpen));
-      if (submenu) submenu.hidden = isOpen;
+      closeAllDropdowns(null);
     }
 
     if (navToggle && mainNav) {
-      navToggle.addEventListener("click", () => {
-        const opened = mainNav.classList.contains("open");
+      navToggle.addEventListener("click", function () {
+        var opened = mainNav.classList.contains("open");
         opened ? closeNav() : openNav();
       });
 
-      navOverlay?.addEventListener("click", closeNav);
+      if (navOverlay) navOverlay.addEventListener("click", closeNav);
 
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape") {
-          // close dropdowns first if any are open
-          if (document.querySelector(".nav-has-children.open")) {
-            closeAllDropdowns();
-            return;
-          }
-          if (mainNav.classList.contains("open")) closeNav();
-        }
-      });
-
-      // Close mobile nav on link click
-      document.querySelectorAll("#mainNav a").forEach(link => {
-        link.addEventListener("click", () => {
+      // Close drawer when clicking a normal link (mobile)
+      mainNav.querySelectorAll("a").forEach(function (link) {
+        link.addEventListener("click", function () {
           if (isMobileNav()) closeNav();
         });
       });
 
-      // Dropdown buttons
-      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => {
-        btn.addEventListener("click", (e) => {
+      // Dropdown buttons (one open at a time)
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(function (btn) {
+        btn.addEventListener("click", function (e) {
+          e.preventDefault();
           e.stopPropagation();
-          toggleDropdown(btn);
+
+          var li = btn.parentElement;
+          var menu = li ? li.querySelector(".nav-submenu") : null;
+          var isOpen = li.classList.contains("open");
+
+          closeAllDropdowns(li);
+
+          li.classList.toggle("open", !isOpen);
+          btn.setAttribute("aria-expanded", (!isOpen) ? "true" : "false");
+          if (menu) menu.hidden = isOpen;
         });
       });
 
-      // Click outside closes dropdowns
-      document.addEventListener("click", (e) => {
-        const target = e.target;
-        if (!mainNav.contains(target) && !navToggle.contains(target)) closeAllDropdowns();
+      // Escape closes dropdowns or drawer
+      document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") {
+          if (document.querySelector(".nav-has-children.open")) closeAllDropdowns(null);
+          else if (mainNav.classList.contains("open")) closeNav();
+        }
       });
 
-      // Resize: ensure body unlock + overlay reset
-      window.addEventListener("resize", () => {
-        if (!isMobileNav()) closeNav();
+      // Click outside closes dropdowns (desktop)
+      document.addEventListener("click", function (e) {
+        if (!e.target.closest(".nav-has-children")) closeAllDropdowns(null);
+      });
+
+      // Resize reset
+      window.addEventListener("resize", function () {
+        if (window.innerWidth > 900) closeNav();
       });
     }
   </script>

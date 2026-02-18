@@ -1,8 +1,18 @@
+<!-- /services/community-participation.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>NDIS Community Participation Melbourne | Social &amp; Community Access | Able Aide</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-651FXYJL03"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-651FXYJL03');
+  </script>
 
   <link rel="canonical" href="https://ableaide.com.au/services/community-participation">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -157,12 +167,10 @@
             <button class="nav-parent-link"
                     type="button"
                     aria-haspopup="true"
-                    aria-expanded="false"
-                    aria-controls="servicesMenu"
-                    id="servicesBtn">
+                    aria-expanded="false">
               Services
             </button>
-            <ul class="nav-submenu" id="servicesMenu" aria-label="Services submenu" hidden>
+            <ul class="nav-submenu" aria-label="Services submenu">
               <li><a href="/services">All services overview</a></li>
               <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/personal-care">Personal care &amp; daily living</a></li>
@@ -514,8 +522,10 @@
 
   <!-- SCRIPTS -->
   <script>
+    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
 
+    // Mobile nav
     const navToggle = document.getElementById("navToggle");
     const mainNav = document.getElementById("mainNav");
     const navOverlay = document.getElementById("navOverlay");
@@ -537,7 +547,6 @@
 
       document.querySelectorAll(".nav-has-children.open").forEach(el => el.classList.remove("open"));
       document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => btn.setAttribute("aria-expanded","false"));
-      document.querySelectorAll(".nav-submenu").forEach(menu => menu.hidden = true);
     }
 
     if (navToggle && mainNav) {
@@ -558,15 +567,12 @@
         });
       });
 
-      const parentButtons = document.querySelectorAll(".nav-has-children > .nav-parent-link");
-      parentButtons.forEach(btn => {
-        const li = btn.parentElement;
-        const submenu = li.querySelector(".nav-submenu");
-
+      // Services submenu toggle (button)
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => {
         btn.addEventListener("click", () => {
+          const li = btn.parentElement;
           const isOpen = li.classList.toggle("open");
           btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
-          if (submenu) submenu.hidden = !isOpen;
         });
       });
 
@@ -575,6 +581,7 @@
       });
     }
 
+    // Floating CTA accessibility
     const floatingToggle = document.getElementById("floatingCtaToggle");
     const floatingCta = document.getElementById("floatingCta");
     const floatingPanel = floatingCta ? floatingCta.querySelector(".floating-cta-panel") : null;

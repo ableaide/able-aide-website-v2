@@ -1,8 +1,18 @@
+<!-- /services/allied-health-access.html -->
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <title>NDIS Allied Health Access Melbourne | OT, Speech, Psychology & Assessments – Able Aide</title>
+
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-651FXYJL03"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-651FXYJL03');
+  </script>
 
   <link rel="canonical" href="https://ableaide.com.au/services/allied-health-access">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -168,7 +178,7 @@
       </div>
       <div class="top-trust-right">
         <span class="top-trust-phone">
-          Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a>
+          Call: <a href="tel:+61435039110" class="top-trust-link">0435 039 110</a>
         </span>
         <a href="/refer" class="top-trust-link">Quick referral form →</a>
       </div>
@@ -305,11 +315,11 @@
         </header>
 
         <div class="card-grid">
+
           <article class="card">
             <h3>Finding the right providers</h3>
             <p class="small">
               Support to identify and contact OTs, physios, psychologists, speech pathologists and other allied health providers suited to your needs.
-              If required, we can also help you locate qualified behaviour support practitioners via referral pathways.
             </p>
           </article>
 
@@ -347,6 +357,7 @@
               With your consent, we help keep families, Support Coordinators and providers aligned and informed.
             </p>
           </article>
+
         </div>
       </div>
     </section>
@@ -432,7 +443,7 @@
       </div>
     </section>
 
-    <!-- FAQ (visible section matches FAQ schema) -->
+    <!-- FAQ -->
     <section class="home-section">
       <div class="container">
         <header class="section-header">
@@ -518,7 +529,7 @@
         <p>Registered NDIS Provider delivering reliable disability supports across Melbourne and Plan Management Australia-wide.</p>
         <p class="small"><strong>Provider No.:</strong> 4050173180</p>
         <p>
-          <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
+          <strong>Phone:</strong> <a href="tel:+61435039110">0435 039 110</a><br>
           <strong>General enquiries:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a><br>
           <strong>Plan Management:</strong> <a href="mailto:planmanagement@ableaide.com.au">planmanagement@ableaide.com.au</a>
         </p>
@@ -576,7 +587,7 @@
       <div class="floating-cta-title">Talk to Able Aide</div>
       <div class="floating-cta-text">Quick ways to reach us.</div>
       <div class="floating-cta-links">
-        <a href="tel:61435039110">📞 Call 0435 039 110</a>
+        <a href="tel:+61435039110">📞 Call 0435 039 110</a>
         <a href="mailto:enquiries@ableaide.com.au">✉️ General enquiries</a>
         <a href="/refer">📝 Refer a participant</a>
         <a href="/contact">📩 Send an enquiry</a>
@@ -586,8 +597,10 @@
 
   <!-- SCRIPTS -->
   <script>
+    // Footer year
     document.getElementById("year").textContent = new Date().getFullYear();
 
+    // Mobile nav
     const navToggle = document.getElementById("navToggle");
     const mainNav = document.getElementById("mainNav");
     const navOverlay = document.getElementById("navOverlay");
@@ -629,8 +642,8 @@
         });
       });
 
-      const parentButtons = document.querySelectorAll(".nav-has-children > .nav-parent-link");
-      parentButtons.forEach(btn => {
+      // Submenu toggle (button)
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => {
         btn.addEventListener("click", () => {
           const li = btn.parentElement;
           const isOpen = li.classList.toggle("open");
@@ -643,6 +656,7 @@
       });
     }
 
+    // Floating CTA accessibility
     const floatingToggle = document.getElementById("floatingCtaToggle");
     const floatingCta = document.getElementById("floatingCta");
     const floatingPanel = floatingCta ? floatingCta.querySelector(".floating-cta-panel") : null;

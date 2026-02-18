@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <title>Able Aide Reviews – What Participants & Families Say</title>
 
-  <!-- Canonical -->
-  <link rel="canonical" href="https://ableaide.com.au/reviews">
+  <!-- ✅ Canonical (.html) -->
+  <link rel="canonical" href="https://ableaide.com.au/reviews.html">
 
   <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -24,7 +24,8 @@
   <meta property="og:description" content="Warm, person-centred disability supports across Victoria. Read real reviews from participants, families and coordinators.">
   <meta property="og:image" content="/assets/img/og-image.webp">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://ableaide.com.au/reviews">
+  <!-- ✅ .html URL -->
+  <meta property="og:url" content="https://ableaide.com.au/reviews.html">
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
@@ -43,7 +44,7 @@
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
 
-  <!-- ✅ FULL Schema -->
+  <!-- ✅ FULL Schema (updated to .html) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -58,7 +59,11 @@
         "description": "Able Aide provides disability supports across Melbourne and Victoria, with a focus on clear communication, respectful workers and reliable follow-up.",
         "email": "enquiries@ableaide.com.au",
         "telephone": "+61435039110",
-        "identifier": "NDIS Provider Number 4050173180",
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "NDIS Provider Registration Number",
+          "value": "4050173180"
+        },
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Melbourne",
@@ -88,9 +93,9 @@
       },
       {
         "@type": "WebPage",
-        "@id": "https://ableaide.com.au/reviews#webpage",
+        "@id": "https://ableaide.com.au/reviews.html#webpage",
         "name": "Able Aide Reviews – What Participants & Families Say",
-        "url": "https://ableaide.com.au/reviews",
+        "url": "https://ableaide.com.au/reviews.html",
         "description": "Read testimonials from participants, families and support coordinators across Victoria and leave a Google review for Able Aide.",
         "isPartOf": { "@id": "https://ableaide.com.au/#website" },
         "about": { "@id": "https://ableaide.com.au/#business" },
@@ -98,15 +103,15 @@
       },
       {
         "@type": "BreadcrumbList",
-        "@id": "https://ableaide.com.au/reviews#breadcrumbs",
+        "@id": "https://ableaide.com.au/reviews.html#breadcrumbs",
         "itemListElement": [
           { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ableaide.com.au/" },
-          { "@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://ableaide.com.au/reviews" }
+          { "@type": "ListItem", "position": 2, "name": "Reviews", "item": "https://ableaide.com.au/reviews.html" }
         ]
       },
       {
         "@type": "ItemList",
-        "@id": "https://ableaide.com.au/reviews#testimonials",
+        "@id": "https://ableaide.com.au/reviews.html#testimonials",
         "name": "Able Aide Testimonials",
         "itemListElement": [
           {
@@ -157,8 +162,8 @@
         <span class="top-trust-badge">Greater Melbourne, Geelong &amp; Regional VIC</span>
       </div>
       <div class="top-trust-right">
-        <span class="top-trust-phone">Call: <a href="tel:61435039110" class="top-trust-link">0435 039 110</a></span>
-        <a href="/refer" class="top-trust-link">Quick referral form →</a>
+        <span class="top-trust-phone">Call: <a href="tel:+61435039110" class="top-trust-link">0435 039 110</a></span>
+        <a href="/refer.html" class="top-trust-link">Quick referral form →</a>
       </div>
     </div>
   </div>
@@ -167,7 +172,7 @@
   <header class="site-header">
     <div class="container header-inner">
 
-      <a href="/" class="logo" aria-label="Able Aide Home">
+      <a href="/index.html" class="logo" aria-label="Able Aide Home">
         <img src="/assets/img/able-aide-logo.webp"
              alt="Able Aide logo"
              class="logo-img"
@@ -178,35 +183,40 @@
 
       <nav class="main-nav" id="mainNav" aria-label="Main Navigation">
         <ul class="nav-list">
-          <li><a href="/about">About</a></li>
+          <li><a href="/about.html">About</a></li>
 
           <li class="nav-has-children">
-            <button class="nav-parent-link" type="button" aria-haspopup="true" aria-expanded="false">
+            <button class="nav-parent-link"
+                    type="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-controls="servicesMenu"
+                    id="servicesBtn">
               Services
             </button>
-            <ul class="nav-submenu" aria-label="Services submenu">
-              <li><a href="/services">All services overview</a></li>
-              <li><a href="/services/plan-management">Plan management</a></li>
-              <li><a href="/services/personal-care">Personal care &amp; daily living</a></li>
-              <li><a href="/services/community-participation">Community participation</a></li>
-              <li><a href="/services/support-coordination">Support coordination</a></li>
-              <li><a href="/services/allied-health-access">Allied health access</a></li>
-              <li><a href="/services/family-early-support">Early &amp; family support</a></li>
+            <ul class="nav-submenu" id="servicesMenu" aria-label="Services submenu" hidden>
+              <li><a href="/services.html">All services overview</a></li>
+              <li><a href="/services/plan-management.html">Plan management</a></li>
+              <li><a href="/services/personal-care.html">Personal care &amp; daily living</a></li>
+              <li><a href="/services/community-participation.html">Community participation</a></li>
+              <li><a href="/services/support-coordination.html">Support coordination</a></li>
+              <li><a href="/services/allied-health-access.html">Allied health access</a></li>
+              <li><a href="/services/family-early-support.html">Early &amp; family support</a></li>
             </ul>
           </li>
 
-          <li><a href="/locations">Locations</a></li>
-          <li><a href="/refer">Refer</a></li>
-          <li><a href="/resources">Resources</a></li>
-          <li><a href="/reviews" aria-current="page">Reviews</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/careers">Careers</a></li>
+          <li><a href="/locations.html">Locations</a></li>
+          <li><a href="/refer.html">Refer</a></li>
+          <li><a href="/resources.html">Resources</a></li>
+          <li><a href="/reviews.html" aria-current="page">Reviews</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/careers.html">Careers</a></li>
         </ul>
       </nav>
 
       <div class="header-cta">
-        <a href="/refer" class="btn btn-outline">Refer a participant</a>
-        <a href="/contact" class="btn btn-primary">Book a free chat</a>
+        <a href="/refer.html" class="btn btn-outline">Refer a participant</a>
+        <a href="/contact.html" class="btn btn-primary">Book a free chat</a>
       </div>
 
       <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
@@ -245,7 +255,7 @@
         </div>
 
         <p class="small" style="margin-top: .75rem;">
-          Prefer private feedback? Use <a href="/contact">our contact form</a>.
+          Prefer private feedback? Use <a href="/contact.html">our contact form</a>.
         </p>
       </div>
     </section>
@@ -306,8 +316,8 @@
             If you’ve referred a participant to Able Aide and want to share feedback, we welcome coordinator reviews too.
           </p>
           <div>
-            <a class="btn btn-outline" href="/refer">Make a referral</a>
-            <a class="btn btn-primary" href="/contact" style="margin-left:.5rem;">Send feedback</a>
+            <a class="btn btn-outline" href="/refer.html">Make a referral</a>
+            <a class="btn btn-primary" href="/contact.html" style="margin-left:.5rem;">Send feedback</a>
           </div>
         </div>
       </div>
@@ -342,9 +352,9 @@
       <div class="floating-cta-title">Talk to Able Aide</div>
       <div class="floating-cta-text">Quick ways to reach us about NDIS supports, referrals or questions.</div>
       <div class="floating-cta-links">
-        <a href="tel:61435039110" aria-label="Call Able Aide on 0435 039 110">📞 Call 0435 039 110</a>
-        <a href="/contact">✉️ Send an enquiry</a>
-        <a href="/refer">📝 Refer a participant</a>
+        <a href="tel:+61435039110" aria-label="Call Able Aide on 0435 039 110">📞 Call 0435 039 110</a>
+        <a href="/contact.html">✉️ Send an enquiry</a>
+        <a href="/refer.html">📝 Refer a participant</a>
       </div>
     </div>
   </div>
@@ -357,7 +367,7 @@
         <h3>Able Aide</h3>
         <p>Warm, person-centred disability supports across Victoria.</p>
         <p>
-          <strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
+          <strong>Phone:</strong> <a href="tel:+61435039110">0435 039 110</a><br>
           <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
         </p>
       </div>
@@ -365,14 +375,14 @@
       <div class="footer-col">
         <h3>Quick links</h3>
         <ul class="footer-links">
-          <li><a href="/about">About</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/locations">Locations</a></li>
-          <li><a href="/refer">Refer</a></li>
-          <li><a href="/resources">Resources</a></li>
-          <li><a href="/reviews" aria-current="page">Reviews</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/careers">Careers</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/locations.html">Locations</a></li>
+          <li><a href="/refer.html">Refer</a></li>
+          <li><a href="/resources.html">Resources</a></li>
+          <li><a href="/reviews.html" aria-current="page">Reviews</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/careers.html">Careers</a></li>
         </ul>
       </div>
 
@@ -405,7 +415,8 @@
 
   <!-- Scripts -->
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    const y = document.getElementById("year");
+    if (y) y.textContent = new Date().getFullYear();
 
     const navToggle = document.getElementById("navToggle");
     const mainNav = document.getElementById("mainNav");
@@ -428,6 +439,7 @@
 
       document.querySelectorAll(".nav-has-children.open").forEach(el => el.classList.remove("open"));
       document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => btn.setAttribute("aria-expanded","false"));
+      document.querySelectorAll(".nav-submenu").forEach(menu => menu.hidden = true);
     }
 
     if (navToggle && mainNav) {
@@ -450,10 +462,13 @@
 
       const parentButtons = document.querySelectorAll(".nav-has-children > .nav-parent-link");
       parentButtons.forEach(btn => {
+        const li = btn.parentElement;
+        const submenu = li.querySelector(".nav-submenu");
+
         btn.addEventListener("click", () => {
-          const li = btn.parentElement;
           const isOpen = li.classList.toggle("open");
           btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          if (submenu) submenu.hidden = !isOpen;
         });
       });
 
@@ -473,10 +488,6 @@
         floatingPanel.setAttribute("aria-hidden", isOpen ? "false" : "true");
       });
     }
-  </script>
-
-  <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
   </script>
 
 </body>

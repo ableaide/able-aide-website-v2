@@ -33,7 +33,7 @@
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
   <link rel="shortcut icon" href="/favicon.ico">
 
@@ -59,6 +59,106 @@
   <!-- Preload key images -->
   <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
   <link rel="preload" href="/assets/img/able-aide-ndis-personal-care-support.webp" as="image">
+  <link rel="preload" href="/assets/img/i-love-ndis-registered-provider.png" as="image">
+
+  <!-- ✅ JSON-LD (Registered provider + WebSite + WebPage + Breadcrumb + BlogPosting) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "LocalBusiness",
+        "@id": "https://ableaide.com.au/#business",
+        "name": "Able Aide",
+        "url": "https://ableaide.com.au/",
+        "logo": "https://ableaide.com.au/assets/img/able-aide-logo.webp",
+        "image": "https://ableaide.com.au/assets/img/og-image.webp",
+        "description": "Able Aide is a Registered NDIS Provider delivering Support Coordination and Core Supports across Melbourne, with Plan Management available Australia-wide.",
+        "email": "enquiries@ableaide.com.au",
+        "telephone": "+61435039110",
+        "identifier": {
+          "@type": "PropertyValue",
+          "propertyID": "NDIS Provider Registration Number",
+          "value": "4050173180"
+        },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Melbourne",
+          "addressRegion": "VIC",
+          "addressCountry": "AU"
+        },
+        "areaServed": [
+          { "@type": "AdministrativeArea", "name": "Melbourne, Victoria" },
+          { "@type": "Country", "name": "Australia" }
+        ],
+        "sameAs": [
+          "https://www.facebook.com/able.aide",
+          "https://www.instagram.com/ableaide/",
+          "https://www.linkedin.com/company/ableaide/",
+          "https://www.tiktok.com/@ableaide",
+          "https://www.youtube.com/@AbleAide",
+          "https://x.com/AbleAideSupport"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://ableaide.com.au/#website",
+        "url": "https://ableaide.com.au/",
+        "name": "Able Aide",
+        "publisher": { "@id": "https://ableaide.com.au/#business" },
+        "inLanguage": "en-AU"
+      },
+      {
+        "@type": "WebPage",
+        "@id": "https://ableaide.com.au/blog/what-personal-care-includes-ndis#webpage",
+        "name": "What Personal Care Includes Under the NDIS | Able Aide",
+        "url": "https://ableaide.com.au/blog/what-personal-care-includes-ndis",
+        "description": "A clear guide to what personal care includes under the NDIS – showering, dressing, toileting, mobility support, mealtime assistance, routines and capacity-building.",
+        "isPartOf": { "@id": "https://ableaide.com.au/#website" },
+        "about": { "@id": "https://ableaide.com.au/#business" },
+        "inLanguage": "en-AU"
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://ableaide.com.au/blog/what-personal-care-includes-ndis#breadcrumbs",
+        "itemListElement": [
+          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ableaide.com.au/" },
+          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ableaide.com.au/blog.html" },
+          { "@type": "ListItem", "position": 3, "name": "What Personal Care Includes Under the NDIS", "item": "https://ableaide.com.au/blog/what-personal-care-includes-ndis" }
+        ]
+      },
+      {
+        "@type": "BlogPosting",
+        "@id": "https://ableaide.com.au/blog/what-personal-care-includes-ndis#post",
+        "headline": "What Personal Care Includes Under the NDIS",
+        "description": "A clear guide to what personal care includes under the NDIS – showering, dressing, toileting, mobility support, mealtime assistance, routines and capacity-building.",
+        "url": "https://ableaide.com.au/blog/what-personal-care-includes-ndis",
+        "image": "https://ableaide.com.au/assets/img/able-aide-ndis-personal-care-support.webp",
+        "author": {
+          "@type": "Organization",
+          "name": "Able Aide",
+          "@id": "https://ableaide.com.au/#business"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Able Aide",
+          "@id": "https://ableaide.com.au/#business",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://ableaide.com.au/assets/img/able-aide-logo.webp"
+          }
+        },
+        "mainEntityOfPage": {
+          "@type": "WebPage",
+          "@id": "https://ableaide.com.au/blog/what-personal-care-includes-ndis#webpage"
+        },
+        "datePublished": "2026-02-17",
+        "dateModified": "2026-02-17",
+        "inLanguage": "en-AU"
+      }
+    ]
+  }
+  </script>
 </head>
 
 <body>
@@ -80,7 +180,8 @@
         <span class="top-trust-phone">
           Call: <a href="tel:+61435039110" class="top-trust-link">0435 039 110</a>
         </span>
-        <a href="/refer" class="top-trust-link">Quick referral →</a>
+        <!-- ✅ UPDATED (.html) -->
+        <a href="/refer.html" class="top-trust-link">Quick referral →</a>
       </div>
     </div>
   </div>
@@ -93,14 +194,17 @@
         <img src="/assets/img/able-aide-logo.webp"
              alt="Able Aide logo"
              class="logo-img"
-             decoding="async">
+             decoding="async"
+             width="48"
+             height="48">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
 
       <nav class="main-nav" id="mainNav" aria-label="Main navigation">
         <ul class="nav-list">
-          <li><a href="/about">About</a></li>
+          <!-- ✅ UPDATED (.html) -->
+          <li><a href="/about.html">About</a></li>
 
           <li class="nav-has-children">
             <button class="nav-parent-link"
@@ -112,7 +216,8 @@
               Services
             </button>
             <ul class="nav-submenu" id="servicesMenu" aria-label="Services submenu" hidden>
-              <li><a href="/services">All services overview</a></li>
+              <!-- ✅ UPDATED (.html) -->
+              <li><a href="/services.html">All services overview</a></li>
               <li><a href="/services/support-coordination">Support coordination</a></li>
               <li><a href="/services/personal-care">Personal care &amp; daily living</a></li>
               <li><a href="/services/community-participation">Community participation</a></li>
@@ -122,23 +227,36 @@
             </ul>
           </li>
 
-          <li><a href="/locations">Locations</a></li>
-          <li><a href="/refer">Refer a participant</a></li>
-          <li><a href="/resources">Resources</a></li>
-          <li><a href="/reviews">Reviews</a></li>
-          <li><a href="/blog" aria-current="page">Blog</a></li>
-          <li><a href="/careers">Careers</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/complaints">Complaints</a></li>
+          <!-- ✅ UPDATED (.html) -->
+          <li><a href="/locations.html">Locations</a></li>
+          <!-- ✅ UPDATED (.html) -->
+          <li><a href="/refer.html">Refer a participant</a></li>
+          <!-- ✅ UPDATED (.html) -->
+          <li><a href="/resources.html">Resources</a></li>
+          <!-- ✅ UPDATED (.html) -->
+          <li><a href="/reviews.html">Reviews</a></li>
+          <!-- ✅ UPDATED (.html) -->
+          <li><a href="/blog.html" aria-current="page">Blog</a></li>
+          <!-- ✅ UPDATED (.html) -->
+          <li><a href="/careers.html">Careers</a></li>
+          <!-- ✅ UPDATED (.html) -->
+          <li><a href="/contact.html">Contact</a></li>
+          <!-- ✅ UPDATED (.html) -->
+          <li><a href="/complaints.html">Complaints</a></li>
         </ul>
       </nav>
 
       <div class="header-cta">
-        <a href="/refer" class="btn btn-outline">Refer a participant</a>
-        <a href="/contact" class="btn btn-primary">Book a free chat</a>
+        <!-- ✅ UPDATED (.html) -->
+        <a href="/refer.html" class="btn btn-outline">Refer a participant</a>
+        <!-- ✅ UPDATED (.html) -->
+        <a href="/contact.html" class="btn btn-primary">Book a free chat</a>
       </div>
 
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" type="button"
+              aria-label="Toggle navigation"
+              aria-controls="mainNav"
+              aria-expanded="false">
         <span></span>
       </button>
 
@@ -152,7 +270,8 @@
       <div class="container hero-inner">
 
         <div class="hero-text">
-          <p class="small"><a href="/blog">Blog</a> · NDIS Guide</p>
+          <!-- ✅ UPDATED (.html) -->
+          <p class="small"><a href="/blog.html">Blog</a> · NDIS Guide</p>
           <h1>What Personal Care Includes Under the NDIS</h1>
 
           <p class="hero-subtext">
@@ -176,7 +295,9 @@
             alt="Support worker assisting a participant with personal care"
             class="hero-img"
             loading="lazy"
-            decoding="async">
+            decoding="async"
+            width="900"
+            height="600">
 
           <h2 class="hero-card-title">Need personal care support?</h2>
           <p class="small">
@@ -189,7 +310,8 @@
           </div>
 
           <a href="/services/personal-care" class="btn btn-outline btn-block">Personal care &amp; daily living</a>
-          <a href="/contact" class="btn btn-primary btn-block" style="margin-top:0.5rem;">Talk to our team</a>
+          <!-- ✅ UPDATED (.html) -->
+          <a href="/contact.html" class="btn btn-primary btn-block" style="margin-top:0.5rem;">Talk to our team</a>
         </aside>
 
       </div>
@@ -303,7 +425,8 @@
             Able Aide supports participants across Greater Melbourne, Geelong, Ballarat, Bendigo, Shepparton &amp; regional Victoria.
           </p>
 
-          <p><a href="/contact" class="btn btn-primary">Talk to Able Aide about personal care</a></p>
+          <!-- ✅ UPDATED (.html) -->
+          <p><a href="/contact.html" class="btn btn-primary">Talk to Able Aide about personal care</a></p>
 
         </article>
       </div>
@@ -317,8 +440,10 @@
           <p>We’ll listen first, then suggest practical options that fit your plan and preferences.</p>
         </div>
         <div class="final-cta-actions">
-          <a href="/contact" class="btn btn-primary">Book a free chat</a>
-          <a href="/refer" class="btn btn-outline">Refer a participant</a>
+          <!-- ✅ UPDATED (.html) -->
+          <a href="/contact.html" class="btn btn-primary">Book a free chat</a>
+          <!-- ✅ UPDATED (.html) -->
+          <a href="/refer.html" class="btn btn-outline">Refer a participant</a>
         </div>
       </div>
     </section>
@@ -362,16 +487,17 @@
       <div class="footer-col">
         <h3>Quick links</h3>
         <ul class="footer-links">
-          <li><a href="/about">About</a></li>
-          <li><a href="/services">Services</a></li>
-          <li><a href="/locations">Locations</a></li>
-          <li><a href="/refer">Refer a participant</a></li>
-          <li><a href="/resources">Resources</a></li>
-          <li><a href="/reviews">Reviews</a></li>
-          <li><a href="/blog" aria-current="page">Blog</a></li>
-          <li><a href="/careers">Careers</a></li>
-          <li><a href="/contact">Contact</a></li>
-          <li><a href="/complaints">Complaints</a></li>
+          <!-- ✅ UPDATED (.html) -->
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/services.html">Services</a></li>
+          <li><a href="/locations.html">Locations</a></li>
+          <li><a href="/refer.html">Refer a participant</a></li>
+          <li><a href="/resources.html">Resources</a></li>
+          <li><a href="/reviews.html">Reviews</a></li>
+          <li><a href="/blog.html" aria-current="page">Blog</a></li>
+          <li><a href="/careers.html">Careers</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/complaints.html">Complaints</a></li>
         </ul>
       </div>
 
@@ -391,7 +517,7 @@
           <li><a href="https://www.linkedin.com/company/ableaide/" target="_blank" rel="noopener">LinkedIn</a></li>
           <li><a href="https://www.tiktok.com/@ableaide" target="_blank" rel="noopener">TikTok</a></li>
           <li><a href="https://www.youtube.com/@AbleAide" target="_blank" rel="noopener">YouTube</a></li>
-          <li><a href="https://x.com/AbleAideSupport" target="_blank" rel="noopener">X (Twitter)</a></li>
+          <li><a href="https://x.com/AbleAideSupport" target="_blank" rel="noopener">X</a></li>
         </ul>
       </div>
 
@@ -399,9 +525,11 @@
 
     <div class="container footer-bottom">
       <p class="small">
-        © <span id="year"></span> Able Aide. All rights reserved. ·
-        <a href="/privacy-policy" class="footer-link">Privacy Policy</a> ·
-        <a href="/terms-of-service" class="footer-link">Terms of Service</a>
+        © <span id="year"></span> Able Aide ·
+        <!-- ✅ UPDATED (.html) -->
+        <a href="/privacy-policy.html" class="footer-link">Privacy Policy</a> ·
+        <!-- ✅ UPDATED (.html) -->
+        <a href="/terms-of-service.html" class="footer-link">Terms of Service</a>
       </p>
     </div>
   </footer>
@@ -427,17 +555,19 @@
     }
 
     function openNav() {
+      if (!mainNav) return;
       mainNav.classList.add("open");
       navOverlay?.classList.add("open");
-      navToggle.setAttribute("aria-expanded", "true");
+      navToggle?.setAttribute("aria-expanded", "true");
       navOverlay?.setAttribute("aria-hidden", "false");
       document.body.classList.add("nav-lock");
     }
 
     function closeNav() {
+      if (!mainNav) return;
       mainNav.classList.remove("open");
       navOverlay?.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
+      navToggle?.setAttribute("aria-expanded", "false");
       navOverlay?.setAttribute("aria-hidden", "true");
       document.body.classList.remove("nav-lock");
       closeAllDropdowns();
@@ -503,58 +633,19 @@
         if (!isMobileNav()) closeNav();
       });
     }
-  </script>
 
-  <!-- ✅ Updated JSON-LD (Registered provider + Breadcrumb + BlogPosting) -->
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@graph": [
-      {
-        "@type": "LocalBusiness",
-        "@id": "https://ableaide.com.au/#business",
-        "name": "Able Aide",
-        "url": "https://ableaide.com.au/",
-        "logo": "https://ableaide.com.au/assets/img/able-aide-logo.webp",
-        "telephone": "+61435039110",
-        "email": "enquiries@ableaide.com.au",
-        "identifier": {
-          "@type": "PropertyValue",
-          "propertyID": "NDIS Provider Registration Number",
-          "value": "4050173180"
-        }
-      },
-      {
-        "@type": "BreadcrumbList",
-        "@id": "https://ableaide.com.au/blog/what-personal-care-includes-ndis#breadcrumbs",
-        "itemListElement": [
-          { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://ableaide.com.au/" },
-          { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://ableaide.com.au/blog" },
-          { "@type": "ListItem", "position": 3, "name": "What Personal Care Includes Under the NDIS", "item": "https://ableaide.com.au/blog/what-personal-care-includes-ndis" }
-        ]
-      },
-      {
-        "@type": "BlogPosting",
-        "@id": "https://ableaide.com.au/blog/what-personal-care-includes-ndis#post",
-        "headline": "What Personal Care Includes Under the NDIS",
-        "description": "A clear guide to what personal care includes under the NDIS – showering, dressing, toileting, mobility support, mealtime assistance, routines and capacity-building.",
-        "url": "https://ableaide.com.au/blog/what-personal-care-includes-ndis",
-        "image": "https://ableaide.com.au/assets/img/og-image.webp",
-        "author": { "@type": "Organization", "name": "Able Aide" },
-        "publisher": {
-          "@type": "Organization",
-          "name": "Able Aide",
-          "logo": {
-            "@type": "ImageObject",
-            "url": "https://ableaide.com.au/assets/img/able-aide-logo.webp"
-          }
-        },
-        "mainEntityOfPage": "https://ableaide.com.au/blog/what-personal-care-includes-ndis",
-        "datePublished": "2026-02-17",
-        "dateModified": "2026-02-17"
-      }
-    ]
-  }
+    // Floating CTA (if your global CSS uses it site-wide)
+    const floatingToggle = document.getElementById("floatingCtaToggle");
+    const floatingCta = document.getElementById("floatingCta");
+    const floatingPanel = floatingCta ? floatingCta.querySelector(".floating-cta-panel") : null;
+
+    if (floatingToggle && floatingCta && floatingPanel) {
+      floatingToggle.addEventListener("click", () => {
+        const isOpen = floatingCta.classList.toggle("open");
+        floatingToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        floatingPanel.setAttribute("aria-hidden", isOpen ? "false" : "true");
+      });
+    }
   </script>
 
 </body>

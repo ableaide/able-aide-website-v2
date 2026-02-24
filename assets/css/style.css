@@ -596,3 +596,85 @@ img{
   .card-grid{ grid-template-columns:1fr; }
   .footer-inner{ grid-template-columns:1fr; }
 }
+
+/* ================================
+   Plan Management Form Alignment (UPDATED)
+   Fixes: cramped fields, uneven grid, inconsistent heights
+================================ */
+
+/* Make labels behave properly */
+.contact-form label{
+  display:block;
+  margin:10px 0 6px;
+}
+
+/* Inputs consistent + full width */
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  display:block;
+  width:100%;
+  max-width:100%;
+  box-sizing:border-box;
+  padding:10px 12px;
+  border:1px solid #d1d5db;
+  border-radius:10px;
+  font:inherit;
+  line-height:1.3;
+  background:#fff;
+}
+
+/* Make input/select same height */
+.contact-form input,
+.contact-form select{
+  height:44px;
+}
+
+/* Textarea sizing */
+.contact-form textarea{
+  resize:vertical;
+  min-height:120px;
+}
+
+/* Form cards */
+.contact-form .card{
+  text-align:left;
+}
+
+/* IMPORTANT: force form grid to 2 columns only (not 3) */
+.contact-form .card-grid{
+  grid-template-columns:repeat(2,1fr);
+  gap:1.25rem;
+  margin-top:1rem;
+  align-items:start;
+}
+
+/* Stack form on mobile */
+@media (max-width:900px){
+  .contact-form .card-grid{
+    grid-template-columns:1fr;
+  }
+}
+
+/* Full width submit button inside form */
+.contact-form .btn{
+  width:100%;
+}
+
+/* Tidy spacing */
+.contact-form .card h3{
+  margin-bottom:8px;
+}
+
+/* Focus styles for inputs */
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus{
+  outline:3px solid rgba(11,114,133,.25);
+  border-color: rgba(11,114,133,.55);
+}
+
+/* Optional: make labels a bit clearer */
+.contact-form label.small{
+  font-weight:600;
+}

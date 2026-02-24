@@ -49,6 +49,8 @@
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
   <link rel="preload" href="/assets/img/able-aide-ndis-services-hero.webp" as="image">
+  <!-- ✅ Added preload for missing badge -->
+  <link rel="preload" href="/assets/img/i-love-ndis-registered-provider.png" as="image">
 
   <!-- Schema -->
   <script type="application/ld+json">
@@ -259,7 +261,17 @@
             <span class="badge badge-hours">Clear updates</span>
           </div>
 
-          <a href="#pm-enquiry" class="btn btn-primary js-start">Start Plan Management</a>
+          <!-- ✅ Added missing I Love NDIS badge on Plan Management page -->
+          <div style="margin-top:1rem;">
+            <img
+              src="/assets/img/i-love-ndis-registered-provider.png"
+              alt="I Love NDIS – Registered Provider"
+              loading="lazy"
+              decoding="async"
+              style="max-width:190px;">
+          </div>
+
+          <a href="#pm-enquiry" class="btn btn-primary js-start" style="margin-top:1rem;">Start Plan Management</a>
           <p class="small" style="margin-top:.75rem;">
             <strong>Response:</strong> We aim to respond within 1 business day.
           </p>
@@ -313,7 +325,7 @@
           <p>Submit your details and we’ll contact you. (Australia-wide)</p>
         </header>
 
-        <!-- Static-site friendly form (FormSubmit). Replace email if needed. -->
+        <!-- Static-site friendly form (FormSubmit). -->
         <form class="contact-form"
               action="https://formsubmit.co/planmanagement@ableaide.com.au"
               method="POST"
@@ -322,6 +334,8 @@
           <input type="hidden" name="_subject" value="New Plan Management Enquiry – Able Aide">
           <input type="hidden" name="_captcha" value="true">
           <input type="hidden" name="_template" value="table">
+          <!-- ✅ Redirect to your existing thank you page -->
+          <input type="hidden" name="_next" value="https://ableaide.com.au/thanks.html">
 
           <div class="card-grid">
             <div class="card">
@@ -482,7 +496,18 @@
         <h3>Able Aide</h3>
         <p>Registered NDIS Provider delivering Support Coordination and Core Supports across Melbourne, with Plan Management Australia-wide.</p>
         <p class="small"><strong>Provider No.:</strong> 4050173180</p>
-        <p>
+
+        <!-- ✅ Added I Love NDIS badge in footer as well -->
+        <div class="ndis-badge" aria-label="Registered NDIS Provider badge" style="margin-top:1rem;">
+          <img
+            src="/assets/img/i-love-ndis-registered-provider.png"
+            alt="I Love NDIS – Registered Provider"
+            loading="lazy"
+            decoding="async"
+            style="max-width:220px;">
+        </div>
+
+        <p style="margin-top:1rem;">
           <strong>Phone:</strong> <a class="js-call" href="tel:+61435039110">0435 039 110</a><br>
           <strong>General enquiries:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a><br>
           <strong>Plan Management:</strong> <a class="js-email" href="mailto:planmanagement@ableaide.com.au">planmanagement@ableaide.com.au</a>

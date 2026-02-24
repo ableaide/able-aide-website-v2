@@ -14,12 +14,11 @@
     gtag('config', 'G-651FXYJL03');
   </script>
 
-  <!-- ✅ Canonical (match the real file) -->
   <link rel="canonical" href="https://ableaide.com.au/thanks.html">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <meta name="description"
-        content="Thank you for contacting Able Aide. Our team will be in touch shortly to discuss your enquiry, referral or support needs.">
+        content="Thank you for contacting Able Aide. Our team will be in touch shortly about your enquiry, referral or Plan Management request.">
 
   <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
@@ -29,7 +28,7 @@
 
   <!-- OpenGraph -->
   <meta property="og:title" content="Thank You – Able Aide">
-  <meta property="og:description" content="We will contact you shortly.">
+  <meta property="og:description" content="We have received your message and will contact you shortly.">
   <meta property="og:image" content="/assets/img/og-image.webp">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://ableaide.com.au/thanks.html">
@@ -37,7 +36,7 @@
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Thank You – Able Aide">
-  <meta name="twitter:description" content="We will contact you shortly.">
+  <meta name="twitter:description" content="We have received your message and will contact you shortly.">
   <meta name="twitter:image" content="/assets/img/og-image.webp">
 
   <!-- Styles -->
@@ -54,7 +53,7 @@
       border:1px solid #e5e7eb;
       border-radius:1rem;
       padding:2rem;
-      max-width:680px;
+      max-width:720px;
       margin:2rem auto;
       text-align:center;
       box-shadow:0 12px 28px rgba(15,23,42,0.08);
@@ -63,6 +62,13 @@
       font-size:3rem;
       margin-bottom:1rem;
       color:#0b7285;
+    }
+    .thanks-actions{
+      display:flex;
+      justify-content:center;
+      gap:.6rem;
+      flex-wrap:wrap;
+      margin-top:1.25rem;
     }
   </style>
 
@@ -81,7 +87,11 @@
         "description": "Able Aide is a Registered NDIS Provider delivering reliable disability supports across Melbourne and Plan Management Australia-wide.",
         "email": "enquiries@ableaide.com.au",
         "telephone": "+61435039110",
-        "identifier": "NDIS Provider Number 4050173180",
+        "identifier": {
+          "@type":"PropertyValue",
+          "propertyID":"NDIS Provider Registration Number",
+          "value":"4050173180"
+        },
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "Melbourne",
@@ -136,7 +146,6 @@
 
   <a class="skip-link" href="#main">Skip to content</a>
 
-  <!-- overlay for mobile nav -->
   <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
 
   <!-- TOP TRUST BAR -->
@@ -144,7 +153,7 @@
     <div class="container top-trust-bar-inner">
       <div class="top-trust-left">
         <span class="top-trust-badge">Registered NDIS Provider · Provider No. 4050173180</span>
-        <span class="top-trust-badge">Core supports &amp; Support Coordination: Melbourne</span>
+        <span class="top-trust-badge">Support Coordination &amp; Core Supports: Melbourne</span>
         <span class="top-trust-badge">Plan Management: Australia-wide</span>
       </div>
       <div class="top-trust-right">
@@ -160,7 +169,7 @@
   <header class="site-header">
     <div class="container header-inner">
 
-      <a href="/" class="logo" aria-label="Able Aide Home">
+      <a href="/index.html" class="logo" aria-label="Able Aide Home">
         <img src="/assets/img/able-aide-logo.webp" alt="Able Aide Logo" class="logo-img" decoding="async">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
@@ -170,9 +179,18 @@
         <ul class="nav-list">
           <li><a href="/about.html">About</a></li>
 
+          <!-- Services dropdown (matches your newer pattern) -->
           <li class="nav-has-children">
-            <a href="/services.html" class="nav-parent-link">Services</a>
-            <ul class="nav-submenu">
+            <button class="nav-parent-link"
+                    type="button"
+                    aria-haspopup="true"
+                    aria-expanded="false"
+                    aria-controls="servicesMenu"
+                    data-menu="servicesMenu">
+              Services
+            </button>
+            <ul class="nav-submenu" id="servicesMenu" aria-label="Services submenu" hidden>
+              <li><a href="/services/">All services overview</a></li>
               <li><a href="/services/plan-management.html">Plan management</a></li>
               <li><a href="/services/personal-care.html">Personal care &amp; daily living</a></li>
               <li><a href="/services/community-participation.html">Community participation</a></li>
@@ -182,18 +200,17 @@
             </ul>
           </li>
 
-          <li><a href="/locations.html">Locations</a></li>
+          <li><a href="/locations/">Locations</a></li>
           <li><a href="/refer.html">Refer a participant</a></li>
-          <li><a href="/resources.html">Resources</a></li>
+          <li><a href="/resources/">Resources</a></li>
           <li><a href="/contact.html">Contact</a></li>
-          <li><a href="/careers.html">Careers</a></li>
-          <li><a href="/complaints.html">Complaints</a></li>
+          <li><a href="/careers/">Careers</a></li>
         </ul>
       </nav>
 
       <div class="header-cta">
         <a href="/refer.html" class="btn btn-outline">Refer a participant</a>
-        <a href="/contact.html" class="btn btn-primary">Book a free chat</a>
+        <a href="/services/plan-management.html#pm-enquiry" class="btn btn-primary">Plan Management enquiry</a>
       </div>
 
       <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
@@ -205,23 +222,33 @@
 
   <main id="main">
 
-    <section class="section">
+    <section class="home-section">
       <div class="container">
 
         <div class="thanks-box">
-          <div class="thanks-icon">🎉</div>
-          <h1>Thank you!</h1>
+          <div class="thanks-icon">✅</div>
+          <h1>Thanks — we received your message</h1>
 
-          <p>Your message has been received and our team will be in touch shortly.</p>
+          <p>We’ll contact you shortly.</p>
           <p class="small">We aim to respond within the same day during business hours.</p>
 
+          <div class="thanks-actions">
+            <a href="/index.html" class="btn btn-primary">Return to Home</a>
+            <a href="tel:+61435039110" class="btn btn-secondary">Call 0435 039 110</a>
+            <a href="mailto:planmanagement@ableaide.com.au" class="btn btn-outline">Email Plan Management</a>
+            <a href="/refer.html" class="btn btn-outline">Make a referral</a>
+          </div>
+
           <div style="margin-top:1.5rem;">
-            <a href="/" class="btn btn-primary">Return to Home</a>
-            <a href="/refer.html" class="btn btn-outline" style="margin-left:.5rem;">Make a referral</a>
+            <img src="/assets/img/i-love-ndis-registered-provider.png"
+                 alt="I Love NDIS – Registered Provider"
+                 loading="lazy"
+                 decoding="async"
+                 style="max-width:190px; margin:0 auto;">
           </div>
 
           <p class="small" style="margin-top:1rem;">
-            Need help sooner? Call us on <a href="tel:+61435039110">0435 039 110</a>.
+            Able Aide is a Registered NDIS Provider. The NDIS/NDIA does not endorse specific providers.
           </p>
         </div>
 
@@ -240,7 +267,7 @@
         <p class="small"><strong>Provider No.:</strong> 4050173180</p>
 
         <div class="ndis-badge" aria-label="Registered NDIS Provider badge">
-          <img src="/assets/img/i-love-ndis-registered-provider.png" alt="I Love NDIS Registered Provider">
+          <img src="/assets/img/i-love-ndis-registered-provider.png" alt="I Love NDIS Registered Provider" loading="lazy" decoding="async">
           <p class="small">
             <strong>Registered NDIS Provider</strong><br>
             Provider No. 4050173180
@@ -258,12 +285,12 @@
         <h3>Quick links</h3>
         <ul class="footer-links">
           <li><a href="/about.html">About</a></li>
-          <li><a href="/services.html">Services</a></li>
-          <li><a href="/locations.html">Locations</a></li>
+          <li><a href="/services/">Services</a></li>
+          <li><a href="/locations/">Locations</a></li>
           <li><a href="/refer.html">Refer a participant</a></li>
-          <li><a href="/resources.html">Resources</a></li>
+          <li><a href="/resources/">Resources</a></li>
           <li><a href="/faqs.html">FAQs</a></li>
-          <li><a href="/careers.html">Careers</a></li>
+          <li><a href="/careers/">Careers</a></li>
           <li><a href="/contact.html">Contact</a></li>
           <li><a href="/complaints.html">Complaints</a></li>
         </ul>
@@ -297,12 +324,11 @@
     </div>
   </footer>
 
-  <!-- FLOATING CTA -->
   <div class="floating-cta" id="floatingCta">
-    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button">
+    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button" aria-expanded="false">
       <span class="icon">💬</span><span>Need support?</span>
     </button>
-    <div class="floating-cta-panel">
+    <div class="floating-cta-panel" aria-hidden="true">
       <div class="floating-cta-title">Talk to Able Aide</div>
       <div class="floating-cta-text">Quick ways to reach us.</div>
       <div class="floating-cta-links">
@@ -314,29 +340,42 @@
     </div>
   </div>
 
-  <!-- SCRIPTS -->
   <script>
-    document.getElementById("year").textContent = new Date().getFullYear();
+    // Footer year
+    const yearEl = document.getElementById("year");
+    if (yearEl) yearEl.textContent = new Date().getFullYear();
 
+    // Track thank you page view (useful for Ads later)
+    try { gtag('event', 'pm_thankyou_view', {event_category:'PlanManagement'}); } catch(e) {}
+
+    // Mobile nav (same pattern as your homepage)
     const navToggle = document.getElementById("navToggle");
     const mainNav = document.getElementById("mainNav");
     const navOverlay = document.getElementById("navOverlay");
 
+    function closeAllSubmenus() {
+      document.querySelectorAll(".nav-has-children").forEach(li => li.classList.remove("open"));
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => btn.setAttribute("aria-expanded", "false"));
+      document.querySelectorAll(".nav-submenu").forEach(menu => menu.hidden = true);
+    }
+
     function openNav() {
+      if (!mainNav) return;
       mainNav.classList.add("open");
-      navOverlay.classList.add("open");
-      navToggle.setAttribute("aria-expanded", "true");
-      navOverlay.setAttribute("aria-hidden", "false");
+      if (navOverlay) navOverlay.classList.add("open");
+      if (navToggle) navToggle.setAttribute("aria-expanded", "true");
+      if (navOverlay) navOverlay.setAttribute("aria-hidden", "false");
       document.body.classList.add("nav-lock");
     }
 
     function closeNav() {
+      if (!mainNav) return;
       mainNav.classList.remove("open");
-      navOverlay.classList.remove("open");
-      navToggle.setAttribute("aria-expanded", "false");
-      navOverlay.setAttribute("aria-hidden", "true");
+      if (navOverlay) navOverlay.classList.remove("open");
+      if (navToggle) navToggle.setAttribute("aria-expanded", "false");
+      if (navOverlay) navOverlay.setAttribute("aria-hidden", "true");
       document.body.classList.remove("nav-lock");
-      document.querySelectorAll(".nav-has-children.open").forEach(el => el.classList.remove("open"));
+      closeAllSubmenus();
     }
 
     if (navToggle && mainNav) {
@@ -351,20 +390,42 @@
         if (e.key === "Escape" && mainNav.classList.contains("open")) closeNav();
       });
 
+      // Close drawer on link click (mobile)
       document.querySelectorAll("#mainNav a").forEach(link => {
         link.addEventListener("click", () => {
           if (window.innerWidth <= 900) closeNav();
         });
       });
 
-      // Mobile submenu: tap Services to expand
-      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(a => {
-        a.addEventListener("click", (e) => {
-          if (window.innerWidth <= 900) {
-            e.preventDefault();
-            a.parentElement.classList.toggle("open");
-          }
+      // Dropdown buttons (mobile + accessible)
+      const parentButtons = document.querySelectorAll(".nav-has-children > .nav-parent-link");
+      parentButtons.forEach(btn => {
+        const li = btn.parentElement;
+        const submenu = li.querySelector(".nav-submenu");
+
+        btn.addEventListener("click", (e) => {
+          e.stopPropagation();
+
+          // Close others
+          document.querySelectorAll(".nav-has-children").forEach(other => {
+            if (other !== li) other.classList.remove("open");
+          });
+          document.querySelectorAll(".nav-submenu").forEach(menu => {
+            if (submenu && menu !== submenu) menu.hidden = true;
+          });
+          document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(otherBtn => {
+            if (otherBtn !== btn) otherBtn.setAttribute("aria-expanded", "false");
+          });
+
+          const isOpen = li.classList.toggle("open");
+          btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
+          if (submenu) submenu.hidden = !isOpen;
         });
+      });
+
+      // Close dropdowns when clicking outside (desktop usability)
+      document.addEventListener("click", (e) => {
+        if (!mainNav.contains(e.target)) closeAllSubmenus();
       });
 
       window.addEventListener("resize", () => {
@@ -372,10 +433,17 @@
       });
     }
 
+    // Floating CTA
     const floatingToggle = document.getElementById("floatingCtaToggle");
     const floatingCta = document.getElementById("floatingCta");
-    if (floatingToggle && floatingCta) {
-      floatingToggle.addEventListener("click", () => floatingCta.classList.toggle("open"));
+    const floatingPanel = floatingCta ? floatingCta.querySelector(".floating-cta-panel") : null;
+
+    if (floatingToggle && floatingCta && floatingPanel) {
+      floatingToggle.addEventListener("click", () => {
+        const isOpen = floatingCta.classList.toggle("open");
+        floatingToggle.setAttribute("aria-expanded", isOpen ? "true" : "false");
+        floatingPanel.setAttribute("aria-hidden", isOpen ? "false" : "true");
+      });
     }
   </script>
 

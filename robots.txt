@@ -5,7 +5,7 @@
 User-agent: *
 Allow: /
 
-# Block obvious non-site/system folders (only if they ever exist)
+# Block system / admin folders
 Disallow: /admin/
 Disallow: /administrator/
 Disallow: /backend/
@@ -15,6 +15,13 @@ Disallow: /tmp/
 Disallow: /backup/
 Disallow: /old/
 Disallow: /server-status/
+
+# Block utility / non-content pages from indexing
+# (still crawlable for link-following, just not indexed via meta robots)
+# These are handled via <meta name="robots" content="noindex"> on the pages themselves:
+#   /thanks.html
+#   /404.html
+# No need to Disallow here — canonical + noindex is cleaner.
 
 # Sitemap
 Sitemap: https://ableaide.com.au/sitemap.xml

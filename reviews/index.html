@@ -4,47 +4,43 @@
   <meta charset="UTF-8">
   <title>Able Aide Reviews – What Participants & Families Say</title>
 
-  <!-- ✅ Canonical (.html) -->
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-651FXYJL03"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-651FXYJL03');
+  </script>
+
   <link rel="canonical" href="https://ableaide.com.au/reviews.html">
-
-  <!-- Responsive -->
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <!-- SEO -->
   <meta name="robots" content="index, follow">
-  <meta name="theme-color" content="#0b7285">
+  <meta name="theme-color" content="#0b3b5a">
   <meta name="format-detection" content="telephone=no">
 
-  <!-- Meta Description -->
-  <meta name="description"
-        content="Read testimonials from participants, families and support coordinators across Victoria. Share your experience with Able Aide by leaving a Google review.">
+  <meta name="description" content="Read testimonials from participants, families and support coordinators across Victoria. Share your experience with Able Aide by leaving a Google review.">
 
-  <!-- OpenGraph -->
   <meta property="og:title" content="Able Aide Reviews – What People Say">
   <meta property="og:description" content="Warm, person-centred disability supports across Victoria. Read real reviews from participants, families and coordinators.">
   <meta property="og:image" content="/assets/img/og-image.webp">
   <meta property="og:type" content="website">
-  <!-- ✅ .html URL -->
   <meta property="og:url" content="https://ableaide.com.au/reviews.html">
 
-  <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Able Aide Reviews – What People Say">
   <meta name="twitter:description" content="Warm, reliable disability support with consistent, respectful workers. Read real reviews.">
   <meta name="twitter:image" content="/assets/img/og-image.webp">
 
-  <!-- Favicons -->
   <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon_32x32.png">
   <link rel="icon" type="image/png" sizes="16x16" href="/assets/img/favicon_16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="/assets/img/favicon_180x180.png">
   <link rel="shortcut icon" href="/favicon.ico">
 
-  <!-- Styles -->
   <link rel="preload" href="/assets/css/style.css" as="style">
   <link rel="stylesheet" href="/assets/css/style.css">
   <link rel="preload" href="/assets/img/able-aide-logo.webp" as="image">
 
-  <!-- ✅ FULL Schema (updated to .html) -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -149,8 +145,6 @@
 <body>
 
   <a class="skip-link" href="#main">Skip to content</a>
-
-  <!-- Mobile nav overlay -->
   <div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
 
   <!-- TOP TRUST BAR -->
@@ -162,7 +156,7 @@
         <span class="top-trust-badge">Greater Melbourne, Geelong &amp; Regional VIC</span>
       </div>
       <div class="top-trust-right">
-        <span class="top-trust-phone">Call: <a href="tel:+61435039110" class="top-trust-link">0435 039 110</a></span>
+        <span class="top-trust-phone">Call: <a href="tel:61435039110" class="top-trust-link" aria-label="Call Able Aide on 0435 039 110">0435 039 110</a></span>
         <a href="/refer.html" class="top-trust-link">Quick referral form →</a>
       </div>
     </div>
@@ -173,10 +167,7 @@
     <div class="container header-inner">
 
       <a href="/index.html" class="logo" aria-label="Able Aide Home">
-        <img src="/assets/img/able-aide-logo.webp"
-             alt="Able Aide logo"
-             class="logo-img"
-             decoding="async">
+        <img src="/assets/img/able-aide-logo.webp" alt="Able Aide logo" class="logo-img" width="180" height="46" decoding="async">
         <span class="logo-mark">Able Aide</span>
         <span class="logo-tagline">Your Journey, Our Support</span>
       </a>
@@ -186,16 +177,9 @@
           <li><a href="/about.html">About</a></li>
 
           <li class="nav-has-children">
-            <button class="nav-parent-link"
-                    type="button"
-                    aria-haspopup="true"
-                    aria-expanded="false"
-                    aria-controls="servicesMenu"
-                    id="servicesBtn">
-              Services
-            </button>
-            <ul class="nav-submenu" id="servicesMenu" aria-label="Services submenu" hidden>
-              <li><a href="/services.html">All services overview</a></li>
+            <button class="nav-parent-link" type="button" aria-haspopup="true" aria-expanded="false">Services</button>
+            <ul class="nav-submenu" aria-label="Services submenu">
+              <li><a href="/services/index.html">All services overview</a></li>
               <li><a href="/services/plan-management.html">Plan management</a></li>
               <li><a href="/services/personal-care.html">Personal care &amp; daily living</a></li>
               <li><a href="/services/community-participation.html">Community participation</a></li>
@@ -205,12 +189,39 @@
             </ul>
           </li>
 
-          <li><a href="/locations.html">Locations</a></li>
-          <li><a href="/refer.html">Refer</a></li>
-          <li><a href="/resources.html">Resources</a></li>
+          <li class="nav-has-children">
+            <button class="nav-parent-link" type="button" aria-haspopup="true" aria-expanded="false">Locations</button>
+            <ul class="nav-submenu" aria-label="Locations submenu">
+              <li><a href="/locations/index.html">All locations</a></li>
+              <li><a href="/locations/melbourne.html">Melbourne (CBD &amp; inner)</a></li>
+              <li><a href="/locations/frankston.html">Frankston</a></li>
+              <li><a href="/locations/dandenong.html">Dandenong</a></li>
+              <li><a href="/locations/ringwood.html">Ringwood</a></li>
+              <li><a href="/locations/epping.html">Epping</a></li>
+              <li><a href="/locations/werribee.html">Werribee</a></li>
+              <li><a href="/locations/sunshine.html">Sunshine</a></li>
+              <li><a href="/locations/mornington-peninsula.html">Mornington Peninsula</a></li>
+            </ul>
+          </li>
+
+          <li><a href="/refer.html">Refer a participant</a></li>
+
+          <li class="nav-has-children">
+            <button class="nav-parent-link" type="button" aria-haspopup="true" aria-expanded="false">Resources</button>
+            <ul class="nav-submenu" aria-label="Resources submenu">
+              <li><a href="/resources/index.html">All resources</a></li>
+              <li><a href="/resources/goal-setting-guide.html">NDIS Goal Setting Guide</a></li>
+              <li><a href="/resources/evidence-reports-checklist.html">Evidence &amp; Reports Checklist</a></li>
+              <li><a href="/resources/support-worker-guide.html">Support Worker Guide</a></li>
+              <li><a href="/resources/support-worker-family-tips.html">Tips for Families</a></li>
+              <li><a href="/resources/participant-rights-guide.html">Participant Rights Guide</a></li>
+            </ul>
+          </li>
+
           <li><a href="/reviews.html" aria-current="page">Reviews</a></li>
           <li><a href="/contact.html">Contact</a></li>
           <li><a href="/careers.html">Careers</a></li>
+          <li><a href="/complaints.html">Complaints</a></li>
         </ul>
       </nav>
 
@@ -219,7 +230,7 @@
         <a href="/contact.html" class="btn btn-primary">Book a free chat</a>
       </div>
 
-      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false">
+      <button class="nav-toggle" id="navToggle" type="button" aria-label="Toggle navigation" aria-expanded="false" aria-controls="mainNav">
         <span></span>
       </button>
     </div>
@@ -228,98 +239,166 @@
   <main id="main">
 
     <!-- HERO -->
-    <section class="home-section">
-      <div class="container">
-        <header class="section-header">
+    <section class="hero simple-hero">
+      <div class="container hero-inner">
+        <div class="hero-text">
           <h1>What people say about Able Aide</h1>
           <p>
             Feedback from participants, families and Support Coordinators across Victoria.
             Reviews help others choose supports with confidence.
           </p>
-        </header>
-
-        <div style="margin-top:1.5rem; display:flex; gap:.75rem; flex-wrap:wrap;">
-          <a href="https://g.page/r/CbaCZeVihQldEBM/review"
-             target="_blank"
-             rel="noopener"
-             class="btn btn-primary">
-            ⭐ Leave a Google Review
-          </a>
-
-          <a href="https://www.google.com/search?q=Able+Aide+reviews"
-             target="_blank"
-             rel="noopener"
-             class="btn btn-outline">
-            🔎 View on Google
-          </a>
+          <div style="margin-top:1.5rem; display:flex; gap:.75rem; flex-wrap:wrap;">
+            <a href="https://g.page/r/CbaCZeVihQldEBM/review" target="_blank" rel="noopener" class="btn btn-primary">
+              ⭐ Leave a Google Review
+            </a>
+            <a href="https://www.google.com/search?q=Able+Aide+NDIS+reviews" target="_blank" rel="noopener" class="btn btn-outline">
+              🔎 View on Google
+            </a>
+          </div>
+          <p class="small" style="margin-top:.75rem;">
+            Prefer private feedback? Use <a href="/contact.html">our contact form</a>.
+          </p>
         </div>
+      </div>
+    </section>
 
-        <p class="small" style="margin-top: .75rem;">
-          Prefer private feedback? Use <a href="/contact.html">our contact form</a>.
-        </p>
+    <!-- TRUST BAR -->
+    <section class="trust-bar">
+      <div class="container trust-inner">
+        <div class="trust-item">
+          <h3>Participants &amp; families</h3>
+          <p class="small">Hear directly from people we support about what makes the difference.</p>
+        </div>
+        <div class="trust-item">
+          <h3>Support Coordinators</h3>
+          <p class="small">Coordinators share why they refer to Able Aide again and again.</p>
+        </div>
+        <div class="trust-item">
+          <h3>Registered NDIS Provider</h3>
+          <p class="small">Provider No. 4050173180 — registered, screened and accountable.</p>
+        </div>
       </div>
     </section>
 
     <!-- REVIEWS GRID -->
     <section class="home-section">
       <div class="container">
-        <div class="card-grid">
+
+        <header class="section-header">
+          <h2>Testimonials</h2>
+          <p>Real feedback from participants, families and coordinators across Melbourne and Victoria.</p>
+        </header>
+
+        <div class="card-grid" style="gap:2rem; margin-top:1rem;">
+
           <article class="card testimonial">
             <p class="testimonial-quote">
-              “Able Aide helped my son feel comfortable and supported. Their consistency and respect for our
-              culture has made a huge difference to our home life.”
+              "Able Aide helped my son feel comfortable and supported. Their consistency and respect for our
+              culture has made a huge difference to our home life."
             </p>
-            <p class="testimonial-meta">Parent of teenage participant</p>
+            <p class="testimonial-meta">Parent of teenage participant · Melbourne</p>
           </article>
 
           <article class="card testimonial">
             <p class="testimonial-quote">
-              “As a support coordinator, communication matters. Able Aide are responsive, clear and always
-              follow through. My participants feel genuinely safe and respected.”
+              "As a support coordinator, communication matters. Able Aide are responsive, clear and always
+              follow through. My participants feel genuinely safe and respected."
             </p>
-            <p class="testimonial-meta">NDIS Support Coordinator</p>
+            <p class="testimonial-meta">NDIS Support Coordinator · Victoria</p>
           </article>
 
           <article class="card testimonial">
             <p class="testimonial-quote">
-              “My support worker listens and never rushes me. I have more confidence going to appointments,
-              shopping and visiting community places again.”
+              "My support worker listens and never rushes me. I have more confidence going to appointments,
+              shopping and visiting community places again."
             </p>
-            <p class="testimonial-meta">Adult participant</p>
+            <p class="testimonial-meta">Adult participant · Melbourne</p>
           </article>
 
           <article class="card testimonial">
             <p class="testimonial-quote">
-              “They kept me updated throughout the whole process and matched workers based on personality.
-              That level of care is rare.”
+              "They kept me updated throughout the whole process and matched workers based on personality.
+              That level of care is rare."
             </p>
-            <p class="testimonial-meta">Family member</p>
+            <p class="testimonial-meta">Family member · South-East Melbourne</p>
           </article>
 
           <article class="card testimonial">
             <p class="testimonial-quote">
-              “The team is warm, professional and truly person-centred. Highly recommended for any coordinator
-              seeking reliable supports for their participants.”
+              "The team is warm, professional and truly person-centred. Highly recommended for any coordinator
+              seeking reliable supports for their participants."
             </p>
-            <p class="testimonial-meta">Support Coordinator</p>
+            <p class="testimonial-meta">Support Coordinator · Victoria</p>
           </article>
+
+          <article class="card testimonial">
+            <p class="testimonial-quote">
+              "From first contact to ongoing support, the communication has been excellent. It feels like they
+              genuinely care — not just about ticking boxes."
+            </p>
+            <p class="testimonial-meta">Parent · Northern Melbourne</p>
+          </article>
+
         </div>
       </div>
     </section>
 
-    <!-- SUPPORT COORDINATORS CTA -->
-    <section class="home-section">
+    <!-- LEAVE A REVIEW CTA -->
+    <section class="home-section section-alt" style="padding:2.8rem 0;">
       <div class="container">
-        <div class="card" style="padding:1.25rem;">
-          <h2 style="margin:0 0 .5rem;">Support Coordinators</h2>
-          <p class="small" style="margin:0 0 1rem;">
-            If you’ve referred a participant to Able Aide and want to share feedback, we welcome coordinator reviews too.
+        <header class="section-header" style="margin-bottom:1.4rem;">
+          <h2>Share your experience</h2>
+          <p>
+            Your feedback helps participants and families make confident decisions about supports.
+            A short review makes a real difference.
           </p>
-          <div>
-            <a class="btn btn-outline" href="/refer.html">Make a referral</a>
-            <a class="btn btn-primary" href="/contact.html" style="margin-left:.5rem;">Send feedback</a>
-          </div>
+        </header>
+
+        <div class="card-grid" style="gap:1.6rem;">
+
+          <article class="card" style="padding:1.6rem; text-align:center;">
+            <h3>Leave a Google Review</h3>
+            <p>Quick, public and helps families find us. Takes about 2 minutes.</p>
+            <a href="https://g.page/r/CbaCZeVihQldEBM/review" target="_blank" rel="noopener"
+               class="btn btn-primary" style="margin-top:1rem; display:inline-block;">
+              ⭐ Review on Google
+            </a>
+          </article>
+
+          <article class="card" style="padding:1.6rem; text-align:center;">
+            <h3>Send private feedback</h3>
+            <p>Prefer to share something directly with our team? Use the contact form.</p>
+            <a href="/contact.html" class="btn btn-outline" style="margin-top:1rem; display:inline-block;">
+              ✉️ Contact us
+            </a>
+          </article>
+
+          <article class="card" style="padding:1.6rem; text-align:center;">
+            <h3>Support Coordinators</h3>
+            <p>Referred a participant to Able Aide? We'd love your feedback or a referral note.</p>
+            <a href="/refer.html" class="btn btn-outline" style="margin-top:1rem; display:inline-block;">
+              📝 Refer a participant
+            </a>
+          </article>
+
         </div>
+      </div>
+    </section>
+
+    <!-- WHY REVIEWS MATTER -->
+    <section class="home-section" style="padding:2.8rem 0;">
+      <div class="container">
+        <header class="section-header" style="margin-bottom:1.2rem;">
+          <h2>Why reviews matter for disability services</h2>
+        </header>
+        <p>
+          Choosing an NDIS provider is a big decision for families. Many participants can't easily
+          trial a provider before committing — so reading what others have experienced helps enormously.
+        </p>
+        <p style="margin-top:0.8rem;">
+          If Able Aide has made a difference for you or someone you support,
+          sharing that experience helps other families make a confident, informed choice.
+        </p>
       </div>
     </section>
 
@@ -327,73 +406,47 @@
     <section class="home-section final-cta">
       <div class="container final-cta-inner">
         <div>
-          <h2>Share your experience with Able Aide</h2>
-          <p>Your feedback helps families, coordinators and participants make confident decisions.</p>
+          <h2>Ready to experience Able Aide?</h2>
+          <p>Start with a free, no-pressure conversation about your support needs.</p>
         </div>
         <div class="final-cta-actions">
-          <a href="https://g.page/r/CbaCZeVihQldEBM/review"
-             target="_blank"
-             rel="noopener"
-             class="btn btn-outline">
-            ⭐ Leave a Google Review
-          </a>
+          <a href="/contact.html" class="btn btn-primary">Book a free chat</a>
+          <a href="/refer.html" class="btn btn-outline">Refer a participant</a>
         </div>
       </div>
     </section>
 
   </main>
 
-  <!-- FLOATING CTA -->
-  <div class="floating-cta" id="floatingCta">
-    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button" aria-label="Open support options" aria-expanded="false">
-      <span class="icon">💬</span> <span>Need support?</span>
-    </button>
-    <div class="floating-cta-panel" aria-hidden="true">
-      <div class="floating-cta-title">Talk to Able Aide</div>
-      <div class="floating-cta-text">Quick ways to reach us about NDIS supports, referrals or questions.</div>
-      <div class="floating-cta-links">
-        <a href="tel:+61435039110" aria-label="Call Able Aide on 0435 039 110">📞 Call 0435 039 110</a>
-        <a href="/contact.html">✉️ Send an enquiry</a>
-        <a href="/refer.html">📝 Refer a participant</a>
-      </div>
-    </div>
-  </div>
-
-  <!-- FOOTER -->
   <footer class="site-footer">
     <div class="container footer-inner">
-
       <div class="footer-col">
         <h3>Able Aide</h3>
-        <p>Warm, person-centred disability supports across Victoria.</p>
-        <p>
-          <strong>Phone:</strong> <a href="tel:+61435039110">0435 039 110</a><br>
-          <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a>
-        </p>
+        <p>Your Journey, Our Support – warm, person-centred disability supports across Greater Melbourne and regional Victoria.</p>
+        <p><strong>Phone:</strong> <a href="tel:61435039110">0435 039 110</a><br>
+           <strong>Email:</strong> <a href="mailto:enquiries@ableaide.com.au">enquiries@ableaide.com.au</a></p>
+        <p class="small"><strong>Provider No.:</strong> 4050173180</p>
       </div>
-
       <div class="footer-col">
         <h3>Quick links</h3>
         <ul class="footer-links">
           <li><a href="/about.html">About</a></li>
-          <li><a href="/services.html">Services</a></li>
-          <li><a href="/locations.html">Locations</a></li>
-          <li><a href="/refer.html">Refer</a></li>
-          <li><a href="/resources.html">Resources</a></li>
+          <li><a href="/services/index.html">Services</a></li>
+          <li><a href="/locations/index.html">Locations</a></li>
+          <li><a href="/refer.html">Refer a participant</a></li>
+          <li><a href="/resources/index.html">Resources</a></li>
           <li><a href="/reviews.html" aria-current="page">Reviews</a></li>
-          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/faqs.html">FAQs</a></li>
           <li><a href="/careers.html">Careers</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+          <li><a href="/complaints.html">Complaints</a></li>
         </ul>
       </div>
-
       <div class="footer-col">
         <h3>Where we support</h3>
-        <p>
-          Greater Melbourne (Frankston, Dandenong, Ringwood, Epping, Werribee, Sunshine &amp; surrounds)<br>
-          Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria
-        </p>
+        <p>Greater Melbourne (Frankston, Dandenong, Ringwood, Epping, Werribee, Sunshine &amp; surrounds)<br>
+           Geelong · Ballarat · Bendigo · Shepparton · Regional Victoria</p>
       </div>
-
       <div class="footer-col">
         <h3>Connect with us</h3>
         <ul class="footer-links">
@@ -405,82 +458,86 @@
           <li><a href="https://x.com/AbleAideSupport" target="_blank" rel="noopener">X (Twitter)</a></li>
         </ul>
       </div>
-
     </div>
-
     <div class="container footer-bottom">
-      <p class="small">© <span id="year"></span> Able Aide. All rights reserved.</p>
+      <p class="small">© <span id="year"></span> Able Aide. All rights reserved. ·
+        <a href="/privacy-policy.html" class="footer-link">Privacy Policy</a> ·
+        <a href="/terms-of-service.html" class="footer-link">Terms of Service</a>
+      </p>
     </div>
   </footer>
 
-  <!-- Scripts -->
+  <div class="floating-cta" id="floatingCta">
+    <button class="floating-cta-toggle" id="floatingCtaToggle" type="button" aria-label="Open support options" aria-expanded="false">
+      <span class="icon">💬</span><span>Need support?</span>
+    </button>
+    <div class="floating-cta-panel" aria-hidden="true">
+      <div class="floating-cta-title">Talk to Able Aide</div>
+      <div class="floating-cta-text">Quick ways to reach us about NDIS supports, referrals or questions.</div>
+      <div class="floating-cta-links">
+        <a href="tel:61435039110" aria-label="Call Able Aide on 0435 039 110">📞 Call 0435 039 110</a>
+        <a href="/contact.html">✉️ Send an enquiry</a>
+        <a href="/refer.html">📝 Refer a participant</a>
+      </div>
+    </div>
+  </div>
+
   <script>
-    const y = document.getElementById("year");
-    if (y) y.textContent = new Date().getFullYear();
+    document.getElementById("year").textContent = new Date().getFullYear();
 
     const navToggle = document.getElementById("navToggle");
     const mainNav = document.getElementById("mainNav");
     const navOverlay = document.getElementById("navOverlay");
 
+    function closeAllDropdowns(exceptLi) {
+      document.querySelectorAll(".nav-has-children").forEach(li => {
+        if (li !== exceptLi) {
+          li.classList.remove("open");
+          const btn = li.querySelector(".nav-parent-link");
+          if (btn) btn.setAttribute("aria-expanded", "false");
+        }
+      });
+    }
+
     function openNav() {
       mainNav.classList.add("open");
-      navOverlay.classList.add("open");
+      if (navOverlay) { navOverlay.classList.add("open"); navOverlay.setAttribute("aria-hidden", "false"); }
       navToggle.setAttribute("aria-expanded", "true");
-      navOverlay.setAttribute("aria-hidden", "false");
       document.body.classList.add("nav-lock");
     }
 
     function closeNav() {
       mainNav.classList.remove("open");
-      navOverlay.classList.remove("open");
+      if (navOverlay) { navOverlay.classList.remove("open"); navOverlay.setAttribute("aria-hidden", "true"); }
       navToggle.setAttribute("aria-expanded", "false");
-      navOverlay.setAttribute("aria-hidden", "true");
       document.body.classList.remove("nav-lock");
-
-      document.querySelectorAll(".nav-has-children.open").forEach(el => el.classList.remove("open"));
-      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => btn.setAttribute("aria-expanded","false"));
-      document.querySelectorAll(".nav-submenu").forEach(menu => menu.hidden = true);
+      closeAllDropdowns();
     }
 
     if (navToggle && mainNav) {
-      navToggle.addEventListener("click", () => {
-        const opened = mainNav.classList.contains("open");
-        opened ? closeNav() : openNav();
-      });
-
+      navToggle.addEventListener("click", () => mainNav.classList.contains("open") ? closeNav() : openNav());
       if (navOverlay) navOverlay.addEventListener("click", closeNav);
+      document.addEventListener("keydown", e => { if (e.key === "Escape") { if (mainNav.classList.contains("open")) closeNav(); else closeAllDropdowns(); } });
+      document.querySelectorAll("#mainNav a").forEach(link => link.addEventListener("click", () => { if (window.innerWidth <= 900) closeNav(); }));
 
-      document.addEventListener("keydown", (e) => {
-        if (e.key === "Escape" && mainNav.classList.contains("open")) closeNav();
-      });
-
-      document.querySelectorAll("#mainNav a").forEach(link => {
-        link.addEventListener("click", () => {
-          if (window.innerWidth <= 900) closeNav();
+      document.querySelectorAll(".nav-has-children > .nav-parent-link").forEach(btn => {
+        btn.addEventListener("click", e => {
+          e.preventDefault();
+          const li = btn.parentElement;
+          const isOpen = li.classList.contains("open");
+          closeAllDropdowns(li);
+          li.classList.toggle("open", !isOpen);
+          btn.setAttribute("aria-expanded", !isOpen ? "true" : "false");
         });
       });
 
-      const parentButtons = document.querySelectorAll(".nav-has-children > .nav-parent-link");
-      parentButtons.forEach(btn => {
-        const li = btn.parentElement;
-        const submenu = li.querySelector(".nav-submenu");
-
-        btn.addEventListener("click", () => {
-          const isOpen = li.classList.toggle("open");
-          btn.setAttribute("aria-expanded", isOpen ? "true" : "false");
-          if (submenu) submenu.hidden = !isOpen;
-        });
-      });
-
-      window.addEventListener("resize", () => {
-        if (window.innerWidth > 900) closeNav();
-      });
+      document.addEventListener("click", e => { if (!e.target.closest(".nav-has-children")) closeAllDropdowns(); });
+      window.addEventListener("resize", () => { if (window.innerWidth > 900) closeNav(); });
     }
 
     const floatingToggle = document.getElementById("floatingCtaToggle");
     const floatingCta = document.getElementById("floatingCta");
     const floatingPanel = floatingCta ? floatingCta.querySelector(".floating-cta-panel") : null;
-
     if (floatingToggle && floatingCta && floatingPanel) {
       floatingToggle.addEventListener("click", () => {
         const isOpen = floatingCta.classList.toggle("open");

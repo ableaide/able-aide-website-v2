@@ -215,7 +215,19 @@
           </li>
 
           <li><a href="/refer.html">Refer a participant</a></li>
-          <li><a href="/resources/index.html">Resources</a></li>
+
+          <!-- FIXED: was /resources/index.html — now points to /learn/ -->
+          <li class="nav-has-children">
+            <button class="nav-parent-link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="learnMenu" data-menu="learnMenu">Learn</button>
+            <ul class="nav-submenu" id="learnMenu" aria-label="Learn submenu" hidden>
+              <li><a href="/learn/index.html">Learning hub overview</a></li>
+              <li><a href="/learn/index.html#guides">NDIS guides &amp; checklists</a></li>
+              <li><a href="/learn/index.html#blog">Blog articles</a></li>
+              <li><a href="/learn/index.html#stories">Stories &amp; case studies</a></li>
+              <li><a href="/learn/index.html#downloads">Downloads &amp; templates</a></li>
+            </ul>
+          </li>
+
           <li><a href="/contact.html">Contact</a></li>
         </ul>
       </nav>
@@ -588,13 +600,15 @@
           <article class="card">
             <h3>NDIS guides</h3>
             <p>Step-by-step information on plans, reports, goals, reviews and how to make the most of your funding.</p>
-            <a href="/resources/ndis-guides.html" class="card-link">Read guides →</a>
+            <!-- FIXED: was /resources/ndis-guides.html -->
+            <a href="/learn/ndis-guides.html" class="card-link">Read guides →</a>
           </article>
 
           <article class="card">
             <h3>Downloads</h3>
             <p>Useful forms and participant resources available anytime — service agreements, referral checklists and more.</p>
-            <a href="/resources/downloads.html" class="card-link">Browse downloads →</a>
+            <!-- FIXED: was /resources/downloads.html -->
+            <a href="/learn/downloads.html" class="card-link">Browse downloads →</a>
           </article>
 
           <article class="card">
@@ -670,7 +684,8 @@
           <li><a href="/services/index.html">Services</a></li>
           <li><a href="/locations/index.html">Locations</a></li>
           <li><a href="/refer.html">Refer a participant</a></li>
-          <li><a href="/resources/index.html">Resources</a></li>
+          <!-- FIXED: was /resources/index.html -->
+          <li><a href="/learn/index.html">Learn</a></li>
           <li><a href="/faqs.html">FAQs</a></li>
           <li><a href="/contact.html">Contact</a></li>
           <li><a href="/complaints.html">Complaints</a></li>

@@ -135,7 +135,7 @@
             "name": "How do I refer a participant to Able Aide?",
             "acceptedAnswer": {
               "@type": "Answer",
-              "text": "You can complete our online referral form at ableaide.com.au/refer.html, call 0435 039 110, or email enquiries@ableaide.com.au. We respond the same business day."
+              "text": "You can complete our online referral form at ableaide.com.au/refer, call 0435 039 110, or email enquiries@ableaide.com.au. We respond the same business day."
             }
           }
         ]
@@ -216,7 +216,6 @@
 
           <li><a href="/refer.html">Refer a participant</a></li>
 
-          <!-- FIXED: was /resources/index.html — now points to /learn/ -->
           <li class="nav-has-children">
             <button class="nav-parent-link" type="button" aria-haspopup="true" aria-expanded="false" aria-controls="learnMenu" data-menu="learnMenu">Learn</button>
             <ul class="nav-submenu" id="learnMenu" aria-label="Learn submenu" hidden>
@@ -516,7 +515,17 @@
         </header>
 
         <div class="card-grid card-grid-2">
+
+          <!-- FIXED: added itemReviewed and reviewRating to fix Google schema error -->
           <article class="card card-review" itemscope itemtype="https://schema.org/Review">
+            <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/LocalBusiness">
+              <meta itemprop="name" content="Able Aide">
+              <meta itemprop="url" content="https://ableaide.com.au">
+            </div>
+            <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+              <meta itemprop="ratingValue" content="5">
+              <meta itemprop="bestRating" content="5">
+            </div>
             <div class="review-stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
             <blockquote itemprop="reviewBody">
               <p>"They took the time to understand our son's routines before anyone even walked through the door. That made all the difference for our whole family."</p>
@@ -530,7 +539,16 @@
             </footer>
           </article>
 
+          <!-- FIXED: added itemReviewed and reviewRating to fix Google schema error -->
           <article class="card card-review" itemscope itemtype="https://schema.org/Review">
+            <div itemprop="itemReviewed" itemscope itemtype="https://schema.org/LocalBusiness">
+              <meta itemprop="name" content="Able Aide">
+              <meta itemprop="url" content="https://ableaide.com.au">
+            </div>
+            <div itemprop="reviewRating" itemscope itemtype="https://schema.org/Rating">
+              <meta itemprop="ratingValue" content="5">
+              <meta itemprop="bestRating" content="5">
+            </div>
             <div class="review-stars" aria-label="5 out of 5 stars"><span aria-hidden="true">★★★★★</span></div>
             <blockquote itemprop="reviewBody">
               <p>"As a coordinator I need providers who communicate well and show up reliably. Able Aide does both — my clients feel safe and supported with them."</p>
@@ -543,6 +561,7 @@
               </div>
             </footer>
           </article>
+
         </div>
       </div>
     </section>
@@ -600,14 +619,12 @@
           <article class="card">
             <h3>NDIS guides</h3>
             <p>Step-by-step information on plans, reports, goals, reviews and how to make the most of your funding.</p>
-            <!-- FIXED: was /resources/ndis-guides.html -->
             <a href="/learn/ndis-guides.html" class="card-link">Read guides →</a>
           </article>
 
           <article class="card">
             <h3>Downloads</h3>
             <p>Useful forms and participant resources available anytime — service agreements, referral checklists and more.</p>
-            <!-- FIXED: was /resources/downloads.html -->
             <a href="/learn/downloads.html" class="card-link">Browse downloads →</a>
           </article>
 
@@ -684,7 +701,6 @@
           <li><a href="/services/index.html">Services</a></li>
           <li><a href="/locations/index.html">Locations</a></li>
           <li><a href="/refer.html">Refer a participant</a></li>
-          <!-- FIXED: was /resources/index.html -->
           <li><a href="/learn/index.html">Learn</a></li>
           <li><a href="/faqs.html">FAQs</a></li>
           <li><a href="/contact.html">Contact</a></li>
